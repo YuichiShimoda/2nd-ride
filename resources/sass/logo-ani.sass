@@ -1,0 +1,510 @@
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+
+
+
+@mixin bph800
+	@media screen and (max-height: 800px)
+		@content
+@mixin bph750
+	@media screen and (max-height: 750px)
+		@content
+
+
+
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+
+
+
+
+
+#wrap
+	display: block
+	width: 100%
+	max-width: 100vw !important
+	overflow-x: hidden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer
+	&.is-move
+		#logo-ani
+			#kai
+				g
+					&:nth-of-type(1)
+						path
+							animation-name: line-anim-navy
+							animation-duration: 2.0s
+							animation-delay: 3.5s
+							animation-timing-function: ease
+							animation-fill-mode: forwards
+					&#eye
+						animation: blink 2.0s 2.0s forwards
+						path
+							animation-name: line-anim-orange
+							animation-duration: 3.0s
+							animation-delay: 0.5s
+							animation-timing-function: ease
+							animation-fill-mode: forwards
+					&#head
+						.left-hair
+							animation: leftHair 2.0s 2.0s forwards, line-anim-navy 3.0s 0.75s ease forwards
+						.right-hair
+							animation: rightHair 2.0s 2.0s forwards, line-anim-navy 3.0s 0.75s ease forwards
+						.top
+							animation: line-anim-navy 3.0s 0.75s ease forwards
+					&#mouth
+						ellipse
+							animation-name: line-anim-orange
+							animation-duration: 3.0s
+							animation-delay: 0.5s
+							animation-timing-function: ease
+							animation-fill-mode: forwards
+					&#nose
+						path
+							animation-name: line-anim-orange
+							animation-duration: 3.0s
+							animation-delay: 0.5s
+							animation-timing-function: ease
+							animation-fill-mode: forwards
+			#tori
+				path
+					animation-name: line-anim-navy
+					animation-duration: 2.5s
+					animation-delay: 3.5s
+					animation-timing-function: ease
+					animation-fill-mode: forwards
+					&.last
+						animation-duration: 2.0s
+						animation-delay: 3.9s
+			#saru
+				g
+					path
+						animation-name: line-anim-navy
+						animation-timing-function: ease
+						animation-fill-mode: forwards
+					&:nth-of-type(1)
+						path
+							animation-duration: 2.5s
+							animation-delay: 3.8s
+					&:nth-of-type(2)
+						path
+							animation-duration: 2.5s
+							animation-delay: 3.8s
+					&:nth-of-type(3)
+						path
+							animation-duration: 2.9s
+							animation-delay: 3.5s
+			#maru
+				path
+					animation-name: line-anim-navy
+					animation-duration: 3.3s
+					animation-delay: 3.5s
+					animation-timing-function: ease
+					animation-fill-mode: forwards
+			#ku
+				path
+					animation-name: line-anim-navy
+					animation-duration: 3.0s
+					animation-delay: 4.0s
+					animation-timing-function: ease
+					animation-fill-mode: forwards
+			#n
+				path
+					animation-name: line-anim-navy
+					animation-duration: 3.0s
+					animation-delay: 4.0s
+					animation-timing-function: ease
+					animation-fill-mode: forwards
+			#s-mark
+				&.is-hidden
+				&.done
+					opacity: 0.0
+			#logotype
+				animation: logotype 5.0s ease forwards
+				path
+					fill: #323333
+					@for $i from 1 through 9
+						&:nth-of-type(#{$i})
+							animation: move-random-#{$i} 4.0s 7.5s forwards
+					+bp700
+						@for $i from 1 through 9
+							&:nth-of-type(#{$i})
+								animation: move-random-#{$i} 4.0s 7.5s forwards
+					+bp450
+						@for $i from 1 through 9
+							&:nth-of-type(#{$i})
+								animation: move-random-sp-#{$i} 4.0s 7.5s forwards
+	#logo-ani
+		display: block
+		width: 450px
+		overflow: visible
+		+bp700
+			width: 350px
+		+bp450
+			width: 300px
+		+bp400
+			width: 270px
+		#kai
+			g
+				&:nth-of-type(1)
+					path
+						stroke: #1a1e71
+						stroke-width: 0.0
+						fill: #fff
+				&#eye
+					transform-origin: center
+					path
+						stroke: #e37a32
+						stroke-width: 0.0
+						fill: #fff
+				&#head
+					path
+						stroke: #1a1e71
+						stroke-width: 0.0
+						fill: #fff
+					.left-hair
+						transform-origin: center
+					.right-hair
+						transform-origin: center
+					.top
+				&#mouth
+					ellipse
+						stroke: #e37a32
+						stroke-width: 0.0
+						fill: #fff
+				&#nose
+					path
+						stroke: #e37a32
+						stroke-width: 0.0
+						fill: #fff
+		#tori
+			path
+				stroke: #1a1e71
+				stroke-width: 0.0
+				fill: #fff
+				&.last
+		#saru
+			g
+				path
+					stroke: #1a1e71
+					stroke-width: 0.0
+					fill: #fff
+				&:nth-of-type(1)
+					path
+				&:nth-of-type(2)
+					path
+				&:nth-of-type(3)
+					path
+		#maru
+			path
+				stroke: #1a1e71
+				stroke-width: 0.0
+				fill: #fff
+		#ku
+			path
+				stroke: #1a1e71
+				stroke-width: 0.0
+				fill: #fff
+		#n
+			path
+				stroke: #1a1e71
+				stroke-width: 0.0
+				fill: #fff
+		#s-mark
+			&.is-hidden
+				opacity: 0.0
+		#logotype
+			transform-origin: center top
+			path
+				fill: #fff
+				@function rand-px($min, $max)
+					@return ($min + random($max - $min + 1)) * 1px
+				@function rand-scale($min, $max)
+					@return ($min + random($max - $min + 1)) * 0.2
+				@function rand-deg($min, $max)
+					@return ($min + random($max - $min + 1)) * 1deg
+				@for $i from 1 through 5
+					$idx: 2 * $i - 1
+					@keyframes move-random-#{$idx}
+						0%
+							transform: translate(0, 0) scale(1.0) rotate(0deg)
+						20%
+							transform: translate(#{rand-px(80, 150)}, #{rand-px(-50, 50)}) scale(#{rand-scale(5, 15)}) rotate(#{rand-deg(-360, 360)})
+							opacity: 1.0
+						40%
+							transform: translate(#{rand-px(80, 150)}, #{rand-px(-50, 50)}) scale(#{rand-scale(1, 5)}) rotate(#{rand-deg(-360, 360)})
+							opacity: 0.0
+						60%
+							transform: translate(0, #{rand-px(-5, 0)}) scale(1.0) rotate(0deg)
+							opacity: 0.0
+						100%
+							transform: translate(0, 0) scale(1.0) rotate(0deg)
+							opacity: 1.0
+				@for $i from 1 through 4
+					$idx: 2 * $i
+					@keyframes move-random-#{$idx}
+						0%
+							transform: translate(0, 0) scale(1.0) rotate(0deg)
+						35%
+							transform: translate(#{rand-px(80, 150)}, #{rand-px(-50, 50)}) scale(#{rand-scale(5, 15)}) rotate(#{rand-deg(-360, 360)})
+							opacity: 1.0
+						50%
+							transform: translate(#{rand-px(80, 150)}, #{rand-px(-50, 50)}) scale(#{rand-scale(1, 5)}) rotate(#{rand-deg(-360, 360)})
+							opacity: 0.0
+						70%
+							transform: translate(0, #{rand-px(0, 5)}) scale(1.0) rotate(0deg)
+							opacity: 0.0
+						100%
+							transform: translate(0, 0) scale(1.0) rotate(0deg)
+							opacity: 1.0
+				+bp700
+					@for $i from 1 through 5
+						$idx: 2 * $i - 1
+						@keyframes move-random-#{$idx}
+							0%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+							20%
+								transform: translate(#{rand-px(80, 150)}, #{rand-px(-30, 30)}) scale(#{rand-scale(5, 15)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 1.0
+							40%
+								transform: translate(#{rand-px(80, 150)}, #{rand-px(-30, 30)}) scale(#{rand-scale(1, 5)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 0.0
+							60%
+								transform: translate(0, #{rand-px(-5, 0)}) scale(1.0) rotate(0deg)
+								opacity: 0.0
+							100%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+								opacity: 1.0
+					@for $i from 1 through 4
+						$idx: 2 * $i
+						@keyframes move-random-#{$idx}
+							0%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+							35%
+								transform: translate(#{rand-px(80, 150)}, #{rand-px(-30, 30)}) scale(#{rand-scale(5, 15)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 1.0
+							50%
+								transform: translate(#{rand-px(80, 150)}, #{rand-px(-30, 30)}) scale(#{rand-scale(1, 5)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 0.0
+							70%
+								transform: translate(0, #{rand-px(0, 5)}) scale(1.0) rotate(0deg)
+								opacity: 0.0
+							100%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+								opacity: 1.0
+				+bp450
+					@for $i from 1 through 5
+						$idx: 2 * $i - 1
+						@keyframes move-random-sp-#{$idx}
+							0%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+							20%
+								transform: translate(#{rand-px(80, 120)}, #{rand-px(-20, 20)}) scale(#{rand-scale(4, 8)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 1.0
+							40%
+								transform: translate(#{rand-px(80, 120)}, #{rand-px(-20, 20)}) scale(#{rand-scale(1, 3)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 0.0
+							60%
+								transform: translate(0, #{rand-px(-5, 0)}) scale(1.0) rotate(0deg)
+								opacity: 0.0
+							100%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+								opacity: 1.0
+					@for $i from 1 through 4
+						$idx: 2 * $i
+						@keyframes move-random-sp-#{$idx}
+							0%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+							35%
+								transform: translate(#{rand-px(80, 120)}, #{rand-px(-20, 20)}) scale(#{rand-scale(4, 8)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 1.0
+							50%
+								transform: translate(#{rand-px(80, 120)}, #{rand-px(-20, 20)}) scale(#{rand-scale(1, 3)}) rotate(#{rand-deg(-360, 360)})
+								opacity: 0.0
+							70%
+								transform: translate(0, #{rand-px(0, 5)}) scale(1.0) rotate(0deg)
+								opacity: 0.0
+							100%
+								transform: translate(0, 0) scale(1.0) rotate(0deg)
+								opacity: 1.0
+
+
+
+
+
+
+
+@keyframes blink
+	0%
+		transform: scaleY(1.0)
+	60%
+		transform: scaleY(1.0)
+	64%
+		transform: scaleY(0.1)
+	68%
+		transform: scaleY(1.0)
+	80%
+		transform: scaleY(1.0)
+	84%
+		transform: scaleY(0.1)
+	88%
+		transform: scaleY(1.0)
+	100%
+		transform: scaleY(1.0)
+@keyframes leftHair
+	0%
+		transform: translate(0%, 0%) rotate(0deg)
+	60%
+		transform: translate(0%, 0%) rotate(0deg)
+	64%
+		transform: translate(0%, -28%) rotate(-10deg)
+	68%
+		transform: translate(0%, 0%) rotate(0deg)
+	80%
+		transform: translate(0%, 0%) rotate(0deg)
+	84%
+		transform: translate(0.2%, -28%) rotate(-10deg)
+	88%
+		transform: translate(0%, 0%) rotate(0deg)
+	100%
+		transform: translate(0%, 0%) rotate(0deg)
+@keyframes rightHair
+	0%
+		transform: translate(0%, 0%) rotate(0deg)
+	60%
+		transform: translate(0%, 0%) rotate(0deg)
+	64%
+		transform: translate(-0.5%, 23%) rotate(10deg)
+	68%
+		transform: translate(0%, 0%) rotate(0deg)
+	80%
+		transform: translate(0%, 0%) rotate(0deg)
+	84%
+		transform: translate(-1.2%, 23%) rotate(10deg)
+	88%
+		transform: translate(0%, 0%) rotate(0deg)
+	100%
+		transform: translate(0%, 0%) rotate(0deg)
+@keyframes blurFadeInOut
+	0%
+		opacity: 0.0
+		filter: blur(5px)
+		transform: scale(1.2)
+	20%, 100%
+		opacity: 1.0
+		filter: blur(0px)
+		transform: scale(1.0)
+
+
+
+
+
+
+
+@keyframes line-anim-navy
+	0%
+		fill: #fff
+		stroke-width: 0.2
+	80%
+		stroke-dashoffset: 0
+		stroke-width: 0.2
+		fill: #fff
+	100%
+		stroke-width: 0.0
+		fill: #1a1e71
+@keyframes line-anim-orange
+	0%
+		fill: #fff
+		stroke-width: 0.2
+	80%
+		stroke-dashoffset: 0
+		stroke-width: 0.2
+		fill: #fff
+	100%
+		stroke-width: 0.0
+		fill: #e37a32
+@keyframes logotype
+	0%
+		transform: scale(10.0) rotateX(120deg) rotateY(60deg) rotateZ(2000deg)
+		filter: blur(1em) drop-shadow(2px 2px 0 #ccc)
+	10%
+		transform: scale(1.0) rotate3d(0, 0, 0, 30deg)
+		filter: blur(0) drop-shadow(2px 2px 0 #ccc)
+	60%
+		transform: scale(1.0) rotate3d(0, 0, 0, 30deg)
+		filter: blur(0) drop-shadow(2px 2px 0 #ccc)
+	70%
+		transform: scale(1.0) rotate3d(0, 0, 0, 30deg)
+		filter: blur(0) drop-shadow(0px 0px 0 #ccc)
+	100%
+		transform: scale(1.0) rotate3d(0, 0, 0, 30deg)
+		filter: blur(0) drop-shadow(0px 0px 0 #ccc)
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1002 @@
+body {
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#wrap {
+  overflow: hidden;
+  min-height: 100vh;
+  background: url("../image/rule-bg.png");
+  background-size: 200px;
+  background-repeat: repeat;
+}
+@media screen and (max-width: 500px) {
+  #wrap {
+    background-size: 120px;
+  }
+}
+
+*::selection {
+  background: #ddd;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#title {
+  display: block;
+  width: 1200px;
+  padding: 0 0 120px;
+  margin: 240px auto 0;
+  border-bottom: solid 1px #ccc;
+}
+@media screen and (max-width: 1400px) {
+  #title {
+    width: 1000px;
+    padding: 0 0 80px;
+    margin: 200px auto 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #title {
+    width: calc(100vw - 100px);
+  }
+}
+@media screen and (max-width: 700px) {
+  #title {
+    margin: 160px auto 0;
+    padding: 0 0 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #title {
+    width: calc(100vw - 60px);
+    padding: 0 0 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #title {
+    width: calc(100vw - 30px);
+    padding: 0 0 30px;
+    margin: 150px auto 0;
+  }
+}
+#title h1 {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #title h1 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #title h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #title h1 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #title h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #title h1 {
+    font-size: 22px;
+  }
+}
+
+#clause {
+  display: block;
+  width: 1200px;
+  margin: 120px auto 100px;
+}
+@media screen and (max-width: 1400px) {
+  #clause {
+    width: 1000px;
+    margin: 100px auto 100px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause {
+    width: calc(100vw - 100px);
+    margin: 90px auto 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #clause {
+    margin: 50px auto 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #clause {
+    width: calc(100vw - 60px);
+  }
+}
+@media screen and (max-width: 450px) {
+  #clause {
+    width: calc(100vw - 30px);
+    margin: 40px auto 40px;
+  }
+}
+#clause > .outline {
+  display: block;
+  width: 100%;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #555;
+}
+@media screen and (max-width: 500px) {
+  #clause > .outline {
+    font-size: 14px;
+  }
+}
+#clause > .outline > span {
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 60px auto 0;
+  width: 900px;
+}
+@media screen and (max-width: 1100px) {
+  #clause > .info-box {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #clause > .info-box {
+    width: 90%;
+    margin: 40px auto 0;
+  }
+}
+#clause > .info-box > .left-box, #clause > .info-box .right-box {
+  display: block;
+}
+#clause > .info-box > .left-box > .outline-ele, #clause > .info-box .right-box > .outline-ele {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+#clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(1) {
+  display: block;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: #333;
+}
+@media screen and (max-width: 700px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(1) {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(1) {
+    padding-right: 30px;
+    white-space: initial;
+  }
+}
+@media screen and (max-width: 400px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(1) {
+    padding-right: 20px;
+  }
+}
+#clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) {
+  display: block;
+  padding-bottom: 35px;
+  padding-left: 50px;
+  border-left: solid 1px #666;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 900px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) {
+    font-size: 14px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2), #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) {
+    padding-left: 20px;
+    padding-bottom: 25px;
+  }
+}
+#clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) .email, #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) .email {
+  display: inline;
+  width: 170px;
+  vertical-align: baseline;
+}
+@media screen and (max-width: 700px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) .email, #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) .email {
+    width: 150px;
+  }
+}
+#clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) .num, #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) .num {
+  display: inline;
+  margin: 0 0.2em;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) .num, #clause > .info-box .right-box > .outline-ele > p:nth-of-type(2) .num {
+    font-size: 14px;
+  }
+}
+#clause > .info-box > .left-box > .outline-ele:first-of-type > p, #clause > .info-box .right-box > .outline-ele:first-of-type > p {
+  padding-top: 40px;
+}
+@media screen and (max-width: 500px) {
+  #clause > .info-box > .left-box > .outline-ele:first-of-type > p, #clause > .info-box .right-box > .outline-ele:first-of-type > p {
+    padding-top: 30px;
+  }
+}
+#clause > .info-box > .left-box > .outline-ele:last-of-type > p, #clause > .info-box .right-box > .outline-ele:last-of-type > p {
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 500px) {
+  #clause > .info-box > .left-box > .outline-ele:last-of-type > p, #clause > .info-box .right-box > .outline-ele:last-of-type > p {
+    padding-bottom: 30px;
+  }
+}
+#clause > .info-box > .left-box {
+  width: 100%;
+}
+#clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1) {
+  width: 260px;
+}
+@media screen and (max-width: 1100px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1) {
+    width: 230px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1) {
+    width: 190px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1) {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(1) {
+    width: 130px;
+  }
+}
+#clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) {
+  width: calc(100% - 260px);
+}
+@media screen and (max-width: 1100px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) {
+    width: calc(100% - 230px);
+  }
+}
+@media screen and (max-width: 700px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) {
+    width: calc(100% - 190px);
+  }
+}
+@media screen and (max-width: 500px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) {
+    width: calc(100% - 140px);
+  }
+}
+@media screen and (max-width: 400px) {
+  #clause > .info-box > .left-box > .outline-ele > p:nth-of-type(2) {
+    width: calc(100% - 130px);
+  }
+}
+#clause > .info-box > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .info-box > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .info-box > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .info-box > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .info-box > .desc {
+  display: block;
+  width: 100%;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .info-box > .desc {
+    font-size: 14px;
+  }
+}
+#clause > .info-box > .desc:nth-child(2) {
+  margin-top: 30px;
+}
+@media screen and (max-width: 600px) {
+  #clause > .info-box > .desc:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+#clause > .info-box > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}
+#clause > .info-box > .paragraph_box > .paragraph_ele {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+#clause > .info-box > .paragraph_box > .paragraph_ele > .tit {
+  display: block;
+  width: 100%;
+  padding-left: 39px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-indent: -1.6em;
+}
+#clause > .info-box > .paragraph_box > .paragraph_ele > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 39px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .info-box > .paragraph_box > .paragraph_ele > .itemization {
+  display: block;
+  width: 100%;
+  padding-left: 53px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-indent: -1em;
+}
+#clause > .info-box > .paragraph_box > .paragraph_ele > .itemization > span {
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .info-box > .paragraph_box > .paragraph_ele:first-of-type {
+  margin-top: 0;
+}
+#clause > .article_box.sect2 {
+  display: block;
+  width: 100%;
+  margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect2 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect2 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect2 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect2 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect2 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect2 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect2 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect2 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect2 > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+#clause > .article_box.sect2 > .paragraph_box > p {
+  display: block;
+  width: 100%;
+  padding-left: 39px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-indent: -1.6em;
+}
+#clause > .article_box.sect2 > .paragraph_box > p > span {
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .article_box.sect3 {
+  display: block;
+  width: 100%;
+  margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect3 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect3 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect3 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect3 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect3 > .tit {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .tit {
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+    line-height: 1.3;
+  }
+}
+#clause > .article_box.sect3 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect3 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect3 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect3 > .note {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  padding-left: 1.3em;
+  text-indent: -1.3em;
+}
+#clause > .article_box.sect3 > .link_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  margin-top: 10px;
+  margin-left: 17px;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .link_box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+#clause > .article_box.sect3 > .link_box a {
+  display: block;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #5184c9;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .link_box a {
+    line-height: 1.7;
+  }
+}
+#clause > .article_box.sect3 > .link_box span {
+  display: block;
+  padding: 0 5px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .link_box span {
+    display: none;
+  }
+}
+#clause > .article_box.sect4 {
+  display: block;
+  width: 100%;
+  margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect4 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect4 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect4 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect4 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect4 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect4 > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .tit {
+  display: block;
+  width: 100%;
+  padding-left: 30px;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-indent: -2em;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .tit {
+    font-size: 14px;
+  }
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .list_box {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .list_box > p {
+  display: block;
+  width: 100%;
+  padding-left: 54px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-indent: -1.7em;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .list_box > p > span {
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele:first-of-type {
+  margin-top: 0;
+}
+#clause > .article_box.sect5 {
+  display: block;
+  width: 100%;
+  margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect5 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect5 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect5 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect5 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect5 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect5 > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .tit {
+  display: block;
+  width: 100%;
+  padding-left: 30px;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-indent: -2em;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .tit {
+    font-size: 14px;
+  }
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .tit > span {
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .itemization {
+  display: block;
+  width: 100%;
+  padding-left: 39px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+  text-indent: -1em;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele:first-of-type {
+  margin-top: 0;
+}
+#clause > .article_box.sect7 {
+  display: block;
+  width: 100%;
+  margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect7 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect7 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect7 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect7 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect7 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect7 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect7 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect7 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect7 > .info_box {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+#clause > .article_box.sect7 > .info_box > p {
+  display: block;
+  width: 100%;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .article_box.sect7 > .info_box > .item {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 13px;
+}
+#clause > .article_box.sect7 > .info_box > .item > span {
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#clause > .article_box.sect7 > .info_box > .item:nth-of-type(1) {
+  margin-top: 0;
+}
+#clause > .article_box.sect7 > .info_box a {
+  display: block;
+  width: fit-content;
+  padding: 0 3px 4px;
+  margin-top: 5px;
+  border-bottom: solid 1px #306ec1;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #306ec1;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect7 > .info_box a {
+    font-size: 13px;
+  }
+}
+#clause > .article_box.sect10 {
+  display: block;
+  width: 100%;
+  margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect10 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect10 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #0C2A81;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect10 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect10 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect10 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect10 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect10 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect10 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect10 > .create_date {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  text-align: right;
+  color: #555;
+}
+#clause > .article_box.sect10 > .update_date {
+  display: block;
+  width: 100%;
+  margin-top: 0.5em;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "A-OTF Ryumin Pro", serif;
+  letter-spacing: 0.05em;
+  text-align: right;
+  color: #555;
+}

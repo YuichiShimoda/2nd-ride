@@ -1,0 +1,32 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.8",
+        "@tailwindcss/vite": "^4.3.3",
+        "@vitejs/plugin-vue": "^6.0.9",
+        "axios": "^1.20.0",
+        "bootstrap": "^5.3.8",
+        "concurrently": "^9.2.0",
+        "fast-glob": "^3.3.3",
+        "gulp": "^5.0.1",
+        "gulp-sass": "^6.0.1",
+        "laravel-vite-plugin": "^3.2.0",
+        "sass": "^1.105.1",
+        "tailwindcss": "^4.3.3",
+        "vite": "^8.3.2"
+    },
+    "dependencies": {
+        "@algolia/autocomplete-js": "^1.19.12",
+        "@algolia/autocomplete-theme-classic": "^1.19.12",
+        "lazysizes": "^5.3.2",
+        "splitting": "^1.1.0",
+        "video.js": "^8.23.4",
+        "vue-draggable-plus": "^0.6.1"
+    }
+}

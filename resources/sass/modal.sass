@@ -1,0 +1,460 @@
+$eurostile-extended: "eurostile-extended", sans-serif // 400, 500, 900
+$noto-sans: "Noto Sans JP", sans-serif // 400, 500, 700
+$noto-serif: "Noto Serif JP", serif // 400, 500, 700
+$ah-hakushu-rs: "ah-hakushu-rs", sans-serif // 800
+$taw-byakkokaisho-eye: "taw-byakkokaisho-eye", sans-serif // 400
+$ferry: "ferry", sans-serif // 400
+$df-kaisho-ub: "df-kaisho-ub", sans-serif // 400
+$amiri-quran: "amiri-quran", sans-serif // 400
+
+
+
+
+$base: #00a000
+$black-color: #006000
+$white-light: #E5E5E5
+$white-dark: #D0D0D0
+$black-bg: #232523
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp650
+	@media screen and (max-width: 650px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+
+
+
+
+
+#modal
+	&.is-play
+		.md-overlay
+			.inner-box
+				.panel-box
+					.panel-ele
+						box-shadow: 0 0 10px rgba($black-color, 0.1)
+						transform: scaleX(1.0)
+		.md-contents
+			.inside-box
+				.sub-tit-box
+					.rect
+						background: #222
+	.md-overlay
+		display: none
+		position: fixed
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vh
+		background: $black-bg
+		z-index: 99997
+		.inner-box
+			display: block
+			width: 100%
+			height: 100%
+			position: relative
+			.close-box
+				position: absolute
+				top: 0
+				right: 0
+				display: block
+				width: fit-content
+				height: fit-content
+				padding: 20px 25px
+				cursor: pointer
+				z-index: 2
+				transition: all 0.1s ease-in-out
+				&:hover
+					.row-box
+						&:nth-of-type(1)
+							transform: translate(-10%)
+						&:nth-of-type(2)
+							transform: translate(10%)
+						&:nth-of-type(3)
+							transform: translate(-10%)
+				.row-box
+					display: flex
+					justify-content: space-between
+					align-items: center
+					width: 25px
+					margin-top: 5px
+					transition: all 0.5s ease-in-out
+					&:nth-of-type(1)
+						margin-top: 0
+					&:nth-of-type(2)
+						transition-delay: 0.05s
+					&:nth-of-type(3)
+						transition-delay: 0.1s
+					.dot
+						display: block
+						width: 5px
+						aspect-ratio: 1 / 1
+						border-radius: 50%
+						background: $base
+			.glitch-video-box
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				width: 100%
+				height: 100%
+				mix-blend-mode: screen
+				z-index: 1
+				.video
+					display: block
+					width: 100%
+					height: 100%
+					object-fit: cover
+					object-position: center
+			.panel-box
+				position: absolute
+				top: 0
+				left: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				height: 100%
+				z-index: 0
+				.panel-ele
+					display: block
+					width: calc(100%/9)
+					height: 100%
+					background: #222
+					transform-origin: 100%
+					transform: scaleX(0.0)
+					overflow: hidden
+					transition: transform 0.2s ease-in-out
+					@for $i from 1 through 9
+						&:nth-child(#{$i})
+							transition-delay: 0.03s * ($i - 1)
+	.ribbon
+		display: none
+		position: fixed
+		right: 0
+		bottom: 0
+		width: auto
+		height: 92vh
+		filter: brightness(0.8)
+		z-index: 99998
+	.md-contents
+		display: none
+		position: fixed
+		top: 50%
+		left: 50%
+		width: 800px
+		height: fit-content
+		padding: 50px 0
+		transform: translate(-50%, -50%)
+		z-index: 99999
+		// overflow: hidden
+		.inside-box
+			display: block
+			width: 100%
+			height: 100%
+			.sub-tit-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				margin-top: 100px
+				position: relative
+				&:nth-of-type(1)
+					margin-top: 0
+				.txt
+					display: block
+					font-weight: 900
+					font-size: 48px
+					line-height: 1.0
+					font-family: $eurostile-extended
+					letter-spacing: 0.05em
+					background: linear-gradient(180deg, #fff 0%, #aaa 100%)
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+					background-clip: text
+					text-fill-color: transparent
+					z-index: 30
+					&::selection
+						color: #aaa
+						-webkit-text-fill-color: #aaa
+				.rect
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					width: calc(100% - 360px)
+					height: 100%
+					background: $black-bg
+					z-index: 20
+					transition: all 0.5s ease-in-out
+				.left-streak-box
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: 360px
+					height: fit-content
+					z-index: 10
+					.line-box
+						display: block
+						width: 100%
+						position: relative
+						.base
+							display: block
+							width: 100%
+							height: 2px
+							background: linear-gradient(to right, rgba($base, 0) 0%, $base 50%, rgba($base, 0) 51%, rgba($base, 0) 100%)
+							box-shadow: 0px 0px 1px $base
+							filter: blur(2.5px)
+						.highlight
+							position: absolute
+							top: 0
+							left: 0
+							bottom: 0
+							margin: auto
+							display: block
+							width: 100%
+							height: 1px
+							background: linear-gradient(to right, rgba(#fff, 0) 0%, #fff 50%, rgba(#fff, 0) 51%, rgba(#fff, 0) 100%)
+							filter: blur(1.5px)
+							z-index: 1
+				.right-streak-box
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: 360px
+					height: fit-content
+					z-index: 10
+					.line-box
+						display: block
+						width: 100%
+						position: relative
+						.base
+							display: block
+							width: 100%
+							height: 2px
+							background: linear-gradient(to left, rgba($base, 0) 0%, $base 50%, rgba($base, 0) 51%, rgba($base, 0) 100%)
+							box-shadow: 0px 0px 1px $base
+							filter: blur(2.5px)
+						.highlight
+							position: absolute
+							top: 0
+							left: 0
+							bottom: 0
+							margin: auto
+							display: block
+							width: 100%
+							height: 1px
+							background: linear-gradient(to left, rgba(#fff, 0) 0%, #fff 50%, rgba(#fff, 0) 51%, rgba(#fff, 0) 100%)
+							filter: blur(1.5px)
+							z-index: 1
+			.top-nav-box
+				display: block
+				width: 100%
+				margin-top: 40px
+				> ul
+					display: flex
+					justify-content: space-between
+					align-items: center
+					width: 100%
+					.global-nav-box
+						display: block
+						width: calc((100% - 80px)/3)
+						height: 160px
+						.link-box
+							display: flex
+							justify-content: center
+							align-items: center
+							flex-direction: column
+							width: 100%
+							height: 100%
+							border-radius: 20px
+							background: rgba(#000, 0.3)
+							transition: all 0.5s ease-in-out
+							&:hover
+								box-shadow: 0px 2px 2px rgba(#fff, 0.5), 0px 2px 40px rgba(#fff, 0.2)
+								.en
+									background: linear-gradient(180deg, $base 0%, $black-color 100%)
+									-webkit-background-clip: text
+							.en
+								display: block
+								font-weight: 500
+								font-size: 20px
+								line-height: 1.0
+								font-family: $eurostile-extended
+								letter-spacing: 0.15em
+								background: linear-gradient(180deg, #fff 0%, #aaa 100%)
+								-webkit-background-clip: text
+								-webkit-text-fill-color: transparent
+								background-clip: text
+								text-fill-color: transparent
+								transition: all 0.5s ease-in-out
+								&::selection
+									color: #555
+									-webkit-text-fill-color: #555
+							.jp
+								display: block
+								margin-top: 15px
+								font-weight: 700
+								font-size: 14px
+								line-height: 1.0
+								font-family: $noto-sans
+								letter-spacing: 0.2em
+								color: #ccc
+								&::selection
+									color: #555
+			.bottom-nav-box
+				display: block
+				width: 100%
+				margin-top: 40px
+				> ul
+					display: flex
+					justify-content: space-between
+					align-items: center
+					width: 100%
+					.global-nav-box
+						display: block
+						width: calc((100% - 40px)/2)
+						height: 160px
+						.link-box
+							display: flex
+							justify-content: center
+							align-items: center
+							flex-direction: column
+							width: 100%
+							height: 100%
+							border-radius: 20px
+							background: rgba(#000, 0.3)
+							transition: all 0.5s ease-in-out
+							&:hover
+								box-shadow: 0px 2px 2px rgba(#fff, 0.5), 0px 2px 40px rgba(#fff, 0.2)
+								.en
+									background: linear-gradient(180deg, $base 0%, $black-color 100%)
+									-webkit-background-clip: text
+							.en
+								display: block
+								font-weight: 500
+								font-size: 20px
+								line-height: 1.0
+								font-family: $eurostile-extended
+								letter-spacing: 0.15em
+								background: linear-gradient(180deg, #fff 0%, #aaa 100%)
+								-webkit-background-clip: text
+								-webkit-text-fill-color: transparent
+								background-clip: text
+								text-fill-color: transparent
+								transition: all 0.5s ease-in-out
+								&::selection
+									color: #555
+									-webkit-text-fill-color: #555
+							.jp
+								display: block
+								margin-top: 15px
+								font-weight: 700
+								font-size: 14px
+								line-height: 1.0
+								font-family: $noto-sans
+								letter-spacing: 0.2em
+								color: #ccc
+								&::selection
+									color: #555
+			.close-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 50px
+				aspect-ratio: 1 / 1
+				margin: 60px auto 0
+				border-radius: 50%
+				border: solid 1px #fff
+				cursor: pointer
+				transition: all 1.0s ease-in-out
+				&:hover
+					border: solid 2px $base
+					background: rgba(#fff, 0.7)
+					box-shadow: 0px 1px 2px rgba($base, 0.5), 0px 1px 40px rgba($base, 0.2)
+					.img
+						path
+							fill: $black-color
+				.img
+					display: block
+					width: 10px
+					path
+						fill: #ccc
+						transition: all 1.0s ease-in-out
+

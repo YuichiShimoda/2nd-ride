@@ -1,0 +1,163 @@
+gulp
+php artisan serve
+npm run dev
+
+
+◆ssh接続
+PW：7TikyBfiVWVx
+
+
+
+◆管理画面ログイン
+・ID：p_ce.p_ce.w_ld@icloud.com
+・PW：testtest
+
+
+
+
+
+
+
+git clone <https://github.com/YuichiShimoda/an-hama.git> <project_name>
+.envの作成
+composer install
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+npm install
+npm run dev｜npm run build
+シンボリックリンク作成：ln -s ~/(ドメイン)/public_html/(プロジェクト)/public ~/(ドメイン)/public_html/(ディレクトリ)
+シンボリックリンクは「 ln -s A B 」形式のコマンド
+　∟ A：リンク元。実際に存在するファイルまたはディレクトリ。
+　∟ B：シンボリックリンクとして作成される名前。アクセスされる「仮の入り口」。
+chmod -R 755 public　※ Aのプロジェクトで実行すること
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+adminLTEデモ：https://tunasv2.yawas.my/admin/index3.html
+CRUD作成：https://www.itsolutionstuff.com/post/laravel-12-crud-application-example-tutorialexample.html
+adminLTE document1：https://adminlte.io/docs/3.2/index.html
+adminLTE document2：https://jeroennoten.github.io/Laravel-AdminLTE/sections/components/basic_forms_components.html
+
+
+
+
+◆XSERVERにlaravelのwebアプリをgitからデプロイ
+全体の流れ+phpのバージョン切替：https://qiita.com/ren7087/items/654f2be6b34ba428405f
+composerのバージョンUP+nodeインストール：https://huck-town.com/setting/command-composer/
+
+
+
+
+
+
+
+
+
+＊＊＊＊＊　DB設計　＊＊＊＊＊
+
+
+【　査定：Appraisals　】
+・ID
+・ステータス（ required ）　※ 受付番号発行 / 申請完了 / 交渉中 / 顧客回答待ち / キャンセル / 訪問
+・担当者（ required ）
+・受付番号（ required ）　※ 4桁の数字
+・エリア
+
+
+【　買取品：Items　】
+・ID
+・査定ID（ required ）　外部キー
+・査定品名
+・画像（ required ）
+・カテゴリ
+・状態(客)　※ 新品 / 未使用に近い / 目立った傷や汚れなし / やや傷や汚れあり / 傷や汚れあり / 全体的に状態が悪い
+・状態(業者)　※ 新品 / 未使用に近い / 目立った傷や汚れなし / やや傷や汚れあり / 傷や汚れあり / 全体的に状態が悪い
+・ブランド
+・メーカー
+・査定額
+・表示（ required ）　※ 1:default / 0
+・メモ
+
+
+
+
+
+
+
+
+
+
+
+◆package.jsonのアップデート方法
+以下の順番でコマンドを実行
+・npm outdated　// 各パッケージの現在のバージョンと最新バージョンを比較
+・ncu　// 各パッケージの依存関係を考慮しつつ、利用可能な最新バージョンを一覧表示
+・ncu -u　// "ncu"で表示された利用可能な最新バージョンにpackage.jsonを書き換え
+・npm install　// package.jsonの内容に更新
+
+
+
+
+◆composer.jsonのアップデート方法
+以下の順番でコマンドを実行
+・composer outdated　// 現在インストールされているバージョンと最新バージョンの差を一覧表示
+・composer update --dry-run　// アップデート可能なパッケージとそのバージョンを表示
+・composer update　// アップデート実施
+※ composer.json内に記述されている各パッケージやライブラリのバージョンを書き換えてくれない
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xamppでphpのバージョンを変更する方法を教えて
+PCはwindowsです。
+Windows版XAMPPでPHPのバージョンを変更するには、主に以下の2つの方法があります。
+方法1：PHPフォルダを差し替える（手動アップデート）
+現在のXAMPP環境を維持したまま、PHPの実行ファイルだけを入れ替える方法です。 
+バックアップ: XAMPPフォルダ（通常 C:\xampp）内の php フォルダを、php_old などにリネームして残しておきます。
+新バージョンの入手: PHP For Windows から、目的のバージョンの Thread Safe版（Zipファイル） をダウンロードして解凍します。
+配置: 解凍した中身を新しい php フォルダとしてXAMPPフォルダ内に配置します。
+設定の引き継ぎ:
+旧フォルダから php.ini をコピーして新フォルダへ移します。
+apache/conf/extra/httpd-xampp.conf を開き、PHPのパス（例: php7apache2_4.dll から php8apache2_4.dll）を新バージョンに合わせて書き換えます。
+再起動: XAMPP Control PanelからApacheを再起動してください。 
+方法2：別バージョンのXAMPPを並行インストールする（推奨）
+設定の書き換えによるエラーを防ぐため、異なるバージョンのXAMPPを別のディレクトリにインストールする方法が安全です。 
+Apache Friends から、目的のPHPバージョンが含まれるXAMPPをダウンロードします。
+インストール時に、既存のXAMPP（C:\xampp）と重ならないよう、C:\xampp_php81 などの別フォルダを指定してインストールします。
+利用したいバージョンのXAMPPコントロールパネルから起動することで、簡単に使い分けが可能です。 
+注意点:
+手動で行う場合は、必ず事前に htdocs やデータベース（mysql/data）のバックアップを取ってください。
+複数のXAMPPを同時に起動することはできません（ポートが競合するため）。 
+特定のPHPバージョン（例：PHP 8.2から8.3など）へのアップグレードをご希望ですか？具体的な現在のバージョンと移行先を教えていただければ、より詳細な手順を案内できます。

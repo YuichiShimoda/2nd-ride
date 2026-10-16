@@ -1,0 +1,4094 @@
+@use "sass:math"
+
+$eurostile-extended: "eurostile-extended", sans-serif // 400, 500, 900
+$noto-sans: "Noto Sans JP", sans-serif // 400, 500, 700
+$noto-serif: "Noto Serif JP", serif // 400, 500, 700
+$ah-hakushu-rs: "ah-hakushu-rs", sans-serif // 800
+$taw-byakkokaisho-eye: "taw-byakkokaisho-eye", sans-serif // 400
+$ferry: "ferry", sans-serif // 400
+$df-kaisho-ub: "df-kaisho-ub", sans-serif // 400
+$amiri-quran: "amiri-quran", sans-serif // 400
+
+
+
+
+$base: #00a000
+$black-color: #006000
+$white-light: #E5E5E5
+$white-dark: #D0D0D0
+$black-bg: #232523
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+
+
+
+@mixin bph800
+	@media screen and (max-height: 800px)
+		@content
+@mixin bph750
+	@media screen and (max-height: 750px)
+		@content
+
+
+
+
+body
+	// overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: initial !important
+	max-width: 100%
+	// background: url("../image/common/base-bg.webp")
+	// background-attachment: fixed
+	// background-size: cover
+	// background-position: center
+	&.no-scroll
+		#pr
+			.content-box
+				.pr-box
+					.pr-ele
+						pointer-events: none
+*::selection
+	background: #ddd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#test
+	display: block
+	width: 100%
+	height: 100vh
+	background: #fff
+	position: relative
+	z-index: 300
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		position: relative
+		> h1
+			display: block
+			.word
+				.char
+					display: inline-block
+					font-weight: 900
+					font-size: 68px
+					line-height: 1.2
+					font-family: $eurostile-extended
+					letter-spacing: 0.0em
+.slash-animation
+	.char
+		display: inline-block
+		color: transparent
+		position: relative
+		&::before, &::after
+			position: absolute
+			top: 0
+			left: 0
+			content: attr(data-char)
+			display: block
+			width: 100%
+			height: 100%
+			color: #555
+			opacity: 0.0
+			visibility: visible !important
+		&::before
+			clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%)
+			animation: slashTopLoop 2.5s calc(var(--char-index) * 0.1s) cubic-bezier(0.16, 1, 0.3, 1) infinite
+		&::after
+			clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%)
+			animation: slashBottomLoop 2.5s calc(var(--char-index) * 0.1s) cubic-bezier(0.16, 1, 0.3, 1) infinite
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#test2
+	display: block
+	width: 100%
+	height: 100vh
+	background: #fff
+	position: relative
+	z-index: 300
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		.glitch-wrapper
+			display: block
+			width: 400px
+			position: relative
+			&.is-glitch
+				background: #000
+				animation: container-shake 0.4s linear forwards
+				.glitch-img
+					opacity: 1.0
+				.glitch-img.red-layer
+					opacity: 1.0
+					filter: drop-shadow(0 0 0 red) hue-rotate(300deg) saturate(3.0)
+					animation: glitch-anim-1 0.4s linear forwards
+				.glitch-img.cyan-layer
+					opacity: 1.0
+					filter: drop-shadow(0 0 0 cyan) hue-rotate(180deg) saturate(3.0)
+					animation: glitch-anim-2 0.4s linear forwards
+			.glitch-img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: center
+				opacity: 0.0
+				&.red-layer, &.cyan-layer
+					position: absolute
+					top: 0
+					left: 0
+					opacity: 0.0
+					mix-blend-mode: screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#mv
+	display: block
+	width: 100%
+	height: 150vh
+	position: fixed
+	top: 0
+	z-index: 210
+	.container
+		display: block
+		width: 100%
+		height: 100%
+		.sticky-box
+			position: sticky
+			top: 0
+			display: block
+			width: 100%
+			height: 100vh
+			background: url("../image/top/mv/bg.webp")
+			background-size: cover
+			background-position: left bottom
+			perspective: 800px
+			.content-box
+				display: block
+				width: 100%
+				height: 100%
+				position: relative
+				transform-style: preserve-3d
+				will-change: transform
+				.logo
+					position: absolute
+					left: 120px
+					top: 48%
+					display: block
+					width: 460px
+				.en-box
+					position: absolute
+					top: 220px
+					right: 150px
+					display: flex
+					justify-content: flex-start
+					align-items: flex-end
+					flex-direction: column
+					width: fit-content
+					> p
+						display: block
+						.word
+							.char
+								display: inline-block
+								font-weight: 900
+								font-size: 68px
+								line-height: 1.2
+								font-family: $eurostile-extended
+								letter-spacing: 0.0em
+								color: transparent
+								position: relative
+								&::before, &::after
+									position: absolute
+									top: 0
+									left: 0
+									content: attr(data-char)
+									display: block
+									width: 100%
+									height: 100%
+									color: #333
+									opacity: 0.0
+									visibility: visible !important
+								&::before
+									clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%)
+									animation: slashTopLoop 8.0s calc(var(--char-index) * 0.1s) cubic-bezier(0.16, 1, 0.3, 1) infinite
+								&::after
+									clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%)
+									animation: slashBottomLoop 8.0s calc(var(--char-index) * 0.1s) cubic-bezier(0.16, 1, 0.3, 1) infinite
+						.green
+							display: inline
+							margin-left: 0.7em
+							.word
+								.char
+									display: inline-block
+									font-weight: 900
+									font-size: 68px
+									line-height: 1.2
+									font-family: $eurostile-extended
+									letter-spacing: 0.0em
+									color: transparent
+									position: relative
+									&::before, &::after
+										position: absolute
+										top: 0
+										left: 0
+										content: attr(data-char)
+										display: block
+										width: 100%
+										height: 100%
+										color: $base
+										opacity: 0.0
+										visibility: visible !important
+									&::before
+										clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%)
+										animation: slashTopLoop 8.0s calc(var(--char-index) * 0.1s) cubic-bezier(0.16, 1, 0.3, 1) infinite
+									&::after
+										clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%)
+										animation: slashBottomLoop 8.0s calc(var(--char-index) * 0.1s) cubic-bezier(0.16, 1, 0.3, 1) infinite
+				.right-bottom-box
+					position: absolute
+					right: 150px
+					bottom: 210px
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					.desc
+						display: block
+						width: 340px
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.7
+						font-family: $noto-sans
+						letter-spacing: 0.15em
+						text-align: right
+						color: #111
+					.hatching
+						display: block
+						width: 24px
+						margin-left: 95px
+						path
+							$total-paths: 7
+							$duration: 3.0s
+							opacity: 0.1
+							animation: hatchBlink $duration ease-in-out infinite
+							@for $i from 1 through $total-paths
+								&:nth-child(#{$i})
+									animation-delay: #{"calc((" + $total-paths + " - " + $i + ") * (" + $duration + " / " + $total-paths + "))"}
+				.top-rect
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 30px
+					background: $base
+					pointer-events: none
+				.top-shape
+					position: absolute
+					top: 0
+					right: 0
+					display: block
+					width: 620px
+					pointer-events: none
+				.bottom-shape-box
+					position: absolute
+					right: 0
+					bottom: 0
+					display: block
+					width: 880px
+					pointer-events: none
+					.inner-box
+						display: block
+						width: 100%
+						height: 100%
+						position: relative
+						z-index: 1
+						.scroll-box
+							position: absolute
+							top: 0px
+							right: 0px
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: fit-content
+							transform-origin: right top
+							transform: rotateZ(90deg) translate(calc(100% + 30px), 30px)
+							.txt
+								display: block
+								font-weight: 400
+								font-size: 14px
+								line-height: 1.0
+								font-family: $noto-sans
+								letter-spacing: 0.05em
+								color: #fff
+							.line
+								display: block
+								width: 70px
+								height: 1px
+								background: rgba(#fff, 0.2)
+								margin-left: 20px
+								overflow: hidden
+								position: relative
+								&::before
+									position: absolute
+									top: 0
+									left: 0
+									content: ""
+									display: block
+									width: 100%
+									height: 100%
+									background: #fff
+									transform-origin: left
+									animation: scrollLineLoop 2.0s cubic-bezier(0.16, 1, 0.3, 1) infinite
+					.bottom-shape
+						display: block
+						width: 100%
+						pointer-events: none
+#mv-scroll-space
+	display: block
+	width: 100%
+	height: 150vh
+	pointer-events: none
+@keyframes slashTopLoop
+	0%
+		transform: translate(-20%, -60%)
+		filter: blur(10px)
+		opacity: 0.0
+	7%
+		transform: translate(0, 0)
+		filter: blur(0)
+		opacity: 1.0
+	70%
+		transform: translate(0, 0)
+		filter: blur(0)
+		opacity: 1.0
+	80%, 100%
+		transform: translate(-20%, -60%)
+		filter: blur(10px)
+		opacity: 0.0
+@keyframes slashBottomLoop
+	0%
+		transform: translate(20%, 60%)
+		filter: blur(10px)
+		opacity: 0.0
+	7%
+		transform: translate(0, 0)
+		filter: blur(0)
+		opacity: 1.0
+	70%
+		transform: translate(0, 0)
+		filter: blur(0)
+		opacity: 1.0
+	80%, 100%
+		transform: translate(20%, 60%)
+		filter: blur(10px)
+		opacity: 0.0
+@keyframes hatchBlink
+	0%
+		opacity: 0.1
+	9%
+		opacity: 1.0
+		filter: none
+	10%
+		opacity: 1.0
+		filter: drop-shadow(0 0 1px $base)
+	80%
+		opacity: 1.0
+		filter: drop-shadow(0 0 1px $base)
+	81%
+		filter: none
+	90%
+		opacity: 0.1
+	100%
+		opacity: 0.1
+@keyframes scrollLineLoop
+	0%
+		transform-origin: left
+		transform: scaleX(0)
+	50%
+		transform-origin: left
+		transform: scaleX(1)
+	51%
+		transform-origin: right
+	100%
+		transform-origin: right
+		transform: scaleX(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#belief
+	display: block
+	width: 100%
+	height: 120vh
+	position: fixed
+	top: 0
+	z-index: 209
+	pointer-events: none
+	will-change: transform
+	&.is-show
+		.container
+			.sticky-box
+				.content-box
+					.txt-box
+						.sentence-box
+							.txt
+								.word
+									.char
+										animation: textKinetic 0.5s #{"calc(min(var(--char-index), var(--char-total) - 1 - var(--char-index)) * 0.1s)"} cubic-bezier(0.16, 1, 0.3, 1) forwards
+					.ticker
+						.ticker-track
+							.ticker-group
+								> p
+									color: $white-light
+									animation: none !important
+	.container
+		display: block
+		width: 100%
+		height: 100%
+		.sticky-box
+			position: sticky
+			top: 0
+			display: block
+			width: 100%
+			height: 100vh
+			background: url("../image/top/belief/bg.webp")
+			background-size: cover
+			background-position: center
+			.content-box
+				position: relative
+				width: 100%
+				height: 100vh
+				overflow: hidden
+				.txt-box
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: fit-content
+					height: fit-content
+					.sentence-box
+						display: flex
+						justify-content: center
+						align-items: center
+						flex-direction: column
+						width: fit-content
+						height: fit-content
+						position: relative
+						.txt
+							display: block
+							margin-top: 25px
+							&:nth-of-type(1)
+								margin-top: 0
+							.word
+								.char
+									display: inline-block
+									font-weight: 400
+									font-size: 24px
+									line-height: 1.0
+									font-family: $noto-sans
+									letter-spacing: 0.3em
+									color: #111
+									opacity: 0.0
+						.top-char
+							position: absolute
+							left: 50%
+							top: 0
+							transform-origin: bottom center
+							transform: scale(1.065) translate(-50%, calc(-80% - 45px))
+							display: block
+							font-weight: 800
+							font-size: 62px
+							line-height: 1.0
+							font-family: $ah-hakushu-rs
+							letter-spacing: 0.0em
+							background: linear-gradient(180deg, rgba($base, 1.0) 0%, rgba($black-color, 1.0) 100%)
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+							background-clip: text
+							text-fill-color: transparent
+							&::selection
+								color: $base
+								-webkit-text-fill-color: $base
+						.bottom-char
+							position: absolute
+							left: 50%
+							bottom: 0
+							transform-origin: top center
+							transform: translate(-50%, calc(95% + 45px))
+							display: block
+							font-weight: 800
+							font-size: 62px
+							line-height: 1.0
+							font-family: $ah-hakushu-rs
+							letter-spacing: 0.0em
+							background: linear-gradient(180deg, rgba($black-color, 1.0) 0%, rgba($base, 1.0) 100%)
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+							background-clip: text
+							text-fill-color: transparent
+							&::selection
+								color: $base
+								-webkit-text-fill-color: $base
+						.logo-box
+							position: absolute
+							left: 50%
+							bottom: 0
+							transform-origin: top center
+							transform: translate(-50%, calc(100% + 45px + 62px + 80px))
+							display: flex
+							justify-content: center
+							align-items: center
+							flex-direction: column
+							width: fit-content
+							height: fit-content
+							.logo
+								display: block
+								width: 120px
+							.streak-box
+								display: block
+								width: fit-content
+								margin-top: 20px
+								position: relative
+								.base
+									display: block
+									width: 160px
+									height: 4px
+									background: linear-gradient(to right, rgba($base, 0), $base, rgba($base, 0))
+									box-shadow: 0px 0px 1px $base
+									filter: blur(2.5px)
+								.highlight
+									position: absolute
+									top: 0
+									left: 0
+									bottom: 0
+									margin: auto
+									display: block
+									width: 160px
+									height: 2px
+									background: linear-gradient(to right, rgba(#fff, 0), #fff, rgba(#fff, 0))
+									filter: blur(1.5px)
+									z-index: 1
+				.scroll-box
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 60px
+					margin: auto
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					width: fit-content
+					height: fit-content
+					.inner-box
+						display: block
+						width: fit-content
+						height: fit-content
+						position: relative
+						box-shadow: 1px 2px 3px rgba(#000, 0.1)
+						.base
+							display: block
+							width: 6px
+							height: 80px
+							border-radius: 3px
+							background: #E0E0E0
+						.progress
+							position: absolute
+							top: 0
+							left: 0
+							margin: auto
+							display: block
+							width: 100%
+							height: 60%
+							border-radius: 3px
+							background: linear-gradient(to bottom, #C0FFC0, $base)
+							z-index: 1
+				// .swiper
+				// 	position: absolute
+				// 	display: block
+				// 	width: 100%
+				// 	height: fit-content
+				// 	overflow: hidden
+				// 	z-index: 2
+				// 	&.slider-box1
+				// 		left: 0
+				// 		bottom: 0
+				// 		transform-origin: left bottom
+				// 		transform: translateX(calc(110px + 40px)) rotateZ(-90deg)
+				// 	&.slider-box2
+				// 		right: 0
+				// 		bottom: 0
+				// 		transform-origin: right bottom
+				// 		transform: translateX(calc(-110px - 40px)) rotateZ(90deg)
+				// 	.swiper-wrapper
+				// 		height: fit-content
+				// 		transition-timing-function: linear !important
+				// 		.swiper-slide
+				// 			display: block
+				// 			width: fit-content
+				// 			height: fit-content
+				// 			> p
+				// 				display: block
+				// 				margin-left: 50px
+				// 				font-weight: 900
+				// 				font-size: 140px
+				// 				line-height: 1.0
+				// 				font-family: $eurostile-extended
+				// 				letter-spacing: -0.05em
+				// 				background: linear-gradient(180deg, rgba($white-light, 0.3) 0%, rgba($white-dark, 0.3) 100%)
+				// 				-webkit-background-clip: text
+				// 				-webkit-text-fill-color: transparent
+				// 				background-clip: text
+				// 				text-fill-color: transparent
+				.ticker
+					position: absolute
+					display: block
+					width: 100%
+					height: fit-content
+					padding: 100px 0 100px
+					background: linear-gradient(to bottom, #fff 0%, #fff 70%, rgba(#fff, 0.0) 100%)
+					overflow: hidden
+					z-index: 2
+					&.slider-box1
+						left: 0
+						bottom: 0
+						transform-origin: left bottom
+						transform: translateX(calc(110px + 40px + 100px)) rotateZ(-90deg)
+						.ticker-track
+							animation: telop 12.0s linear infinite
+					&.slider-box2
+						right: 0
+						bottom: 0
+						transform-origin: right bottom
+						transform: translateX(calc(-110px - 40px - 100px)) rotateZ(90deg)
+						.ticker-track
+							animation: telop 12.0s -4.0s linear infinite
+					.ticker-track
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						width: max-content
+						will-change: transform
+						.ticker-group
+							display: flex
+							flex: 0 0 auto
+							width: max-content
+							> p
+								display: block
+								flex: 0 0 auto
+								width: max-content
+								margin-left: 50px
+								font-weight: 900
+								font-size: 140px
+								line-height: 1.0
+								font-family: $eurostile-extended
+								letter-spacing: -0.05em
+								color: #777
+								opacity: 0.3
+								transition: color 1.0s 1.0s ease-in-out, animation 0.5s ease-in-out
+								&:nth-of-type(2n)
+									animation: 1.6s telopTextBlink linear infinite
+								&:nth-of-type(2n+1)
+									animation: 1.6s 0.8s telopTextBlink linear infinite
+@keyframes textKinetic
+	0%
+		opacity: 0.0
+		filter: blur(5px)
+		transform: scale(10)
+	100%
+		opacity: 1.0
+		filter: blur(0)
+		transform: scale(1.0)
+@keyframes telopTextBlink
+	0%
+		opacity: 0.1
+	50%
+		opacity: 1.0
+	100%
+		opacity: 0.1
+@keyframes telop
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(-50%)
+#belief-scroll-space
+	display: block
+	width: 100%
+	height: 120vh
+	pointer-events: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#service
+	display: block
+	width: 100%
+	height: fit-content
+	&.is-show
+		.container
+			.sticky-box
+				.content-box
+					.rect
+						border: none
+						background: $base
+					.circle-box
+						.circle1
+							border: none
+							background: $base
+						.circle2
+							border: none
+							background: $base
+						.small-circle
+							border: none
+							background: $base
+					.pixel
+						opacity: 1.0
+					.black-bg
+						opacity: 0.0
+			.scroll-content-box
+				.tit-box
+					.en
+						.word
+							.char
+								&::before, &::after
+									color: #333
+					.desc-box
+						> p
+							color: #111
+	&.is-show.is-show2
+		.container
+			.sticky-box
+				.content-box
+					.rect
+						border: none
+						background: $base
+						transform: translate(-58%, -40%) rotate(0deg)
+						opacity: 0.0
+						transition: all 0.5s 0.2s ease-in-out
+					.circle-box
+						.circle1
+							border: none
+							background: $base
+							transform: scale(0.0)
+							transition: all 0.5s 0.4s cubic-bezier(0.68, -1.2, 0.8, 1.4)
+						.circle2
+							border: none
+							background: $base
+							transform: scale(0.0)
+							transition: all 0.5s 0.6s cubic-bezier(0.68, -1.2, 0.8, 1.4)
+						.small-circle
+							border: none
+							background: $base
+							transform: scale(0.0)
+							transition: all 0.5s 0.6s cubic-bezier(0.68, -1.2, 0.8, 1.4)
+					.pixel
+						opacity: 0.0
+						transition: all 0.8s 0.8s ease-in-out
+			.scroll-content-box
+				.step-box
+					.circle-trace-box
+						opacity: 1.0
+						.circle-ele
+							opacity: 1.0
+							transform: scale(1.0)
+							transition: all 1.0s cubic-bezier(0.68, -1.2, 0.8, 1.4)
+							@for $i from 1 through 4
+								&:nth-child(#{$i})
+									transition-delay: 0.3s * ($i - 1)
+	&.is-show.is-show2.is-show3
+		.container
+			.sticky-box
+				.content-box
+					// .rect
+					// .circle-box
+					// 	.circle1
+					// 	.circle2
+					// 	.small-circle
+					// .pixel
+					.black-bg
+						opacity: 1.0
+			.scroll-content-box
+				.step-box
+					.circle-trace-box
+						opacity: 0.0
+					.road-box
+						opacity: 1.0
+						.inner-box
+					.left-box
+						.step-ele
+							&:nth-of-type(1)
+								.img-box .img.base
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+							&:nth-of-type(2)
+								.img-box .img.base
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+									transition-delay: 0.2s
+							.head-box
+								.num
+								> h2
+									background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#aaa, 1.0) 100%)
+									-webkit-background-clip: text
+									.green
+										background: linear-gradient(180deg, rgba($black-color, 1.0) 0%, rgba($base, 1.0) 100%)
+										-webkit-background-clip: text
+							.desc-box
+								> p
+									color: #fff
+					.right-box
+						.step-ele
+							&:nth-of-type(1)
+								.img-box .img.base
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+									transition-delay: 0.0s
+							&:nth-of-type(2)
+								.img-box .img.base
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+									transition-delay: 0.4s
+							.head-box
+								.num
+								> h2
+									background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#aaa, 1.0) 100%)
+									-webkit-background-clip: text
+									.green
+										background: linear-gradient(180deg, rgba($black-color, 1.0) 0%, rgba($base, 1.0) 100%)
+										-webkit-background-clip: text
+							.desc-box
+								> p
+									color: #fff
+									&::selection
+										color: #555
+	.container
+		display: block
+		width: 100%
+		height: 100%
+		.sticky-box
+			position: sticky
+			top: 0
+			display: block
+			width: 100%
+			height: 100vh
+			background: url("../image/top/service/bg.webp")
+			background-size: cover
+			background-position: center
+			z-index: 0
+			.content-box
+				position: relative
+				width: 100%
+				height: 100vh
+				overflow: hidden
+				.rect
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 60vw
+					aspect-ratio: 2 / 1
+					border: solid 2px $base
+					transform: translate(-58%, -40%) rotate(-20deg)
+					z-index: 3
+					transition: all 0.5s ease-in-out
+				.circle-box
+					position: absolute
+					top: 250px
+					left: 500px
+					width: 220px
+					aspect-ratio: 1 / 1
+					z-index: 3
+					.inner-box
+						display: block
+						width: 100%
+						height: 100%
+						position: relative
+						.circle1
+							display: block
+							width: 100%
+							aspect-ratio: 1 / 1
+							border-radius: 50%
+							border: solid 2px $base
+							transition: all 0.5s ease-in-out
+						.circle2
+							position: absolute
+							left: calc(-163% - 60px)
+							bottom: calc(-163% - 60px)
+							display: block
+							width: 163%
+							aspect-ratio: 1 / 1
+							border-radius: 50%
+							border: solid 2px $base
+							transition: all 0.5s ease-in-out
+						.small-circle
+							position: absolute
+							right: 0
+							bottom: -115%
+							display: block
+							width: 14%
+							aspect-ratio: 1 / 1
+							border-radius: 50%
+							border: solid 2px $base
+							transform-origin: center right
+							transition: all 0.5s ease-in-out
+				.pixel
+					position: absolute
+					right: 120px
+					bottom: 0
+					display: block
+					width: 430px
+					opacity: 0.1
+					z-index: 2
+					transition: all 0.5s ease-in-out
+				.black-bg
+					position: absolute
+					top: 0
+					left: 0
+					width: 100vw
+					height: 100vh
+					background: $black-bg
+					opacity: 1.0
+					z-index: 1
+					transition: all 0.5s ease-in-out
+		.scroll-content-box
+			display: block
+			width: 100%
+			padding-top: 150vh
+			padding-bottom: 35vh
+			margin-top: -100vh
+			z-index: 10
+			position: relative
+			.tit-box
+				display: flex
+				justify-content: flex-start
+				align-items: flex-end
+				flex-direction: column
+				width: fit-content
+				margin: 0 80px 0 auto
+				&.is-on
+					.en .char
+						&::before
+							animation: textTopReassemble 2.0s ease-in-out forwards
+						&::after
+							animation: textBottomReassemble 2.0s ease-in-out forwards
+					.desc-box > p
+						opacity: 1.0
+						transition-delay: 0.5s
+				.en
+					display: block
+					.word
+						.char
+							display: inline-block
+							font-weight: 900
+							font-size: 202px
+							line-height: 1.0
+							font-family: $eurostile-extended
+							letter-spacing: 0.0em
+							color: transparent
+							position: relative
+							&::before, &::after
+								position: absolute
+								top: 0
+								left: 0
+								content: attr(data-char)
+								display: block
+								width: 100%
+								height: 100%
+								color: $white-light
+								opacity: 0.0
+								visibility: visible !important
+							&::before
+								clip-path: polygon(0 0, 100% 0, 100% 45%, 0 55%)
+							&::after
+								clip-path: polygon(100% 45%, 100% 100%, 0 100%, 0 55%)
+							&::selection
+								color: #aaa
+								-webkit-text-fill-color: #aaa
+				.desc-box
+					display: flex
+					justify-content: flex-start
+					align-items: flex-end
+					flex-direction: column
+					width: fit-content
+					margin-top: 40px
+					> p
+						display: block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.5
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						color: #fff
+						opacity: 0.0
+						transition: all 0.5s ease-in-out
+						&::selection
+							color: #555
+			.step-box
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				flex-wrap: wrap
+				width: calc(100vw - 160px)
+				margin: 80vh auto 0
+				z-index: 10
+				position: relative
+				.circle-trace-box
+					position: absolute
+					left: 0
+					right: 0
+					top: 360px
+					margin: auto
+					display: block
+					width: 13%
+					height: 100vh
+					opacity: 0.0
+					transition: all 0.5s ease-in-out
+					.circle-ele
+						display: block
+						width: 100%
+						aspect-ratio: 1 / 1
+						margin-top: 40px
+						border-radius: 50%
+						background: rgba($base, 0.1)
+						opacity: 0
+						transform: scale(0.0)
+						&:nth-of-type(1)
+							margin-top: 0
+				.road-box
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 360px
+					margin: auto
+					display: block
+					width: 20%
+					height: 100vh
+					background-image: linear-gradient(to bottom, rgba(#999, 0.5) 60px, transparent 60px), linear-gradient(to bottom, rgba(#999, 0.5) 60px, transparent 60px)
+					background-size: 2px 90px, 2px 90px
+					background-repeat: repeat-y, repeat-y
+					background-position: left top, right top
+					animation: borderLoop 0.3s linear infinite
+					opacity: 0.0
+					pointer-events: none
+					transition: all 0.5s ease-in-out
+					.inner-box
+						display: block
+						width: 100%
+						height: 100%
+						animation: carTopdownShake 6.0s linear infinite
+						position: relative
+						.car-box
+							position: absolute
+							left: 0
+							right: 0
+							bottom: 30%
+							margin: auto
+							display: block
+							width: 54%
+							.inside-box
+								display: block
+								width: fit-content
+								height: fit-content
+								position: relative
+								.car
+									display: block
+									width: 100%
+									z-index: 11
+									position: relative
+									pointer-events: none
+								.l-light
+									position: absolute
+									left: -45%
+									bottom: -40%
+									display: block
+									width: 108%
+									pointer-events: none
+								.r-light
+									position: absolute
+									right: -45%
+									bottom: -40%
+									display: block
+									width: 108%
+									pointer-events: none
+				.top-diagonal-box
+					position: absolute
+					top: 0
+					right: 0
+					display: block
+					width: 50%
+					$diagonal-width: 640
+					$diagonal-height: 280
+					$angle: math.atan(math.div($diagonal-height, $diagonal-width))
+					aspect-ratio: math.div($diagonal-width, $diagonal-height)
+					.inner-box
+						display: block
+						width: 100%
+						height: 100%
+						position: relative
+						.label-box
+							position: absolute
+							top: 0
+							left: 0
+							right: 0
+							bottom: 0
+							margin: auto
+							display: flex
+							justify-content: center
+							align-items: center
+							width: fit-content
+							height: fit-content
+							padding: 10px 20px
+							background: $black-color
+							> h2
+								display: block
+								font-weight: 800
+								font-size: 12px
+								line-height: 1.0
+								font-family: $ah-hakushu-rs
+								letter-spacing: 0.1em
+								color: #fff
+						&::before
+							position: absolute
+							top: 0
+							left: 0
+							content: ""
+							display: block
+							width: 40%
+							height: 1px
+							background: $base
+							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+							transform-origin: left top
+							transform: rotate($angle)
+						&::after
+							position: absolute
+							right: 0
+							bottom: 0
+							content: ""
+							display: block
+							width: 40%
+							height: 1px
+							background: $base
+							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+							transform-origin: right bottom
+							transform: rotate($angle)
+				.bottom-diagonal-box
+					position: absolute
+					left: 0
+					bottom: 0
+					display: block
+					width: 50%
+					$diagonal-width: 640
+					$diagonal-height: 280
+					$angle: math.atan(math.div($diagonal-height, $diagonal-width))
+					aspect-ratio: math.div($diagonal-width, $diagonal-height)
+					.inner-box
+						display: block
+						width: 100%
+						height: 100%
+						position: relative
+						&::before
+							position: absolute
+							top: 0
+							left: 0
+							content: ""
+							display: block
+							width: 40%
+							height: 1px
+							background: $base
+							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+							transform-origin: left top
+							transform: rotate($angle)
+						&::after
+							position: absolute
+							right: 0
+							bottom: 0
+							content: ""
+							display: block
+							width: 40%
+							height: 1px
+							background: $base
+							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+							transform-origin: right bottom
+							transform: rotate($angle)
+				.left-box
+					display: block
+					width: 34.5%
+					.step-ele
+						display: block
+						width: 100%
+						&:nth-of-type(1)
+							.head-box
+								.num
+									letter-spacing: 0.2em
+						&:nth-of-type(2)
+							margin-top: 80px
+						&.is-glitch
+							.img-box
+								background: #000
+								animation: container-shake 0.4s linear forwards
+								.img
+									opacity: 1.0
+									&.base
+										transition: box-shadow 1.0s cubic-bezier(0.68, -1.2, 0.8, 1.4)
+								.img.red-layer
+									opacity: 1.0
+									filter: drop-shadow(0 0 0 red) hue-rotate(300deg) saturate(3.0)
+									animation: glitch-anim-1 0.4s linear forwards
+								.img.cyan-layer
+									opacity: 1.0
+									filter: drop-shadow(0 0 0 cyan) hue-rotate(180deg) saturate(3.0)
+									animation: glitch-anim-2 0.4s linear forwards
+							.desc-box
+								> p
+									@for $i from 1 through 4
+										&:nth-child(#{$i})
+											transform: translateY(0)
+											filter: blur(0)
+											opacity: 1.0
+						.img-box
+							display: block
+							width: 400px
+							position: relative
+							.img
+								display: block
+								width: 100%
+								height: 100%
+								object-fit: cover
+								object-position: center
+								opacity: 0.0
+								&.red-layer, &.cyan-layer
+									position: absolute
+									top: 0
+									left: 0
+									opacity: 0.0
+									mix-blend-mode: screen
+						.head-box
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: 100%
+							margin-top: 40px
+							.num
+								display: block
+								width: 23px
+								font-weight: 400
+								font-size: 14px
+								line-height: 1.0
+								font-family: $ferry
+								letter-spacing: 0.05em
+								color: #ccc
+							> h2
+								display: block
+								margin-left: 17px
+								font-weight: 700
+								font-size: 32px
+								line-height: 1.0
+								font-family: $noto-sans
+								letter-spacing: 0.25em
+								background: linear-gradient(180deg, rgba(#999, 1.0) 0%, rgba(#333, 1.0) 100%)
+								-webkit-background-clip: text
+								-webkit-text-fill-color: transparent
+								background-clip: text
+								text-fill-color: transparent
+								transition: all 0.5s ease-in-out
+								&::selection
+									color: #555
+									-webkit-text-fill-color: #555
+								.green
+									display: inline
+									font-weight: 700
+									font-size: 32px
+									line-height: 1.0
+									font-family: $noto-sans
+									letter-spacing: 0.25em
+									background: linear-gradient(180deg, rgba(#999, 1.0) 0%, rgba(#333, 1.0) 100%)
+									-webkit-background-clip: text
+									-webkit-text-fill-color: transparent
+									background-clip: text
+									text-fill-color: transparent
+									transition: all 0.5s ease-in-out
+						.desc-box
+							display: block
+							padding-left: 40px
+							margin-top: 25px
+							> p
+								display: block
+								margin-top: 1.4em
+								font-weight: 400
+								font-size: 14px
+								line-height: 1.5
+								font-family: $noto-sans
+								letter-spacing: 0.1em
+								color: #555
+								opacity: 0.0
+								transition: all 0.5s ease-in-out
+								&:nth-of-type(1)
+									margin-top: 0
+								@for $i from 1 through 4
+									&:nth-child(#{$i})
+										transform: translateY(1em + 2em * (4 - $i) / (3 * $i))
+										transition-delay: 0.3s * ($i - 1)
+										filter: blur(1em)
+				.right-box
+					display: block
+					width: 34.5%
+					margin-top: 380px
+					.step-ele
+						display: block
+						width: 100%
+						&:nth-of-type(2)
+							margin-top: 80px
+						&.is-glitch
+							.img-box
+								background: #000
+								animation: container-shake 0.4s linear forwards
+								.img
+									opacity: 1.0
+									&.base
+										transition: box-shadow 1.0s cubic-bezier(0.68, -1.2, 0.8, 1.4)
+								.img.red-layer
+									opacity: 1.0
+									filter: drop-shadow(0 0 0 red) hue-rotate(300deg) saturate(3.0)
+									animation: glitch-anim-1 0.4s linear forwards
+								.img.cyan-layer
+									opacity: 1.0
+									filter: drop-shadow(0 0 0 cyan) hue-rotate(180deg) saturate(3.0)
+									animation: glitch-anim-2 0.4s linear forwards
+							.desc-box
+								> p
+									@for $i from 1 through 4
+										&:nth-child(#{$i})
+											transform: translateY(0)
+											filter: blur(0)
+											opacity: 1.0
+						.img-box
+							display: block
+							width: 400px
+							position: relative
+							.img
+								display: block
+								width: 100%
+								height: 100%
+								object-fit: cover
+								object-position: center
+								opacity: 0.0
+								&.red-layer, &.cyan-layer
+									position: absolute
+									top: 0
+									left: 0
+									opacity: 0.0
+									mix-blend-mode: screen
+						.head-box
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: 100%
+							margin-top: 40px
+							.num
+								display: block
+								width: 23px
+								font-weight: 400
+								font-size: 14px
+								line-height: 1.0
+								font-family: $ferry
+								letter-spacing: 0.05em
+								color: #ccc
+							> h2
+								display: block
+								margin-left: 17px
+								font-weight: 700
+								font-size: 32px
+								line-height: 1.0
+								font-family: $noto-sans
+								letter-spacing: 0.25em
+								background: linear-gradient(180deg, rgba(#999, 1.0) 0%, rgba(#333, 1.0) 100%)
+								-webkit-background-clip: text
+								-webkit-text-fill-color: transparent
+								background-clip: text
+								text-fill-color: transparent
+								transition: all 0.5s ease-in-out
+								&::selection
+									color: #555
+									-webkit-text-fill-color: #555
+								.green
+									display: inline
+									font-weight: 700
+									font-size: 32px
+									line-height: 1.0
+									font-family: $noto-sans
+									letter-spacing: 0.25em
+									background: linear-gradient(180deg, rgba(#999, 1.0) 0%, rgba(#333, 1.0) 100%)
+									-webkit-background-clip: text
+									-webkit-text-fill-color: transparent
+									background-clip: text
+									text-fill-color: transparent
+									transition: all 0.5s ease-in-out
+						.desc-box
+							display: block
+							padding-left: 40px
+							margin-top: 25px
+							> p
+								display: block
+								margin-top: 1.4em
+								font-weight: 400
+								font-size: 14px
+								line-height: 1.5
+								font-family: $noto-sans
+								letter-spacing: 0.1em
+								color: #555
+								opacity: 0.0
+								transition: all 0.5s ease-in-out
+								&:nth-of-type(1)
+									margin-top: 0
+								@for $i from 1 through 4
+									&:nth-child(#{$i})
+										transform: translateY(1em + 2em * (4 - $i) / (3 * $i))
+										transition-delay: 0.3s * ($i - 1)
+										filter: blur(1em)
+			.link-box
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 360px
+				padding: 24px 40px 24px 60px
+				margin: 160px auto 0
+				border-radius: 39px
+				background: #fff
+				transition: box-shadow 1.0s ease-in-out
+				&:hover
+					box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+					> p
+						color: $base
+					.arrow-box
+						.v-line
+							background: $base
+						.arrow
+							path
+								fill: $base
+				> p
+					display: block
+					font-weight: 700
+					font-size: 18px
+					line-height: 1.0
+					font-family: $noto-sans
+					letter-spacing: 0.15em
+					color: #333
+					transition: all 0.5s ease-in-out
+				.arrow-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					.v-line
+						display: block
+						width: 0.5px
+						height: 30px
+						background: #333
+						transition: all 0.5s ease-in-out
+					.arrow
+						display: block
+						width: 17px
+						margin-left: 35px
+						animation: arrowMove 3.0s linear infinite
+						path
+							fill: #333
+							transition: all 0.5s ease-in-out
+@keyframes textTopReassemble
+	0%
+		color: $base
+		filter: blur(10px)
+		opacity: 0.0
+	30%
+		filter: blur(0)
+		opacity: 1.0
+	60%
+		color: $base
+	80%
+		color: $white-light
+	100%
+		filter: blur(0)
+		opacity: 1.0
+@keyframes textBottomReassemble
+	0%
+		color: #111
+		transform: translate(30%, 0)
+		filter: blur(10px)
+		opacity: 0.0
+	30%
+		transform: translate(30%, 0)
+		filter: blur(0)
+		opacity: 1.0
+	40%
+		transform: translate(0, 0)
+	60%
+		color: #111
+	80%
+		color: $white-light
+		clip-path: polygon(100% 45%, 100% 100%, 0 100%, 0 55%)
+	80.5%
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)
+	100%
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)
+		opacity: 1.0
+@keyframes container-shake
+	0%
+		transform: translate(0, 0) skewX(0deg)
+	10%
+		transform: translate(-5px, 2px) skewX(-4deg)
+	20%
+		transform: translate(4px, -2px) skewX(5deg)
+	30%
+		transform: translate(0, 0) skewX(0deg)
+	40%
+		transform: translate(-3px, -3px) skewX(2deg)
+	50%
+		transform: translate(3px, 4px) skewX(-2deg)
+	60%
+		transform: translate(0, 0) skewX(0deg)
+	100%
+		transform: translate(0, 0) skewX(0deg)
+@keyframes glitch-anim-1
+	0%
+		clip-path: inset(40% 0 50% 0)
+		transform: translate(-8px, 0)
+	20%
+		clip-path: inset(10% 0 80% 0)
+		transform: translate(12px, 0)
+	40%
+		clip-path: inset(75% 0 10% 0)
+		transform: translate(-15px, 0)
+	60%
+		clip-path: inset(30% 0 60% 0)
+		transform: translate(5px, 0)
+	80%
+		clip-path: inset(90% 0 2% 0)
+		transform: translate(-5px, 0)
+	99%
+		opacity: 1.0
+	100%
+		opacity: 0.0
+		clip-path: inset(0 0 0 0)
+		transform: translate(0, 0)
+@keyframes glitch-anim-2
+	0%
+		clip-path: inset(25% 0 58% 0)
+		transform: translate(10px, 0)
+	20%
+		clip-path: inset(85% 0 5% 0)
+		transform: translate(-10px, 0)
+	40%
+		clip-path: inset(15% 0 70% 0)
+		transform: translate(18px, 0)
+	60%
+		clip-path: inset(60% 0 15% 0)
+		transform: translate(-8px, 0)
+	80%
+		clip-path: inset(5% 0 90% 0)
+		transform: translate(4px, 0)
+	99%
+		opacity: 1.0
+	100%
+		opacity: 0
+		clip-path: inset(0 0 0 0)
+		transform: translate(0, 0)
+@keyframes arrowMove
+	0%
+		transform: translateX(0)
+	1.83%
+		transform: translateX(36.95%)
+	2.64%
+		transform: translateX(45.6%)
+	3.03%
+		transform: translateX(47.7%)
+	3.42%
+		transform: translateX(48.35%)
+	3.81%
+		transform: translateX(47.7%)
+	4.2%
+		transform: translateX(45.8%)
+	5.07%
+		transform: translateX(37.55%)
+	8.7%
+		transform: translateX(-15.2%)
+	9.54%
+		transform: translateX(-22.3%)
+	10.35%
+		transform: translateX(-25.55%)
+	10.71%
+		transform: translateX(-25.85%)
+	11.1%
+		transform: translateX(-25.45%)
+	11.88%
+		transform: translateX(-22.75%)
+	15.36%
+		transform: translateX(1.75%)
+	16.32%
+		transform: translateX(6.3%)
+	17.25%
+		transform: translateX(8.55%)
+	17.97%
+		transform: translateX(8.9%)
+	18.75%
+		transform: translateX(8.2%)
+	21.84%
+		transform: translateX(1.25%)
+	23.46%
+		transform: translateX(-0.85%)
+	24.84%
+		transform: translateX(-1.15%)
+	27.9%
+		transform: translateX(-0.2%)
+	30%, 100%
+		transform: translateX(0)
+@keyframes borderLoop
+	0%
+		background-position: left 0px, right 0px
+	100%
+		background-position: left -90px, right -90px
+@keyframes carTopdownShake
+	0%
+		transform: rotate(0deg) translateY(0px)
+	10%
+		transform: rotate(0.6deg) translateY(-0.5px)
+	20%
+		transform: rotate(-0.4deg) translateY(0.3px)
+	30%
+		transform: rotate(0.8deg) translateY(-0.2px)
+	40%
+		transform: rotate(-0.7deg) translateY(0.5px)
+	50%
+		transform: rotate(0.3deg) translateY(-0.4px)
+	60%
+		transform: rotate(-0.5deg) translateY(0.2px)
+	70%
+		transform: rotate(0.7deg) translateY(-0.3px)
+	80%
+		transform: rotate(-0.8deg) translateY(0.4px)
+	90%
+		transform: rotate(0.4deg) translateY(-0.1px)
+	100%
+		transform: rotate(0deg) translateY(0px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#landscape
+	display: block
+	width: 100%
+	margin-top: calc(-0.054*100vw - 1px)
+	z-index: 2
+	position: relative
+	.img
+		display: block
+		width: 100%
+		z-index: 10
+		position: relative
+	.dots
+		position: absolute
+		bottom: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 50%
+		background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
+		background-size: 16px 16px
+		z-index: 9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#expert
+	display: block
+	width: 100%
+	height: 250vh
+	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
+	background-size: 16px 16px
+	&.is-show
+		.container
+			.sticky-box
+				.content-box
+					.txt-box
+						.sentence-box
+							.center
+								color: #111
+								animation: none
+							.en-line
+								&.top1
+									top: -50%
+									opacity: 1.0
+								&.top2
+									top: -90%
+									opacity: 1.0
+								&.top3
+									top: -120%
+									opacity: 1.0
+								&.top4
+									top: -140%
+									opacity: 1.0
+								&.bottom1
+									bottom: -50%
+									opacity: 1.0
+								&.bottom2
+									bottom: -90%
+									opacity: 1.0
+								&.bottom3
+									bottom: -120%
+									opacity: 1.0
+								&.bottom4
+									bottom: -140%
+									opacity: 1.0
+	.container
+		display: block
+		width: 100%
+		height: 100%
+		.sticky-box
+			position: sticky
+			top: 0
+			display: block
+			width: 100%
+			height: 100vh
+			.content-box
+				position: relative
+				width: 100%
+				height: 100vh
+				overflow: hidden
+				.txt-box
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: fit-content
+					height: fit-content
+					.sentence-box
+						display: flex
+						justify-content: center
+						align-items: center
+						flex-direction: column
+						width: fit-content
+						height: fit-content
+						position: relative
+						.center
+							display: block
+							background: #fff
+							font-weight: 900
+							font-size: 240px
+							line-height: 1.0
+							font-family: $eurostile-extended
+							letter-spacing: -0.1em
+							color: $base
+							clip-path: polygon(-5% 15%, 105% 15%, 105% 97%, -5% 97%)
+							animation: greenLoop 2.0s ease-in-out infinite
+							z-index: 10
+							position: relative
+							transition: color 0.5s ease-in-out
+						.en-line
+							position: absolute
+							left: 0
+							display: block
+							background: #fff
+							font-weight: 900
+							font-size: 240px
+							line-height: 1.0
+							font-family: $eurostile-extended
+							letter-spacing: -0.1em
+							color: #fff
+							-webkit-text-stroke: 2px $base
+							z-index: 9
+							&.top1
+								top: 0%
+								clip-path: polygon(-5% 15%, 105% 15%, 105% 92%, -5% 92%)
+								opacity: 0.0
+								z-index: 8
+								transition: all 1.0s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+							&.top2
+								top: 0%
+								clip-path: polygon(-5% 15%, 105% 15%, 105% 92%, -5% 92%)
+								opacity: 0.0
+								z-index: 7
+								transition: all 1.0s 0.2s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+							&.top3
+								top: 0%
+								clip-path: polygon(-5% 15%, 105% 15%, 105% 92%, -5% 92%)
+								opacity: 0.0
+								z-index: 6
+								transition: all 1.0s 0.4s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+							&.top4
+								top: 0%
+								clip-path: polygon(-5% 15%, 105% 15%, 105% 92%, -5% 92%)
+								opacity: 0.0
+								z-index: 5
+								transition: all 1.0s 0.6s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+							&.bottom1
+								bottom: 0%
+								clip-path: polygon(-5% 20%, 105% 20%, 105% 97%, -5% 97%)
+								opacity: 0.0
+								z-index: 8
+								transition: all 1.0s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+							&.bottom2
+								bottom: 0%
+								clip-path: polygon(-5% 20%, 105% 20%, 105% 97%, -5% 97%)
+								opacity: 0.0
+								z-index: 7
+								transition: all 1.0s 0.2s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+							&.bottom3
+								bottom: 0%
+								clip-path: polygon(-5% 20%, 105% 20%, 105% 97%, -5% 97%)
+								opacity: 0.0
+								z-index: 6
+								transition: all 1.0s 0.4s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+							&.bottom4
+								bottom: 0%
+								clip-path: polygon(-5% 20%, 105% 20%, 105% 97%, -5% 97%)
+								opacity: 0.0
+								z-index: 5
+								transition: all 1.0s 0.6s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1)
+@keyframes greenLoop
+	0%
+		color: #00a000
+	16.6%
+		color: #007500
+	33.3%
+		color: #00c800
+	50%
+		color: #10b530
+	66.6%
+		color: #006000
+	83.3%
+		color: #45d045
+	100%
+		color: #00a000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#category
+	display: block
+	width: 100%
+	height: fit-content
+	padding-top: 260px
+	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
+	background-size: 16px 16px
+	.container
+		display: block
+		width: 100%
+		height: 100%
+		.sticky-box
+			position: sticky
+			top: 0
+			display: block
+			width: 100%
+			height: 100vh
+			background: url("../image/top/category/pixel-bg.webp")
+			background-size: cover
+			background-position: center
+			z-index: 0
+			.content-box
+				position: relative
+				width: 100%
+				height: 100vh
+				background: #00C000
+				// overflow: hidden
+				.pixel
+					display: block
+					width: 100%
+					height: 100%
+					object-fit: cover
+					object-position: center
+					mix-blend-mode: screen
+					z-index: 3
+					position: relative
+				.top-brush-stroke
+					position: absolute
+					top: -50px
+					left: 50%
+					transform: translate(-50%, 0)
+					display: block
+					width: 100%
+					height: 50px
+					object-fit: cover
+					object-position: center
+					z-index: 2
+				.bottom-brush-stroke
+					position: absolute
+					bottom: -100px
+					left: 50%
+					transform: translate(-50%, 0)
+					display: block
+					width: 100%
+					height: 100px
+					object-fit: cover
+					object-position: center
+					z-index: 2
+				.top-grunge-paint
+					position: absolute
+					top: -175px
+					right: 120px
+					display: block
+					width: 400px
+					z-index: 1
+				.bottom-grunge-paint
+					position: absolute
+					left: 120px
+					bottom: -190px
+					display: block
+					width: 600px
+					z-index: 1
+		.scroll-content-box
+			display: block
+			width: 100%
+			padding-top: 25vh
+			padding-bottom: 25vh
+			margin-top: -100vh
+			z-index: 10
+			position: relative
+			.video-box
+				display: flex
+				justify-content: space-between
+				align-items: center
+				flex-wrap: wrap
+				width: calc(100vw - 160px)
+				margin: 0 auto
+				.video-ele
+					display: block
+					width: calc(50% - 20px)
+					aspect-ratio: 1 / 1
+					&:hover
+						.inner-box
+							box-shadow: 0px 0px 4px #fff, 0px 0px 16px rgba(#fff, 0.8), 0px 0px 48px rgba(#fff, 0.5), 0px 0px 120px rgba(#fff, 0.3)
+							.base-box
+								.video
+									transform: scale(1.05)
+							.cat-tit
+								opacity: 1.0
+							.arrow
+								opacity: 1.0
+							.desc-box
+								opacity: 1.0
+							.img-box
+								opacity: 1.0
+								.img
+									transform: scale(1.05)
+							.bg
+								opacity: 1.0
+					&:nth-of-type(2n)
+						.inner-box
+							.cat-tit
+								letter-spacing: 0.05em
+					&:nth-of-type(n+3)
+						margin-top: 80px
+					&:nth-of-type(5)
+						width: 100%
+						height: calc(50% - 20px)
+						aspect-ratio: initial
+						.inner-box
+							.cat-tit
+								letter-spacing: 0.05em
+					.inner-box
+						display: block
+						width: 100%
+						height: 100%
+						border-radius: 10px
+						overflow: hidden
+						position: relative
+						transition: all 1.0s ease-in-out
+						.base-box
+							display: block
+							width: 100%
+							height: 100%
+							z-index: 20
+							position: relative
+							.video
+								display: block
+								width: 100%
+								height: 100%
+								object-fit: cover
+								object-position: center
+								filter: saturate(0)
+								transition: all 0.5s ease-in-out
+						.cat-tit
+							position: absolute
+							top: 65px
+							left: 60px
+							font-weight: 400
+							font-size: 90px
+							line-height: 1.0
+							font-family: $taw-byakkokaisho-eye
+							letter-spacing: 0.25em
+							color: #fff
+							opacity: 0.0
+							z-index: 22
+							transition: all 0.5s 0.3s ease-in-out
+							&::selection
+								color: #555
+						.arrow
+							position: absolute
+							top: 91px
+							right: 60px
+							display: block
+							width: 61px
+							opacity: 0.0
+							z-index: 22
+							transition: all 0.5s 0.3s ease-in-out
+						.desc-box
+							position: absolute
+							left: 60px
+							bottom: 50px
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							flex-wrap: wrap
+							width: calc(100% - 120px)
+							opacity: 0.0
+							z-index: 22
+							transition: all 0.5s 0.5s ease-in-out
+							> li
+								display: inline-block
+								font-weight: 400
+								font-size: 14px
+								line-height: 1.5
+								font-family: $noto-sans
+								letter-spacing: 0.1em
+								color: #fff
+								&::selection
+									color: #555
+								&::after
+									content: "、"
+									display: inline
+									font-weight: 400
+									font-size: 14px
+									line-height: 1.5
+									font-family: $noto-sans
+									letter-spacing: 0.1em
+									color: #fff
+								&:last-of-type::after
+									display: none
+						.img-box
+							position: absolute
+							top: 0
+							left: 0
+							display: block
+							width: 100%
+							height: 100%
+							opacity: 0.0
+							transition: all 0.5s ease-in-out
+							z-index: 21
+							.img
+								display: block
+								width: 100%
+								height: 100%
+								object-fit: cover
+								object-position: center
+								transition: all 0.5s ease-in-out
+						.bg
+							position: absolute
+							top: 0
+							left: 0
+							display: block
+							width: 100%
+							height: 100%
+							background: linear-gradient(180deg, rgba(#000, 0.7) 0%, rgba(#000, 0.5) 20%, rgba(#000, 0.2) 50%, rgba(#000, 0.5) 70%, rgba(#000, 0.7) 100%)
+							opacity: 0.0
+							z-index: 21
+							transition: all 0.5s ease-in-out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#marugoto
+	display: block
+	width: 100%
+	padding-top: 45vh
+	padding-bottom: 0
+	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
+	background-size: 16px 16px
+	.content-box
+		display: block
+		width: 100%
+		height: 100%
+		position: relative
+		.tit-box
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			width: calc(100vw - 160px)
+			margin: 0 auto 0
+			.left-box
+				display: block
+				width: fit-content
+				.label-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					padding: 10px 25px 12px 20px
+					border-radius: 20px
+					border: solid 1px $base
+					background: #fff
+					.dots
+						display: block
+						width: 6px
+						margin-top: 3px
+						aspect-ratio: 1 / 1
+						border-radius: 50%
+						background: $base
+						box-shadow: 0 0 3px $base
+						position: relative
+						&::before
+							position: absolute
+							top: 0
+							left: 0
+							right: 0
+							bottom: 0
+							margin: auto
+							content: ""
+							display: block
+							width: 100%
+							height: 100%
+							border: solid 1px $base
+							border-radius: 50%
+							box-sizing: border-box
+							pointer-events: none
+							animation: dotPulsate 2.0s linear infinite
+						&::after
+							position: absolute
+							top: 0
+							left: 0
+							right: 0
+							bottom: 0
+							margin: auto
+							content: ""
+							display: block
+							width: 100%
+							height: 100%
+							border: solid 1px $base
+							border-radius: 50%
+							box-sizing: border-box
+							pointer-events: none
+							animation: dotPulsate 2.0s 1.0s linear infinite
+					.solution
+						display: block
+						margin-left: 15px
+						font-weight: 400
+						font-size: 16px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						background: linear-gradient(180deg, rgba(#999, 1.0) 0%, rgba(#333, 1.0) 100%)
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+						background-clip: text
+						text-fill-color: transparent
+						&::selection
+							color: #555
+							-webkit-text-fill-color: #555
+				.head-box
+					display: block
+					margin-top: 20px
+					width: fit-content
+					transform: translateY(50%)
+					position: relative
+					transition: all 0.5s ease-in-out
+					&.is-show
+						transform: translateY(0%)
+						.head-content
+							opacity: 1.0
+							&.reveal
+								opacity: 0.0
+								filter: blur(0)
+							// .start-bracket
+							// 	animation: 1.0s bracketBlink linear infinite
+							// .end-bracket
+							// 	animation: 1.0s bracketBlink linear infinite
+					.head-content
+						display: block
+						font-weight: 700
+						font-size: 42px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.15em
+						white-space: nowrap
+						background: linear-gradient(180deg, rgba(#999, 1.0) 0%, rgba(#333, 1.0) 100%)
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+						background-clip: text
+						text-fill-color: transparent
+						opacity: 0.0
+						transition: all 0.5s ease-in-out
+						&::selection
+							color: #555
+							-webkit-text-fill-color: #555
+						&.reveal
+							position: absolute
+							top: 0
+							left: 0
+							opacity: 1.0
+							filter: blur(20px)
+							pointer-events: none
+						.start-bracket
+							display: inline
+							margin-left: -0.3em
+							margin-right: 0.2em
+							font-weight: 700
+							font-size: 1.24em
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.0em
+							color: #555
+							&::selection
+								color: #555
+								-webkit-text-fill-color: #555
+						.inside
+							display: inline
+							font-weight: 700
+							font-size: 1.24em
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.05em
+							background: linear-gradient(180deg, rgba(#999, 1.0) 0%, rgba(#333, 1.0) 100%)
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+							background-clip: text
+							text-fill-color: transparent
+							&::selection
+								color: #555
+								-webkit-text-fill-color: #555
+						.end-bracket
+							display: inline
+							margin-left: 0.2em
+							margin-right: -0.2em
+							font-weight: 700
+							font-size: 1.24em
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.0em
+							color: #555
+							&::selection
+								color: #555
+								-webkit-text-fill-color: #555
+				.desc-box
+					display: block
+					width: fit-content
+					margin-top: 60px
+					&.is-show
+						> p
+							@for $i from 1 through 3
+								&:nth-child(#{$i})
+									transform: translateY(0)
+									filter: blur(0)
+									opacity: 1.0
+					> p
+						display: block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.5
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						color: #111
+						opacity: 0
+						transition: all 0.5s ease-in-out
+						@for $i from 1 through 3
+							&:nth-child(#{$i})
+								transform: translateY(1em + 2em * (4 - $i) / (3 * $i))
+								transition-delay: 0.1s * ($i - 1)
+								filter: blur(1em)
+			.right-box
+				display: block
+				width: 550px
+				overflow: hidden
+				opacity: 0.0
+				clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)
+				transition: all 1.0s 0.5s ease-in-out
+				&.is-show
+					opacity: 1.0
+					clip-path: polygon(0% 0%, 200% 0%, 100% 100%, 0% 100%)
+					.img
+						transform: scale(1.0)
+				.img
+					display: block
+					width: 100%
+					height: 100%
+					object-fit: cover
+					object-position: center
+					pointer-events: none
+					transform: scale(1.2)
+					transition: all 1.0s 0.5s ease-in-out
+		.project-box
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			width: calc(100vw - 160px)
+			padding-bottom: 50vh
+			margin: 15vh auto 0
+			.project-ele
+				display: block
+				width: calc(50% - 20px)
+				aspect-ratio: 1 / 1
+				border-radius: 10px
+				overflow: hidden
+				.inner-box
+					display: block
+					width: 100%
+					height: 100%
+					position: relative
+					user-select: none
+					cursor: ew-resize
+					.image-after
+						display: block
+						width: 100%
+						height: 100%
+						z-index: 1
+						position: relative
+						.img
+							display: block
+							width: 100%
+							height: 100%
+							object-fit: cover
+							object-position: center
+							pointer-events: none
+					.image-before
+						position: absolute
+						top: 0
+						left: 0
+						width: 50%
+						height: 100%
+						overflow: hidden
+						z-index: 2
+						.img
+							position: absolute
+							top: 0
+							left: 0
+							display: block
+							width: 100%
+							max-width: none
+							height: 100%
+							object-fit: cover
+							object-position: left center
+							pointer-events: none
+					.slider-line-box
+						position: absolute
+						top: 0
+						left: 50%
+						width: 1px
+						height: 100%
+						background: #bbb
+						box-shadow: 0 0 8px rgba(0, 0, 0, 0.5)
+						transform: translateX(-50%)
+						pointer-events: none
+						z-index: 6
+						.inner-box
+							display: block
+							width: 100%
+							height: 100%
+							position: relative
+							.circle
+								position: absolute
+								top: 50%
+								left: 50%
+								transform-origin: center
+								transform: translate(-50%, -50%)
+								display: block
+								width: 40px
+								aspect-ratio: 1 / 1
+								border-radius: 50%
+								background: $base
+					.cat-tit-box
+						position: absolute
+						top: 65px
+						left: 60px
+						display: block
+						width: fit-content
+						transform: translateX(-2.5em)
+						transition: all 0.5s ease-in-out
+						z-index: 10
+						&.is-show
+							transform: translateX(0%)
+							.inner-tit-box
+								.head-content
+									letter-spacing: 0.15em
+									opacity: 1.0
+									&.reveal
+										opacity: 0.0
+										filter: blur(0)
+						.inner-tit-box
+							display: block
+							width: fit-content
+							position: relative
+							.head-content
+								display: block
+								font-weight: 400
+								font-size: 60px
+								line-height: 1.0
+								font-family: $taw-byakkokaisho-eye
+								letter-spacing: -0.05em
+								color: #fff
+								opacity: 0.0
+								transition: all 0.5s ease-in-out
+								&::selection
+									color: #555
+									-webkit-text-fill-color: #555
+								&.reveal
+									position: absolute
+									top: 0
+									left: 0
+									opacity: 1.0
+									filter: blur(0.4em)
+									pointer-events: none
+									transition: all 0.5s ease-in-out
+					.desc-box
+						position: absolute
+						left: 60px
+						bottom: 50px
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						flex-wrap: wrap
+						width: calc(100% - 120px)
+						z-index: 10
+						> p
+							display: inline-block
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.5
+							font-family: $noto-sans
+							letter-spacing: 0.1em
+							color: #fff
+							&::selection
+								color: #555
+								-webkit-text-fill-color: #555
+					.bg
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						background: linear-gradient(180deg, rgba(#000, 0.7) 0%, rgba(#000, 0.5) 20%, rgba(#000, 0.2) 50%, rgba(#000, 0.5) 70%, rgba(#000, 0.7) 100%)
+						z-index: 5
+@keyframes dotPulsate
+	0%
+		transform: scale(1.0)
+		opacity: 1.0
+	100%
+		transform: scale(4.0)
+		opacity: 0.0
+@keyframes bracketBlink
+	0%
+		opacity: 0.2
+	50%
+		opacity: 1.0
+	100%
+		opacity: 0.2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#result
+	display: block
+	width: 100%
+	height: 200vh
+	position: fixed
+	top: 0
+	z-index: 208
+	transform-origin: 50% 50vh
+	transform: translate(0) scale(0)
+	opacity: 0.0
+	will-change: transform opacity
+	&.is-start
+		.container
+			.sticky-box
+				.content-box
+					.left-box
+						.link-box
+							background: #fff
+							transform: scale(1.0)
+							opacity: 1.0
+					.fig-box
+						.inner-box
+							&::before
+							> .img
+					.text-pattern-box
+						animation: flickerNoise 8.0s 1.0s linear infinite
+				.cross-box
+					opacity: 1.0
+	&.is-unlock
+		position: initial
+		top: initial
+	&.is-start.is-unlock.is-end
+		transform: translate(100%, 0) scale(1) !important
+		opacity: 0.0 !important
+		transition: all 0.5s ease-in-out
+	.container
+		display: block
+		width: 100%
+		height: 100%
+		.sticky-box
+			position: sticky
+			top: 0
+			display: block
+			width: 100%
+			height: calc(100vh + 200px)
+			background: $black-bg
+			.content-box
+				position: relative
+				width: 100%
+				height: calc(100vh + 200px)
+				overflow: hidden
+				.left-box
+					position: absolute
+					top: 0
+					left: 80px
+					bottom: 0
+					margin: auto
+					display: block
+					width: fit-content
+					height: fit-content
+					transform: translateY(-100px)
+					z-index: 100
+					.info-box
+						display: block
+						padding: 50px 60px
+						border-radius: 20px
+						background: rgba(#111, 0.6)
+						animation: neonBoxShadow 5.0s linear infinite
+						.head
+							display: block
+							font-weight: 700
+							font-size: 42px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.15em
+							background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#aaa, 1.0) 100%)
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+							background-clip: text
+							text-fill-color: transparent
+							&::selection
+								color: #555
+								-webkit-text-fill-color: #555
+						.desc-box
+							display: block
+							width: 340px
+							margin-top: 30px
+							> p
+								display: block
+								margin-top: 1.2em
+								font-weight: 400
+								font-size: 12px
+								line-height: 1.5
+								font-family: $noto-sans
+								letter-spacing: 0.1em
+								color: #fff
+								&:nth-of-type(1)
+									margin-top: 0
+								&::selection
+									color: #555
+									-webkit-text-fill-color: #555
+					.link-box
+						display: flex
+						justify-content: space-between
+						align-items: center
+						width: 360px
+						padding: 24px 40px 24px 60px
+						margin-top: 80px
+						border-radius: 39px
+						background: $base
+						transform: scale(3.0, 0.0)
+						opacity: 0.0
+						transition: box-shadow 1.0s ease-in-out, background 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out
+						&:hover
+							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
+							> p
+								color: $base
+							.arrow-box
+								.v-line
+									background: $base
+								.arrow
+									path
+										fill: $base
+						> p
+							display: block
+							font-weight: 700
+							font-size: 18px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.15em
+							color: #333
+							transition: all 0.5s ease-in-out
+						.arrow-box
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: fit-content
+							.v-line
+								display: block
+								width: 0.5px
+								height: 30px
+								background: #333
+								transition: all 0.5s ease-in-out
+							.arrow
+								display: block
+								width: 17px
+								margin-left: 35px
+								animation: arrowMove 3.0s linear infinite
+								path
+									fill: #333
+									transition: all 0.5s ease-in-out
+				.fig-box
+					position: absolute
+					top: 30%
+					right: 300px
+					display: block
+					width: fit-content
+					height: fit-content
+					transform: translateY(-70px)
+					z-index: 10
+					.inner-box
+						display: block
+						width: 275px
+						position: relative
+						z-index: 20
+						&::before
+							position: absolute
+							top: -20px
+							left: -20px
+							content: ""
+							display: block
+							width: calc(100% + 40px)
+							height: calc(100% + 40px)
+							background: #ccc
+							box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(#000, 0.6), 1px 1px 48px rgba(#000, 0.3)
+							z-index: 19
+							transition: all 0.5s ease-in-out
+							&:hover
+								background: #bcb
+						> .img
+							display: block
+							width: 100%
+							z-index: 20
+							position: relative
+							transition: all 0.5s ease-in-out
+							&:hover
+								box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.3)
+						.guitar-box
+							position: absolute
+							top: -65px
+							left: -175px
+							display: block
+							width: 230px
+							transform-origin: center
+							transform: rotate(-5deg)
+							z-index: 10
+							&:hover
+								&::before
+									background: #bcb
+								> .img
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.3)
+							&::before
+								position: absolute
+								top: -20px
+								left: -20px
+								content: ""
+								display: block
+								width: calc(100% + 40px)
+								height: calc(100% + 40px)
+								background: #ccc
+								box-shadow: 1px 1px 4px #fff, 1px 1px 16px rgba(#fff, 0.5)
+								z-index: 9
+								transition: all 0.5s ease-in-out
+							> .img
+								display: block
+								width: 100%
+								z-index: 10
+								position: relative
+								transition: all 0.5s ease-in-out
+						.dresser-box
+							position: absolute
+							top: -50px
+							right: -180px
+							display: block
+							width: 200px
+							transform-origin: center
+							transform: rotate(10deg)
+							z-index: 30
+							&:hover
+								&::before
+									background: #bcb
+								> .img
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.3)
+							&::before
+								position: absolute
+								top: -25px
+								left: -25px
+								content: ""
+								display: block
+								width: calc(100% + 50px)
+								height: calc(100% + 50px)
+								background: #ccc
+								box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(#000, 0.6), 1px 1px 48px rgba(#000, 0.3)
+								z-index: 29
+								transition: all 0.5s ease-in-out
+							> .img
+								display: block
+								width: 100%
+								z-index: 30
+								position: relative
+								transition: all 0.5s ease-in-out
+						.gift-box
+							position: absolute
+							left: -170px
+							bottom: -330px
+							display: block
+							width: 340px
+							transform-origin: center
+							transform: rotate(-2deg)
+							z-index: 10
+							&:hover
+								&::before
+									background: #bcb
+								> .img
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.3)
+							&::before
+								position: absolute
+								top: -28px
+								left: -28px
+								content: ""
+								display: block
+								width: calc(100% + 56px)
+								height: calc(100% + 56px)
+								background: #ccc
+								box-shadow: 1px 1px 4px #fff, 1px 1px 16px rgba(#fff, 0.5)
+								z-index: 9
+								transition: all 0.5s ease-in-out
+							> .img
+								display: block
+								width: 100%
+								z-index: 10
+								position: relative
+								transition: all 0.5s ease-in-out
+						.leather-shoes-box
+							position: absolute
+							right: -110px
+							bottom: -250px
+							display: block
+							width: 250px
+							transform-origin: center
+							transform: rotate(5deg)
+							z-index: 40
+							&:hover
+								&::before
+									background: #bcb
+								> .img
+									box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.3)
+							&::before
+								position: absolute
+								top: -25px
+								left: -25px
+								content: ""
+								display: block
+								width: calc(100% + 50px)
+								height: calc(100% + 50px)
+								background: #ccc
+								box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(#000, 0.6), 1px 1px 48px rgba(#000, 0.3)
+								z-index: 39
+								transition: all 0.5s ease-in-out
+							> .img
+								display: block
+								width: 100%
+								z-index: 40
+								position: relative
+								transition: all 0.5s ease-in-out
+					.sentence-box
+						display: flex
+						justify-content: center
+						align-items: center
+						flex-direction: column
+						width: fit-content
+						height: fit-content
+						position: relative
+				.text-pattern-box
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					transform-origin: left top
+					transform: translate(-10%, -10%) rotate(-3deg)
+					opacity: 0.02
+					z-index: 1
+					.ticker
+						display: block
+						width: fit-content
+						margin-top: 20px
+						&.slider-box1
+							.ticker-track
+								animation: telop 18.3s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 40px
+										font-size: 48px
+						&.slider-box2
+							.ticker-track
+								animation: telop 12.9s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 70px
+						&.slider-box3
+							.ticker-track
+								animation: telop 17.7s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 32px
+						&.slider-box4
+							.ticker-track
+								animation: telop 19.7s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 20px
+										font-size: 26px
+						&.slider-box5
+							.ticker-track
+								animation: telop 15.5s linear infinite reverse
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 48px
+						&.slider-box6
+							.ticker-track
+								animation: telop 18.0s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 32px
+						&.slider-box7
+							.ticker-track
+								animation: telop 20.9s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 25px
+										font-size: 26px
+						&.slider-box8
+							.ticker-track
+								animation: telop 17.6s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 45px
+										font-size: 82px
+						&.slider-box9
+							.ticker-track
+								animation: telop 14.7s linear infinite reverse
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 30px
+						&.slider-box10
+							.ticker-track
+								animation: telop 18.6s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 32px
+						&.slider-box11
+							.ticker-track
+								animation: telop 20.3s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 30px
+						&.slider-box12
+							.ticker-track
+								animation: telop 11.0s linear infinite
+								.ticker-group
+									> h3
+										margin-left: 30px
+										font-size: 52px
+						&.slider-box13
+							.ticker-track
+								animation: telop 14.1s linear infinite reverse
+								.ticker-group
+									> p
+										margin-left: 40px
+										font-size: 48px
+						&.slider-box14
+							.ticker-track
+								animation: telop 18.8s linear infinite reverse
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 70px
+						&.slider-box15
+							.ticker-track
+								animation: telop 20.7s linear infinite
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 32px
+						&.slider-box16
+							.ticker-track
+								animation: telop 17.3s linear infinite reverse
+								.ticker-group
+									> p
+										margin-left: 20px
+										font-size: 26px
+						&.slider-box17
+							.ticker-track
+								animation: telop 11.7s linear infinite
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 48px
+						&.slider-box18
+							.ticker-track
+								animation: telop 19.0s linear infinite
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 32px
+						&.slider-box19
+							.ticker-track
+								animation: telop 16.2s linear infinite reverse
+								.ticker-group
+									> p
+										margin-left: 25px
+										font-size: 26px
+						&.slider-box20
+							.ticker-track
+								animation: telop 21.0s linear infinite
+								.ticker-group
+									> p
+										margin-left: 45px
+										font-size: 82px
+						&.slider-box21
+							.ticker-track
+								animation: telop 18.5s linear infinite reverse
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 30px
+						&.slider-box22
+							.ticker-track
+								animation: telop 13.4s linear infinite
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 32px
+						&.slider-box23
+							.ticker-track
+								animation: telop 17.9s linear infinite
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 30px
+						&.slider-box24
+							.ticker-track
+								animation: telop 20.6s linear infinite
+								.ticker-group
+									> p
+										margin-left: 30px
+										font-size: 52px
+						.ticker-track
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: max-content
+							will-change: transform
+							.ticker-group
+								display: flex
+								flex: 0 0 auto
+								width: max-content
+								> h3, p
+									display: block
+									font-weight: 700
+									line-height: 1.0
+									font-family: $noto-sans
+									letter-spacing: 0.05em
+									color: #fff
+									user-select: none
+					// .swiper
+					// 	display: block
+					// 	width: fit-content
+					// 	margin-top: 20px
+					// 	&.slider-box1 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 40px
+					// 			font-size: 48px
+					// 	&.slider-box2 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 70px
+					// 	&.slider-box3 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 32px
+					// 	&.slider-box4 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 20px
+					// 			font-size: 26px
+					// 	&.slider-box5 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 48px
+					// 	&.slider-box6 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 32px
+					// 	&.slider-box7 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 25px
+					// 			font-size: 26px
+					// 	&.slider-box8 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 45px
+					// 			font-size: 82px
+					// 	&.slider-box9 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 30px
+					// 	&.slider-box10 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 32px
+					// 	&.slider-box11 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 30px
+					// 	&.slider-box12 .swiper-wrapper .swiper-slide
+					// 		> h3
+					// 			margin-left: 30px
+					// 			font-size: 52px
+					// 	&.slider-box13 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 40px
+					// 			font-size: 48px
+					// 	&.slider-box14 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 70px
+					// 	&.slider-box15 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 32px
+					// 	&.slider-box16 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 20px
+					// 			font-size: 26px
+					// 	&.slider-box17 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 48px
+					// 	&.slider-box18 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 32px
+					// 	&.slider-box19 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 25px
+					// 			font-size: 26px
+					// 	&.slider-box20 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 45px
+					// 			font-size: 82px
+					// 	&.slider-box21 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 30px
+					// 	&.slider-box22 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 32px
+					// 	&.slider-box23 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 30px
+					// 	&.slider-box24 .swiper-wrapper .swiper-slide
+					// 		> p
+					// 			margin-left: 30px
+					// 			font-size: 52px
+					// 	.swiper-wrapper
+					// 		height: fit-content
+					// 		transition-timing-function: linear
+					// 		.swiper-slide
+					// 			display: block
+					// 			width: fit-content
+					// 			height: fit-content
+					// 			> h3, p
+					// 				display: block
+					// 				font-weight: 700
+					// 				line-height: 1.0
+					// 				font-family: $noto-sans
+					// 				letter-spacing: 0.05em
+					// 				color: #fff
+					// 				user-select: none
+			.cross-box
+				position: absolute
+				left: 0
+				bottom: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				max-width: 1920px
+				aspect-ratio: 1920 / 550
+				transform-origin: center center
+				transform: translate(0%, 60%)
+				opacity: 0.0
+				overflow: hidden
+				z-index: 100
+				transition: all 0.5s 1.5s ease-in-out
+				+bp1600
+					aspect-ratio: 1920 / 580
+				+bp1400
+					aspect-ratio: 1920 / 600
+				.inner-box
+					display: block
+					width: 100%
+					height: 100%
+					position: relative
+					.cross-slider-box1
+						display: block
+						width: fit-content
+						box-shadow: 0px 2px 4px #001A00, 0px 2px 16px rgba(#001A00, 0.8), 0px 2px 48px rgba(#001A00, 0.5)
+						transform-origin: left top
+						transform: rotate(10deg)
+						z-index: 101
+						.ticker-track
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: max-content
+							height: fit-content
+							padding: 30px 0 40px
+							background: $base
+							will-change: transform
+							animation: telop 20.0s linear infinite reverse
+							.ticker-group
+								display: flex
+								flex: 0 0 auto
+								width: max-content
+								> p
+									display: block
+									margin-left: 30px
+									&:hover
+										.word
+											.char
+												animation: crossBounceDown 0.5s #{"calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.05s)"} cubic-bezier(0.25, 1, 0.5, 1)
+									.word
+										.char
+											display: inline-block
+											font-weight: 900
+											font-size: 72px
+											line-height: 1.0
+											font-family: $eurostile-extended
+											letter-spacing: -0.05em
+											color: #fff
+											user-select: none
+											transition: color 0.5s ease-in-out
+						// .swiper-wrapper
+						// 	height: fit-content
+						// 	padding: 30px 0 40px
+						// 	background: $base
+						// 	transition-timing-function: linear
+						// 	.swiper-slide
+						// 		display: block
+						// 		width: fit-content
+						// 		height: fit-content
+						// 		> p
+						// 			display: block
+						// 			margin-left: 30px
+						// 			font-weight: 900
+						// 			font-size: 72px
+						// 			line-height: 1.0
+						// 			font-family: $eurostile-extended
+						// 			letter-spacing: -0.05em
+						// 			color: #fff
+					.cross-slider-box2
+						position: absolute
+						top: 0
+						right: 0
+						display: block
+						width: fit-content
+						box-shadow: 0px 2px 4px #001A00, 0px 2px 16px rgba(#001A00, 0.8), 0px 2px 48px rgba(#001A00, 0.5)
+						transform-origin: center
+						transform: translate(50%) rotate(-10deg)
+						z-index: 102
+						.ticker-track
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: max-content
+							height: fit-content
+							padding: 30px 0 40px
+							background: $base
+							will-change: transform
+							animation: telop 20.0s linear infinite
+							.ticker-group
+								display: flex
+								flex: 0 0 auto
+								width: max-content
+								> p
+									display: block
+									margin-left: 30px
+									&:hover
+										.word
+											.char
+												animation: crossBounceDown 0.5s #{"calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.05s)"} cubic-bezier(0.25, 1, 0.5, 1)
+									.word
+										.char
+											display: inline-block
+											font-weight: 900
+											font-size: 72px
+											line-height: 1.0
+											font-family: $eurostile-extended
+											letter-spacing: -0.05em
+											color: #fff
+											user-select: none
+											transition: color 0.5s ease-in-out
+						// .swiper-wrapper
+						// 	height: fit-content
+						// 	padding: 30px 0 40px
+						// 	background: $base
+						// 	transition-timing-function: linear
+						// 	.swiper-slide
+						// 		display: block
+						// 		width: fit-content
+						// 		height: fit-content
+						// 		> p
+						// 			display: block
+						// 			margin-left: 30px
+						// 			font-weight: 900
+						// 			font-size: 72px
+						// 			line-height: 1.0
+						// 			font-family: $eurostile-extended
+						// 			letter-spacing: -0.05em
+						// 			color: #fff
+#result-scroll-space
+	display: block
+	width: 100%
+	height: 200vh
+	pointer-events: none
+	&.is-unlock
+		height: 0
+@keyframes flickerNoise
+	0%
+		transform: translate(0, 0) skewX(0deg) rotate(-3deg)
+		opacity: 0.08
+		filter: hue-rotate(0deg)
+	0.6%
+		transform: translate(-2px, 1px) skewX(-3deg) rotate(-3deg)
+		opacity: 0.04
+	1.5%
+		transform: translate(1px, -1px) skewX(0deg) rotate(-3deg)
+		opacity: 0.06
+	2.4%
+		transform: translate(-5px, -2px) skewX(10deg) rotate(-3deg)
+		opacity: 0.01
+		filter: hue-rotate(90deg)
+	3%
+		transform: translate(4px, 2px) skewX(-5deg) rotate(-3deg)
+		opacity: 0.08
+		filter: hue-rotate(0deg)
+	4.5%
+		transform: translate(-1px, -1px) skewX(0deg) rotate(-3deg)
+		opacity: 0.03
+	5.4%
+		transform: translate(2px, 1px) skewX(2deg) rotate(-3deg)
+		opacity: 0.05
+	6%
+		transform: translate(0, 0) skewX(0deg) rotate(-3deg)
+		opacity: 0.02
+	100%
+		transform: translate(0, 0) skewX(0deg) rotate(-3deg)
+		opacity: 0.02
+@keyframes neonBoxShadow
+	0%
+		box-shadow: 0px 2px 4px $base, 0px 2px 48px rgba($base, 0.3)
+	10%
+		box-shadow: 0px 2px 8px $base, 0px 2px 100px rgba($base, 0.3)
+	20%
+		box-shadow: 0px 2px 4px $base, 0px 2px 48px rgba($base, 0.3)
+	27%
+		box-shadow: 0px 2px 8px $base, 0px 2px 100px rgba($base, 0.3)
+	40%
+		box-shadow: 0px 2px 4px $base, 0px 2px 48px rgba($base, 0.3)
+	100%
+		box-shadow: 0px 2px 4px $base, 0px 2px 48px rgba($base, 0.3)
+@keyframes crossBounceDown
+	0%
+		transform: translateY(0)
+	40%
+		transform: translateY(0.3em)
+		animation-timing-function: ease-out
+	75%
+		transform: translateY(-0.08em)
+		animation-timing-function: ease-in-out
+	85%
+		transform: translateY(0.025em)
+		animation-timing-function: ease-in-out
+	100%
+		transform: translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#info
+	display: block
+	width: 100%
+	padding-top: 30vh
+	padding-bottom: 200px
+	.content-box
+		display: block
+		width: 100%
+		height: 100%
+		position: relative
+		.tit-box
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			margin: 0 auto 0
+			&.is-show
+				.en .word .char
+					&::before
+						animation: infoTopReassemble 2.0s ease-in-out forwards
+					&::after
+						animation: infoBottomReassemble 2.0s ease-in-out forwards
+				.jp .word .char
+					letter-spacing: 0.25em
+					filter: blur(0)
+					opacity: 1.0
+			.en
+				display: block
+			.word
+				.char
+					display: inline-block
+					font-weight: 900
+					font-size: 202px
+					line-height: 1.0
+					font-family: $eurostile-extended
+					letter-spacing: 0.0em
+					color: transparent
+					position: relative
+					&::before, &::after
+						position: absolute
+						top: 0
+						left: 0
+						content: attr(data-char)
+						display: block
+						width: 100%
+						height: 100%
+						color: #333
+						opacity: 0.0
+						visibility: visible !important
+					&::before
+						clip-path: polygon(0 0, 100% 0, 100% 55%, 0 65%)
+					&::after
+						clip-path: polygon(100% 55%, 100% 100%, 0 100%, 0 65%)
+					&::selection
+						color: #aaa
+						-webkit-text-fill-color: #aaa
+			.jp
+				display: block
+				margin-top: 35px
+				.word
+					.char
+						display: inline-block
+						font-weight: 700
+						font-size: 32px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: -0.3em
+						color: #777
+						filter: blur(0.5em)
+						opacity: 0.0
+						transition: all 1.0s #{"calc(0.5s + abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.2s)"} ease-in-out
+						&::selection
+							color: #555
+							-webkit-text-fill-color: #555
+		.detail-box
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: calc(100vw - 160px)
+			margin: 200px auto 0
+			.left-box
+				display: block
+				width: fit-content
+				.info-ele
+					display: flex
+					justify-content: flex-start
+					align-items: flex-start
+					width: 580px
+					padding: 0px 20px 15px 20px
+					border-bottom: solid 1px #ccc
+					margin-top: 20px
+					position: relative
+					&:nth-of-type(1)
+						margin-top: 0
+					&:hover
+						border-bottom: solid 1px #fff
+						.streak-box
+							opacity: 1.0
+							clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)
+					> h3
+						display: block
+						width: 140px
+						font-weight: 700
+						font-size: 18px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						color: #999
+						&::selection
+							color: #555
+					> p
+						display: block
+						margin-left: 40px
+						font-weight: 400
+						font-size: 18px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						white-space: nowrap
+						color: #999
+						&::selection
+							color: #555
+						.num
+							display: inline
+							margin-left: 0.25em
+							margin-right: 0.3em
+							font-weight: 400
+							font-size: 17px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.05em
+							color: #999
+							&::selection
+								color: #555
+					.streak-box
+						position: absolute
+						left: 0
+						bottom: -1px
+						display: block
+						width: 100%
+						opacity: 0.0
+						clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)
+						filter: saturate(200%)
+						transition: all 0.2s ease-in-out
+						.inner-box
+							display: block
+							width: 100%
+							position: relative
+							.base
+								display: block
+								width: 100%
+								height: 3px
+								background: linear-gradient(to right, rgba($base, 0), $base, rgba($base, 0))
+								box-shadow: 0px 0px 1px $base
+								filter: blur(2px)
+							.highlight
+								position: absolute
+								top: 0
+								left: 0
+								bottom: 0
+								margin: auto
+								display: block
+								width: 100%
+								height: 1px
+								background: linear-gradient(to right, rgba(#fff, 0), #fff, rgba(#fff, 0))
+								filter: blur(1px)
+								z-index: 2
+					.tel
+						display: block
+						margin-left: 40px
+						font-weight: 400
+						font-size: 18px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						white-space: nowrap
+						color: #999
+						transition: all 0.5s ease-in-out
+						&:hover
+							color: $base
+						&::selection
+							color: #555
+
+					.mail
+						display: block
+						margin-left: 40px
+						font-weight: 400
+						font-size: 18px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						white-space: nowrap
+						color: #999
+						transition: all 0.5s ease-in-out
+						&:hover
+							color: $base
+						&::selection
+							color: #555
+					.address-box
+						display: block
+						width: fit-content
+						margin-left: 40px
+						.post-code-box
+							display: block
+							font-weight: 400
+							font-size: 17px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.1em
+							color: #999
+							&::selection
+								color: #555
+							.mark
+								display: inline
+								margin-right: 0.15em
+								font-weight: 400
+								font-size: 18px
+								line-height: 1.0
+								font-family: $noto-sans
+								letter-spacing: 0.0em
+								color: #999
+								&::selection
+									color: #555
+						.address
+							display: block
+							margin-top: 8px
+							font-weight: 400
+							font-size: 18px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.1em
+							color: #999
+							&::selection
+								color: #555
+			.right-box
+				display: block
+				width: 600px
+				.img
+					display: block
+					width: 100%
+@keyframes infoTopReassemble
+	0%
+		color: #111
+		transform: translate(-25vw, 0)
+		filter: blur(0.5em)
+		opacity: 0.0
+	30%
+		transform: translate(-25vw, 0)
+		filter: blur(0)
+		opacity: 1.0
+	40%
+		transform: translate(0, 0)
+	60%
+		color: #111
+	80%
+		color: #555
+	100%
+		filter: blur(0)
+		opacity: 1.0
+@keyframes infoBottomReassemble
+	0%
+		color: $base
+		transform: translate(25vw, 0)
+		filter: blur(0.5em)
+		opacity: 0.0
+	30%
+		transform: translate(25vw, 0)
+		filter: blur(0)
+		opacity: 1.0
+	40%
+		transform: translate(0, 0)
+	60%
+		color: $base
+	80%
+		color: #555
+		clip-path: polygon(100% 55%, 100% 100%, 0 100%, 0 65%)
+	80.5%
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)
+	100%
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)
+		opacity: 1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#promise
+	display: block
+	width: 100%
+	height: 250vh
+	.container
+		display: block
+		width: 100%
+		height: 100%
+		.sticky-box
+			position: sticky
+			top: 0
+			display: block
+			width: 100%
+			height: 100vh
+			background: url("../image/top/promise/bg.webp")
+			background-size: cover
+			background-position: center
+			.content-box
+				position: relative
+				width: 100%
+				height: 100vh
+				overflow: hidden
+				.txt-box
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: fit-content
+					height: fit-content
+					z-index: 2
+					.sentence-box
+						display: flex
+						justify-content: center
+						align-items: center
+						flex-direction: column
+						width: fit-content
+						height: fit-content
+						position: relative
+						.txt
+							display: block
+							margin-top: 20px
+							font-weight: 400
+							font-size: 24px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.3em
+							color: #111
+							&:nth-of-type(1)
+								margin-top: 0
+						.top-tit-box
+							position: absolute
+							left: 50%
+							top: 0
+							transform-origin: bottom center
+							transform: translate(-50%, calc(-100% - 60px))
+							display: flex
+							justify-content: center
+							align-items: center
+							flex-direction: column
+							width: fit-content
+							h2
+								display: block
+								.word
+									white-space: nowrap
+									.char
+										display: inline-block
+										font-weight: 800
+										font-size: 62px
+										line-height: 1.0
+										font-family: $ah-hakushu-rs
+										letter-spacing: 0.25em
+										color: #555
+										&:nth-of-type(1)
+											margin-right: 0.25em
+											font-weight: 400
+											font-size: 82px
+											line-height: 1.0
+											font-family: $amiri-quran
+											letter-spacing: 0.0em
+										&:nth-of-type(4)
+											letter-spacing: 0.0em
+							.streak-box
+								display: block
+								width: fit-content
+								margin-top: 40px
+								position: relative
+								.base
+									display: block
+									width: 180px
+									height: 4px
+									background: linear-gradient(to right, rgba($base, 0), $base, rgba($base, 0))
+									box-shadow: 0px 0px 1px $base
+									filter: blur(2.5px)
+								.highlight
+									position: absolute
+									top: 0
+									left: 0
+									bottom: 0
+									margin: auto
+									display: block
+									width: 180px
+									height: 2px
+									background: linear-gradient(to right, rgba(#fff, 0), #fff, rgba(#fff, 0))
+									filter: blur(1.5px)
+									z-index: 5
+						.logo-box
+							position: absolute
+							left: 50%
+							bottom: 0
+							transform-origin: top center
+							transform: translate(-50%, calc(100% + 100px))
+							display: flex
+							justify-content: center
+							align-items: center
+							flex-direction: column
+							width: fit-content
+							height: fit-content
+							.logo
+								display: block
+								width: 120px
+				.fig1-box
+					position: absolute
+					top: -30px
+					left: -90px
+					display: block
+					width: 450px
+					z-index: 1
+					perspective: 200px
+					perspective-origin: right bottom
+					.img
+						display: block
+						width: 100%
+						will-change: transform, opacity
+				.fig2-box
+					position: absolute
+					top: 60px
+					left: 0
+					right: 0
+					margin: auto
+					display: block
+					width: 300px
+					z-index: 1
+					perspective: 200px
+					perspective-origin: center bottom
+					.img
+						display: block
+						width: 100%
+						will-change: transform, opacity
+				.fig3-box
+					position: absolute
+					top: 80px
+					right: -20px
+					display: block
+					width: 415px
+					z-index: 1
+					perspective: 200px
+					perspective-origin: left bottom
+					.img
+						display: block
+						width: 100%
+						will-change: transform, opacity
+				.fig4-box
+					position: absolute
+					left: -70px
+					bottom: 45px
+					display: block
+					width: 500px
+					z-index: 1
+					perspective: 200px
+					perspective-origin: right top
+					.img
+						display: block
+						width: 100%
+						will-change: transform, opacity
+				.fig5-box
+					position: absolute
+					left: 0
+					right: 0
+					bottom: -65px
+					margin: auto
+					display: block
+					width: 500px
+					transform: translate(3%)
+					z-index: 1
+					perspective: 200px
+					perspective-origin: center top
+					.img
+						display: block
+						width: 100%
+						will-change: transform, opacity
+				.fig6-box
+					position: absolute
+					right: -130px
+					bottom: 190px
+					display: block
+					width: 500px
+					z-index: 1
+					perspective: 200px
+					perspective-origin: left top
+					.img
+						display: block
+						width: 100%
+						will-change: transform, opacity
+
+
+
+
+
+
+
+

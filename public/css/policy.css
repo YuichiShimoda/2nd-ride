@@ -1,0 +1,867 @@
+body {
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#wrap {
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: radial-gradient(circle, #CCC 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+*::selection {
+  background: #ddd;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#title {
+  display: block;
+  width: 100%;
+  padding: 240px 0 120px;
+  background: linear-gradient(180deg, #00a000 0%, #00a000 50%, rgba(0, 160, 0, 0.8) 100%);
+  position: relative;
+}
+#title .content-box {
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1400px) {
+  #title .content-box {
+    width: 1000px;
+    padding: 0 0 80px;
+    margin: 200px auto 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #title .content-box {
+    width: calc(100vw - 100px);
+  }
+}
+@media screen and (max-width: 700px) {
+  #title .content-box {
+    margin: 160px auto 0;
+    padding: 0 0 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #title .content-box {
+    width: calc(100vw - 60px);
+    padding: 0 0 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #title .content-box {
+    width: calc(100vw - 30px);
+    padding: 0 0 30px;
+    margin: 150px auto 0;
+  }
+}
+#title .content-box h1 {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #fff;
+}
+@media screen and (max-width: 1400px) {
+  #title .content-box h1 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #title .content-box h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #title .content-box h1 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #title .content-box h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #title .content-box h1 {
+    font-size: 22px;
+  }
+}
+#title .en {
+  position: absolute;
+  right: 10vw;
+  bottom: 15px;
+  display: block;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1;
+  font-family: "eurostile-extended", sans-serif;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, white 0%, #cccccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+#clause {
+  display: block;
+  width: 1200px;
+  margin: 160px auto 25vh;
+}
+@media screen and (max-width: 1400px) {
+  #clause {
+    width: 1000px;
+    margin: 100px auto 100px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause {
+    width: calc(100vw - 100px);
+    margin: 90px auto 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #clause {
+    margin: 50px auto 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #clause {
+    width: calc(100vw - 60px);
+  }
+}
+@media screen and (max-width: 450px) {
+  #clause {
+    width: calc(100vw - 30px);
+    margin: 40px auto 40px;
+  }
+}
+#clause > .outline {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  text-indent: 1em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .outline {
+    font-size: 14px;
+  }
+}
+#clause > .outline > span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect1 {
+  display: block;
+  width: 100%;
+  margin: 140px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect1 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect1 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  color: #00a000;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect1 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect1 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect1 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect1 > .desc {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect1 > .desc {
+    font-size: 14px;
+  }
+}
+#clause > .article_box.sect1 > .desc:nth-child(2) {
+  margin-top: 3em;
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect1 > .desc:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect1 > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+}
+#clause > .article_box.sect1 > .paragraph_box > .paragraph_ele {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+#clause > .article_box.sect1 > .paragraph_box > .paragraph_ele > .tit {
+  display: block;
+  width: 100%;
+  padding-left: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  text-indent: -1.6em;
+}
+#clause > .article_box.sect1 > .paragraph_box > .paragraph_ele > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 39px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect1 > .paragraph_box > .paragraph_ele > .itemization {
+  display: block;
+  width: 100%;
+  padding-left: 53px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  text-indent: -1em;
+}
+#clause > .article_box.sect1 > .paragraph_box > .paragraph_ele > .itemization > span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect1 > .paragraph_box > .paragraph_ele:first-of-type {
+  margin-top: 0;
+}
+#clause > .article_box.sect2 {
+  display: block;
+  width: 100%;
+  margin: 140px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect2 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect2 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  color: #00a000;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect2 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect2 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect2 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect2 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect2 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect2 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect2 > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+}
+#clause > .article_box.sect2 > .paragraph_box > p {
+  display: block;
+  width: 100%;
+  padding-left: 32px;
+  margin-top: 1em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  text-indent: -1.6em;
+}
+#clause > .article_box.sect2 > .paragraph_box > p:nth-of-type(1) {
+  margin-top: 0;
+}
+#clause > .article_box.sect2 > .paragraph_box > p > span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect3 {
+  display: block;
+  width: 100%;
+  margin: 140px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect3 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect3 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  color: #00a000;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect3 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect3 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect3 > .tit {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .tit {
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+    line-height: 1.3;
+  }
+}
+#clause > .article_box.sect3 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect3 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect3 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect3 > .note {
+  display: block;
+  width: 100%;
+  margin-top: 0.6em;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  padding-left: 1.55em;
+  text-indent: -1.55em;
+}
+#clause > .article_box.sect3 > .link_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  margin-top: 1em;
+  margin-left: 19px;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .link_box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+#clause > .article_box.sect3 > .link_box a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #5184c9;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .link_box a {
+    line-height: 2;
+  }
+}
+#clause > .article_box.sect3 > .link_box span {
+  display: block;
+  padding: 0 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect3 > .link_box span {
+    display: none;
+  }
+}
+#clause > .article_box.sect4 {
+  display: block;
+  width: 100%;
+  margin: 140px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect4 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect4 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  color: #00a000;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect4 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect4 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect4 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect4 > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  padding-left: 2.3em;
+  text-indent: -2.3em;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .tit {
+    font-size: 14px;
+  }
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .list_box {
+  display: block;
+  width: 100%;
+  padding-left: 38px;
+  margin-top: 2em;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .list_box > p {
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  padding-left: 2.15em;
+  text-indent: -2.15em;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .list_box > p:nth-of-type(1) {
+  margin-top: 0;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele > .list_box > p > span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect4 > .paragraph_box > .paragraph_ele:first-of-type {
+  margin-top: 0;
+}
+#clause > .article_box.sect5 {
+  display: block;
+  width: 100%;
+  margin: 140px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect5 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect5 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  color: #00a000;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect5 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect5 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect5 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect5 > .paragraph_box {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  padding-left: 2.3em;
+  text-indent: -2.3em;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .tit {
+    font-size: 14px;
+  }
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .tit > span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele > .itemization {
+  display: block;
+  width: 100%;
+  padding-left: 39px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+  text-indent: -1em;
+}
+#clause > .article_box.sect5 > .paragraph_box > .paragraph_ele:first-of-type {
+  margin-top: 0;
+}
+#clause > .article_box.sect7 {
+  display: block;
+  width: 100%;
+  margin: 140px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect7 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect7 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  color: #00a000;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect7 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect7 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect7 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect7 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect7 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect7 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect7 > .info_box {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+}
+#clause > .article_box.sect7 > .info_box > p {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect7 > .info_box > p.address {
+  line-height: 1.2;
+}
+#clause > .article_box.sect7 > .info_box > .item {
+  margin-top: 1em;
+  font-weight: 700;
+  font-size: 13px;
+}
+#clause > .article_box.sect7 > .info_box > .item > span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+#clause > .article_box.sect7 > .info_box > .item:nth-of-type(1) {
+  margin-top: 0;
+}
+#clause > .article_box.sect7 > .info_box a {
+  display: block;
+  width: fit-content;
+  padding: 0 3px 4px;
+  margin-top: 5px;
+  border-bottom: solid 1px #306ec1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #306ec1;
+}
+@media screen and (max-width: 500px) {
+  #clause > .article_box.sect7 > .info_box a {
+    font-size: 13px;
+  }
+}
+#clause > .article_box.sect10 {
+  display: block;
+  width: 100%;
+  margin: 140px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #clause > .article_box.sect10 {
+    margin: 40px auto 0;
+  }
+}
+#clause > .article_box.sect10 > .tit {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  color: #00a000;
+}
+@media screen and (max-width: 1400px) {
+  #clause > .article_box.sect10 > .tit {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #clause > .article_box.sect10 > .tit {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect10 > .tit {
+    font-size: 16px;
+  }
+}
+#clause > .article_box.sect10 > .desc {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #clause > .article_box.sect10 > .desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #clause > .article_box.sect10 > .desc {
+    margin-top: 20px;
+  }
+}
+#clause > .article_box.sect10 > .create_date {
+  display: block;
+  width: 100%;
+  margin-top: 5em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: right;
+  color: #555;
+}
+#clause > .article_box.sect10 > .update_date {
+  display: block;
+  width: 100%;
+  margin-top: 0.5em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: right;
+  color: #555;
+}

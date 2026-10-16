@@ -1,0 +1,933 @@
+$mb101: 'A-OTF Gothic MB101 Pro', sans-serif // M:500, DB:600
+$heisei-maru: "heisei-maru-gothic-std", sans-serif // 400, 800
+$ryumin: 'A-OTF Ryumin Pro', serif // M:450, B:550, EB:600, H:700, EH:800
+
+
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+	&.no-scroll
+		overflow: hidden
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	min-height: 100vh
+	background: url("../image/rule-bg.png")
+	background-size: 200px
+	background-repeat: repeat
+	+bp500
+		background-size: 120px
+*::selection
+	background: #ddd
+*::-webkit-scrollbar
+	display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#header
+	position: fixed
+	top: 0
+	left: 0
+	display: block
+	width: 100%
+	height: 80px
+	background-color: #fff
+	box-shadow: 0 5px 5px rgba(#000, 0.15)
+	z-index: 100
+	.content-box
+		display: block
+		width: 100%
+		height: 100%
+		position: relative
+		#logo_sp_btn
+			position: absolute
+			top: 23px
+			left: 50px
+			display: block
+			width: 200px
+			opacity: 1
+			z-index: 110
+			+bp500
+				left: 30px
+			+bp450
+				width: 170px
+				top: 26px
+				left: 15px
+		#open_btn
+			position: absolute
+			top: 10px
+			right: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 62px
+			aspect-ratio: 1 / 1
+			border-radius: 50%
+			background-color: rgba(#2D2D2D, 0.45)
+			backdrop-filter: blur(5px)
+			transition: all 0.3s ease-in-out
+			cursor: pointer
+			z-index: 110
+			+bp500
+				right: 30px
+			+bp450
+				top: 12px
+				right: 15px
+				width: 56px
+			> .inner_circle
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				width: 46px
+				aspect-ratio: 1 / 1
+				border-radius: 50%
+				background-color: #fff
+				transition: width 0.5s ease-in-out, height 0.5s ease-in-out, border 0.2s ease-in-out 0.3s
+				position: relative
+				+bp450
+					width: 42px
+				.txt
+					display: block
+					font-size: 15px
+					line-height: 1.0
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #777
+					+bp450
+						font-size: 14px
+		#open_btn:hover
+			background-color: rgba(#BDBDAB, 0.0)
+			.inner_circle
+				width: 100%
+				height: 100%
+				border: solid 1px #e0e0e0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#title
+	display: block
+	width: 1200px
+	padding: 0 0 80px
+	margin: 240px auto 0
+	border-bottom: solid 1px #ccc
+	+bp1400
+		width: 1000px
+		padding: 0 0 60px
+		margin: 200px auto 0
+	+bp1100
+		width: calc(100vw - 100px)
+	+bp700
+		margin: 160px auto 0
+		padding: 0 0 40px
+	+bp500
+		width: calc(100vw - 60px)
+		padding: 0 0 40px
+	+bp450
+		width: calc(100vw - 30px)
+		padding: 0 0 30px
+		margin: 150px auto 0
+	h1
+		display: block
+		width: 100%
+		font-weight: 700
+		font-size: 38px
+		line-height: 1.0
+		font-family: $ryumin
+		letter-spacing: 0.05em
+		color: #0C2A81
+		+bp1400
+			font-size: 34px
+		+bp900
+			font-size: 32px
+		+bp700
+			font-size: 28px
+		+bp500
+			font-size: 24px
+		+bp450
+			font-size: 22px
+	.desc-box
+		display: block
+		width: fit-content
+		margin: 80px auto 0
+		+bp1400
+			margin: 60px auto 0
+		+bp700
+			margin: 40px auto 0
+		+bp500
+			width: calc(100vw - 60px)
+		+bp450
+			width: calc(100vw - 30px)
+			margin: 40px auto 0
+		// > .outline
+		// 	display: block
+		// 	width: 100%
+		// 	font-weight: 550
+		// 	font-size: 16px
+		// 	line-height: 1.7
+		// 	font-family: $ryumin
+		// 	letter-spacing: 0.05em
+		// 	text-align: center
+		// 	color: #555
+		// 	+bp500
+		// 		font-size: 14px
+		.base
+			display: block
+			font-weight: 550
+			font-size: 16px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+			+bp700
+				font-size: 14px
+		.note
+			display: block
+			padding-left: 1.35em
+			font-weight: 450
+			font-size: 11px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #777
+			text-indent: -1.35em
+			&:nth-of-type(4)
+				margin-top: 20px
+				+bp550
+					margin-top: 10px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wpcf7-response-success
+	display: block
+	margin: 80px 0 0
+	font-weight: 550
+	font-size: 16px !important
+	line-height: 1.8
+	font-family: $ryumin
+	letter-spacing: 0.05em
+	text-align: center
+	white-space: nowrap
+	color: #DC4C4C
+	border: 0 !important
+	+bp1000
+		margin: 70px auto 0
+	+bp700
+		margin: 60px auto 0
+		font-size: 14px !important
+	+bp500
+		margin: 50px auto 0
+	+bp450
+		margin: 40px auto calc(100vh - 150px - 52px - 90px - 120px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#input-form
+	display: block
+	width: 650px
+	margin: 80px auto 0
+	+bp1400
+		margin: 70px auto 0
+	+bp1100
+		margin: 60px auto 0
+	+bp900
+		width: calc(100% - 160px)
+	+bp700
+		width: calc(100% - 100px)
+		margin: 50px auto 0
+	+bp600
+		width: calc(100% - 60px)
+	+bp450
+		width: calc(100% - 30px)
+	.input-box
+		display: block
+		width: 100%
+		padding: 40px 50px 30px
+		margin: 0 auto
+		box-shadow: 0 5px 5px rgba(#666, 0.3)
+		background: linear-gradient(160deg, #F0EFEF 0%, #EBE9E9 100%)
+		transition: all 1.0s ease-in-out
+		+bp600
+			padding: 40px 30px 30px
+			~.each_input
+				width: calc(100% - 60px)
+				margin: 15px auto 0
+		+bp420
+			padding: 40px 15px 30px
+			~.each_input
+				width: calc(100% - 30px)
+		.mark-desc
+			display: block
+			margin-bottom: 20px
+			font-weight: 450
+			font-size: 12px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #B92928
+			.mark
+				display: inline-block
+				padding-left: 5px
+				margin-top: -5px
+				margin-right: 7px
+				font-weight: 450
+				font-size: 14px
+				line-height: 1.0
+				font-family: $ryumin
+				letter-spacing: 0
+				color: #B92928
+		.each-input
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			width: 100%
+			margin-top: 15px
+			&:first-of-type
+				margin-top: 0
+			+bp850
+				flex-direction: column
+			> .input-tittle
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				width: 150px
+				padding-top: 6px
+				+bp850
+					width: 100%
+					padding-top: 0
+					margin-bottom: 4px
+				> .input-s-tittle
+					display: block
+					font-weight: 450
+					font-size: 14px
+					line-height: 1.3
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #333
+					br
+						display: block
+						+bp850
+							display: none
+				> .required
+					display: block
+					padding-left: 5px
+					margin-top: -5px
+					font-weight: 450
+					font-size: 14px
+					line-height: 1.0
+					font-family: $ryumin
+					letter-spacing: 0
+					color: #B92928
+			> .input-part
+				max-width: 500px
+				+bp850
+					width: 100%
+					max-width: initial
+				input
+					height: 30px
+					padding: 3px 10px
+					background: none
+					border: solid 1px #ccc
+					border-radius: 5px
+					background-color: #fff
+					font-weight: 450
+					font-size: 14px
+					line-height: 1.0
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+					appearance: none
+					-webkit-appearance: none
+				.select-box
+					display: block
+					width: fit-content
+					font-weight: 550
+					font-size: 14px
+					line-height: 1.5
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #333
+					position: relative
+					&::before
+						position: absolute
+						right: 10px
+						top: 12px
+						width: 0
+						height: 0
+						content: ""
+						border-style: solid
+						border-right: 4px solid rgba(#fff, 0.0)
+						border-left: 4px solid rgba(#fff, 0.0)
+						border-top: 8px solid #d9d9d9
+						border-bottom: 0
+						z-index: 1
+					select
+						width: 135px
+						height: 30px
+						padding: 3px 10px
+						background: none
+						border: solid 1px #ccc
+						border-radius: 5px
+						background-color: #fff
+						font-weight: 450
+						font-size: 14px
+						line-height: 1.0
+						font-family: $ryumin
+						letter-spacing: 0.05em
+						color: #555
+						appearance: none
+						-webkit-appearance: none
+						&.input-sex
+							width: 100px
+						&.input-age
+							width: 120px
+						&.input-day
+							width: 130px
+						&.input-num
+							width: 100px
+						&.input-visit-num
+							width: 120px
+						&.input-know
+							width: 300px
+						&.input-visit-how
+							width: 110px
+						&.input-taste
+							width: 130px
+						&.input-service
+							width: 130px
+						&.input-clean
+							width: 130px
+						&.input-interior
+							width: 130px
+						&.input-overall
+							width: 130px
+						> option
+							color: #555
+				textarea
+					width: 100%
+					height: 160px
+					padding: 8px 10px
+					background: none
+					border: solid 1px #ccc
+					border-radius: 5px
+					background-color: #fff
+					font-weight: 450
+					font-size: 14px
+					font-family: $ryumin
+					line-height: 1.5
+					letter-spacing: 0.05em
+					color: #555
+					resize: vertical
+					appearance: none
+					-webkit-appearance: none
+				.input-name
+					width: 200px
+				.input-email
+					width: 250px
+				.input-place
+					> .wpcf7-list-item
+						margin: 0 15px 0 0
+						.wpcf7-list-item-label
+							font-weight: 450
+							font-size: 14px
+							line-height: 1.0
+							font-family: $ryumin
+							letter-spacing: 0.05em
+							color: #555
+					> .wpcf7-list-item.last
+						margin-right: 0
+				.input-request
+					width: 400px
+					+bp850
+						width: 100%
+				.wpcf7-not-valid-tip
+					display: block
+					margin-left: 2px
+					margin-top: 5px
+					font-weight: 450
+					font-size: 10px
+					font-family: $ryumin
+					line-height: 1.0
+					letter-spacing: 0.075em
+					color: #DC4C4C
+					transform-origin: left top
+		.line
+			display: block
+			width: calc(100% + 20px)
+			height: 1px
+			margin: 30px 0 30px -10px
+			background-color: #ddd
+			+bp400
+				width: calc(100% + 10px)
+				margin: 25px 0 25px -5px
+	.contact-button
+		display: block
+		width: 160px
+		height: 43px
+		margin: 50px auto 0
+		background-color: #EE7D2E
+		border: none
+		font-weight: 450
+		font-size: 14px
+		line-height: 1.0
+		font-family: $ryumin
+		letter-spacing: 0.05em
+		color: #fff
+		appearance: none
+		-webkit-appearance: none
+		+bp700
+			margin: 30px auto 0
+	.wpcf7-spinner
+		display: none
+	.wpcf7-response-output
+		display: block
+		margin: 20px 0 0
+		font-weight: 450
+		font-size: 14px !important
+		line-height: 1.0
+		font-family: $ryumin
+		letter-spacing: 0.05em
+		text-align: center
+		white-space: nowrap
+		color: #DC4C4C
+		border: 0 !important
+		+bp500
+			line-height: 1.4
+			text-align: left
+			white-space: initial
+
+
+
+
+
+
+.thanks-box
+	display: block
+	width: 500px
+	margin: 50px auto
+	+bp600
+		width: calc(100% - 60px)
+		margin: 40px auto
+	+bp450
+		width: calc(100% - 30px)
+		margin: 30px auto 0
+	p
+		display: block
+		font-weight: 450
+		font-size: 14px
+		font-family: $ryumin
+		line-height: 1.5
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+		&:nth-of-type(2)
+			margin-top: 30px
+			text-align: left
+		&:nth-of-type(3)
+			text-align: left
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-direction: column
+	width: 100%
+	padding: 30px 0 20px
+	margin-top: 60px
+	background-color: #0C2A81
+	transition: all 0.5s ease-in-out
+	// +bp1100
+	// 	padding: 60px 15px 20px
+	// +bp900
+	// 	margin-top: 50px
+	+bp500
+		// padding: 20px 0 20px
+		margin-top: 40px
+	// +bp400
+	// 	padding: 40px 5px 15px
+	.logo-box
+		display: block
+		width: 330px
+		margin: 0 auto
+		// +bp1400
+		// 	width: 520px
+		// +bp1200
+		// 	width: 480px
+		// +bp1000
+		// 	width: 400px
+		// +bp900
+		// 	width: 380px
+		// +bp800
+		// 	width: 360px
+		// +bp700
+		// 	width: 55%
+		+bp500
+			width: 60%
+		&:hover
+			opacity: 0.7
+		.logo
+			display: block
+			width: 100%
+	// .link-box
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	width: fit-content
+	// 	margin: 50px auto 0
+	// 	+bp1100
+	// 		margin: 40px auto 0
+	// 	+bp900
+	// 		margin: 30px auto 0
+	// 	+bp500
+	// 		flex-wrap: wrap
+	// 		width: 80%
+	// 		margin: 25px auto 0
+	// 	.link
+	// 		display: block
+	// 		margin-right: 40px
+	// 		font-weight: 500
+	// 		font-size: 16px
+	// 		line-height: 1.0
+	// 		font-family: $mb101
+	// 		letter-spacing: 0.05em
+	// 		color: #fff
+	// 		transition: all 0.5s ease-in-out
+	// 		&:hover
+	// 			color: #EE7D2E
+	// 		&:last-of-type
+	// 			margin-right: 0
+	// 		+bp700
+	// 			margin-right: 30px
+	// 		+bp600
+	// 			font-size: 14px
+	// 		+bp500
+	// 			line-height: 1.5
+	// 			&:nth-of-type(2)
+	// 				margin-right: 0
+	// 			&:last-of-type
+	// 				margin-top: 10px
+	// 				margin-right: 0
+	// .invoice-box
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	width: fit-content
+	// 	margin: 30px auto 0
+	// 	+bp500
+	// 		margin: 20px auto 0
+	// 	.tit
+	// 		display: block
+	// 		font-weight: 550
+	// 		font-size: 14px
+	// 		line-height: 1.0
+	// 		font-family: $ryumin
+	// 		letter-spacing: 0.05em
+	// 		color: #fff
+	// 		+bp600
+	// 			font-size: 12px
+	// 	.num-box
+	// 		display: flex
+	// 		justify-content: center
+	// 		align-items: center
+	// 		width: fit-content
+	// 		// margin-left: 20px
+	// 		// +bp600
+	// 		// 	margin-left: 15px
+	// 		.txt
+	// 			display: block
+	// 			font-weight: 450
+	// 			font-size: 14px
+	// 			line-height: 1.0
+	// 			font-family: $ryumin
+	// 			letter-spacing: 0.05em
+	// 			color: #fff
+	// 			+bp600
+	// 				font-size: 12px
+	// 		.num
+	// 			display: block
+	// 			margin-left: 0.2em
+	// 			font-weight: 450
+	// 			font-size: 14px
+	// 			line-height: 1.0
+	// 			font-family: $ryumin
+	// 			letter-spacing: 0.05em
+	// 			color: #fff
+	// 			+bp600
+	// 				font-size: 12px
+	// .dealer-box
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	width: fit-content
+	// 	margin: 12px auto 0
+	// 	+bp600
+	// 		margin: 10px auto 0
+	// 	.tit
+	// 		display: block
+	// 		font-weight: 550
+	// 		font-size: 14px
+	// 		line-height: 1.0
+	// 		font-family: $ryumin
+	// 		letter-spacing: 0.05em
+	// 		color: #fff
+	// 		+bp600
+	// 			font-size: 12px
+	// 	.num-box
+	// 		display: flex
+	// 		justify-content: center
+	// 		align-items: center
+	// 		width: fit-content
+	// 		margin-left: 7px
+	// 		.txt
+	// 			display: block
+	// 			font-weight: 450
+	// 			font-size: 14px
+	// 			line-height: 1.0
+	// 			font-family: $ryumin
+	// 			letter-spacing: 0.05em
+	// 			color: #fff
+	// 			+bp600
+	// 				font-size: 12px
+	// 		.num
+	// 			display: block
+	// 			margin-left: 0.2em
+	// 			margin-right: 0.2em
+	// 			font-weight: 450
+	// 			font-size: 14px
+	// 			line-height: 1.0
+	// 			font-family: $ryumin
+	// 			letter-spacing: 0.05em
+	// 			color: #fff
+	// 			+bp600
+	// 				font-size: 12px
+	// .brand-num-box
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	width: fit-content
+	// 	margin: 12px auto 0
+	// 	+bp600
+	// 		margin: 10px auto 0
+	// 	.tit
+	// 		display: block
+	// 		font-weight: 550
+	// 		font-size: 14px
+	// 		line-height: 1.0
+	// 		font-family: $ryumin
+	// 		letter-spacing: 0.05em
+	// 		color: #fff
+	// 		+bp600
+	// 			font-size: 12px
+	// 	.num-box
+	// 		display: flex
+	// 		justify-content: center
+	// 		align-items: center
+	// 		width: fit-content
+	// 		// margin-left: 20px
+	// 		.txt
+	// 			display: block
+	// 			font-weight: 450
+	// 			font-size: 14px
+	// 			line-height: 1.0
+	// 			font-family: $ryumin
+	// 			letter-spacing: 0.05em
+	// 			color: #fff
+	// 			+bp600
+	// 				font-size: 12px
+	// 		.num
+	// 			display: block
+	// 			margin-left: 0.2em
+	// 			margin-right: 0.2em
+	// 			font-weight: 450
+	// 			font-size: 14px
+	// 			line-height: 1.0
+	// 			font-family: $ryumin
+	// 			letter-spacing: 0.05em
+	// 			color: #fff
+	// 			+bp600
+	// 				font-size: 12px
+	// .trademark-box
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	width: fit-content
+	// 	margin: 12px auto 0
+	// 	+bp600
+	// 		margin: 10px auto 0
+	// 	.tit
+	// 		display: block
+	// 		font-weight: 550
+	// 		font-size: 14px
+	// 		line-height: 1.0
+	// 		font-family: $ryumin
+	// 		letter-spacing: 0.05em
+	// 		color: #fff
+	// 		+bp600
+	// 			font-size: 12px
+	// 		.symbol-mark
+	// 			display: inline
+	// 			width: 33px
+	// 			margin-left: 3px
+	// 			margin-right: 3px
+	.copyright
+		display: block
+		margin: 20px auto 0
+		font-weight: 450
+		font-size: 14px
+		line-height: 1.0
+		font-family: $ryumin
+		letter-spacing: 0.05em
+		color: #fff
+		+bp600
+			margin: 15px auto 0
+			font-size: 12px

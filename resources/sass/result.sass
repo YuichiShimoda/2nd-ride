@@ -1,0 +1,220 @@
+@use "sass:math"
+
+$eurostile-extended: "eurostile-extended", sans-serif // 400, 500, 900
+$noto-sans: "Noto Sans JP", sans-serif // 400, 500, 700
+$noto-serif: "Noto Serif JP", serif // 400, 500, 700
+$ah-hakushu-rs: "ah-hakushu-rs", sans-serif // 800
+$taw-byakkokaisho-eye: "taw-byakkokaisho-eye", sans-serif // 400
+$ferry: "ferry", sans-serif // 400
+$df-kaisho-ub: "df-kaisho-ub", sans-serif // 400
+$amiri-quran: "amiri-quran", sans-serif // 400
+
+
+
+
+$base: #00a000
+$black-color: #006000
+$white-light: #E5E5E5
+$white-dark: #D0D0D0
+$black-bg: #232523
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+	&.no-scroll
+		overflow: hidden
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	min-height: 100vh
+	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
+	background-size: 16px 16px
+*::selection
+	background: #ddd
+*::-webkit-scrollbar
+	display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#title
+	display: block
+	width: 100%
+	padding: 240px 0 120px
+	background: linear-gradient(180deg, rgba($base, 1.0) 0%, rgba($base, 1.0) 50%, rgba($base, 0.8) 100%)
+	position: relative
+	.content-box
+		display: block
+		width: 1200px
+		margin: 0 auto
+		+bp1400
+			width: 1000px
+			padding: 0 0 80px
+			margin: 200px auto 0
+		+bp1100
+			width: calc(100vw - 100px)
+		+bp700
+			margin: 160px auto 0
+			padding: 0 0 60px
+		+bp500
+			width: calc(100vw - 60px)
+			padding: 0 0 40px
+		+bp450
+			width: calc(100vw - 30px)
+			padding: 0 0 30px
+			margin: 150px auto 0
+		h1
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 38px
+			line-height: 1.0
+			font-family: $noto-sans
+			letter-spacing: 0.15em
+			color: #fff
+			+bp1400
+				font-size: 34px
+			+bp900
+				font-size: 32px
+			+bp700
+				font-size: 28px
+			+bp500
+				font-size: 24px
+			+bp450
+				font-size: 22px
+	.en
+		position: absolute
+		right: 10vw
+		bottom: 15px
+		display: block
+		font-weight: 900
+		font-size: 18px
+		line-height: 1.0
+		font-family: $eurostile-extended
+		letter-spacing: 0.05em
+		background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+
+
+
+
+
+
+
+
+
+
+
+#test
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 50vh
+	margin: 160px auto 0
+	p
+		display: block
+		font-weight: 400
+		font-size: 50px
+		line-height: 2.0
+		font-family: $noto-sans
+		letter-spacing: 0.15em
+		color: #555

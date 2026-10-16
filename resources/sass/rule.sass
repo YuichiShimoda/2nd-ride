@@ -1,0 +1,858 @@
+$mb101: 'A-OTF Gothic MB101 Pro', sans-serif // M:500, DB:600
+$heisei-maru: "heisei-maru-gothic-std", sans-serif // 400, 800
+$ryumin: 'A-OTF Ryumin Pro', serif // M:450, B:550, EB:600, H:700, EH:800
+
+
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+	&.no-scroll
+		overflow: hidden
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	min-height: 100vh
+	background: url("../image/rule-bg.png")
+	background-size: 200px
+	background-repeat: repeat
+	+bp500
+		background-size: 120px
+*::selection
+	background: #ddd
+*::-webkit-scrollbar
+	display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#title
+	display: block
+	width: 1200px
+	padding: 0 0 120px
+	margin: 240px auto 0
+	border-bottom: solid 1px #ccc
+	+bp1400
+		width: 1000px
+		padding: 0 0 80px
+		margin: 200px auto 0
+	+bp1100
+		width: calc(100vw - 100px)
+	+bp700
+		margin: 160px auto 0
+		padding: 0 0 60px
+	+bp500
+		width: calc(100vw - 60px)
+		padding: 0 0 40px
+	+bp450
+		width: calc(100vw - 30px)
+		padding: 0 0 30px
+		margin: 150px auto 0
+	h1
+		display: block
+		width: 100%
+		font-weight: 700
+		font-size: 38px
+		line-height: 1.0
+		font-family: $ryumin
+		letter-spacing: 0.05em
+		color: #0C2A81
+		+bp1400
+			font-size: 34px
+		+bp900
+			font-size: 32px
+		+bp700
+			font-size: 28px
+		+bp500
+			font-size: 24px
+		+bp450
+			font-size: 22px
+
+
+
+
+
+
+
+
+
+
+
+
+#clause
+	display: block
+	width: 1200px
+	margin: 120px auto 100px
+	+bp1400
+		width: 1000px
+		margin: 100px auto 100px
+	+bp1100
+		width: calc(100vw - 100px)
+		margin: 90px auto 80px
+	+bp700
+		margin: 50px auto 60px
+	+bp500
+		width: calc(100vw - 60px)
+	+bp450
+		width: calc(100vw - 30px)
+		margin: 40px auto 40px
+	> .outline
+		display: block
+		width: 100%
+		font-weight: 550
+		font-size: 16px
+		line-height: 1.7
+		font-family: $ryumin
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+		+bp500
+			font-size: 14px
+		> span
+			font-weight: 450
+			font-size: 14px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+	> .info-box
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		margin: 60px auto 0
+		width: 900px
+		// +bp1100
+		// 	flex-direction: column
+		// 	width: 100%
+		// 	max-width: 500px
+		+bp1100
+			width: 85%
+		+bp900
+			width: 90%
+			margin: 40px auto 0
+		> .left-box, .right-box
+			display: block
+			> .outline-ele
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				width: 100%
+				> p:nth-of-type(1)
+					display: block
+					font-weight: 550
+					font-size: 16px
+					line-height: 1.5
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					white-space: nowrap
+					color: #333
+					+bp700
+						font-size: 14px
+					+bp500
+						padding-right: 30px
+						white-space: initial
+					+bp400
+						padding-right: 20px
+				> p:nth-of-type(2)
+					display: block
+					padding-bottom: 35px
+					padding-left: 50px
+					border-left: solid 1px #666
+					font-weight: 550
+					font-size: 16px
+					line-height: 1.5
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+					+bp900
+						padding-bottom: 30px
+					+bp700
+						font-size: 14px
+						padding-left: 30px
+					+bp400
+						padding-left: 20px
+						padding-bottom: 25px
+					.email
+						display: inline
+						width: 170px
+						vertical-align: baseline
+						+bp700
+							width: 150px
+					.num
+						display: inline
+						margin: 0 0.2em
+						font-weight: 550
+						font-size: 16px
+						line-height: 1.5
+						font-family: $ryumin
+						letter-spacing: 0.05em
+						color: #555
+						+bp700
+							font-size: 14px
+			> .outline-ele:first-of-type
+				> p
+					padding-top: 40px
+					+bp500
+						padding-top: 30px
+			> .outline-ele:last-of-type
+				> p
+					padding-bottom: 40px
+					+bp500
+						padding-bottom: 30px
+		> .left-box
+			width: 100%
+			> .outline-ele
+				> p:nth-of-type(1)
+					width: 260px
+					+bp1100
+						width: 230px
+					+bp700
+						width: 190px
+					+bp500
+						width: 140px
+					+bp400
+						width: 130px
+				> p:nth-of-type(2)
+					width: calc(100% - 260px)
+					+bp1100
+						width: calc(100% - 230px)
+					+bp700
+						width: calc(100% - 190px)
+					+bp500
+						width: calc(100% - 140px)
+					+bp400
+						width: calc(100% - 130px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		> .tit
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 24px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #0C2A81
+			+bp1400
+				font-size: 22px
+			+bp1100
+				font-size: 20px
+			+bp600
+				font-size: 16px
+		> .desc
+			display: block
+			width: 100%
+			font-weight: 550
+			font-size: 16px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+			+bp700
+				font-size: 14px
+		> .desc:nth-child(2)
+			margin-top: 30px
+			+bp600
+				margin-top: 20px
+		> .paragraph_box
+			display: block
+			width: 100%
+			margin-top: 30px
+			> .paragraph_ele
+				display: block
+				width: 100%
+				margin-top: 15px
+				> .tit
+					display: block
+					width: 100%
+					padding-left: 39px
+					font-weight: 450
+					font-size: 14px
+					line-height: 1.7
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+					text-indent: -1.6em
+				> .desc
+					display: block
+					width: 100%
+					margin-top: 10px
+					padding-left: 39px
+					font-weight: 450
+					font-size: 14px
+					line-height: 1.7
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+				> .itemization
+					display: block
+					width: 100%
+					padding-left: 53px
+					font-weight: 450
+					font-size: 14px
+					line-height: 1.7
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+					text-indent: -1.0em
+					> span
+						font-weight: 450
+						font-size: 12px
+						line-height: 1.7
+						font-family: $ryumin
+						letter-spacing: 0.05em
+						color: #555
+			> .paragraph_ele:first-of-type
+				margin-top: 0
+
+
+
+	> .article_box.sect2
+		display: block
+		width: 100%
+		margin: 80px auto 0
+		+bp1000
+			margin: 40px auto 0
+		> .tit
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 24px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #0C2A81
+			+bp1400
+				font-size: 22px
+			+bp1100
+				font-size: 20px
+			+bp600
+				font-size: 16px
+		> .desc
+			display: block
+			width: 100%
+			margin-top: 30px
+			font-weight: 550
+			font-size: 16px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+			+bp700
+				font-size: 14px
+			+bp600
+				margin-top: 20px
+		> .paragraph_box
+			display: block
+			width: 100%
+			margin-top: 10px
+			> p
+				display: block
+				width: 100%
+				padding-left: 39px
+				font-weight: 450
+				font-size: 14px
+				line-height: 1.7
+				font-family: $ryumin
+				letter-spacing: 0.05em
+				color: #555
+				text-indent: -1.6em
+				> span
+					font-weight: 450
+					font-size: 12px
+					line-height: 1.7
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+
+
+
+	> .article_box.sect3
+		display: block
+		width: 100%
+		margin: 80px auto 0
+		+bp1000
+			margin: 40px auto 0
+		> .tit
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 24px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #0C2A81
+			+bp1400
+				font-size: 22px
+			+bp1100
+				font-size: 20px
+			+bp600
+				font-size: 16px
+			+bp500
+				padding-left: 1.3em
+				text-indent: -1.3em
+				line-height: 1.3
+		> .desc
+			display: block
+			width: 100%
+			margin-top: 30px
+			font-weight: 550
+			font-size: 16px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+			+bp700
+				font-size: 14px
+			+bp600
+				margin-top: 20px
+		> .note
+			display: block
+			width: 100%
+			margin-top: 3px
+			font-weight: 450
+			font-size: 12px
+			line-height: 1.5
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+			padding-left: 1.3em
+			text-indent: -1.3em
+		> .link_box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			width: fit-content
+			margin-top: 10px
+			margin-left: 17px
+			+bp500
+				align-items: flex-start
+				flex-direction: column
+			a
+				display: block
+				font-weight: 450
+				font-size: 14px
+				line-height: 1.0
+				font-family: $ryumin
+				letter-spacing: 0.05em
+				color: #5184c9
+				+bp500
+					line-height: 1.7
+			span
+				display: block
+				padding: 0 5px
+				font-weight: 450
+				font-size: 14px
+				line-height: 1.0
+				font-family: $ryumin
+				letter-spacing: 0.05em
+				color: #555
+				+bp500
+					display: none
+		// > .paragraph_box
+		// 	display: block
+		// 	width: 100%
+		// 	margin-top: 10px
+		// 	> p
+		// 		display: block
+		// 		width: 100%
+		// 		padding-left: 39px
+		// 		font-weight: 400
+		// 		font-size: 14px
+		// 		line-height: 1.7
+		// 		font-family: $ryumin
+		// 		letter-spacing: 0.05em
+		// 		color: #555
+		// 		text-indent: -1.6em
+		// 		> span
+		// 			font-weight: 400
+		// 			font-size: 12px
+		// 			line-height: 1.7
+		// 			font-family: $ryumin
+		// 			letter-spacing: 0.05em
+		// 			color: #555
+
+
+
+	> .article_box.sect4
+		display: block
+		width: 100%
+		margin: 80px auto 0
+		+bp1000
+			margin: 40px auto 0
+		> .tit
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 24px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #0C2A81
+			+bp1400
+				font-size: 22px
+			+bp1100
+				font-size: 20px
+			+bp600
+				font-size: 16px
+		> .paragraph_box
+			display: block
+			width: 100%
+			margin-top: 30px
+			> .paragraph_ele
+				display: block
+				width: 100%
+				margin-top: 15px
+				> .tit
+					display: block
+					width: 100%
+					padding-left: 30px
+					font-weight: 550
+					font-size: 16px
+					line-height: 1.7
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+					text-indent: -2.0em
+					+bp700
+						font-size: 14px
+				> .list_box
+					display: block
+					width: 100%
+					margin-top: 10px
+					> p
+						display: block
+						width: 100%
+						padding-left: 54px
+						font-weight: 450
+						font-size: 14px
+						line-height: 1.7
+						font-family: $ryumin
+						letter-spacing: 0.05em
+						color: #555
+						text-indent: -1.7em
+						> span
+							font-weight: 450
+							font-size: 12px
+							line-height: 1.7
+							font-family: $ryumin
+							letter-spacing: 0.05em
+							color: #555
+			> .paragraph_ele:first-of-type
+				margin-top: 0
+
+
+
+	> .article_box.sect5
+		display: block
+		width: 100%
+		margin: 80px auto 0
+		+bp1000
+			margin: 40px auto 0
+		> .tit
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 24px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #0C2A81
+			+bp1400
+				font-size: 22px
+			+bp1100
+				font-size: 20px
+			+bp600
+				font-size: 16px
+		> .paragraph_box
+			display: block
+			width: 100%
+			margin-top: 30px
+			> .paragraph_ele
+				display: block
+				width: 100%
+				margin-top: 15px
+				> .tit
+					display: block
+					width: 100%
+					padding-left: 30px
+					font-weight: 550
+					font-size: 16px
+					line-height: 1.7
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+					text-indent: -2.0em
+					+bp700
+						font-size: 14px
+					> span
+						font-weight: 450
+						font-size: 12px
+						line-height: 1.7
+						font-family: $ryumin
+						letter-spacing: 0.05em
+						color: #555
+				> .itemization
+					display: block
+					width: 100%
+					padding-left: 39px
+					font-weight: 450
+					font-size: 14px
+					line-height: 1.7
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+					text-indent: -1.0em
+			> .paragraph_ele:first-of-type
+				margin-top: 0
+
+
+
+	> .article_box.sect7
+		display: block
+		width: 100%
+		margin: 80px auto 0
+		+bp1000
+			margin: 40px auto 0
+		> .tit
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 24px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #0C2A81
+			+bp1400
+				font-size: 22px
+			+bp1100
+				font-size: 20px
+			+bp600
+				font-size: 16px
+		> .desc
+			display: block
+			width: 100%
+			margin-top: 30px
+			font-weight: 550
+			font-size: 16px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+			+bp700
+				font-size: 14px
+			+bp600
+				margin-top: 20px
+		> .info_box
+			display: block
+			width: 100%
+			margin-top: 15px
+			> p
+				display: block
+				width: 100%
+				font-weight: 450
+				font-size: 14px
+				line-height: 1.7
+				font-family: $ryumin
+				letter-spacing: 0.05em
+				color: #555
+			> .item
+				margin-top: 10px
+				font-weight: 700
+				font-size: 13px
+				> span
+					font-weight: 450
+					font-size: 12px
+					line-height: 1.0
+					font-family: $ryumin
+					letter-spacing: 0.05em
+					color: #555
+			> .item:nth-of-type(1)
+				margin-top: 0
+			a
+				display: block
+				width: fit-content
+				padding: 0 3px 4px
+				margin-top: 5px
+				border-bottom: solid 1px #306ec1
+				font-weight: 450
+				font-size: 14px
+				line-height: 1.0
+				font-family: $ryumin
+				letter-spacing: 0.05em
+				color: #306ec1
+				+bp500
+					font-size: 13px
+
+
+
+	> .article_box.sect10
+		display: block
+		width: 100%
+		margin: 80px auto 0
+		+bp1000
+			margin: 40px auto 0
+		> .tit
+			display: block
+			width: 100%
+			font-weight: 700
+			font-size: 24px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #0C2A81
+			+bp1400
+				font-size: 22px
+			+bp1100
+				font-size: 20px
+			+bp600
+				font-size: 16px
+		> .desc
+			display: block
+			width: 100%
+			margin-top: 30px
+			font-weight: 550
+			font-size: 16px
+			line-height: 1.7
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			color: #555
+			+bp700
+				font-size: 14px
+			+bp600
+				margin-top: 20px
+		> .create_date
+			display: block
+			width: 100%
+			margin-top: 20px
+			font-weight: 450
+			font-size: 14px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			text-align: right
+			color: #555
+		> .update_date
+			display: block
+			width: 100%
+			margin-top: 0.5em
+			font-weight: 450
+			font-size: 14px
+			line-height: 1.0
+			font-family: $ryumin
+			letter-spacing: 0.05em
+			text-align: right
+			color: #555
+
+
+
+
+
