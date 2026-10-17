@@ -281,15 +281,15 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(149px, 23px) scale(2.2) rotate(112deg);
+    transform: translate(94px, -33px) scale(1.2) rotate(-30deg);
     opacity: 1;
   }
   40% {
-    transform: translate(81px, 42px) scale(0.6) rotate(-321deg);
+    transform: translate(136px, -35px) scale(1) rotate(-236deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, 0px) scale(1) rotate(0deg);
+    transform: translate(0, -2px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -302,15 +302,15 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(113px, 49px) scale(1.6) rotate(119deg);
+    transform: translate(83px, -36px) scale(3) rotate(208deg);
     opacity: 1;
   }
   40% {
-    transform: translate(86px, 14px) scale(1.2) rotate(181deg);
+    transform: translate(107px, -35px) scale(0.4) rotate(139deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, -2px) scale(1) rotate(0deg);
+    transform: translate(0, -4px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -323,11 +323,11 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(140px, -1px) scale(1.8) rotate(-306deg);
+    transform: translate(107px, -10px) scale(2) rotate(90deg);
     opacity: 1;
   }
   40% {
-    transform: translate(92px, 20px) scale(1.2) rotate(-44deg);
+    transform: translate(81px, -14px) scale(0.8) rotate(-31deg);
     opacity: 0;
   }
   60% {
@@ -344,15 +344,15 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(87px, 51px) scale(2) rotate(32deg);
+    transform: translate(137px, 50px) scale(2.6) rotate(-203deg);
     opacity: 1;
   }
   40% {
-    transform: translate(105px, 25px) scale(0.4) rotate(88deg);
+    transform: translate(89px, 2px) scale(0.6) rotate(163deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, -2px) scale(1) rotate(0deg);
+    transform: translate(0, 1px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -365,15 +365,15 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(83px, 0px) scale(1.8) rotate(-343deg);
+    transform: translate(110px, -10px) scale(2.8) rotate(213deg);
     opacity: 1;
   }
   40% {
-    transform: translate(134px, -23px) scale(1.2) rotate(252deg);
+    transform: translate(121px, -2px) scale(1.2) rotate(196deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, -4px) scale(1) rotate(0deg);
+    transform: translate(0, -3px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -386,15 +386,15 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(91px, -40px) scale(1.6) rotate(-317deg);
+    transform: translate(129px, 39px) scale(1.8) rotate(244deg);
     opacity: 1;
   }
   50% {
-    transform: translate(138px, -21px) scale(0.8) rotate(5deg);
+    transform: translate(109px, -26px) scale(1.2) rotate(259deg);
     opacity: 0;
   }
   70% {
-    transform: translate(0, 6px) scale(1) rotate(0deg);
+    transform: translate(0, 2px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -407,15 +407,15 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(104px, -49px) scale(2.8) rotate(-162deg);
+    transform: translate(117px, 37px) scale(1.6) rotate(151deg);
     opacity: 1;
   }
   50% {
-    transform: translate(148px, 34px) scale(0.4) rotate(-258deg);
+    transform: translate(106px, 43px) scale(0.8) rotate(-147deg);
     opacity: 0;
   }
   70% {
-    transform: translate(0, 4px) scale(1) rotate(0deg);
+    transform: translate(0, 2px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -428,11 +428,11 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(96px, 4px) scale(3) rotate(-225deg);
+    transform: translate(126px, -35px) scale(1.4) rotate(215deg);
     opacity: 1;
   }
   50% {
-    transform: translate(96px, 31px) scale(0.6) rotate(146deg);
+    transform: translate(91px, 18px) scale(0.4) rotate(256deg);
     opacity: 0;
   }
   70% {
@@ -449,11 +449,11 @@
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(148px, -25px) scale(2.2) rotate(11deg);
+    transform: translate(87px, 7px) scale(2.2) rotate(-192deg);
     opacity: 1;
   }
   50% {
-    transform: translate(108px, 24px) scale(1) rotate(232deg);
+    transform: translate(85px, -30px) scale(0.6) rotate(-352deg);
     opacity: 0;
   }
   70% {
@@ -471,11 +471,11 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(113px, 30px) scale(1.2) rotate(352deg);
+      transform: translate(81px, 6px) scale(2.2) rotate(-177deg);
       opacity: 1;
     }
     40% {
-      transform: translate(126px, 17px) scale(0.6) rotate(-281deg);
+      transform: translate(101px, 23px) scale(1) rotate(302deg);
       opacity: 0;
     }
     60% {
@@ -492,15 +492,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(134px, 5px) scale(2) rotate(-2deg);
+      transform: translate(146px, 20px) scale(2.6) rotate(242deg);
       opacity: 1;
     }
     40% {
-      transform: translate(96px, 4px) scale(1.2) rotate(-302deg);
+      transform: translate(142px, -21px) scale(1) rotate(306deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -2px) scale(1) rotate(0deg);
+      transform: translate(0, -3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -513,15 +513,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(130px, -27px) scale(1.2) rotate(-33deg);
+      transform: translate(109px, -16px) scale(2.6) rotate(-239deg);
       opacity: 1;
     }
     40% {
-      transform: translate(117px, -26px) scale(1.2) rotate(162deg);
+      transform: translate(87px, 23px) scale(0.4) rotate(100deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -4px) scale(1) rotate(0deg);
+      transform: translate(0, -1px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -534,15 +534,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(142px, -9px) scale(1.4) rotate(-63deg);
+      transform: translate(81px, 31px) scale(1.8) rotate(-297deg);
       opacity: 1;
     }
     40% {
-      transform: translate(102px, 19px) scale(0.6) rotate(-164deg);
+      transform: translate(113px, 8px) scale(0.4) rotate(231deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -1px) scale(1) rotate(0deg);
+      transform: translate(0, 1px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -555,15 +555,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(142px, 23px) scale(2.4) rotate(47deg);
+      transform: translate(126px, 7px) scale(1.2) rotate(14deg);
       opacity: 1;
     }
     40% {
-      transform: translate(130px, -21px) scale(1) rotate(259deg);
+      transform: translate(133px, -13px) scale(0.6) rotate(-170deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, 0px) scale(1) rotate(0deg);
+      transform: translate(0, -3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -576,11 +576,11 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(136px, -10px) scale(2.4) rotate(-124deg);
+      transform: translate(83px, -9px) scale(3) rotate(322deg);
       opacity: 1;
     }
     50% {
-      transform: translate(117px, 30px) scale(1) rotate(52deg);
+      transform: translate(129px, 28px) scale(0.8) rotate(291deg);
       opacity: 0;
     }
     70% {
@@ -597,15 +597,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(141px, 16px) scale(1.2) rotate(-331deg);
+      transform: translate(121px, 5px) scale(2.6) rotate(348deg);
       opacity: 1;
     }
     50% {
-      transform: translate(130px, -11px) scale(0.6) rotate(-310deg);
+      transform: translate(120px, 7px) scale(0.8) rotate(-353deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 6px) scale(1) rotate(0deg);
+      transform: translate(0, 1px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -618,15 +618,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(149px, -19px) scale(2.2) rotate(-342deg);
+      transform: translate(121px, 30px) scale(1.4) rotate(167deg);
       opacity: 1;
     }
     50% {
-      transform: translate(126px, -2px) scale(1) rotate(355deg);
+      transform: translate(112px, 21px) scale(0.4) rotate(-137deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 6px) scale(1) rotate(0deg);
+      transform: translate(0, 1px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -639,15 +639,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(85px, 0px) scale(3.2) rotate(-142deg);
+      transform: translate(106px, 6px) scale(3.2) rotate(48deg);
       opacity: 1;
     }
     50% {
-      transform: translate(87px, -20px) scale(0.6) rotate(-111deg);
+      transform: translate(108px, -9px) scale(1) rotate(-228deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 5px) scale(1) rotate(0deg);
+      transform: translate(0, 4px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -662,15 +662,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(90px, 21px) scale(1.4) rotate(-38deg);
+      transform: translate(109px, -2px) scale(1.6) rotate(-42deg);
       opacity: 1;
     }
     40% {
-      transform: translate(85px, -7px) scale(0.8) rotate(254deg);
+      transform: translate(111px, -12px) scale(0.6) rotate(171deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -4px) scale(1) rotate(0deg);
+      transform: translate(0, 0px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -683,15 +683,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(111px, -4px) scale(1.2) rotate(-306deg);
+      transform: translate(91px, -5px) scale(1) rotate(254deg);
       opacity: 1;
     }
     40% {
-      transform: translate(91px, 0px) scale(0.8) rotate(135deg);
+      transform: translate(87px, -5px) scale(0.4) rotate(-201deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -1px) scale(1) rotate(0deg);
+      transform: translate(0, -4px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -704,15 +704,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(94px, 3px) scale(1.8) rotate(-259deg);
+      transform: translate(111px, -6px) scale(1.4) rotate(-343deg);
       opacity: 1;
     }
     40% {
-      transform: translate(119px, 14px) scale(0.6) rotate(-118deg);
+      transform: translate(107px, 5px) scale(0.8) rotate(-250deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -2px) scale(1) rotate(0deg);
+      transform: translate(0, -3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -725,15 +725,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(109px, 6px) scale(1.8) rotate(57deg);
+      transform: translate(84px, 15px) scale(1.6) rotate(-279deg);
       opacity: 1;
     }
     40% {
-      transform: translate(108px, 7px) scale(0.6) rotate(-4deg);
+      transform: translate(85px, -12px) scale(0.6) rotate(-358deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -1px) scale(1) rotate(0deg);
+      transform: translate(0, -3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -746,15 +746,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(98px, 21px) scale(1.6) rotate(-110deg);
+      transform: translate(111px, -14px) scale(1.2) rotate(335deg);
       opacity: 1;
     }
     40% {
-      transform: translate(98px, 21px) scale(0.8) rotate(-46deg);
+      transform: translate(100px, -6px) scale(0.6) rotate(169deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -2px) scale(1) rotate(0deg);
+      transform: translate(0, -3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -767,11 +767,11 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(108px, -17px) scale(1.4) rotate(253deg);
+      transform: translate(109px, 7px) scale(1.4) rotate(-203deg);
       opacity: 1;
     }
     50% {
-      transform: translate(113px, 6px) scale(0.4) rotate(-324deg);
+      transform: translate(101px, 0px) scale(0.8) rotate(-222deg);
       opacity: 0;
     }
     70% {
@@ -788,15 +788,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(120px, 15px) scale(1.8) rotate(-86deg);
+      transform: translate(97px, 16px) scale(1.4) rotate(3deg);
       opacity: 1;
     }
     50% {
-      transform: translate(113px, -14px) scale(0.8) rotate(69deg);
+      transform: translate(118px, -10px) scale(0.8) rotate(-179deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 6px) scale(1) rotate(0deg);
+      transform: translate(0, 5px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -809,15 +809,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(116px, -10px) scale(1) rotate(358deg);
+      transform: translate(121px, -19px) scale(1) rotate(-151deg);
       opacity: 1;
     }
     50% {
-      transform: translate(119px, 17px) scale(0.6) rotate(16deg);
+      transform: translate(81px, -6px) scale(0.4) rotate(-283deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 1px) scale(1) rotate(0deg);
+      transform: translate(0, 3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -830,15 +830,15 @@
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(96px, -8px) scale(1.6) rotate(-123deg);
+      transform: translate(86px, 5px) scale(1.6) rotate(-308deg);
       opacity: 1;
     }
     50% {
-      transform: translate(85px, -9px) scale(0.6) rotate(-231deg);
+      transform: translate(85px, -1px) scale(0.4) rotate(-348deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 2px) scale(1) rotate(0deg);
+      transform: translate(0, 3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {

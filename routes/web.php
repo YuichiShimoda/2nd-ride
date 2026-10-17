@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\AppraisalController;
 use App\Http\Controllers\Admin\ItemController;
@@ -24,6 +25,16 @@ Route::get('faq', [FrontController::class, 'faq'])->name('faq');
 
 // プロフィール
 Route::get('profile', [FrontController::class, 'profile'])->name('profile');
+
+// ご予約
+Route::get('appointment', [ContactController::class, 'appointmentIndex'])->name('appointment.index');
+Route::post('appointment/confirm', [ContactController::class, 'appointmentConfirm'])->name('appointment.confirm');
+Route::post('appointment/thanks', [ContactController::class, 'appointmentThanks'])->name('appointment.thanks');
+
+// ご質問・ご相談
+Route::get('inquiry', [ContactController::class, 'inquiryIndex'])->name('inquiry.index');
+Route::post('inquiry/confirm', [ContactController::class, 'inquiryConfirm'])->name('inquiry.confirm');
+Route::post('inquiry/thanks', [ContactController::class, 'inquiryThanks'])->name('inquiry.thanks');
 
 // アンケート
 Route::get('voice', [FrontController::class, 'voice'])->name('voice');

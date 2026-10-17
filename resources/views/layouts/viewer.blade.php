@@ -193,13 +193,13 @@
                         <nav class="bottom-nav-box">
                             <ul>
                                 <li class="global-nav-box">
-                                    <a class="link-box" href="{{ route('top') }}">
+                                    <a class="link-box" href="{{ route('appointment.index') }}">
                                         <p class="en">APPOINTMENT</p>
                                         <h3 class="jp">ご予約</h3>
                                     </a>
                                 </li>
                                 <li class="global-nav-box">
-                                    <a class="link-box" href="{{ route('top') }}">
+                                    <a class="link-box" href="{{ route('inquiry.index') }}">
                                         <p class="en">INQUIRY</p>
                                         <h3 class="jp">ご質問・ご相談</h3>
                                     </a>
@@ -246,14 +246,14 @@
 
             <section id="contact">
                 <div class="content-box">
-                    <a class="left-box" href="{{ route('top') }}">
+                    <a class="left-box" href="{{ route('appointment.index') }}">
                         <div class="tit-box">
                             <p class="en" data-splitting>Appointment</p>
                             <h2 class="jp">ご予約</h2>
                         </div>
                         <img class="img lazyload" data-src="{{ asset('/image/top/contact/appointment.webp') }}" alt="カレンダー">
                     </a>
-                    <a class="right-box" href="{{ route('top') }}">
+                    <a class="right-box" href="{{ route('inquiry.index') }}">
                         <div class="tit-box">
                             <p class="en" data-splitting>Inquiry</p>
                             <h2 class="jp">ご質問・ご相談</h2>
@@ -292,8 +292,8 @@
                         <div class="contact-box">
                             <p class="en">Contact</p>
                             <div class="link-box">
-                                <a class="link" href="{{ route('top') }}">ご予約</a>
-                                <a class="link" href="{{ route('top') }}">お問い合わせ</a>
+                                <a class="link" href="{{ route('appointment.index') }}">ご予約</a>
+                                <a class="link" href="{{ route('inquiry.index') }}">ご質問・ご相談</a>
                                 <a class="link" href="tel:07011464820">070-1146-4820</a>
                             </div>
                         </div>
