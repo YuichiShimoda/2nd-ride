@@ -1596,7 +1596,7 @@
 			<div class="detail-box">
 				<div class="left-box">
 					<div class="info-ele">
-						<h3>屋号</h3>
+						<h3>事業者</h3>
 						<p>セカンド・ライド</p>
 						<div class="streak-box">
 							<div class="inner-box">
@@ -1606,7 +1606,7 @@
 						</div>
 					</div>
 					<div class="info-ele">
-						<h3>代表者名</h3>
+						<h3>代表者</h3>
 						<p>柴原 輝</p>
 						<div class="streak-box">
 							<div class="inner-box">
@@ -1660,7 +1660,7 @@
 					</div>
 					<div class="info-ele">
 						<h3>古物商許可</h3>
-						<p>愛知県公安委員会　第<span class="num">111122223333</span>号</p>
+						<p>愛知県公安委員会　第<span class="num">542642600300</span>号</p>
 						<div class="streak-box">
 							<div class="inner-box">
 								<div class="base"></div>
@@ -1748,6 +1748,6 @@
 @section('js')
 	<script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script><!-- swiper -->
     @vite([
-        'resources/js/top.js',
+        'resources/js/top.ts',
     ])
 @stop

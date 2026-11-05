@@ -35,20 +35,20 @@
         <div class="info-box">
             <div class="left-box">
                 <div class="outline-ele">
-                    <P>事業者</P>
-                    <p>株式会社 mono link</p>
+                    <P>事業者（ 屋号 ）</P>
+                    <p>セカンド・ライド</p>
                 </div>
                 <div class="outline-ele">
                     <P>代表者</P>
-                    <p>猿丸 敬将</p>
+                    <p>柴原 輝</p>
                 </div>
                 <div class="outline-ele">
                     <P>住所</P>
-                    <p>〒452-0932<br>愛知県 清須市 朝日 城屋敷 65</p>
+                    <p>〒492-8092<br>愛知県 稲沢市 下津穂所 一丁目 5-9<br>サン アーク 202</p>
                 </div>
                 <div class="outline-ele">
                     <P>電話番号</P>
-                    <p>0120-979-986</p>
+                    <p>070-1146-4820</p>
                 </div>
                 <div class="outline-ele">
                     <P>メールアドレス</P>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="outline-ele">
                     <P>古物商許可</P>
-                    <p>愛知県公安委員会：第<span class="num">541042305500</span>号</p>
+                    <p>愛知県公安委員会：第<span class="num">542642600300</span>号</p>
                 </div>
             </div>
         </div>

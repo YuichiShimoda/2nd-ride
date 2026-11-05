@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import laravel from 'laravel-vite-plugin';
+import checker from 'vite-plugin-checker';
 
 export default defineConfig({
     plugins: [
@@ -9,11 +10,11 @@ export default defineConfig({
                 'resources/js/admin/category.js',
                 'resources/js/admin/item.js',
                 'resources/js/admin/movie.js',
-                'resources/js/app.js',
+                'resources/js/app.ts',
                 'resources/js/smooth-scroll.js',
-                'resources/js/bootstrap.js',
+                'resources/js/bootstrap.ts',
                 'resources/js/mouse.js',
-                'resources/js/top.js',
+                'resources/js/top.ts',
                 'resources/js/result.js',
                 'resources/js/faq.js',
                 'resources/js/profile.js',
@@ -26,6 +27,7 @@ export default defineConfig({
             refresh: true,
         }),
         vue(),
+        checker({ typescript: true }),
     ],
     define: {
         global: 'globalThis',
