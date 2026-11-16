@@ -1,3 +1,9 @@
+import $ from "jquery";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 import "lazysizes";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
@@ -30,8 +36,8 @@ $('a[href^="#"]').click(function(e) {
 	e.preventDefault();
 	var speed = 1000;
 	var href= $(this).attr("href");
-	var target = $(href == "#" || href == "" ? 'html' : href);
-	var windowWidth = $(window).width();
+	var target = $(href && href !== "#" ? href : "html");
+	var windowWidth = $(window).width() ?? 0;
 	if (location.pathname.includes('service')) {
 		if (windowWidth >= 700) {
 			var headerHeight = 0;
@@ -45,9 +51,11 @@ $('a[href^="#"]').click(function(e) {
 			var headerHeight = 0;
 		}
 	}
-	var position = target.offset().top - headerHeight;
+	var position = (target.offset()?.top ?? 0) - headerHeight;
 	$('body,html').animate({scrollTop:position}, speed, 'swing');
-	location.hash = href;
+	if (href) {
+		location.hash = href;
+	}
 	return false;
 });
 
@@ -425,7 +433,7 @@ ScrollTrigger.create({
 
 
 $('video[data-src]').each(function () {
-	const video = this;
+	const video = this as HTMLVideoElement;
 	const observer = new IntersectionObserver((entries, observer) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
@@ -459,8 +467,8 @@ $('video[data-src]').each(function () {
 
 $('.hover-slider-container').on('mousemove', function(e) {
 	var $container = $(this);
-	var containerLeft = $container.offset().left;
-	var containerWidth = $container.width();
+	var containerLeft = $container.offset()?.left ?? 0;
+	var containerWidth = $container.width() ?? 0;
 
 	var mouseX = e.pageX - containerLeft;
 	var percentage = (mouseX / containerWidth) * 100;

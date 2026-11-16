@@ -19,6 +19,9 @@ $white-dark: #D0D0D0
 $black-bg: #232523
 
 
+@mixin bp1750
+	@media screen and (max-width: 1750px)
+		@content
 @mixin bp1600
 	@media screen and (max-width: 1600px)
 		@content
@@ -262,6 +265,18 @@ body::-webkit-scrollbar
 			background-size: cover
 			background-position: left bottom
 			perspective: 800px
+			+bp1500
+				background: url("../image/top/mv/bg_1500.webp")
+			+bp1200
+				background-position: 15% bottom
+			+bp1100
+				background-position: 18% bottom
+			+bp1000
+				background-position: 20% bottom
+			+bp900
+				background-position: 25% bottom
+			+bp800
+				background-position: 30% bottom
 			.content-box
 				display: block
 				width: 100%
@@ -271,10 +286,51 @@ body::-webkit-scrollbar
 				will-change: transform
 				.logo
 					position: absolute
-					left: 120px
-					top: 48%
+					top: 47%
+					left: 200px
 					display: block
-					width: 460px
+					width: 540px
+					+bp1750
+						top: 47.5%
+						left: 180px
+						width: 510px
+					+bp1600
+						top: 48%
+						left: 160px
+						width: 480px
+					+bp1500
+						top: 48.3%
+						left: 120px
+						width: 460px
+					+bp1400
+						top: 48.6%
+						left: 120px
+						width: 430px
+					+bp1300
+						top: 49%
+						left: 120px
+						width: 420px
+					+bp1200
+						top: 49.5%
+						width: 390px
+					+bp1100
+						top: 50%
+						left: 100px
+						width: 370px
+					+bp1000
+						top: 50%
+						left: 90px
+						width: 360px
+					+bp900
+						top: 50.5%
+						width: 340px
+					+bp850
+						left: 80px
+						width: 320px
+					+bp800
+						width: 300px
+					+bp750
+						width: 290px
 				.en-box
 					position: absolute
 					top: 220px
@@ -284,18 +340,47 @@ body::-webkit-scrollbar
 					align-items: flex-end
 					flex-direction: column
 					width: fit-content
+					+bp1400
+						top: 200px
+					+bp1300
+						right: 140px
+					+bp1200
+						top: 220px
+						right: 100px
+					+bp1000
+						right: 85px
+					+bp800
+						right: 70px
 					> p
 						display: block
 						.word
 							.char
 								display: inline-block
 								font-weight: 900
-								font-size: 68px
+								font-size: 86px
 								line-height: 1.2
 								font-family: $eurostile-extended
 								letter-spacing: 0.0em
 								color: transparent
 								position: relative
+								+bp1750
+									font-size: 80px
+								+bp1600
+									font-size: 74px
+								+bp1500
+									font-size: 68px
+								+bp1400
+									line-height: 1.3
+								+bp1200
+									line-height: 1.2
+								+bp1000
+									font-size: 62px
+								+bp900
+									font-size: 58px
+								+bp800
+									font-size: 54px
+								+bp750
+									font-size: 52px
 								&::before, &::after
 									position: absolute
 									top: 0
@@ -320,12 +405,30 @@ body::-webkit-scrollbar
 								.char
 									display: inline-block
 									font-weight: 900
-									font-size: 68px
+									font-size: 86px
 									line-height: 1.2
 									font-family: $eurostile-extended
 									letter-spacing: 0.0em
 									color: transparent
 									position: relative
+									+bp1750
+										font-size: 80px
+									+bp1600
+										font-size: 74px
+									+bp1500
+										font-size: 68px
+									+bp1400
+										line-height: 1.3
+									+bp1200
+										line-height: 1.2
+									+bp1000
+										font-size: 62px
+									+bp900
+										font-size: 58px
+									+bp800
+										font-size: 54px
+									+bp750
+										font-size: 52px
 									&::before, &::after
 										position: absolute
 										top: 0
@@ -351,20 +454,50 @@ body::-webkit-scrollbar
 					justify-content: flex-start
 					align-items: center
 					width: fit-content
+					+bp1200
+						bottom: 190px
+					+bp1000
+						right: 120px
 					.desc
 						display: block
-						width: 340px
+						width: fit-content
 						font-weight: 400
-						font-size: 14px
+						font-size: 16px
 						line-height: 1.7
 						font-family: $noto-sans
 						letter-spacing: 0.15em
 						text-align: right
 						color: #111
+						+bp1750
+							font-size: 15px
+						+bp1600
+							font-size: 14px
+						+bp1200
+							font-size: 13px
+						+bp1000
+							font-size: 12px
+							line-height: 2.0
+						+bp900
+							font-size: 11px
 					.hatching
 						display: block
-						width: 24px
-						margin-left: 95px
+						width: 28px
+						margin-left: 75px
+						+bp1750
+							width: 26px
+							margin-left: 70px
+						+bp1600
+							width: 24px
+							margin-left: 65px
+						+bp1400
+							margin-left: 50px
+						+bp1200
+							margin-left: 40px
+						+bp1000
+							width: 20px
+						+bp900
+							width: 18px
+							margin-left: 35px
 						path
 							$total-paths: 7
 							$duration: 3.0s
@@ -379,22 +512,32 @@ body::-webkit-scrollbar
 					left: 0
 					display: block
 					width: 100%
-					height: 30px
+					height: 50px
 					background: $base
 					pointer-events: none
+					+bp1600
+						height: 30px
+					+bp1000
+						height: 40px
 				.top-shape
 					position: absolute
-					top: 0
+					top: 50px
 					right: 0
 					display: block
 					width: 620px
 					pointer-events: none
+					+bp1600
+						top: 0
+					+bp1000
+						top: 20px
+					+bp850
+						top: 15px
 				.bottom-shape-box
 					position: absolute
 					right: 0
 					bottom: 0
 					display: block
-					width: 880px
+					width: 1080px
 					pointer-events: none
 					.inner-box
 						display: block
@@ -443,6 +586,20 @@ body::-webkit-scrollbar
 						display: block
 						width: 100%
 						pointer-events: none
+						+bp1750
+							clip-path: polygon(100% 0%, 100% 100%, 10% 100%, 50% 0%)
+						+bp1600
+							clip-path: polygon(100% 0%, 100% 100%, 15% 100%, 55% 0%)
+						+bp1300
+							clip-path: polygon(100% 0%, 100% 100%, 20% 100%, 60% 0%)
+						+bp1200
+							clip-path: polygon(100% 0%, 100% 100%, 30% 100%, 70% 0%)
+						+bp1000
+							clip-path: polygon(100% 0%, 100% 100%, 36% 100%, 76% 0%)
+						+bp900
+							clip-path: polygon(100% 0%, 100% 100%, 46% 100%, 86% 0%)
+						+bp800
+							clip-path: polygon(100% 0%, 100% 100%, 52% 100%, 92% 0%)
 #mv-scroll-space
 	display: block
 	width: 100%
@@ -553,6 +710,9 @@ body::-webkit-scrollbar
 								.word
 									.char
 										animation: textKinetic 0.5s #{"calc(min(var(--char-index), var(--char-total) - 1 - var(--char-index)) * 0.1s)"} cubic-bezier(0.16, 1, 0.3, 1) forwards
+							.note
+								opacity: 1.0
+								filter: blur(0px)
 					.ticker
 						.ticker-track
 							.ticker-group
@@ -603,13 +763,35 @@ body::-webkit-scrollbar
 							.word
 								.char
 									display: inline-block
-									font-weight: 400
-									font-size: 24px
+									font-weight: 500
+									font-size: 28px
 									line-height: 1.0
 									font-family: $noto-sans
 									letter-spacing: 0.3em
-									color: #111
+									color: #222
 									opacity: 0.0
+									+bp1750
+										font-size: 26px
+									+bp1500
+										font-size: 24px
+									+bp1000
+										font-size: 22px
+									+bp800
+										font-size: 20px
+						.note
+							display: block
+							margin-top: 30px
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.05em
+							color: #777
+							opacity: 0.0
+							filter: blur(3px)
+							transition: all 1.0s 0.7s ease-in-out
+							+bp800
+								font-size: 9px
 						.top-char
 							position: absolute
 							left: 50%
@@ -618,7 +800,7 @@ body::-webkit-scrollbar
 							transform: scale(1.065) translate(-50%, calc(-80% - 45px))
 							display: block
 							font-weight: 800
-							font-size: 62px
+							font-size: 70px
 							line-height: 1.0
 							font-family: $ah-hakushu-rs
 							letter-spacing: 0.0em
@@ -627,6 +809,14 @@ body::-webkit-scrollbar
 							-webkit-text-fill-color: transparent
 							background-clip: text
 							text-fill-color: transparent
+							+bp1750
+								font-size: 66px
+							+bp1500
+								font-size: 62px
+							+bp1000
+								font-size: 60px
+							+bp800
+								font-size: 56px
 							&::selection
 								color: $base
 								-webkit-text-fill-color: $base
@@ -638,7 +828,7 @@ body::-webkit-scrollbar
 							transform: translate(-50%, calc(95% + 45px))
 							display: block
 							font-weight: 800
-							font-size: 62px
+							font-size: 70px
 							line-height: 1.0
 							font-family: $ah-hakushu-rs
 							letter-spacing: 0.0em
@@ -647,6 +837,14 @@ body::-webkit-scrollbar
 							-webkit-text-fill-color: transparent
 							background-clip: text
 							text-fill-color: transparent
+							+bp1750
+								font-size: 66px
+							+bp1500
+								font-size: 62px
+							+bp1000
+								font-size: 60px
+							+bp800
+								font-size: 56px
 							&::selection
 								color: $base
 								-webkit-text-fill-color: $base
@@ -662,14 +860,30 @@ body::-webkit-scrollbar
 							flex-direction: column
 							width: fit-content
 							height: fit-content
+							+bp1400
+								transform: translate(-50%, calc(100% + 45px + 62px + 70px))
+							+bp1000
+								transform: translate(-50%, calc(100% + 45px + 62px + 60px))
+							+bp800
+								transform: translate(-50%, calc(100% + 45px + 62px + 50px))
 							.logo
 								display: block
 								width: 120px
+								+bp1400
+									width: 110px
+								+bp1000
+									width: 100px
+								+bp800
+									width: 90px
 							.streak-box
 								display: block
 								width: fit-content
 								margin-top: 20px
 								position: relative
+								+bp1000
+									margin-top: 17px
+								+bp800
+									margin-top: 15px
 								.base
 									display: block
 									width: 160px
@@ -677,6 +891,14 @@ body::-webkit-scrollbar
 									background: linear-gradient(to right, rgba($base, 0), $base, rgba($base, 0))
 									box-shadow: 0px 0px 1px $base
 									filter: blur(2.5px)
+									+bp1400
+										width: 140px
+									+bp1000
+										width: 115px
+										height: 3px
+										filter: blur(2.0px)
+									+bp800
+										width: 100px
 								.highlight
 									position: absolute
 									top: 0
@@ -689,6 +911,12 @@ body::-webkit-scrollbar
 									background: linear-gradient(to right, rgba(#fff, 0), #fff, rgba(#fff, 0))
 									filter: blur(1.5px)
 									z-index: 1
+									+bp1400
+										width: 140px
+									+bp1000
+										width: 115px
+									+bp800
+										width: 100px
 				.scroll-box
 					position: absolute
 					left: 0
@@ -713,6 +941,12 @@ body::-webkit-scrollbar
 							height: 80px
 							border-radius: 3px
 							background: #E0E0E0
+							+bp1000
+								width: 5px
+								height: 70px
+								border-radius: 2.5px
+							+bp800
+								height: 65px
 						.progress
 							position: absolute
 							top: 0
@@ -774,14 +1008,38 @@ body::-webkit-scrollbar
 						left: 0
 						bottom: 0
 						transform-origin: left bottom
-						transform: translateX(calc(110px + 40px + 100px)) rotateZ(-90deg)
+						transform: translateX(280px) rotateZ(-90deg)
+						+bp1750
+							transform: translateX(260px) rotateZ(-90deg)
+						+bp1500
+							transform: translateX(250px) rotateZ(-90deg)
+						+bp1200
+							transform: translateX(230px) rotateZ(-90deg)
+						+bp1000
+							transform: translateX(220px) rotateZ(-90deg)
+						+bp900
+							transform: translateX(210px) rotateZ(-90deg)
+						+bp750
+							transform: translateX(195px) rotateZ(-90deg)
 						.ticker-track
 							animation: telop 12.0s linear infinite
 					&.slider-box2
 						right: 0
 						bottom: 0
 						transform-origin: right bottom
-						transform: translateX(calc(-110px - 40px - 100px)) rotateZ(90deg)
+						transform: translateX(-280px) rotateZ(90deg)
+						+bp1750
+							transform: translateX(-260px) rotateZ(90deg)
+						+bp1500
+							transform: translateX(-250px) rotateZ(90deg)
+						+bp1200
+							transform: translateX(-230px) rotateZ(90deg)
+						+bp1000
+							transform: translateX(-220px) rotateZ(90deg)
+						+bp900
+							transform: translateX(-210px) rotateZ(90deg)
+						+bp750
+							transform: translateX(-195px) rotateZ(90deg)
 						.ticker-track
 							animation: telop 12.0s -4.0s linear infinite
 					.ticker-track
@@ -798,15 +1056,31 @@ body::-webkit-scrollbar
 								display: block
 								flex: 0 0 auto
 								width: max-content
-								margin-left: 50px
+								margin-left: 60px
 								font-weight: 900
-								font-size: 140px
+								font-size: 180px
 								line-height: 1.0
 								font-family: $eurostile-extended
 								letter-spacing: -0.05em
 								color: #777
 								opacity: 0.3
 								transition: color 1.0s 1.0s ease-in-out, animation 0.5s ease-in-out
+								+bp1750
+									margin-left: 55px
+									font-size: 160px
+								+bp1500
+									margin-left: 50px
+									font-size: 140px
+								+bp1200
+									margin-left: 45px
+									font-size: 130px
+								+bp1000
+									margin-left: 40px
+									font-size: 120px
+								+bp900
+									font-size: 110px
+								+bp750
+									font-size: 100px
 								&:nth-of-type(2n)
 									animation: 1.6s telopTextBlink linear infinite
 								&:nth-of-type(2n+1)
@@ -1024,6 +1298,14 @@ body::-webkit-scrollbar
 					transform: translate(-58%, -40%) rotate(-20deg)
 					z-index: 3
 					transition: all 0.5s ease-in-out
+					+bp1400
+						transform: translate(-50%, -30%) rotate(-20deg)
+					+bp1200
+						transform: translate(-40%, -20%) rotate(-20deg)
+					+bp850
+						transform: translate(-40%, -10%) rotate(-20deg)
+					+bp800
+						width: 70vw
 				.circle-box
 					position: absolute
 					top: 250px
@@ -1031,6 +1313,17 @@ body::-webkit-scrollbar
 					width: 220px
 					aspect-ratio: 1 / 1
 					z-index: 3
+					+bp1000
+						top: 220px
+						left: 420px
+						width: 180px
+					+bp900
+						top: 240px
+						left: 390px
+						width: 170px
+					+bp800
+						top: 270px
+						width: 160px
 					.inner-box
 						display: block
 						width: 100%
@@ -1073,6 +1366,17 @@ body::-webkit-scrollbar
 					opacity: 0.1
 					z-index: 2
 					transition: all 0.5s ease-in-out
+					+bp1400
+						right: 100px
+						width: 400px
+					+bp1200
+						width: 360px
+						right: 80px
+					+bp1000
+						width: 320px
+						right: 50px
+					+bp800
+						width: 300px
 				.black-bg
 					position: absolute
 					top: 0
@@ -1091,6 +1395,8 @@ body::-webkit-scrollbar
 			margin-top: -100vh
 			z-index: 10
 			position: relative
+			+bp1200
+				padding-bottom: 30vh
 			.tit-box
 				display: flex
 				justify-content: flex-start
@@ -1098,6 +1404,10 @@ body::-webkit-scrollbar
 				flex-direction: column
 				width: fit-content
 				margin: 0 80px 0 auto
+				+bp1400
+					margin: 0 60px 0 auto
+				+bp800
+					margin: 0 40px 0 auto
 				&.is-on
 					.en .char
 						&::before
@@ -1119,6 +1429,14 @@ body::-webkit-scrollbar
 							letter-spacing: 0.0em
 							color: transparent
 							position: relative
+							+bp1400
+								font-size: 185px
+							+bp1200
+								font-size: 165px
+							+bp1000
+								font-size: calc(0.117*100vw + 38.3px)
+							+bp800
+								font-size: calc(0.117*100vw + 30px)
 							&::before, &::after
 								position: absolute
 								top: 0
@@ -1147,15 +1465,29 @@ body::-webkit-scrollbar
 					> p
 						display: block
 						font-weight: 400
-						font-size: 12px
-						line-height: 1.5
+						font-size: 14px
+						line-height: 2.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
+						text-align: right
 						color: #fff
 						opacity: 0.0
 						transition: all 0.5s ease-in-out
+						+bp1400
+							font-size: 13px
+						+bp1200
+							font-size: 12px
+						+bp1000
+							line-height: 1.7
+						+bp900
+							font-size: 11px
 						&::selection
 							color: #555
+						br
+							display: none
+							+bp1000
+								display: block
+
 			.step-box
 				display: flex
 				justify-content: space-between
@@ -1165,6 +1497,10 @@ body::-webkit-scrollbar
 				margin: 80vh auto 0
 				z-index: 10
 				position: relative
+				+bp1400
+					width: calc(100vw - 100px)
+				+bp1000
+					width: calc(100vw - 60px)
 				.circle-trace-box
 					position: absolute
 					left: 0
@@ -1204,6 +1540,8 @@ body::-webkit-scrollbar
 					opacity: 0.0
 					pointer-events: none
 					transition: all 0.5s ease-in-out
+					+bp900
+						width: 16%
 					.inner-box
 						display: block
 						width: 100%
@@ -1218,6 +1556,8 @@ body::-webkit-scrollbar
 							margin: auto
 							display: block
 							width: 54%
+							+bp900
+								width: 70%
 							.inside-box
 								display: block
 								width: fit-content
@@ -1272,14 +1612,22 @@ body::-webkit-scrollbar
 							height: fit-content
 							padding: 10px 20px
 							background: $black-color
+							+bp1000
+								padding: 8px 15px
 							> h2
 								display: block
 								font-weight: 800
-								font-size: 12px
+								font-size: 16px
 								line-height: 1.0
 								font-family: $ah-hakushu-rs
 								letter-spacing: 0.1em
 								color: #fff
+								+bp1600
+									font-size: 14px
+								+bp1400
+									font-size: 13px
+								+bp1000
+									font-size: 12px
 						&::before
 							position: absolute
 							top: 0
@@ -1292,6 +1640,8 @@ body::-webkit-scrollbar
 							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
 							transform-origin: left top
 							transform: rotate($angle)
+							+bp900
+								width: 35%
 						&::after
 							position: absolute
 							right: 0
@@ -1304,6 +1654,8 @@ body::-webkit-scrollbar
 							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
 							transform-origin: right bottom
 							transform: rotate($angle)
+							+bp900
+								width: 35%
 				.bottom-diagonal-box
 					position: absolute
 					left: 0
@@ -1346,6 +1698,10 @@ body::-webkit-scrollbar
 				.left-box
 					display: block
 					width: 34.5%
+					+bp1300
+						width: 36.5%
+					+bp900
+						width: 39%
 					.step-ele
 						display: block
 						width: 100%
@@ -1354,7 +1710,19 @@ body::-webkit-scrollbar
 								.num
 									letter-spacing: 0.2em
 						&:nth-of-type(2)
-							margin-top: 80px
+							margin-top: 120px
+							+bp1750
+								margin-top: 100px
+							+bp1600
+								margin-top: 90px
+							+bp1500
+								margin-top: 80px
+							+bp1000
+								margin-top: 70px
+							+bp900
+								margin-top: 60px
+							+bp800
+								margin-top: 50px
 						&.is-glitch
 							.img-box
 								background: #000
@@ -1380,7 +1748,7 @@ body::-webkit-scrollbar
 											opacity: 1.0
 						.img-box
 							display: block
-							width: 400px
+							width: 100%
 							position: relative
 							.img
 								display: block
@@ -1410,6 +1778,9 @@ body::-webkit-scrollbar
 								font-family: $ferry
 								letter-spacing: 0.05em
 								color: #ccc
+								+bp900
+									width: 20px
+									font-size: 12px
 							> h2
 								display: block
 								margin-left: 17px
@@ -1424,6 +1795,16 @@ body::-webkit-scrollbar
 								background-clip: text
 								text-fill-color: transparent
 								transition: all 0.5s ease-in-out
+								+bp1300
+									font-size: 30px
+								+bp1200
+									font-size: 28px
+								+bp1000
+									font-size: 26px
+								+bp900
+									margin-left: 10px
+								+bp800
+									font-size: 22px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -1440,10 +1821,21 @@ body::-webkit-scrollbar
 									background-clip: text
 									text-fill-color: transparent
 									transition: all 0.5s ease-in-out
+									+bp1300
+										font-size: 30px
+									+bp1200
+										font-size: 28px
+									+bp1000
+										font-size: 26px
+									+bp800
+										font-size: 22px
 						.desc-box
 							display: block
 							padding-left: 40px
 							margin-top: 25px
+							+bp900
+								padding-left: 32px
+								margin-top: 20px
 							> p
 								display: block
 								margin-top: 1.4em
@@ -1455,8 +1847,17 @@ body::-webkit-scrollbar
 								color: #555
 								opacity: 0.0
 								transition: all 0.5s ease-in-out
+								+bp1300
+									font-size: 13px
+								+bp800
+									font-size: 12px
 								&:nth-of-type(1)
 									margin-top: 0
+								&.note
+									font-weight: 200
+									font-size: 10px
+									padding-left: 1.45em
+									text-indent: -1.45em
 								@for $i from 1 through 4
 									&:nth-child(#{$i})
 										transform: translateY(1em + 2em * (4 - $i) / (3 * $i))
@@ -1465,12 +1866,48 @@ body::-webkit-scrollbar
 				.right-box
 					display: block
 					width: 34.5%
-					margin-top: 380px
+					margin-top: 500px
+					+bp1750
+						margin-top: 450px
+					+bp1600
+						margin-top: 400px
+					+bp1500
+						margin-top: 380px
+					+bp1400
+						margin-top: 350px
+					+bp1300
+						width: 36.5%
+						margin-top: 320px
+					+bp1200
+						margin-top: 290px
+					+bp1050
+						margin-top: 270px
+					+bp950
+						margin-top: 260px
+					+bp900
+						width: 39%
+						margin-top: 240px
+					+bp850
+						margin-top: 230px
+					+bp800
+						margin-top: 200px
 					.step-ele
 						display: block
 						width: 100%
 						&:nth-of-type(2)
-							margin-top: 80px
+							margin-top: 120px
+							+bp1750
+								margin-top: 100px
+							+bp1600
+								margin-top: 90px
+							+bp1500
+								margin-top: 80px
+							+bp1000
+								margin-top: 70px
+							+bp900
+								margin-top: 60px
+							+bp800
+								margin-top: 50px
 						&.is-glitch
 							.img-box
 								background: #000
@@ -1496,7 +1933,7 @@ body::-webkit-scrollbar
 											opacity: 1.0
 						.img-box
 							display: block
-							width: 400px
+							width: 100%
 							position: relative
 							.img
 								display: block
@@ -1526,6 +1963,9 @@ body::-webkit-scrollbar
 								font-family: $ferry
 								letter-spacing: 0.05em
 								color: #ccc
+								+bp900
+									width: 20px
+									font-size: 12px
 							> h2
 								display: block
 								margin-left: 17px
@@ -1540,6 +1980,16 @@ body::-webkit-scrollbar
 								background-clip: text
 								text-fill-color: transparent
 								transition: all 0.5s ease-in-out
+								+bp1300
+									font-size: 30px
+								+bp1200
+									font-size: 28px
+								+bp1000
+									font-size: 26px
+								+bp900
+									margin-left: 10px
+								+bp800
+									font-size: 22px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -1556,10 +2006,21 @@ body::-webkit-scrollbar
 									background-clip: text
 									text-fill-color: transparent
 									transition: all 0.5s ease-in-out
+									+bp1300
+										font-size: 30px
+									+bp1200
+										font-size: 28px
+									+bp1000
+										font-size: 26px
+									+bp800
+										font-size: 22px
 						.desc-box
 							display: block
 							padding-left: 40px
 							margin-top: 25px
+							+bp900
+								padding-left: 32px
+								margin-top: 20px
 							> p
 								display: block
 								margin-top: 1.4em
@@ -1571,8 +2032,19 @@ body::-webkit-scrollbar
 								color: #555
 								opacity: 0.0
 								transition: all 0.5s ease-in-out
+								+bp1300
+									font-size: 13px
+								+bp800
+									font-size: 12px
 								&:nth-of-type(1)
 									margin-top: 0
+								&.note
+									font-weight: 200
+									font-size: 10px
+									padding-left: 1.45em
+									text-indent: -1.45em
+									&.second
+										margin-top: 0.2em
 								@for $i from 1 through 4
 									&:nth-child(#{$i})
 										transform: translateY(1em + 2em * (4 - $i) / (3 * $i))
@@ -1584,10 +2056,24 @@ body::-webkit-scrollbar
 				align-items: center
 				width: 360px
 				padding: 24px 40px 24px 60px
-				margin: 160px auto 0
+				margin: 240px auto 0
 				border-radius: 39px
 				background: #fff
 				transition: box-shadow 1.0s ease-in-out
+				+bp1600
+					margin: 200px auto 0
+				+bp1400
+					margin: 180px auto 0
+				+bp1200
+					width: 320px
+					padding: 20px 40px 20px 60px
+					margin: 160px auto 0
+				+bp1000
+					margin: 140px auto 0
+				+bp900
+					width: 280px
+					padding: 18px 40px 18px 60px
+					border-radius: 33px
 				&:hover
 					box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
 					> p
@@ -1607,6 +2093,8 @@ body::-webkit-scrollbar
 					letter-spacing: 0.15em
 					color: #333
 					transition: all 0.5s ease-in-out
+					+bp900
+						font-size: 16px
 				.arrow-box
 					display: flex
 					justify-content: flex-start
@@ -1882,27 +2370,71 @@ body::-webkit-scrollbar
 								&.top1
 									top: -50%
 									opacity: 1.0
+									+bp1500
+										top: -60%
+									+bp1300
+										top: -70%
 								&.top2
 									top: -90%
 									opacity: 1.0
+									+bp1500
+										top: -110%
+									+bp1300
+										top: -130%
+									+bp1000
+										top: -140%
 								&.top3
 									top: -120%
 									opacity: 1.0
+									+bp1500
+										top: -150%
+									+bp1300
+										top: -180%
+									+bp1000
+										top: -200%
 								&.top4
 									top: -140%
 									opacity: 1.0
+									+bp1500
+										top: -180%
+									+bp1300
+										top: -220%
+									+bp1000
+										top: -250%
 								&.bottom1
 									bottom: -50%
 									opacity: 1.0
+									+bp1500
+										bottom: -60%
+									+bp1300
+										bottom: -70%
 								&.bottom2
 									bottom: -90%
 									opacity: 1.0
+									+bp1500
+										bottom: -110%
+									+bp1300
+										bottom: -130%
+									+bp1000
+										bottom: -140%
 								&.bottom3
 									bottom: -120%
 									opacity: 1.0
+									+bp1500
+										bottom: -150%
+									+bp1300
+										bottom: -180%
+									+bp1000
+										bottom: -200%
 								&.bottom4
 									bottom: -140%
 									opacity: 1.0
+									+bp1500
+										bottom: -180%
+									+bp1300
+										bottom: -220%
+									+bp1000
+										bottom: -250%
 	.container
 		display: block
 		width: 100%
@@ -1928,6 +2460,7 @@ body::-webkit-scrollbar
 					display: block
 					width: fit-content
 					height: fit-content
+					transform: translateX(-1%)
 					.sentence-box
 						display: flex
 						justify-content: center
@@ -1940,7 +2473,7 @@ body::-webkit-scrollbar
 							display: block
 							background: #fff
 							font-weight: 900
-							font-size: 240px
+							font-size: 270px
 							line-height: 1.0
 							font-family: $eurostile-extended
 							letter-spacing: -0.1em
@@ -1950,19 +2483,65 @@ body::-webkit-scrollbar
 							z-index: 10
 							position: relative
 							transition: color 0.5s ease-in-out
+							+bp1750
+								font-size: 250px
+							+bp1600
+								font-size: 230px
+							+bp1500
+								font-size: 210px
+							+bp1400
+								font-size: 190px
+							+bp1300
+								font-size: 180px
+							+bp1200
+								font-size: 170px
+							+bp1100
+								font-size: 155px
+							+bp1000
+								font-size: 140px
+							+bp900
+								font-size: 125px
+							+bp800
+								font-size: 110px
+							+bp750
+								font-size: 100px
 						.en-line
 							position: absolute
 							left: 0
 							display: block
 							background: #fff
 							font-weight: 900
-							font-size: 240px
+							font-size: 270px
 							line-height: 1.0
 							font-family: $eurostile-extended
 							letter-spacing: -0.1em
 							color: #fff
-							-webkit-text-stroke: 2px $base
+							-webkit-text-stroke: 3px $base
 							z-index: 9
+							+bp1750
+								font-size: 250px
+							+bp1600
+								font-size: 230px
+							+bp1500
+								font-size: 210px
+								-webkit-text-stroke: 2.5px $base
+							+bp1400
+								font-size: 190px
+							+bp1300
+								font-size: 180px
+							+bp1200
+								font-size: 170px
+							+bp1100
+								font-size: 155px
+							+bp1000
+								font-size: 140px
+								-webkit-text-stroke: 2px $base
+							+bp900
+								font-size: 125px
+							+bp800
+								font-size: 110px
+							+bp750
+								font-size: 100px
 							&.top1
 								top: 0%
 								clip-path: polygon(-5% 15%, 105% 15%, 105% 92%, -5% 92%)
@@ -2115,6 +2694,15 @@ body::-webkit-scrollbar
 					display: block
 					width: 400px
 					z-index: 1
+					+bp1200
+						transform-origin: right bottom
+						transform: scale(0.9)
+					+bp1000
+						transform: scale(0.8)
+					+bp900
+						transform: scale(0.75)
+					+bp800
+						transform: scale(0.7)
 				.bottom-grunge-paint
 					position: absolute
 					left: 120px
@@ -2122,6 +2710,15 @@ body::-webkit-scrollbar
 					display: block
 					width: 600px
 					z-index: 1
+					+bp1200
+						transform-origin: left top
+						transform: scale(0.9)
+					+bp1000
+						transform: scale(0.8)
+					+bp900
+						transform: scale(0.75)
+					+bp800
+						transform: scale(0.7)
 		.scroll-content-box
 			display: block
 			width: 100%
@@ -2130,17 +2727,43 @@ body::-webkit-scrollbar
 			margin-top: -100vh
 			z-index: 10
 			position: relative
+			+bp1000
+				padding-top: 20vh
+				padding-bottom: 20vh
+			+bp800
+				padding-top: 15vh
+				padding-bottom: 15vh
 			.video-box
 				display: flex
 				justify-content: space-between
 				align-items: center
 				flex-wrap: wrap
-				width: calc(100vw - 160px)
+				width: calc(100vw - 300px)
 				margin: 0 auto
+				+bp1750
+					width: calc(100vw - 240px)
+				+bp1500
+					width: calc(100vw - 200px)
+				+bp1200
+					width: calc(100vw - 160px)
+				+bp1000
+					width: calc(100vw - 120px)
+				+bp900
+					width: calc(100vw - 100px)
+				+bp800
+					width: calc(100vw - 80px)
 				.video-ele
 					display: block
-					width: calc(50% - 20px)
+					width: calc(50% - 40px)
 					aspect-ratio: 1 / 1
+					+bp1750
+						width: calc(50% - 30px)
+					+bp1500
+						width: calc(50% - 20px)
+					+bp900
+						width: calc(50% - 15px)
+					+bp800
+						width: calc(50% - 10px)
 					&:hover
 						.inner-box
 							box-shadow: 0px 0px 4px #fff, 0px 0px 16px rgba(#fff, 0.8), 0px 0px 48px rgba(#fff, 0.5), 0px 0px 120px rgba(#fff, 0.3)
@@ -2150,7 +2773,7 @@ body::-webkit-scrollbar
 							.cat-tit
 								opacity: 1.0
 							.arrow
-								opacity: 1.0
+								// opacity: 1.0
 							.desc-box
 								opacity: 1.0
 							.img-box
@@ -2165,6 +2788,12 @@ body::-webkit-scrollbar
 								letter-spacing: 0.05em
 					&:nth-of-type(n+3)
 						margin-top: 80px
+						+bp1500
+							margin-top: 60px
+						+bp1400
+							margin-top: 50px
+						+bp1300
+							margin-top: 40px
 					&:nth-of-type(5)
 						width: 100%
 						height: calc(50% - 20px)
@@ -2176,10 +2805,18 @@ body::-webkit-scrollbar
 						display: block
 						width: 100%
 						height: 100%
-						border-radius: 10px
+						border-radius: 30px
 						overflow: hidden
 						position: relative
 						transition: all 1.0s ease-in-out
+						+bp1750
+							border-radius: 25px
+						+bp1500
+							border-radius: 20px
+						+bp1200
+							border-radius: 15px
+						+bp800
+							border-radius: 10px
 						.base-box
 							display: block
 							width: 100%
@@ -2207,6 +2844,21 @@ body::-webkit-scrollbar
 							opacity: 0.0
 							z-index: 22
 							transition: all 0.5s 0.3s ease-in-out
+							+bp1500
+								top: 50px
+								font-size: calc(0.073*100vw - 20px)
+							+bp1400
+								left: 40px
+							+bp1200
+								font-size: 64px
+							+bp1000
+								left: 35px
+								font-size: 60px
+							+bp900
+								top: 40px
+								font-size: 56px
+							+bp800
+								font-size: 50px
 							&::selection
 								color: #555
 						.arrow
@@ -2218,6 +2870,22 @@ body::-webkit-scrollbar
 							opacity: 0.0
 							z-index: 22
 							transition: all 0.5s 0.3s ease-in-out
+							+bp1500
+								top: calc(0.027*100vw + 35px)
+								width: calc(0.043*100vw - 4px)
+							+bp1400
+								right: 40px
+							+bp1200
+								width: 47px
+							+bp1000
+								top: 64px
+								width: 42px
+							+bp900
+								top: 54px
+								width: 36px
+							+bp800
+								right: 35px
+								width: 32px
 						.desc-box
 							position: absolute
 							left: 60px
@@ -2230,14 +2898,28 @@ body::-webkit-scrollbar
 							opacity: 0.0
 							z-index: 22
 							transition: all 0.5s 0.5s ease-in-out
+							+bp1500
+								bottom: 40px
+							+bp1400
+								left: 40px
+								width: calc(100% - 80px)
+							+bp1000
+								left: 35px
+								width: calc(100% - 70px)
+							+bp900
+								bottom: 35px
 							> li
 								display: inline-block
 								font-weight: 400
-								font-size: 14px
+								font-size: 16px
 								line-height: 1.5
 								font-family: $noto-sans
 								letter-spacing: 0.1em
 								color: #fff
+								+bp1500
+									font-size: 15px
+								+bp1200
+									font-size: 14px
 								&::selection
 									color: #555
 								&::after
@@ -2479,7 +3161,7 @@ body::-webkit-scrollbar
 					margin-top: 60px
 					&.is-show
 						> p
-							@for $i from 1 through 3
+							@for $i from 1 through 5
 								&:nth-child(#{$i})
 									transform: translateY(0)
 									filter: blur(0)

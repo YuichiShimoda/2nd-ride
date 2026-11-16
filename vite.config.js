@@ -7,12 +7,12 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
+                'resources/js/app.ts',
+                'resources/js/bootstrap.ts',
                 'resources/js/admin/category.js',
                 'resources/js/admin/item.js',
                 'resources/js/admin/movie.js',
-                'resources/js/app.ts',
                 'resources/js/smooth-scroll.js',
-                'resources/js/bootstrap.ts',
                 'resources/js/mouse.js',
                 'resources/js/top.ts',
                 'resources/js/result.js',
