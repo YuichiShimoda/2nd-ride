@@ -3000,20 +3000,43 @@ body::-webkit-scrollbar
 			display: flex
 			justify-content: space-between
 			align-items: flex-end
-			width: calc(100vw - 160px)
+			width: calc(100vw - 300px)
 			margin: 0 auto 0
+			+bp1750
+				width: calc(100vw - 240px)
+			+bp1500
+				width: calc(100vw - 200px)
+			+bp1200
+				width: calc(100vw - 160px)
+			+bp1000
+				width: calc(100vw - 120px)
+			+bp900
+				width: calc(100vw - 100px)
+				position: relative
+			+bp800
+				width: calc(100vw - 80px)
 			.left-box
 				display: block
 				width: fit-content
+				+bp1400
+					width: 60%
+				+bp900
+					width: 100%
 				.label-box
 					display: flex
 					justify-content: flex-start
 					align-items: center
 					width: fit-content
-					padding: 10px 25px 12px 20px
+					padding: 10px 30px 12px 25px
 					border-radius: 20px
 					border: solid 1px $base
 					background: #fff
+					+bp1500
+						padding: 10px 25px 12px 20px
+					+bp1000
+						padding: 10px 22px 11px 20px
+					+bp800
+						padding: 8px 20px 9px 20px
 					.dots
 						display: block
 						width: 6px
@@ -3059,7 +3082,7 @@ body::-webkit-scrollbar
 						display: block
 						margin-left: 15px
 						font-weight: 400
-						font-size: 16px
+						font-size: 18px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
@@ -3068,16 +3091,32 @@ body::-webkit-scrollbar
 						-webkit-text-fill-color: transparent
 						background-clip: text
 						text-fill-color: transparent
+						+bp1600
+							font-size: 17px
+						+bp1500
+							font-size: 16px
+						+bp1200
+							font-size: 15px
+						+bp1000
+							font-size: 14px
 						&::selection
 							color: #555
 							-webkit-text-fill-color: #555
 				.head-box
 					display: block
-					margin-top: 20px
+					margin-top: 25px
 					width: fit-content
 					transform: translateY(50%)
 					position: relative
 					transition: all 0.5s ease-in-out
+					+bp1500
+						margin-top: 20px
+					+bp1200
+						margin-top: 17px
+					+bp1000
+						margin-top: 15px
+					+bp800
+						margin-top: 14px
 					&.is-show
 						transform: translateY(0%)
 						.head-content
@@ -3092,7 +3131,7 @@ body::-webkit-scrollbar
 					.head-content
 						display: block
 						font-weight: 700
-						font-size: 42px
+						font-size: 48px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.15em
@@ -3104,6 +3143,18 @@ body::-webkit-scrollbar
 						text-fill-color: transparent
 						opacity: 0.0
 						transition: all 0.5s ease-in-out
+						+bp1600
+							font-size: 44px
+						+bp1500
+							font-size: 41px
+						+bp1400
+							font-size: 39px
+						+bp1200
+							font-size: calc(0.03*100vw + 2px)
+						+bp900
+							font-size: calc(0.03*100vw + 6px)
+						+bp800
+							font-size: calc(0.03*100vw + 5px)
 						&::selection
 							color: #555
 							-webkit-text-fill-color: #555
@@ -3159,6 +3210,16 @@ body::-webkit-scrollbar
 					display: block
 					width: fit-content
 					margin-top: 60px
+					+bp1400
+						margin-top: 50px
+					+bp1200
+						margin-top: 45px
+					+bp1100
+						margin-top: 40px
+					+bp1000
+						margin-top: 35px
+					+bp800
+						margin-top: 20px
 					&.is-show
 						> p
 							@for $i from 1 through 5
@@ -3169,13 +3230,19 @@ body::-webkit-scrollbar
 					> p
 						display: block
 						font-weight: 400
-						font-size: 12px
-						line-height: 1.5
+						font-size: 16px
+						line-height: 2.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						color: #111
 						opacity: 0
 						transition: all 0.5s ease-in-out
+						+bp1600
+							font-size: 15px
+						+bp1400
+							font-size: 14px
+						+bp1200
+							font-size: 12px
 						@for $i from 1 through 3
 							&:nth-child(#{$i})
 								transform: translateY(1em + 2em * (4 - $i) / (3 * $i))
@@ -3183,11 +3250,35 @@ body::-webkit-scrollbar
 								filter: blur(1em)
 			.right-box
 				display: block
-				width: 550px
+				min-width: 500px
+				margin-left: 120px
 				overflow: hidden
 				opacity: 0.0
 				clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)
 				transition: all 1.0s 0.5s ease-in-out
+				+bp1750
+					min-width: 470px
+				+bp1500
+					min-width: 450px
+					margin-left: 100px
+				+bp1400
+					min-width: initial
+					width: 33%
+					margin-left: 7%
+				+bp1000
+					width: 35%
+					margin-left: 5%
+				+bp900
+					position: absolute
+					top: calc(0.15*100vw - 145px)
+					right: 0
+					width: 30%
+					margin-left: 0
+				+bp850
+					width: 29%
+				+bp800
+					top: calc(-0.12*100vw + 74px)
+					width: 26%
 				&.is-show
 					opacity: 1.0
 					clip-path: polygon(0% 0%, 200% 0%, 100% 100%, 0% 100%)
@@ -3199,23 +3290,59 @@ body::-webkit-scrollbar
 					height: 100%
 					object-fit: cover
 					object-position: center
+					border-radius: 10px
 					pointer-events: none
 					transform: scale(1.2)
 					transition: all 1.0s 0.5s ease-in-out
+					+bp1400
+						border-radius: 7px
 		.project-box
 			display: flex
 			justify-content: space-between
 			align-items: center
 			flex-wrap: wrap
-			width: calc(100vw - 160px)
+			width: calc(100vw - 300px)
 			padding-bottom: 50vh
 			margin: 15vh auto 0
+			+bp1750
+				width: calc(100vw - 240px)
+			+bp1500
+				width: calc(100vw - 200px)
+			+bp1400
+				margin: 12vh auto 0
+			+bp1200
+				width: calc(100vw - 160px)
+				margin: 80px auto 0
+			+bp1000
+				width: calc(100vw - 120px)
+				margin: 80px auto 0
+			+bp900
+				width: calc(100vw - 100px)
+				margin: 70px auto 0
+			+bp850
+				margin: 60px auto 0
+			+bp800
+				width: calc(100vw - 80px)
+			+bp750
+				margin: 50px auto 0
 			.project-ele
 				display: block
-				width: calc(50% - 20px)
+				width: calc(50% - 40px)
 				aspect-ratio: 1 / 1
-				border-radius: 10px
+				border-radius: 30px
 				overflow: hidden
+				+bp1750
+					width: calc(50% - 30px)
+					border-radius: 25px
+				+bp1500
+					width: calc(50% - 20px)
+					border-radius: 20px
+				+bp900
+					width: calc(50% - 15px)
+					border-radius: 15px
+				+bp800
+					width: calc(50% - 10px)
+					border-radius: 10px
 				.inner-box
 					display: block
 					width: 100%
@@ -3223,6 +3350,11 @@ body::-webkit-scrollbar
 					position: relative
 					user-select: none
 					cursor: ew-resize
+					&:hover
+						.cat-tit-box
+							opacity: 0.6
+						.desc-box
+							opacity: 0.0
 					.image-after
 						display: block
 						width: 100%
@@ -3282,6 +3414,16 @@ body::-webkit-scrollbar
 								aspect-ratio: 1 / 1
 								border-radius: 50%
 								background: $base
+								+bp1400
+									width: 35px
+								+bp1200
+									width: 32px
+								+bp1000
+									width: 30px
+								+bp850
+									width: 26px
+								+bp800
+									width: 22px
 					.cat-tit-box
 						position: absolute
 						top: 65px
@@ -3291,6 +3433,14 @@ body::-webkit-scrollbar
 						transform: translateX(-2.5em)
 						transition: all 0.5s ease-in-out
 						z-index: 10
+						+bp1500
+							top: 50px
+						+bp1400
+							left: 50px
+						+bp1000
+							left: 40px
+						+bp900
+							top: 40px
 						&.is-show
 							transform: translateX(0%)
 							.inner-tit-box
@@ -3314,6 +3464,18 @@ body::-webkit-scrollbar
 								color: #fff
 								opacity: 0.0
 								transition: all 0.5s ease-in-out
+								+bp1500
+									font-size: 56px
+								+bp1400
+									font-size: 50px
+								+bp1200
+									font-size: 46px
+								+bp1000
+									font-size: 40px
+								+bp900
+									font-size: 36px
+								+bp800
+									font-size: 32px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -3335,6 +3497,17 @@ body::-webkit-scrollbar
 						flex-wrap: wrap
 						width: calc(100% - 120px)
 						z-index: 10
+						transition: all 0.5s ease-in-out
+						+bp1500
+							bottom: 45px
+						+bp1400
+							left: 50px
+							width: calc(100% - 100px)
+						+bp1000
+							left: 40px
+							width: calc(100% - 80px)
+						+bp900
+							bottom: 40px
 						> p
 							display: inline-block
 							font-weight: 400
@@ -3343,6 +3516,10 @@ body::-webkit-scrollbar
 							font-family: $noto-sans
 							letter-spacing: 0.1em
 							color: #fff
+							+bp1200
+								font-size: 12px
+							+bp850
+								font-size: 11px
 							&::selection
 								color: #555
 								-webkit-text-fill-color: #555
