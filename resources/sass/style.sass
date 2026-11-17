@@ -3621,7 +3621,7 @@ body::-webkit-scrollbar
 				.left-box
 					position: absolute
 					top: 0
-					left: 80px
+					left: calc(0.476*100vw - 634.3px)
 					bottom: 0
 					margin: auto
 					display: block
@@ -3629,16 +3629,36 @@ body::-webkit-scrollbar
 					height: fit-content
 					transform: translateY(-100px)
 					z-index: 100
+					+bp1500
+						left: 80px
+					+bp1200
+						left: 60px
+					+bp1100
+						left: 50px
+					+bp1000
+						transform: translateY(-20vh)
 					.info-box
 						display: block
-						padding: 50px 60px
-						border-radius: 20px
+						padding: 60px 70px
+						border-radius: 30px
 						background: rgba(#111, 0.6)
 						animation: neonBoxShadow 5.0s linear infinite
+						+bp1500
+							padding: 50px 70px
+							border-radius: 25px
+						+bp1500
+							padding: 50px 60px
+							border-radius: 20px
+						+bp1400
+							padding: 45px 55px
+						+bp1200
+							padding: 45px 45px
+						+bp1000
+							padding: 55px 55px
 						.head
 							display: block
 							font-weight: 700
-							font-size: 42px
+							font-size: 44px
 							line-height: 1.0
 							font-family: $noto-sans
 							letter-spacing: 0.15em
@@ -3647,22 +3667,45 @@ body::-webkit-scrollbar
 							-webkit-text-fill-color: transparent
 							background-clip: text
 							text-fill-color: transparent
+							+bp1500
+								font-size: 42px
+							+bp1400
+								font-size: 38px
+							+bp1200
+								font-size: 32px
 							&::selection
 								color: #555
 								-webkit-text-fill-color: #555
 						.desc-box
 							display: block
-							width: 340px
-							margin-top: 30px
+							width: 390px
+							margin-top: 35px
+							+bp1500
+								width: 340px
+								margin-top: 30px
+							+bp1400
+								width: 320px
+							+bp1200
+								margin-top: 25px
+							+bp1100
+								width: 280px
+							+bp1000
+								width: 320px
 							> p
 								display: block
 								margin-top: 1.2em
 								font-weight: 400
-								font-size: 12px
-								line-height: 1.5
+								font-size: 16px
+								line-height: 1.7
 								font-family: $noto-sans
 								letter-spacing: 0.1em
 								color: #fff
+								+bp1750
+									font-size: 15px
+								+bp1500
+									font-size: 14px
+								+bp1200
+									font-size: 12px
 								&:nth-of-type(1)
 									margin-top: 0
 								&::selection
@@ -3680,6 +3723,18 @@ body::-webkit-scrollbar
 						transform: scale(3.0, 0.0)
 						opacity: 0.0
 						transition: box-shadow 1.0s ease-in-out, background 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out
+						+bp1400
+							margin-top: 60px
+						+bp1200
+							width: 320px
+							padding: 20px 40px 20px 60px
+							margin-top: 80px
+						+bp1100
+							margin-top: 60px
+						+bp900
+							width: 290px
+							padding: 18px 30px 18px 45px
+							border-radius: 33px
 						&:hover
 							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
 							> p
@@ -3699,6 +3754,8 @@ body::-webkit-scrollbar
 							letter-spacing: 0.15em
 							color: #333
 							transition: all 0.5s ease-in-out
+							+bp900
+								font-size: 16px
 						.arrow-box
 							display: flex
 							justify-content: flex-start
@@ -3721,17 +3778,48 @@ body::-webkit-scrollbar
 				.fig-box
 					position: absolute
 					top: 30%
-					right: 300px
+					right: calc(0.357*100vw - 235.7px)
 					display: block
 					width: fit-content
 					height: fit-content
 					transform: translateY(-70px)
 					z-index: 10
+					+bp1500
+						right: calc(0.3*100vw - 150px)
+					+bp1400
+						right: calc(0.7*100vw - 680px)
+					+bp1200
+						right: calc(0.6*100vw - 530px)
+					+bp1100
+						right: calc(0.6*100vw - 500px)
+					+bp1000
+						right: calc(0.5*100vw - 380px)
+					+bp800
+						right: calc(0.4*100vw - 280px)
 					.inner-box
 						display: block
 						width: 275px
 						position: relative
 						z-index: 20
+						transform: translateY(-15%) scale(1.1)
+						+bp1750
+							transform: translateY(-12%) scale(1.07)
+						+bp1600
+							transform: translateY(-13%) scale(1.05)
+						+bp1500
+							transform: initial
+						+bp1400
+							transform: translateY(-13%) scale(0.95)
+						+bp1300
+							transform: translateY(-17%) scale(0.9)
+						+bp1200
+							transform: translateY(-7%) scale(0.85)
+						+bp1100
+							transform: translateY(-11%) scale(0.8)
+						+bp1000
+							transform: translateY(13vh) scale(0.8)
+						+bp800
+							transform: translateY(15vh) scale(0.7)
 						&::before
 							position: absolute
 							top: -20px
@@ -3795,6 +3883,13 @@ body::-webkit-scrollbar
 							transform-origin: center
 							transform: rotate(10deg)
 							z-index: 30
+							+bp850
+								top: -150%
+								left: initial
+								right: 0
+								width: 150px
+							+bp800
+								top: -180%
 							&:hover
 								&::before
 									background: #bcb
@@ -3827,6 +3922,11 @@ body::-webkit-scrollbar
 							transform-origin: center
 							transform: rotate(-2deg)
 							z-index: 10
+							+bp850
+								left: -330px
+								bottom: -450px
+								width: 280px
+								transform: rotate(-5deg)
 							&:hover
 								&::before
 									background: #bcb
@@ -4246,6 +4346,12 @@ body::-webkit-scrollbar
 							background: $base
 							will-change: transform
 							animation: telop 20.0s linear infinite reverse
+							+bp1400
+								padding: 27px 0 35px
+							+bp1200
+								padding: 25px 0 32px
+							+bp1000
+								padding: 23px 0 28px
 							.ticker-group
 								display: flex
 								flex: 0 0 auto
@@ -4268,6 +4374,16 @@ body::-webkit-scrollbar
 											color: #fff
 											user-select: none
 											transition: color 0.5s ease-in-out
+											+bp1400
+												font-size: 66px
+											+bp1200
+												font-size: 62px
+											+bp1000
+												font-size: 58px
+											+bp900
+												font-size: 54px
+											+bp800
+												font-size: 50px
 						// .swiper-wrapper
 						// 	height: fit-content
 						// 	padding: 30px 0 40px
@@ -4306,6 +4422,12 @@ body::-webkit-scrollbar
 							background: $base
 							will-change: transform
 							animation: telop 20.0s linear infinite
+							+bp1400
+								padding: 27px 0 35px
+							+bp1200
+								padding: 25px 0 32px
+							+bp1000
+								padding: 23px 0 28px
 							.ticker-group
 								display: flex
 								flex: 0 0 auto
@@ -4328,6 +4450,16 @@ body::-webkit-scrollbar
 											color: #fff
 											user-select: none
 											transition: color 0.5s ease-in-out
+											+bp1400
+												font-size: 66px
+											+bp1200
+												font-size: 62px
+											+bp1000
+												font-size: 58px
+											+bp900
+												font-size: 54px
+											+bp800
+												font-size: 50px
 						// .swiper-wrapper
 						// 	height: fit-content
 						// 	padding: 30px 0 40px

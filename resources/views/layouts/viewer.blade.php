@@ -405,7 +405,6 @@
 
             @yield('js')
             @vite([
-                'resources/js/smooth-scroll.js'
             ])
         </body>
     </div>

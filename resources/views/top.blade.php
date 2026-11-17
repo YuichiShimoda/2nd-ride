@@ -1754,5 +1754,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script><!-- swiper -->
     @vite([
         'resources/js/top.ts',
+		'resources/js/smooth-scroll.js',
     ])
 @stop
