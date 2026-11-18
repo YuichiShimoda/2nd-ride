@@ -133,7 +133,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <img class="ribbon lazyload" data-src="{{ asset('image/modal/ribbon.webp') }}" alt="リボン"> -->
                 <div class="md-contents">
                     <div class="inside-box">
                         <div class="sub-tit-box">
