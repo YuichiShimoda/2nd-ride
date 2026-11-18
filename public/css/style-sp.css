@@ -210,15 +210,15 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(106px, 7px) scale(1.2) rotate(-66deg);
+    transform: translate(113px, -1px) scale(2) rotate(-122deg);
     opacity: 1;
   }
   40% {
-    transform: translate(83px, -7px) scale(0.6) rotate(-306deg);
+    transform: translate(136px, -3px) scale(0.4) rotate(31deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, -2px) scale(1) rotate(0deg);
+    transform: translate(0, -1px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -231,15 +231,15 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(122px, -14px) scale(1.6) rotate(-300deg);
+    transform: translate(91px, 28px) scale(1.8) rotate(338deg);
     opacity: 1;
   }
   40% {
-    transform: translate(98px, 7px) scale(0.8) rotate(-91deg);
+    transform: translate(103px, -20px) scale(1) rotate(251deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, 1px) scale(1) rotate(0deg);
+    transform: translate(0, -3px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -252,15 +252,15 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(106px, -14px) scale(2.6) rotate(9deg);
+    transform: translate(149px, -12px) scale(1.8) rotate(-52deg);
     opacity: 1;
   }
   40% {
-    transform: translate(140px, 22px) scale(1) rotate(66deg);
+    transform: translate(101px, 29px) scale(1) rotate(6deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, -1px) scale(1) rotate(0deg);
+    transform: translate(0, 0px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -273,11 +273,11 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(103px, -8px) scale(2) rotate(-303deg);
+    transform: translate(129px, 25px) scale(2.8) rotate(11deg);
     opacity: 1;
   }
   40% {
-    transform: translate(92px, 2px) scale(0.4) rotate(-55deg);
+    transform: translate(135px, -14px) scale(0.4) rotate(-52deg);
     opacity: 0;
   }
   60% {
@@ -294,15 +294,15 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   20% {
-    transform: translate(131px, -11px) scale(1.8) rotate(51deg);
+    transform: translate(146px, -15px) scale(2.8) rotate(75deg);
     opacity: 1;
   }
   40% {
-    transform: translate(112px, 3px) scale(1.2) rotate(32deg);
+    transform: translate(93px, 17px) scale(0.4) rotate(225deg);
     opacity: 0;
   }
   60% {
-    transform: translate(0, -1px) scale(1) rotate(0deg);
+    transform: translate(0, -4px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -315,11 +315,11 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(116px, 3px) scale(1.4) rotate(192deg);
+    transform: translate(108px, 13px) scale(1.6) rotate(226deg);
     opacity: 1;
   }
   50% {
-    transform: translate(84px, -14px) scale(0.8) rotate(-289deg);
+    transform: translate(113px, 8px) scale(0.8) rotate(326deg);
     opacity: 0;
   }
   70% {
@@ -336,15 +336,15 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(139px, -13px) scale(1.8) rotate(318deg);
+    transform: translate(124px, 25px) scale(1.8) rotate(33deg);
     opacity: 1;
   }
   50% {
-    transform: translate(81px, -18px) scale(0.8) rotate(274deg);
+    transform: translate(125px, 20px) scale(0.6) rotate(14deg);
     opacity: 0;
   }
   70% {
-    transform: translate(0, 5px) scale(1) rotate(0deg);
+    transform: translate(0, 1px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -357,15 +357,15 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(88px, 22px) scale(1.6) rotate(358deg);
+    transform: translate(94px, -19px) scale(2) rotate(-270deg);
     opacity: 1;
   }
   50% {
-    transform: translate(140px, -12px) scale(0.4) rotate(124deg);
+    transform: translate(93px, 11px) scale(0.4) rotate(235deg);
     opacity: 0;
   }
   70% {
-    transform: translate(0, 4px) scale(1) rotate(0deg);
+    transform: translate(0, 3px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -378,15 +378,15 @@ main .first-box > svg #logotype path {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   35% {
-    transform: translate(107px, -15px) scale(1.4) rotate(-301deg);
+    transform: translate(134px, -2px) scale(2.2) rotate(-37deg);
     opacity: 1;
   }
   50% {
-    transform: translate(99px, -9px) scale(1) rotate(44deg);
+    transform: translate(90px, 7px) scale(1) rotate(-130deg);
     opacity: 0;
   }
   70% {
-    transform: translate(0, 3px) scale(1) rotate(0deg);
+    transform: translate(0, 2px) scale(1) rotate(0deg);
     opacity: 0;
   }
   100% {
@@ -427,15 +427,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(97px, 16px) scale(1.6) rotate(152deg);
+      transform: translate(119px, 13px) scale(1.2) rotate(295deg);
       opacity: 1;
     }
     40% {
-      transform: translate(107px, 1px) scale(0.4) rotate(168deg);
+      transform: translate(92px, -6px) scale(0.6) rotate(360deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -2px) scale(1) rotate(0deg);
+      transform: translate(0, -3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -448,15 +448,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(84px, 10px) scale(1.6) rotate(-36deg);
+      transform: translate(104px, 12px) scale(1.6) rotate(-13deg);
       opacity: 1;
     }
     40% {
-      transform: translate(83px, -18px) scale(0.4) rotate(163deg);
+      transform: translate(114px, -1px) scale(0.6) rotate(342deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, -3px) scale(1) rotate(0deg);
+      transform: translate(0, 0px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -469,15 +469,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(118px, -11px) scale(1.4) rotate(294deg);
+      transform: translate(100px, -9px) scale(1.2) rotate(251deg);
       opacity: 1;
     }
     40% {
-      transform: translate(121px, -19px) scale(0.4) rotate(-158deg);
+      transform: translate(100px, -5px) scale(0.6) rotate(-29deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, 0px) scale(1) rotate(0deg);
+      transform: translate(0, -4px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -490,15 +490,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(91px, -4px) scale(1.4) rotate(-313deg);
+      transform: translate(81px, -8px) scale(1.4) rotate(-62deg);
       opacity: 1;
     }
     40% {
-      transform: translate(110px, -2px) scale(0.6) rotate(-193deg);
+      transform: translate(103px, 6px) scale(0.8) rotate(170deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, 0px) scale(1) rotate(0deg);
+      transform: translate(0, 1px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -511,15 +511,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     20% {
-      transform: translate(99px, 3px) scale(1.4) rotate(107deg);
+      transform: translate(85px, 19px) scale(1) rotate(94deg);
       opacity: 1;
     }
     40% {
-      transform: translate(111px, 9px) scale(0.4) rotate(158deg);
+      transform: translate(106px, -16px) scale(0.6) rotate(184deg);
       opacity: 0;
     }
     60% {
-      transform: translate(0, 0px) scale(1) rotate(0deg);
+      transform: translate(0, -1px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -532,15 +532,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(115px, -14px) scale(1) rotate(-266deg);
+      transform: translate(119px, -4px) scale(1.8) rotate(308deg);
       opacity: 1;
     }
     50% {
-      transform: translate(95px, -12px) scale(0.6) rotate(347deg);
+      transform: translate(110px, 17px) scale(0.8) rotate(-142deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 2px) scale(1) rotate(0deg);
+      transform: translate(0, 4px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -553,15 +553,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(99px, 2px) scale(1.2) rotate(-274deg);
+      transform: translate(104px, -5px) scale(1.8) rotate(295deg);
       opacity: 1;
     }
     50% {
-      transform: translate(111px, -4px) scale(0.8) rotate(-162deg);
+      transform: translate(91px, -8px) scale(0.6) rotate(282deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 6px) scale(1) rotate(0deg);
+      transform: translate(0, 5px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -574,15 +574,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(97px, -10px) scale(1.4) rotate(76deg);
+      transform: translate(106px, -4px) scale(1.8) rotate(-344deg);
       opacity: 1;
     }
     50% {
-      transform: translate(93px, -16px) scale(0.4) rotate(-148deg);
+      transform: translate(92px, -17px) scale(0.4) rotate(247deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 6px) scale(1) rotate(0deg);
+      transform: translate(0, 1px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {
@@ -595,15 +595,15 @@ main .first-box > svg #logotype path:nth-of-type(9) {
       transform: translate(0, 0) scale(1) rotate(0deg);
     }
     35% {
-      transform: translate(104px, 10px) scale(1.4) rotate(-294deg);
+      transform: translate(117px, -7px) scale(1.2) rotate(-257deg);
       opacity: 1;
     }
     50% {
-      transform: translate(92px, 18px) scale(0.8) rotate(-162deg);
+      transform: translate(112px, -16px) scale(0.8) rotate(-79deg);
       opacity: 0;
     }
     70% {
-      transform: translate(0, 6px) scale(1) rotate(0deg);
+      transform: translate(0, 3px) scale(1) rotate(0deg);
       opacity: 0;
     }
     100% {

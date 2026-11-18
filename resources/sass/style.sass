@@ -5047,11 +5047,21 @@ body::-webkit-scrollbar
 							display: block
 							margin-top: 20px
 							font-weight: 400
-							font-size: 24px
+							font-size: 20px
 							line-height: 1.0
 							font-family: $noto-sans
 							letter-spacing: 0.3em
 							color: #111
+							+bp1500
+								font-size: 18px
+							+bp1200
+								margin-top: 17px
+								font-size: 16px
+							+bp900
+								font-size: 15px
+							+bp800
+								margin-top: 15px
+								font-size: 14px
 							&:nth-of-type(1)
 								margin-top: 0
 						.top-tit-box
@@ -5072,32 +5082,54 @@ body::-webkit-scrollbar
 									.char
 										display: inline-block
 										font-weight: 800
-										font-size: 62px
+										font-size: 54px
 										line-height: 1.0
 										font-family: $ah-hakushu-rs
 										letter-spacing: 0.25em
 										color: #555
+										+bp1400
+											font-size: 50px
+										+bp1200
+											font-size: 46px
+										+bp900
+											font-size: 42px
+										+bp800
+											font-size: 40px
 										&:nth-of-type(1)
 											margin-right: 0.25em
 											font-weight: 400
-											font-size: 82px
+											font-size: 72px
 											line-height: 1.0
 											font-family: $amiri-quran
 											letter-spacing: 0.0em
+											+bp1400
+												font-size: 66px
+											+bp1200
+												font-size: 60px
+											+bp900
+												font-size: 54px
+											+bp800
+												font-size: 50px
 										&:nth-of-type(4)
 											letter-spacing: 0.0em
 							.streak-box
 								display: block
 								width: fit-content
-								margin-top: 40px
+								margin-top: 30px
 								position: relative
+								+bp1400
+									margin-top: 27px
+								+bp1000
+									margin-top: 25px
 								.base
 									display: block
 									width: 180px
-									height: 4px
+									height: 3px
 									background: linear-gradient(to right, rgba($base, 0), $base, rgba($base, 0))
 									box-shadow: 0px 0px 1px $base
-									filter: blur(2.5px)
+									filter: blur(2px)
+									+bp1000
+										width: 150px
 								.highlight
 									position: absolute
 									top: 0
@@ -5105,11 +5137,13 @@ body::-webkit-scrollbar
 									bottom: 0
 									margin: auto
 									display: block
-									width: 180px
-									height: 2px
+									width: 160px
+									height: 1.5px
 									background: linear-gradient(to right, rgba(#fff, 0), #fff, rgba(#fff, 0))
-									filter: blur(1.5px)
+									filter: blur(1px)
 									z-index: 5
+									+bp1000
+										width: 130px
 						.logo-box
 							position: absolute
 							left: 50%
@@ -5124,7 +5158,9 @@ body::-webkit-scrollbar
 							height: fit-content
 							.logo
 								display: block
-								width: 120px
+								width: 100px
+								+bp1000
+									width: 80px
 				.fig1-box
 					position: absolute
 					top: -30px
@@ -5134,6 +5170,19 @@ body::-webkit-scrollbar
 					z-index: 1
 					perspective: 200px
 					perspective-origin: right bottom
+					+bp1300
+						width: 420px
+					+bp1200
+						left: -100px
+						width: 390px
+					+bp1100
+						top: 0
+					+bp1000
+						width: 370px
+					+bp900
+						width: 350px
+					+bp750
+						width: 320px
 					.img
 						display: block
 						width: 100%
@@ -5149,6 +5198,15 @@ body::-webkit-scrollbar
 					z-index: 1
 					perspective: 200px
 					perspective-origin: center bottom
+					+bp1200
+						width: 280px
+					+bp1000
+						width: 220px
+					+bp900
+						top: 90px
+						width: 200px
+					+bp750
+						width: 190px
 					.img
 						display: block
 						width: 100%
@@ -5162,6 +5220,21 @@ body::-webkit-scrollbar
 					z-index: 1
 					perspective: 200px
 					perspective-origin: left bottom
+					+bp1300
+						width: 400px
+					+bp1200
+						right: -40px
+						width: 360px
+					+bp1100
+						top: 120px
+						right: -50px
+						width: 340px
+					+bp1000
+						width: 300px
+					+bp900
+						width: 280px
+					+bp750
+						width: 250px
 					.img
 						display: block
 						width: 100%
@@ -5169,12 +5242,38 @@ body::-webkit-scrollbar
 				.fig4-box
 					position: absolute
 					left: -70px
-					bottom: 45px
+					bottom: 100px
 					display: block
 					width: 500px
 					z-index: 1
 					perspective: 200px
 					perspective-origin: right top
+					+bp1500
+						bottom: 70px
+						width: 460px
+					+bp1400
+						width: 420px
+					+bp1300
+						bottom: 45px
+						width: 410px
+					+bp1200
+						width: 380px
+					+bp1100
+						left: -90px
+						bottom: 180px
+						width: 360px
+					+bp1000
+						left: -100px
+						width: 340px
+					+bp900
+						bottom: 120px
+						width: 320px
+					+bp800
+						bottom: 110px
+						width: 310px
+					+bp750
+						bottom: 90px
+						width: 300px
 					.img
 						display: block
 						width: 100%
@@ -5191,19 +5290,67 @@ body::-webkit-scrollbar
 					z-index: 1
 					perspective: 200px
 					perspective-origin: center top
+					+bp1500
+						width: 460px
+					+bp1400
+						width: 420px
+					+bp1300
+						width: 410px
+					+bp1200
+						width: 380px
+					+bp1100
+						bottom: -30px
+						width: 360px
+					+bp1000
+						bottom: 0
+						width: 300px
+					+bp900
+						width: 270px
+					+bp800
+						width: 260px
+					+bp750
+						width: 225px
 					.img
 						display: block
 						width: 100%
 						will-change: transform, opacity
 				.fig6-box
 					position: absolute
-					right: -130px
+					right: -40px
 					bottom: 190px
 					display: block
 					width: 500px
 					z-index: 1
 					perspective: 200px
 					perspective-origin: left top
+					+bp1750
+						right: -70px
+					+bp1600
+						right: -85px
+						width: 480px
+					+bp1500
+						width: 460px
+					+bp1400
+						right: -100px
+						width: 420px
+					+bp1300
+						width: 410px
+					+bp1200
+						width: 380px
+					+bp1100
+						bottom: 220px
+						width: 360px
+					+bp1000
+						width: 340px
+					+bp900
+						bottom: 180px
+						width: 320px
+					+bp800
+						bottom: 170px
+						width: 310px
+					+bp750
+						bottom: 150px
+						width: 300px
 					.img
 						display: block
 						width: 100%
