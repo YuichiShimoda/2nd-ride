@@ -5292,7 +5292,6 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 850px) {
   #result .container .sticky-box .content-box .fig-box .inner-box .dresser-box {
     top: -150%;
-    left: initial;
     right: 0;
     width: 150px;
   }
@@ -6098,8 +6097,8 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   width: 640px;
   padding: 0px 30px 21px 30px;
-  border-bottom: solid 1px #ccc;
   margin-top: 25px;
+  border-bottom: solid 1px #ccc;
   position: relative;
 }
 @media screen and (max-width: 1750px) {
