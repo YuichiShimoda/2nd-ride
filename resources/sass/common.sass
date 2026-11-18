@@ -32,6 +32,9 @@ $black-bg: #232523
 @mixin bp1200
 	@media screen and (max-width: 1200px)
 		@content
+@mixin bp1150
+	@media screen and (max-width: 1150px)
+		@content
 @mixin bp1100
 	@media screen and (max-width: 1100px)
 		@content
@@ -184,7 +187,9 @@ body::-webkit-scrollbar
 #contact
 	display: block
 	width: 100%
-	height: 320px
+	height: calc(0.115*100vw + 158.5px)
+	+bp850
+		height: fit-content
 	.content-box
 		display: flex
 		justify-content: center
@@ -192,61 +197,21 @@ body::-webkit-scrollbar
 		width: 100%
 		height: 100%
 		border-top: solid 1px #ccc
+		+bp850
+			flex-direction: column
 		.left-box
 			display: block
 			width: 50%
 			height: 100%
 			border-right: solid 1px #ccc
 			position: relative
-			&:hover
-				.tit-box
-					.en
-						.word
-							.char
-								color: $base
-								animation: enBounceDown 0.8s #{"calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.08s)"} cubic-bezier(0.25, 1, 0.5, 1)
-			.tit-box
-				position: absolute
-				top: 100px
-				left: 80px
-				display: block
-				width: fit-content
-				z-index: 2
-				.en
-					display: block
-					.word
-						.char
-							display: inline-block
-							font-weight: 900
-							font-size: 38px
-							line-height: 1.0
-							font-family: $eurostile-extended
-							letter-spacing: 0.05em
-							color: #333
-							text-shadow: 0px 2px 4px #fff, 0px 2px 16px rgba(#fff, 0.8), 0px 2px 48px rgba(#fff, 0.5)
-							transition: color 0.5s ease-in-out
-				.jp
-					display: block
-					margin-top: 20px
-					margin-left: 2px
-					font-weight: 500
-					font-size: 16px
-					line-height: 1.0
-					font-family: $eurostile-extended
-					letter-spacing: 0.25em
-					color: #333
-					text-shadow: 0px 2px 4px #fff, 0px 2px 16px rgba(#fff, 0.8), 0px 2px 48px rgba(#fff, 0.5)
-			.img
-				display: block
+			+bp850
 				width: 100%
-				height: 100%
-				object-fit: cover
-				object-position: right bottom
-		.right-box
-			display: block
-			width: 50%
-			height: 100%
-			position: relative
+				height: 260px
+			+bp800
+				height: 240px
+			+bp750
+				height: 230px
 			&:hover
 				.tit-box
 					.en
@@ -261,36 +226,136 @@ body::-webkit-scrollbar
 				display: block
 				width: fit-content
 				z-index: 2
+				+bp1500
+					top: 65px
+				+bp1200
+					top: 50px
+					left: 60px
+				+bp1000
+					top: 45px
+					left: 55px
 				.en
 					display: block
 					.word
 						.char
 							display: inline-block
 							font-weight: 900
-							font-size: 38px
+							font-size: 44px
 							line-height: 1.0
 							font-family: $eurostile-extended
 							letter-spacing: 0.05em
 							color: #333
 							text-shadow: 0px 2px 4px #fff, 0px 2px 16px rgba(#fff, 0.8), 0px 2px 48px rgba(#fff, 0.5)
 							transition: color 0.5s ease-in-out
+							+bp1500
+								font-size: 38px
+							+bp1000
+								font-size: 34px
+							+bp850
+								font-size: 40px
 				.jp
 					display: block
-					margin-top: 20px
+					margin-top: 25px
 					margin-left: 2px
 					font-weight: 500
-					font-size: 16px
+					font-size: 18px
 					line-height: 1.0
 					font-family: $eurostile-extended
 					letter-spacing: 0.25em
 					color: #333
 					text-shadow: 0px 2px 4px #fff, 0px 2px 16px rgba(#fff, 0.8), 0px 2px 48px rgba(#fff, 0.5)
+					+bp1500
+						margin-top: 20px
+						font-size: 16px
+					+bp1000
+						font-size: 15px
+					+bp850
+						margin-top: 25px
+						font-size: 16px
 			.img
 				display: block
 				width: 100%
 				height: 100%
 				object-fit: cover
 				object-position: right bottom
+		.right-box
+			display: block
+			width: 50%
+			height: 100%
+			position: relative
+			+bp850
+				width: 100%
+				height: 280px
+			&:hover
+				.tit-box
+					.en
+						.word
+							.char
+								color: $base
+								animation: enBounceDown 0.8s #{"calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.08s)"} cubic-bezier(0.25, 1, 0.5, 1)
+			.tit-box
+				position: absolute
+				top: 80px
+				left: 80px
+				display: block
+				width: fit-content
+				z-index: 2
+				+bp1500
+					top: 65px
+				+bp1200
+					top: 50px
+					left: 60px
+				+bp1000
+					top: 45px
+					left: 55px
+				.en
+					display: block
+					.word
+						.char
+							display: inline-block
+							font-weight: 900
+							font-size: 44px
+							line-height: 1.0
+							font-family: $eurostile-extended
+							letter-spacing: 0.05em
+							color: #333
+							text-shadow: 0px 2px 4px #fff, 0px 2px 16px rgba(#fff, 0.8), 0px 2px 48px rgba(#fff, 0.5)
+							transition: color 0.5s ease-in-out
+							+bp1500
+								font-size: 38px
+							+bp1000
+								font-size: 34px
+							+bp850
+								font-size: 40px
+				.jp
+					display: block
+					margin-top: 25px
+					margin-left: 2px
+					font-weight: 500
+					font-size: 18px
+					line-height: 1.0
+					font-family: $eurostile-extended
+					letter-spacing: 0.25em
+					color: #333
+					text-shadow: 0px 2px 4px #fff, 0px 2px 16px rgba(#fff, 0.8), 0px 2px 48px rgba(#fff, 0.5)
+					+bp1500
+						margin-top: 20px
+						font-size: 16px
+					+bp1000
+						font-size: 15px
+					+bp850
+						margin-top: 25px
+						font-size: 16px
+			.img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: right bottom
+				+bp1400
+					object-position: left bottom
+				+bp1200
+					object-position: 40% bottom
 @keyframes enBounceDown
 	0%
 		transform: translateY(0)
@@ -350,9 +415,23 @@ body::-webkit-scrollbar
 		align-items: flex-end
 		flex-wrap: wrap
 		width: 100%
-		padding: 125px 160px 40px 160px
+		padding: 160px 180px 40px 180px
 		background: $black-bg
 		position: relative
+		+bp1500
+			padding: 125px 160px 40px 160px
+		+bp1300
+			padding: 125px 120px 40px 120px
+		+bp1200
+			padding: 110px 100px 40px 100px
+		+bp1150
+			padding: 110px 80px 40px 80px
+		+bp1100
+			padding: 100px 80px 30px 80px
+		+bp1000
+			padding: 100px 60px 30px 60px
+		+bp850
+			padding: 100px 40px 25px 40px
 		.left-box
 			display: flex
 			justify-content: flex-start
@@ -369,6 +448,15 @@ body::-webkit-scrollbar
 					font-family: $eurostile-extended
 					letter-spacing: 0.05em
 					color: #fff
+					+bp1400
+						font-size: 44px
+					+bp1100
+						font-size: 40px
+					+bp950
+						font-weight: 900
+						font-size: 34px
+					+bp850
+						font-size: 32px
 					&::selection
 						color: #555
 				.link-box
@@ -376,6 +464,10 @@ body::-webkit-scrollbar
 					width: fit-content
 					margin-top: 55px
 					margin-left: 3px
+					+bp1400
+						margin-top: 50px
+					+bp1100
+						margin-top: 40px
 					.link
 						display: block
 						width: fit-content
@@ -387,6 +479,15 @@ body::-webkit-scrollbar
 						letter-spacing: 0.15em
 						color: #fff
 						transition: all 0.5s ease-in-out
+						+bp1400
+							margin-top: 25px
+							font-size: 18px
+						+bp1100
+							font-size: 16px
+						+bp950
+							margin-top: 22px
+						+bp850
+							margin-top: 20px
 						&:hover
 							color: $base
 						&::selection
@@ -397,6 +498,14 @@ body::-webkit-scrollbar
 				display: block
 				width: fit-content
 				margin-left: 100px
+				+bp1400
+					margin-left: 80px
+				+bp1100
+					margin-left: 60px
+				+bp950
+					margin-left: 45px
+				+bp850
+					margin-left: 35px
 				.en
 					display: block
 					font-weight: 500
@@ -405,6 +514,15 @@ body::-webkit-scrollbar
 					font-family: $eurostile-extended
 					letter-spacing: 0.05em
 					color: #fff
+					+bp1400
+						font-size: 44px
+					+bp1100
+						font-size: 40px
+					+bp950
+						font-weight: 900
+						font-size: 34px
+					+bp850
+						font-size: 32px
 					&::selection
 						color: #555
 				.link-box
@@ -412,6 +530,10 @@ body::-webkit-scrollbar
 					width: fit-content
 					margin-top: 55px
 					margin-left: 3px
+					+bp1400
+						margin-top: 50px
+					+bp1100
+						margin-top: 40px
 					.link
 						display: block
 						width: fit-content
@@ -423,6 +545,15 @@ body::-webkit-scrollbar
 						letter-spacing: 0.15em
 						color: #fff
 						transition: all 0.5s ease-in-out
+						+bp1400
+							margin-top: 25px
+							font-size: 18px
+						+bp1100
+							font-size: 16px
+						+bp950
+							margin-top: 22px
+						+bp850
+							margin-top: 20px
 						&:hover
 							color: $base
 						&::selection
@@ -431,10 +562,39 @@ body::-webkit-scrollbar
 							margin-top: 0
 		.logo-box
 			position: absolute
-			top: 110px
-			right: 160px
+			top: 145px
+			right: 180px
 			display: block
 			width: 300px
+			+bp1500
+				top: 110px
+				right: 160px
+			+bp1400
+				width: 270px
+			+bp1300
+				right: 120px
+			+bp1200
+				top: 99px
+				right: 100px
+				width: 240px
+			+bp1150
+				right: 80px
+			+bp1100
+				top: 90px
+				width: 220px
+			+bp1000
+				right: 60px
+			+bp950
+				top: 88px
+				width: 200px
+			+bp850
+				right: 40px
+			+bp800
+				top: 90px
+				width: 190px
+			+bp750
+				top: 91px
+				width: 180px
 			.logo
 				display: block
 				width: 100%
@@ -460,6 +620,12 @@ body::-webkit-scrollbar
 					font-family: $noto-serif
 					letter-spacing: 0.05em
 					color: #fff
+					+bp1200
+						font-size: 13px
+					+bp1100
+						font-size: 12px
+					+bp800
+						font-size: 10px
 					&::selection
 						color: #555
 				.detail
@@ -471,6 +637,14 @@ body::-webkit-scrollbar
 					font-family: $noto-serif
 					letter-spacing: 0.05em
 					color: #fff
+					+bp1200
+						font-size: 13px
+					+bp1100
+						margin-left: 15px
+						font-size: 12px
+					+bp800
+						margin-left: 12px
+						font-size: 10px
 					&::selection
 						color: #555
 					.num
@@ -482,6 +656,12 @@ body::-webkit-scrollbar
 						font-family: $noto-serif
 						letter-spacing: 0.05em
 						color: #fff
+						+bp1200
+							font-size: 13px
+						+bp1100
+							font-size: 12px
+						+bp800
+							font-size: 10px
 						&::selection
 							color: #555
 			.licenses-ele
@@ -498,6 +678,12 @@ body::-webkit-scrollbar
 					font-family: $noto-serif
 					letter-spacing: 0.05em
 					color: #fff
+					+bp1200
+						font-size: 13px
+					+bp1100
+						font-size: 12px
+					+bp800
+						font-size: 10px
 					&::selection
 						color: #555
 				.detail
@@ -509,6 +695,14 @@ body::-webkit-scrollbar
 					font-family: $noto-serif
 					letter-spacing: 0.05em
 					color: #fff
+					+bp1200
+						font-size: 13px
+					+bp1100
+						margin-left: 15px
+						font-size: 12px
+					+bp800
+						margin-left: 12px
+						font-size: 10px
 					&::selection
 						color: #555
 					.num
@@ -521,6 +715,12 @@ body::-webkit-scrollbar
 						font-family: $noto-serif
 						letter-spacing: 0.05em
 						color: #fff
+						+bp1200
+							font-size: 13px
+						+bp1100
+							font-size: 12px
+						+bp800
+							font-size: 10px
 						&::selection
 							color: #555
 			.link-box
@@ -529,6 +729,10 @@ body::-webkit-scrollbar
 				align-items: center
 				width: fit-content
 				margin-top: 20px
+				+bp1200
+					margin-top: 17px
+				+bp900
+					flex-direction: column
 				.link
 					display: block
 					margin-left: 40px
@@ -539,16 +743,25 @@ body::-webkit-scrollbar
 					letter-spacing: 0.1em
 					color: #fff
 					transition: all 0.5s ease-in-out
+					+bp1200
+						margin-left: 30px
+						font-size: 15px
+					+bp1100
+						font-size: 14px
+					+bp950
+						margin-left: 20px
 					&:hover
 						color: $base
 					&::selection
 						color: #555
 					&:nth-of-type(1)
 						margin-left: 0
+						+bp900
+							margin-bottom: 10px
 		.copyright
 			display: block
 			width: 100%
-			margin-top: 120px
+			margin-top: 140px
 			font-weight: 400
 			font-size: 14px
 			line-height: 1.0
@@ -556,5 +769,16 @@ body::-webkit-scrollbar
 			letter-spacing: 0.05em
 			text-align: center
 			color: #fff
+			+bp1500
+				margin-top: 120px
+			+bp1200
+				margin-top: 100px
+			+bp1100
+				font-size: 13px
+			+bp1000
+				margin-top: 80px
+			+bp800
+				margin-top: 70px
+				font-size: 12px
 			&::selection
 				color: #555

@@ -4602,6 +4602,12 @@ body::-webkit-scrollbar
 					letter-spacing: 0.0em
 					color: transparent
 					position: relative
+					+bp1500
+						font-size: calc(0.06*100vw + 90px)
+					+bp1300
+						font-size: calc(0.075*100vw + 52.5px)
+					+bp800
+						font-size: 100px
 					&::before, &::after
 						position: absolute
 						top: 0
@@ -4623,6 +4629,8 @@ body::-webkit-scrollbar
 			.jp
 				display: block
 				margin-top: 35px
+				+bp1500
+					margin-top: calc(0.01*100vw + 20px)
 				.word
 					.char
 						display: inline-block
@@ -4635,6 +4643,10 @@ body::-webkit-scrollbar
 						filter: blur(0.5em)
 						opacity: 0.0
 						transition: all 1.0s #{"calc(0.5s + abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.2s)"} ease-in-out
+						+bp1500
+							font-size: calc(0.008*100vw + 20px)
+						+bp1200
+							font-size: calc(0.01*100vw + 15px)
 						&::selection
 							color: #555
 							-webkit-text-fill-color: #555
@@ -4642,8 +4654,33 @@ body::-webkit-scrollbar
 			display: flex
 			justify-content: space-between
 			align-items: center
-			width: calc(100vw - 160px)
+			width: 1450px
 			margin: 200px auto 0
+			+bp1750
+				width: 1400px
+			+bp1600
+				width: 1300px
+				margin: 180px auto 0
+			+bp1500
+				width: 1240px
+			+bp1400
+				width: 1120px
+				margin: 160px auto 0
+			+bp1300
+				width: 1080px
+			+bp1200
+				width: 980px
+				margin: 140px auto 0
+			+bp1100
+				width: 940px
+			+bp1000
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+				width: 100%
+				margin: 120px auto 0
+			+bp900
+				margin: 100px auto 0
 			.left-box
 				display: block
 				width: fit-content
@@ -4651,11 +4688,30 @@ body::-webkit-scrollbar
 					display: flex
 					justify-content: flex-start
 					align-items: flex-start
-					width: 580px
-					padding: 0px 20px 15px 20px
+					width: 640px
+					padding: 0px 30px 21px 30px
 					border-bottom: solid 1px #ccc
-					margin-top: 20px
+					margin-top: 25px
 					position: relative
+					+bp1750
+						padding: 0px 25px 17px 25px
+						margin-top: 22px
+					+bp1600
+						width: 580px
+						padding: 0px 20px 15px 20px
+						margin-top: 20px
+					+bp1400
+						width: 540px
+						margin-top: 16px
+					+bp1300
+						width: 530px
+					+bp1200
+						width: 460px
+						padding: 0px 15px 15px 15px
+					+bp1000
+						width: 580px
+						padding: 0px 20px 15px 20px
+						margin-top: 20px
 					&:nth-of-type(1)
 						margin-top: 0
 					&:hover
@@ -4665,13 +4721,24 @@ body::-webkit-scrollbar
 							clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)
 					> h3
 						display: block
-						width: 140px
+						width: 160px
 						font-weight: 700
 						font-size: 18px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						color: #999
+						+bp1600
+							width: 140px
+						+bp1400
+							width: 130px
+							font-size: 16px
+						+bp1200
+							width: 110px
+							font-size: 14px
+						+bp1000
+							width: 140px
+							font-size: 16px
 						&::selection
 							color: #555
 					> p
@@ -4684,6 +4751,12 @@ body::-webkit-scrollbar
 						letter-spacing: 0.1em
 						white-space: nowrap
 						color: #999
+						+bp1400
+							font-size: 16px
+						+bp1200
+							font-size: 14px
+						+bp1000
+							font-size: 16px
 						&::selection
 							color: #555
 						.num
@@ -4696,6 +4769,12 @@ body::-webkit-scrollbar
 							font-family: $noto-sans
 							letter-spacing: 0.05em
 							color: #999
+							+bp1400
+								font-size: 15px
+							+bp1200
+								font-size: 13px
+							+bp1000
+								font-size: 15px
 							&::selection
 								color: #555
 					.streak-box
@@ -4742,6 +4821,12 @@ body::-webkit-scrollbar
 						white-space: nowrap
 						color: #999
 						transition: all 0.5s ease-in-out
+						+bp1400
+							font-size: 16px
+						+bp1200
+							font-size: 14px
+						+bp1000
+							font-size: 16px
 						&:hover
 							color: $base
 						&::selection
@@ -4758,6 +4843,12 @@ body::-webkit-scrollbar
 						white-space: nowrap
 						color: #999
 						transition: all 0.5s ease-in-out
+						+bp1400
+							font-size: 16px
+						+bp1200
+							font-size: 14px
+						+bp1000
+							font-size: 16px
 						&:hover
 							color: $base
 						&::selection
@@ -4774,6 +4865,12 @@ body::-webkit-scrollbar
 							font-family: $noto-sans
 							letter-spacing: 0.1em
 							color: #999
+							+bp1400
+								font-size: 15px
+							+bp1200
+								font-size: 13px
+							+bp1000
+								font-size: 15px
 							&::selection
 								color: #555
 							.mark
@@ -4785,6 +4882,12 @@ body::-webkit-scrollbar
 								font-family: $noto-sans
 								letter-spacing: 0.0em
 								color: #999
+								+bp1400
+									font-size: 16px
+								+bp1200
+									font-size: 14px
+								+bp1000
+									font-size: 16px
 								&::selection
 									color: #555
 						.address
@@ -4796,14 +4899,44 @@ body::-webkit-scrollbar
 							font-family: $noto-sans
 							letter-spacing: 0.1em
 							color: #999
+							+bp1400
+								font-size: 16px
+							+bp1200
+								font-size: 14px
+							+bp1000
+								font-size: 16px
 							&::selection
 								color: #555
 			.right-box
 				display: block
-				width: 600px
+				width: 640px
+				+bp1750
+					width: 620px
+				+bp1600
+					width: 600px
+				+bp1500
+					width: 560px
+				+bp1400
+					width: 500px
+				+bp1300
+					width: 470px
+				+bp1200
+					width: 440px
+				+bp1100
+					width: 420px
+				+bp1000
+					width: 100%
+					height: calc(0.4*100vw + 0px)
+					margin-top: 100px
+					object-fit: cover
+					object-position: bottom
 				.img
 					display: block
 					width: 100%
+					+bp1000
+						height: 100%
+						object-fit: cover
+						object-position: center 60%
 @keyframes infoTopReassemble
 	0%
 		color: #111
