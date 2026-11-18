@@ -161,10 +161,29 @@ body::-webkit-scrollbar {
 }
 #mv .container .sticky-box .content-box .logo {
   position: absolute;
-  top: 50.5%;
-  left: 80px;
+  top: 51.5%;
+  left: 60px;
   display: block;
-  width: 290px;
+  width: 280px;
+}
+@media screen and (max-width: 600px) {
+  #mv .container .sticky-box .content-box .logo {
+    top: 52%;
+    width: 240px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #mv .container .sticky-box .content-box .logo {
+    top: 52.3%;
+    width: 220px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mv .container .sticky-box .content-box .logo {
+    top: 52.7%;
+    left: 40px;
+    width: 200px;
+  }
 }
 #mv .container .sticky-box .content-box .en-box {
   position: absolute;
@@ -176,18 +195,38 @@ body::-webkit-scrollbar {
   flex-direction: column;
   width: fit-content;
 }
+@media screen and (max-width: 600px) {
+  #mv .container .sticky-box .content-box .en-box {
+    top: 250px;
+  }
+}
 #mv .container .sticky-box .content-box .en-box > p {
   display: block;
 }
 #mv .container .sticky-box .content-box .en-box > p .word .char {
   display: inline-block;
   font-weight: 900;
-  font-size: 52px;
+  font-size: 50px;
   line-height: 1.2;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: 0em;
   color: transparent;
   position: relative;
+}
+@media screen and (max-width: 600px) {
+  #mv .container .sticky-box .content-box .en-box > p .word .char {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #mv .container .sticky-box .content-box .en-box > p .word .char {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mv .container .sticky-box .content-box .en-box > p .word .char {
+    font-size: 36px;
+  }
 }
 #mv .container .sticky-box .content-box .en-box > p .word .char::before, #mv .container .sticky-box .content-box .en-box > p .word .char::after {
   position: absolute;
@@ -216,12 +255,27 @@ body::-webkit-scrollbar {
 #mv .container .sticky-box .content-box .en-box > p .green .word .char {
   display: inline-block;
   font-weight: 900;
-  font-size: 52px;
+  font-size: 50px;
   line-height: 1.2;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: 0em;
   color: transparent;
   position: relative;
+}
+@media screen and (max-width: 600px) {
+  #mv .container .sticky-box .content-box .en-box > p .green .word .char {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #mv .container .sticky-box .content-box .en-box > p .green .word .char {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mv .container .sticky-box .content-box .en-box > p .green .word .char {
+    font-size: 36px;
+  }
 }
 #mv .container .sticky-box .content-box .en-box > p .green .word .char::before, #mv .container .sticky-box .content-box .en-box > p .green .word .char::after {
   position: absolute;
@@ -245,12 +299,27 @@ body::-webkit-scrollbar {
 }
 #mv .container .sticky-box .content-box .right-bottom-box {
   position: absolute;
-  right: 120px;
-  bottom: 190px;
+  right: 110px;
+  bottom: 180px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: fit-content;
+}
+@media screen and (max-width: 650px) {
+  #mv .container .sticky-box .content-box .right-bottom-box {
+    right: 130px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #mv .container .sticky-box .content-box .right-bottom-box {
+    right: 110px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mv .container .sticky-box .content-box .right-bottom-box {
+    right: 100px;
+  }
 }
 #mv .container .sticky-box .content-box .right-bottom-box .desc {
   display: block;
@@ -263,10 +332,58 @@ body::-webkit-scrollbar {
   text-align: right;
   color: #111;
 }
+@media screen and (max-width: 650px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc {
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 550px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+}
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.all {
+  display: block;
+}
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.pc {
+  display: block;
+}
+@media screen and (max-width: 650px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc br.pc {
+    display: none;
+  }
+}
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.sp {
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc br.sp {
+    display: block;
+  }
+}
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.sp2 {
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc br.sp2 {
+    display: block;
+  }
+}
 #mv .container .sticky-box .content-box .right-bottom-box .hatching {
   display: block;
   width: 18px;
-  margin-left: 35px;
+  margin-left: 40px;
+}
+@media screen and (max-width: 650px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .hatching {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .hatching {
+    margin-left: 30px;
+  }
 }
 #mv .container .sticky-box .content-box .right-bottom-box .hatching path {
   opacity: 0.1;
@@ -305,16 +422,16 @@ body::-webkit-scrollbar {
 }
 #mv .container .sticky-box .content-box .top-shape {
   position: absolute;
-  top: 15px;
-  right: 0;
+  top: -5px;
+  right: -5px;
   display: block;
   width: 620px;
   pointer-events: none;
 }
 #mv .container .sticky-box .content-box .bottom-shape-box {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -5px;
+  bottom: -10px;
   display: block;
   width: 1080px;
   pointer-events: none;
@@ -371,7 +488,22 @@ body::-webkit-scrollbar {
   display: block;
   width: 100%;
   pointer-events: none;
-  clip-path: polygon(100% 0%, 100% 100%, 52% 100%, 92% 0%);
+  clip-path: polygon(100% 0%, 100% 100%, 55% 100%, 95% 0%);
+}
+@media screen and (max-width: 600px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box .bottom-shape {
+    clip-path: polygon(100% 0%, 100% 100%, 60% 100%, 95% 0%);
+  }
+}
+@media screen and (max-width: 550px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box .bottom-shape {
+    clip-path: polygon(100% 0%, 100% 100%, 63% 100%, 73% 80%, 85% 0%);
+  }
+}
+@media screen and (max-width: 500px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box .bottom-shape {
+    clip-path: polygon(100% 0%, 100% 100%, 68% 100%, 78% 80%, 85% 0%);
+  }
 }
 
 #mv-scroll-space {
@@ -540,12 +672,27 @@ body::-webkit-scrollbar {
 #belief .container .sticky-box .content-box .txt-box .sentence-box .txt .word .char {
   display: inline-block;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.3em;
   color: #222;
   opacity: 0;
+}
+@media screen and (max-width: 600px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .txt .word .char {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .txt .word .char {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .txt .word .char {
+    font-size: 16px;
+  }
 }
 #belief .container .sticky-box .content-box .txt-box .sentence-box .note {
   display: block;
@@ -560,6 +707,11 @@ body::-webkit-scrollbar {
   filter: blur(3px);
   transition: all 1s 0.7s ease-in-out;
 }
+@media screen and (max-width: 550px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .note {
+    font-size: 8px;
+  }
+}
 #belief .container .sticky-box .content-box .txt-box .sentence-box .top-char {
   position: absolute;
   left: 50%;
@@ -568,7 +720,7 @@ body::-webkit-scrollbar {
   transform: scale(1.065) translate(-50%, calc(-80% - 45px));
   display: block;
   font-weight: 800;
-  font-size: 56px;
+  font-size: 54px;
   line-height: 1;
   font-family: "ah-hakushu-rs", sans-serif;
   letter-spacing: 0em;
@@ -577,6 +729,21 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+@media screen and (max-width: 600px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .top-char {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .top-char {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .top-char {
+    font-size: 42px;
+  }
 }
 #belief .container .sticky-box .content-box .txt-box .sentence-box .top-char::selection {
   color: #00a000;
@@ -590,7 +757,7 @@ body::-webkit-scrollbar {
   transform: translate(-50%, calc(95% + 45px));
   display: block;
   font-weight: 800;
-  font-size: 56px;
+  font-size: 54px;
   line-height: 1;
   font-family: "ah-hakushu-rs", sans-serif;
   letter-spacing: 0em;
@@ -599,6 +766,21 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+@media screen and (max-width: 600px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .bottom-char {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .bottom-char {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #belief .container .sticky-box .content-box .txt-box .sentence-box .bottom-char {
+    font-size: 42px;
+  }
 }
 #belief .container .sticky-box .content-box .txt-box .sentence-box .bottom-char::selection {
   color: #00a000;
@@ -675,6 +857,11 @@ body::-webkit-scrollbar {
   border-radius: 2.5px;
   background: #E0E0E0;
 }
+@media screen and (max-width: 500px) {
+  #belief .container .sticky-box .content-box .scroll-box .inner-box .base {
+    height: 55px;
+  }
+}
 #belief .container .sticky-box .content-box .scroll-box .inner-box .progress {
   position: absolute;
   top: 0;
@@ -701,7 +888,22 @@ body::-webkit-scrollbar {
   left: 0;
   bottom: 0;
   transform-origin: left bottom;
-  transform: translateX(195px) rotateZ(-90deg);
+  transform: translateX(185px) rotateZ(-90deg);
+}
+@media screen and (max-width: 600px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box1 {
+    transform: translateX(175px) rotateZ(-90deg);
+  }
+}
+@media screen and (max-width: 550px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box1 {
+    transform: translateX(165px) rotateZ(-90deg);
+  }
+}
+@media screen and (max-width: 500px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box1 {
+    transform: translateX(158px) rotateZ(-90deg);
+  }
 }
 #belief .container .sticky-box .content-box .ticker.slider-box1 .ticker-track {
   animation: telop 12s linear infinite;
@@ -710,7 +912,22 @@ body::-webkit-scrollbar {
   right: 0;
   bottom: 0;
   transform-origin: right bottom;
-  transform: translateX(-195px) rotateZ(90deg);
+  transform: translateX(-185px) rotateZ(90deg);
+}
+@media screen and (max-width: 600px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box2 {
+    transform: translateX(-175px) rotateZ(90deg);
+  }
+}
+@media screen and (max-width: 550px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box2 {
+    transform: translateX(-165px) rotateZ(90deg);
+  }
+}
+@media screen and (max-width: 500px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box2 {
+    transform: translateX(-158px) rotateZ(90deg);
+  }
 }
 #belief .container .sticky-box .content-box .ticker.slider-box2 .ticker-track {
   animation: telop 12s -4s linear infinite;
@@ -731,15 +948,31 @@ body::-webkit-scrollbar {
   display: block;
   flex: 0 0 auto;
   width: max-content;
-  margin-left: 40px;
+  margin-left: 35px;
   font-weight: 900;
-  font-size: 100px;
+  font-size: 85px;
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: -0.05em;
   color: #777;
   opacity: 0.3;
   transition: color 1s 1s ease-in-out, animation 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  #belief .container .sticky-box .content-box .ticker .ticker-track .ticker-group > p {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #belief .container .sticky-box .content-box .ticker .ticker-track .ticker-group > p {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #belief .container .sticky-box .content-box .ticker .ticker-track .ticker-group > p {
+    margin-left: 25px;
+    font-size: 64px;
+  }
 }
 #belief .container .sticky-box .content-box .ticker .ticker-track .ticker-group > p:nth-of-type(2n) {
   animation: 1.6s telopTextBlink linear infinite;
@@ -2394,7 +2627,7 @@ body::-webkit-scrollbar {
   color: #555;
 }
 #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::after {
-  content: "、";
+  content: "¡¢";
   display: inline;
   font-weight: 400;
   font-size: 14px;

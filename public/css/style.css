@@ -522,6 +522,18 @@ body::-webkit-scrollbar {
     font-size: 11px;
   }
 }
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.all {
+  display: block;
+}
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.pc {
+  display: block;
+}
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.sp {
+  display: none;
+}
+#mv .container .sticky-box .content-box .right-bottom-box .desc br.sp2 {
+  display: none;
+}
 #mv .container .sticky-box .content-box .right-bottom-box .hatching {
   display: block;
   width: 28px;

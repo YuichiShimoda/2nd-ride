@@ -69,7 +69,7 @@
 						<p data-splitting>NEW <span class="green" data-splitting>WAY</span></p>
 					</div>
 					<div class="right-bottom-box">
-						<p class="desc">新たな一歩を共に創る、信頼と専門性を兼ね備えた出張買取パートナー<br>セカンド・ライドは、迅速かつ精緻な査定で貴社の新たな挑戦を後押しし<br>顧客満足を高めながら共に成長し続ける未来を切り開きます</p>
+						<p class="desc">新たな一歩を共に創る、信頼と専門性を<br class="sp">兼ね備えた出張買取パートナー<br class="all">セカンド・ライドは、迅速かつ精緻な査定で<br class="sp">貴社の新たな挑戦を後押しし<br class="pc">顧客満足を<br class="sp2">高めながら共に成長し続ける未来を切り開きます</p>
 						<svg class="hatching" viewBox="0 0 24 130" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0 123.379L24 90V96.6243L0 130V123.379Z" fill="#00A000"/>
 							<path d="M0 108.376L24 75V81.6209L0 115V108.376Z" fill="#00A000"/>
