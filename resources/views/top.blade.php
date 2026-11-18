@@ -1753,9 +1753,9 @@
 @section('js')
 	<script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script><!-- swiper -->
     @vite([
-        'resources/js/defense.js',
-        'resources/js/hamburger-menu.js',
-		'resources/js/smooth-scroll.js',
+        'resources/js/defense.ts',
+        'resources/js/hamburger-menu.ts',
+		'resources/js/smooth-scroll.ts',
         'resources/js/top.ts',
     ])
 @stop
