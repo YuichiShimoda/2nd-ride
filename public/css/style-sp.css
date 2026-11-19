@@ -1537,20 +1537,59 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   display: block;
-  width: 70vw;
-  aspect-ratio: 2/1;
+  width: 60vw;
+  aspect-ratio: 3/2;
   border: solid 2px #00a000;
   transform: translate(-40%, -10%) rotate(-20deg);
   z-index: 3;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (max-width: 650px) {
+  #service .container .sticky-box .content-box .rect {
+    width: 65vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #service .container .sticky-box .content-box .rect {
+    width: 70vw;
+  }
+}
 #service .container .sticky-box .content-box .circle-box {
   position: absolute;
-  top: 270px;
-  left: 390px;
-  width: 160px;
+  top: 240px;
+  left: 320px;
+  width: 150px;
   aspect-ratio: 1/1;
   z-index: 3;
+}
+@media screen and (max-width: 550px) {
+  #service .container .sticky-box .content-box .circle-box {
+    top: 240px;
+    left: 280px;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #service .container .sticky-box .content-box .circle-box {
+    top: 220px;
+    left: 250px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #service .container .sticky-box .content-box .circle-box {
+    top: 190px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #service .container .sticky-box .content-box .circle-box {
+    left: 220px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #service .container .sticky-box .content-box .circle-box {
+    top: 150px;
+  }
 }
 #service .container .sticky-box .content-box .circle-box .inner-box {
   display: block;
@@ -1577,6 +1616,12 @@ body::-webkit-scrollbar {
   border: solid 2px #00a000;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (max-width: 450px) {
+  #service .container .sticky-box .content-box .circle-box .inner-box .circle2 {
+    left: calc(-163% - 30px);
+    bottom: calc(-163% - 30px);
+  }
+}
 #service .container .sticky-box .content-box .circle-box .inner-box .small-circle {
   position: absolute;
   right: 0;
@@ -1598,6 +1643,23 @@ body::-webkit-scrollbar {
   opacity: 0.1;
   z-index: 2;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 450px) {
+  #service .container .sticky-box .content-box .pixel {
+    right: 20px;
+    width: 260px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #service .container .sticky-box .content-box .pixel {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #service .container .sticky-box .content-box .pixel {
+    right: 0;
+    width: 200px;
+  }
 }
 #service .container .sticky-box .content-box .black-bg {
   position: absolute;
@@ -1627,6 +1689,11 @@ body::-webkit-scrollbar {
   width: fit-content;
   margin: 0 40px 0 auto;
 }
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .tit-box {
+    margin: 0 30px 0 auto;
+  }
+}
 #service .container .scroll-content-box .tit-box.is-on .en .char::before {
   animation: textTopReassemble 2s ease-in-out forwards;
 }
@@ -1643,12 +1710,17 @@ body::-webkit-scrollbar {
 #service .container .scroll-content-box .tit-box .en .word .char {
   display: inline-block;
   font-weight: 900;
-  font-size: calc(11.7vw + 30px);
+  font-size: calc(15vw + 5px);
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: 0em;
   color: transparent;
   position: relative;
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .tit-box .en .word .char {
+    font-size: calc(20vw - 14px);
+  }
 }
 #service .container .scroll-content-box .tit-box .en .word .char::before, #service .container .scroll-content-box .tit-box .en .word .char::after {
   position: absolute;
@@ -1677,14 +1749,30 @@ body::-webkit-scrollbar {
   justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
-  width: fit-content;
+  width: calc(100vw - 180px);
   margin-top: 40px;
+}
+@media screen and (max-width: 550px) {
+  #service .container .scroll-content-box .tit-box .desc-box {
+    width: calc(100vw - 140px);
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .tit-box .desc-box {
+    width: calc(100vw - 110px);
+  }
+}
+@media screen and (max-width: 380px) {
+  #service .container .scroll-content-box .tit-box .desc-box {
+    margin-top: 25px;
+  }
 }
 #service .container .scroll-content-box .tit-box .desc-box > p {
   display: block;
   font-weight: 400;
   font-size: 11px;
-  line-height: 1.7;
+  line-height: 2;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   text-align: right;
@@ -1696,7 +1784,7 @@ body::-webkit-scrollbar {
   color: #555;
 }
 #service .container .scroll-content-box .tit-box .desc-box > p br {
-  display: block;
+  display: none;
 }
 #service .container .scroll-content-box .step-box {
   display: flex;
@@ -1704,8 +1792,25 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   flex-wrap: wrap;
   width: calc(100vw - 60px);
-  margin: 80vh auto 0;
+  margin: 60vh auto 0;
   z-index: 10;
+}
+@media screen and (max-width: 600px) {
+  #service .container .scroll-content-box .step-box {
+    margin: 60vh auto 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  #service .container .scroll-content-box .step-box {
+    margin: 50vh auto 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box {
+    margin: 40vh auto 0;
+  }
+}
+#service .container .scroll-content-box .step-box {
   position: relative;
 }
 #service .container .scroll-content-box .step-box .circle-trace-box {

@@ -1272,19 +1272,37 @@ body::-webkit-scrollbar
 					top: 0
 					left: 0
 					display: block
-					width: 70vw
-					aspect-ratio: 2 / 1
+					width: 60vw
+					aspect-ratio: 3 / 2
 					border: solid 2px $base
 					transform: translate(-40%, -10%) rotate(-20deg)
 					z-index: 3
 					transition: all 0.5s ease-in-out
+					+bp650
+						width: 65vw
+					+bp600
+						width: 70vw
 				.circle-box
 					position: absolute
-					top: 270px
-					left: 390px
-					width: 160px
+					top: 240px
+					left: 320px
+					width: 150px
 					aspect-ratio: 1 / 1
 					z-index: 3
+					+bp550
+						top: 240px
+						left: 280px
+						width: 120px
+					+bp450
+						top: 220px
+						left: 250px
+					+bp420
+						top: 190px
+					+bp400
+						left: 220px
+						width: 100px
+					+bp380
+						top: 150px
 					.inner-box
 						display: block
 						width: 100%
@@ -1307,6 +1325,9 @@ body::-webkit-scrollbar
 							border-radius: 50%
 							border: solid 2px $base
 							transition: all 0.5s ease-in-out
+							+bp450
+								left: calc(-163% - 30px)
+								bottom: calc(-163% - 30px)
 						.small-circle
 							position: absolute
 							right: 0
@@ -1327,6 +1348,14 @@ body::-webkit-scrollbar
 					opacity: 0.1
 					z-index: 2
 					transition: all 0.5s ease-in-out
+					+bp450
+						right: 20px
+						width: 260px
+					+bp420
+						width: 220px
+					+bp380
+						right: 0
+						width: 200px
 				.black-bg
 					position: absolute
 					top: 0
@@ -1352,6 +1381,8 @@ body::-webkit-scrollbar
 				flex-direction: column
 				width: fit-content
 				margin: 0 40px 0 auto
+				+bp450
+					margin: 0 30px 0 auto
 				&.is-on
 					.en .char
 						&::before
@@ -1367,12 +1398,14 @@ body::-webkit-scrollbar
 						.char
 							display: inline-block
 							font-weight: 900
-							font-size: calc(0.117*100vw + 30px)
+							font-size: calc(0.15*100vw + 5px)
 							line-height: 1.0
 							font-family: $eurostile-extended
 							letter-spacing: 0.0em
 							color: transparent
 							position: relative
+							+bp450
+								font-size: calc(0.2*100vw - 14px)
 							&::before, &::after
 								position: absolute
 								top: 0
@@ -1396,13 +1429,20 @@ body::-webkit-scrollbar
 					justify-content: flex-start
 					align-items: flex-end
 					flex-direction: column
-					width: fit-content
+					width: calc(100vw - 180px)
 					margin-top: 40px
+					+bp550
+						width: calc(100vw - 140px)
+						margin-top: 30px
+					+bp450
+						width: calc(100vw - 110px)
+					+bp380
+						margin-top: 25px
 					> p
 						display: block
 						font-weight: 400
 						font-size: 11px
-						line-height: 1.7
+						line-height: 2.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						text-align: right
@@ -1412,16 +1452,21 @@ body::-webkit-scrollbar
 						&::selection
 							color: #555
 						br
-							display: block
-
+							display: none
 			.step-box
 				display: flex
 				justify-content: space-between
 				align-items: flex-start
 				flex-wrap: wrap
 				width: calc(100vw - 60px)
-				margin: 80vh auto 0
+				margin: 60vh auto 0
 				z-index: 10
+				+bp600
+					margin: 60vh auto 0
+				+bp500
+					margin: 50vh auto 0
+				+bp450
+					margin: 40vh auto 0
 				position: relative
 				.circle-trace-box
 					position: absolute
