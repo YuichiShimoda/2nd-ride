@@ -155,6 +155,13 @@ body::-webkit-scrollbar {
   background-position: 30% bottom;
   perspective: 800px;
 }
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box {
+    background: url("../image/top/mv/bg_450.webp");
+    background-size: cover;
+    background-position: center;
+  }
+}
 #mv .container .sticky-box .content-box {
   display: block;
   width: 100%;
@@ -189,6 +196,22 @@ body::-webkit-scrollbar {
     width: 200px;
   }
 }
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .logo {
+    top: 50%;
+    width: 230px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #mv .container .sticky-box .content-box .logo {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #mv .container .sticky-box .content-box .logo {
+    width: 190px;
+  }
+}
 #mv .container .sticky-box .content-box .en-box {
   position: absolute;
   top: 220px;
@@ -202,6 +225,12 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 600px) {
   #mv .container .sticky-box .content-box .en-box {
     top: 250px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .en-box {
+    top: 21%;
+    right: 50px;
   }
 }
 #mv .container .sticky-box .content-box .en-box > p {
@@ -230,6 +259,21 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 500px) {
   #mv .container .sticky-box .content-box .en-box > p .word .char {
     font-size: 36px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .en-box > p .word .char {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #mv .container .sticky-box .content-box .en-box > p .word .char {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #mv .container .sticky-box .content-box .en-box > p .word .char {
+    font-size: 32px;
   }
 }
 #mv .container .sticky-box .content-box .en-box > p .word .char::before, #mv .container .sticky-box .content-box .en-box > p .word .char::after {
@@ -281,6 +325,21 @@ body::-webkit-scrollbar {
     font-size: 36px;
   }
 }
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .en-box > p .green .word .char {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #mv .container .sticky-box .content-box .en-box > p .green .word .char {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #mv .container .sticky-box .content-box .en-box > p .green .word .char {
+    font-size: 32px;
+  }
+}
 #mv .container .sticky-box .content-box .en-box > p .green .word .char::before, #mv .container .sticky-box .content-box .en-box > p .green .word .char::after {
   position: absolute;
   top: 0;
@@ -325,6 +384,17 @@ body::-webkit-scrollbar {
     right: 100px;
   }
 }
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .right-bottom-box {
+    right: 80px;
+    bottom: 15%;
+  }
+}
+@media screen and (max-width: 420px) {
+  #mv .container .sticky-box .content-box .right-bottom-box {
+    right: 65px;
+  }
+}
 #mv .container .sticky-box .content-box .right-bottom-box .desc {
   display: block;
   width: fit-content;
@@ -345,6 +415,22 @@ body::-webkit-scrollbar {
   #mv .container .sticky-box .content-box .right-bottom-box .desc {
     font-size: 10px;
     line-height: 1.7;
+  }
+}
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc {
+    font-size: 10.5px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .desc {
+    font-size: 10px;
   }
 }
 #mv .container .sticky-box .content-box .right-bottom-box .desc br.all {
@@ -387,6 +473,16 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 500px) {
   #mv .container .sticky-box .content-box .right-bottom-box .hatching {
     margin-left: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .hatching {
+    width: 17px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #mv .container .sticky-box .content-box .right-bottom-box .hatching {
+    margin-left: 20px;
   }
 }
 #mv .container .sticky-box .content-box .right-bottom-box .hatching path {
@@ -452,7 +548,18 @@ body::-webkit-scrollbar {
     top: 0;
     right: 0;
     display: block;
-    width: 100%;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #mv .container .sticky-box .content-box .top-shape.sp {
+    transform-origin: right top;
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 380px) {
+  #mv .container .sticky-box .content-box .top-shape.sp {
+    transform: scale(0.85);
   }
 }
 #mv .container .sticky-box .content-box .bottom-shape-box {
@@ -468,6 +575,17 @@ body::-webkit-scrollbar {
     right: 0;
     bottom: 0;
     width: 292px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box {
+    transform-origin: right bottom;
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 380px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box {
+    transform: scale(0.85);
   }
 }
 #mv .container .sticky-box .content-box .bottom-shape-box .inner-box {
@@ -488,6 +606,11 @@ body::-webkit-scrollbar {
   transform-origin: right top;
   transform: rotateZ(90deg) translate(calc(100% + 30px), 30px);
 }
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box .inner-box .scroll-box {
+    transform: rotateZ(90deg) translate(calc(100% + 30px), 15px);
+  }
+}
 #mv .container .sticky-box .content-box .bottom-shape-box .inner-box .scroll-box .txt {
   display: block;
   font-weight: 400;
@@ -497,6 +620,11 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #fff;
 }
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box .inner-box .scroll-box .txt {
+    font-size: 12px;
+  }
+}
 #mv .container .sticky-box .content-box .bottom-shape-box .inner-box .scroll-box .line {
   display: block;
   width: 70px;
@@ -505,6 +633,12 @@ body::-webkit-scrollbar {
   margin-left: 20px;
   overflow: hidden;
   position: relative;
+}
+@media screen and (max-width: 450px) {
+  #mv .container .sticky-box .content-box .bottom-shape-box .inner-box .scroll-box .line {
+    width: 55px;
+    margin-left: 15px;
+  }
 }
 #mv .container .sticky-box .content-box .bottom-shape-box .inner-box .scroll-box .line::before {
   position: absolute;
