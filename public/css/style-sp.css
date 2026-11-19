@@ -611,6 +611,7 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   z-index: 209;
+  pointer-events: none;
   will-change: transform;
 }
 #belief.is-show .container .sticky-box .content-box .txt-box .sentence-box .txt .word .char {
