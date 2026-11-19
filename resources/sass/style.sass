@@ -531,9 +531,12 @@ body::-webkit-scrollbar
 					position: absolute
 					top: 50px
 					right: 0
-					display: block
 					width: 620px
 					pointer-events: none
+					&.pc
+						display: block
+					&.sp
+						display: none
 					+bp1600
 						top: 0
 					+bp1000
@@ -591,9 +594,12 @@ body::-webkit-scrollbar
 									transform-origin: left
 									animation: scrollLineLoop 2.0s cubic-bezier(0.16, 1, 0.3, 1) infinite
 					.bottom-shape
-						display: block
 						width: 100%
 						pointer-events: none
+						&.pc
+							display: block
+						&.sp
+							display: none
 						+bp1750
 							clip-path: polygon(100% 0%, 100% 100%, 10% 100%, 50% 0%)
 						+bp1600

@@ -81,7 +81,8 @@
 						</svg>
 					</div>
 					<div class="top-rect"></div>
-					<img class="top-shape lazyload" data-src="{{ asset('/image/top/mv/top-shape.svg') }}" alt="シェイプ">
+					<img class="top-shape pc lazyload" data-src="{{ asset('/image/top/mv/top-shape.svg') }}" alt="シェイプ">
+					<img class="top-shape sp lazyload" data-src="{{ asset('/image/top/mv/top-shape-sp.svg') }}" alt="シェイプ">
 					<div class="bottom-shape-box">
 						<div class="inner-box">
 							<div class="scroll-box">
@@ -89,7 +90,8 @@
 								<div class="line"></div>
 							</div>
 						</div>
-						<img class="bottom-shape lazyload" data-src="{{ asset('/image/top/mv/bottom-shape.svg') }}" alt="シェイプ">
+						<img class="bottom-shape pc lazyload" data-src="{{ asset('/image/top/mv/bottom-shape.svg') }}" alt="シェイプ">
+						<img class="bottom-shape sp lazyload" data-src="{{ asset('/image/top/mv/bottom-shape-sp.svg') }}" alt="シェイプ">
 					</div>
 				</div>
 			</div>

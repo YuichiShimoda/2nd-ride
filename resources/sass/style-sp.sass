@@ -413,13 +413,25 @@ body::-webkit-scrollbar
 					height: 40px
 					background: $base
 					pointer-events: none
+					+bp450
+						display: none
 				.top-shape
 					position: absolute
 					top: -5px
 					right: -5px
-					display: block
 					width: 620px
 					pointer-events: none
+					&.pc
+						display: block
+						+bp450
+							display: none
+					&.sp
+						display: none
+						+bp450
+							top: 0
+							right: 0
+							display: block
+							width: 100%
 				.bottom-shape-box
 					position: absolute
 					right: -5px
@@ -427,6 +439,10 @@ body::-webkit-scrollbar
 					display: block
 					width: 1080px
 					pointer-events: none
+					+bp450
+						right: 0
+						bottom: 0
+						width: 292px
 					.inner-box
 						display: block
 						width: 100%
@@ -475,6 +491,15 @@ body::-webkit-scrollbar
 						width: 100%
 						pointer-events: none
 						clip-path: polygon(100% 0%, 100% 100%, 55% 100%, 95% 0%)
+						&.pc
+							display: block
+							+bp450
+								display: none
+						&.sp
+							display: none
+							+bp450
+								display: block
+								clip-path: initial
 						+bp600
 							clip-path: polygon(100% 0%, 100% 100%, 60% 100%, 95% 0%)
 						+bp550

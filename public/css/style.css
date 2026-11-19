@@ -621,9 +621,14 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 50px;
   right: 0;
-  display: block;
   width: 620px;
   pointer-events: none;
+}
+#mv .container .sticky-box .content-box .top-shape.pc {
+  display: block;
+}
+#mv .container .sticky-box .content-box .top-shape.sp {
+  display: none;
 }
 @media screen and (max-width: 1600px) {
   #mv .container .sticky-box .content-box .top-shape {
@@ -697,9 +702,14 @@ body::-webkit-scrollbar {
   animation: scrollLineLoop 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 #mv .container .sticky-box .content-box .bottom-shape-box .bottom-shape {
-  display: block;
   width: 100%;
   pointer-events: none;
+}
+#mv .container .sticky-box .content-box .bottom-shape-box .bottom-shape.pc {
+  display: block;
+}
+#mv .container .sticky-box .content-box .bottom-shape-box .bottom-shape.sp {
+  display: none;
 }
 @media screen and (max-width: 1750px) {
   #mv .container .sticky-box .content-box .bottom-shape-box .bottom-shape {
