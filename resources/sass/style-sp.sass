@@ -77,6 +77,8 @@ body::-webkit-scrollbar
 
 
 
+#service, #landscape, #expert, #category, #marugoto, #result, #result-scroll-space, #info, #promise, #contact, #footer
+	display: none !important
 
 
 
@@ -611,6 +613,8 @@ body::-webkit-scrollbar
 			background: url("../image/top/belief/bg.webp")
 			background-size: cover
 			background-position: center
+			+bp450
+				background: url("../image/top/belief/bg-sp.webp")
 			.content-box
 				position: relative
 				width: 100%
@@ -626,6 +630,7 @@ body::-webkit-scrollbar
 					display: block
 					width: fit-content
 					height: fit-content
+					z-index: 5
 					.sentence-box
 						display: flex
 						justify-content: center
@@ -637,6 +642,8 @@ body::-webkit-scrollbar
 						.txt
 							display: block
 							margin-top: 25px
+							+bp450
+								margin-top: 20px
 							&:nth-of-type(1)
 								margin-top: 0
 							.word
@@ -655,6 +662,12 @@ body::-webkit-scrollbar
 										font-size: 17px
 									+bp500
 										font-size: 16px
+									+bp450
+										letter-spacing: 0.25em
+									+bp420
+										letter-spacing: 0.2em
+									+bp400
+										font-size: 15px
 						.note
 							display: block
 							margin-top: 30px
@@ -669,6 +682,10 @@ body::-webkit-scrollbar
 							transition: all 1.0s 0.7s ease-in-out
 							+bp550
 								font-size: 8px
+							+bp450
+								margin-top: 23px
+							+bp400
+								letter-spacing: 0
 						.top-char
 							position: absolute
 							left: 50%
@@ -692,6 +709,12 @@ body::-webkit-scrollbar
 								font-size: 46px
 							+bp500
 								font-size: 42px
+							+bp450
+								transform: scale(1.065) translate(-50%, calc(-80% - 35px))
+								font-size: 40px
+							+bp400
+								transform: scale(1.065) translate(-50%, calc(-80% - 30px))
+								font-size: 38px
 							&::selection
 								color: $base
 								-webkit-text-fill-color: $base
@@ -718,6 +741,12 @@ body::-webkit-scrollbar
 								font-size: 46px
 							+bp500
 								font-size: 42px
+							+bp450
+								transform: translate(-50%, calc(95% + 35px))
+								font-size: 40px
+							+bp400
+								transform: translate(-50%, calc(95% + 30px))
+								font-size: 38px
 							&::selection
 								color: $base
 								-webkit-text-fill-color: $base
@@ -733,14 +762,28 @@ body::-webkit-scrollbar
 							flex-direction: column
 							width: fit-content
 							height: fit-content
+							+bp450
+								transform: translate(-50%, calc(100% + 35px + 52px + 50px))
+							+bp400
+								transform: translate(-50%, calc(100% + 30px + 35px + 50px))
 							.logo
 								display: block
 								width: 90px
+								+bp450
+									width: 80px
+								+bp420
+									width: 82px
+								+bp400
+									width: 75px
 							.streak-box
 								display: block
 								width: fit-content
 								margin-top: 15px
 								position: relative
+								+bp450
+									margin-top: 12px
+								+bp400
+									margin-top: 10px
 								.base
 									display: block
 									width: 100px
@@ -748,6 +791,11 @@ body::-webkit-scrollbar
 									background: linear-gradient(to right, rgba($base, 0), $base, rgba($base, 0))
 									box-shadow: 0px 0px 1px $base
 									filter: blur(2px)
+									+bp450
+										width: 90px
+										height: 2.5px
+									+bp400
+										width: 80px
 								.highlight
 									position: absolute
 									top: 0
@@ -760,6 +808,10 @@ body::-webkit-scrollbar
 									background: linear-gradient(to right, rgba(#fff, 0), #fff, rgba(#fff, 0))
 									filter: blur(1.5px)
 									z-index: 1
+									+bp450
+										width: 90px
+									+bp400
+										width: 80px
 				.scroll-box
 					position: absolute
 					left: 0
@@ -772,6 +824,8 @@ body::-webkit-scrollbar
 					flex-direction: column
 					width: fit-content
 					height: fit-content
+					+bp450
+						bottom: 40px
 					.inner-box
 						display: block
 						width: fit-content
@@ -854,6 +908,8 @@ body::-webkit-scrollbar
 							transform: translateX(165px) rotateZ(-90deg)
 						+bp500
 							transform: translateX(158px) rotateZ(-90deg)
+						+bp420
+							transform: translateX(150px) rotateZ(-90deg)
 						.ticker-track
 							animation: telop 12.0s linear infinite
 					&.slider-box2
@@ -867,6 +923,8 @@ body::-webkit-scrollbar
 							transform: translateX(-165px) rotateZ(90deg)
 						+bp500
 							transform: translateX(-158px) rotateZ(90deg)
+						+bp420
+							transform: translateX(-150px) rotateZ(90deg)
 						.ticker-track
 							animation: telop 12.0s -4.0s linear infinite
 					.ticker-track
@@ -899,6 +957,10 @@ body::-webkit-scrollbar
 								+bp500
 									margin-left: 25px
 									font-size: 64px
+								+bp420
+									font-size: 60px
+								+bp400
+									font-size: 56px
 								&:nth-of-type(2n)
 									animation: 1.6s telopTextBlink linear infinite
 								&:nth-of-type(2n+1)
