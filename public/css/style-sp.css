@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
   background: #ddd;
 }
 
-#service, #landscape, #expert, #category, #marugoto, #result, #result-scroll-space, #info, #promise, #contact, #footer {
+#landscape, #expert, #category, #marugoto, #result, #result-scroll-space, #info, #promise, #contact, #footer {
   display: none !important;
 }
 
@@ -643,6 +643,8 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 450px) {
   #belief .container .sticky-box {
     background: url("../image/top/belief/bg-sp.webp");
+    background-size: cover;
+    background-position: center;
   }
 }
 #belief .container .sticky-box .content-box {
@@ -1002,12 +1004,22 @@ body::-webkit-scrollbar {
 #belief .container .sticky-box .content-box .ticker {
   position: absolute;
   display: block;
-  width: 100%;
+  width: fit-content;
   height: fit-content;
   padding: 100px 0 100px;
   background: linear-gradient(to bottom, #fff 0%, #fff 70%, rgba(255, 255, 255, 0) 100%);
   overflow: hidden;
   z-index: 2;
+}
+@media screen and (max-width: 450px) {
+  #belief .container .sticky-box .content-box .ticker {
+    padding: 15px 0 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #belief .container .sticky-box .content-box .ticker {
+    padding: 10px 0 25px;
+  }
 }
 #belief .container .sticky-box .content-box .ticker.slider-box1 {
   left: 0;
@@ -1030,9 +1042,19 @@ body::-webkit-scrollbar {
     transform: translateX(158px) rotateZ(-90deg);
   }
 }
+@media screen and (max-width: 450px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box1 {
+    transform: translateX(90px) rotateZ(-90deg);
+  }
+}
 @media screen and (max-width: 420px) {
   #belief .container .sticky-box .content-box .ticker.slider-box1 {
-    transform: translateX(150px) rotateZ(-90deg);
+    transform: translateX(85px) rotateZ(-90deg);
+  }
+}
+@media screen and (max-width: 400px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box1 {
+    transform: translateX(75px) rotateZ(-90deg);
   }
 }
 #belief .container .sticky-box .content-box .ticker.slider-box1 .ticker-track {
@@ -1059,9 +1081,19 @@ body::-webkit-scrollbar {
     transform: translateX(-158px) rotateZ(90deg);
   }
 }
+@media screen and (max-width: 450px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box2 {
+    transform: translateX(-90px) rotateZ(90deg);
+  }
+}
 @media screen and (max-width: 420px) {
   #belief .container .sticky-box .content-box .ticker.slider-box2 {
-    transform: translateX(-150px) rotateZ(90deg);
+    transform: translateX(-85px) rotateZ(90deg);
+  }
+}
+@media screen and (max-width: 400px) {
+  #belief .container .sticky-box .content-box .ticker.slider-box2 {
+    transform: translateX(-75px) rotateZ(90deg);
   }
 }
 #belief .container .sticky-box .content-box .ticker.slider-box2 .ticker-track {
@@ -1078,6 +1110,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex: 0 0 auto;
   width: max-content;
+  white-space: nowrap;
 }
 #belief .container .sticky-box .content-box .ticker .ticker-track .ticker-group > p {
   display: block;
@@ -1089,6 +1122,7 @@ body::-webkit-scrollbar {
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: -0.05em;
+  white-space: nowrap;
   color: #777;
   opacity: 0.3;
   transition: color 1s 1s ease-in-out, animation 0.5s ease-in-out;

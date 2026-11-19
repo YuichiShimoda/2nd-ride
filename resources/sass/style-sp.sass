@@ -77,7 +77,7 @@ body::-webkit-scrollbar
 
 
 
-#service, #landscape, #expert, #category, #marugoto, #result, #result-scroll-space, #info, #promise, #contact, #footer
+#landscape, #expert, #category, #marugoto, #result, #result-scroll-space, #info, #promise, #contact, #footer
 	display: none !important
 
 
@@ -615,6 +615,8 @@ body::-webkit-scrollbar
 			background-position: center
 			+bp450
 				background: url("../image/top/belief/bg-sp.webp")
+				background-size: cover
+				background-position: center
 			.content-box
 				position: relative
 				width: 100%
@@ -891,12 +893,16 @@ body::-webkit-scrollbar
 				.ticker
 					position: absolute
 					display: block
-					width: 100%
+					width: fit-content
 					height: fit-content
 					padding: 100px 0 100px
 					background: linear-gradient(to bottom, #fff 0%, #fff 70%, rgba(#fff, 0.0) 100%)
 					overflow: hidden
 					z-index: 2
+					+bp450
+						padding: 15px 0 30px
+					+bp400
+						padding: 10px 0 25px
 					&.slider-box1
 						left: 0
 						bottom: 0
@@ -908,8 +914,12 @@ body::-webkit-scrollbar
 							transform: translateX(165px) rotateZ(-90deg)
 						+bp500
 							transform: translateX(158px) rotateZ(-90deg)
+						+bp450
+							transform: translateX(90px) rotateZ(-90deg)
 						+bp420
-							transform: translateX(150px) rotateZ(-90deg)
+							transform: translateX(85px) rotateZ(-90deg)
+						+bp400
+							transform: translateX(75px) rotateZ(-90deg)
 						.ticker-track
 							animation: telop 12.0s linear infinite
 					&.slider-box2
@@ -923,8 +933,12 @@ body::-webkit-scrollbar
 							transform: translateX(-165px) rotateZ(90deg)
 						+bp500
 							transform: translateX(-158px) rotateZ(90deg)
+						+bp450
+							transform: translateX(-90px) rotateZ(90deg)
 						+bp420
-							transform: translateX(-150px) rotateZ(90deg)
+							transform: translateX(-85px) rotateZ(90deg)
+						+bp400
+							transform: translateX(-75px) rotateZ(90deg)
 						.ticker-track
 							animation: telop 12.0s -4.0s linear infinite
 					.ticker-track
@@ -937,6 +951,7 @@ body::-webkit-scrollbar
 							display: flex
 							flex: 0 0 auto
 							width: max-content
+							white-space: nowrap
 							> p
 								display: block
 								flex: 0 0 auto
@@ -947,6 +962,7 @@ body::-webkit-scrollbar
 								line-height: 1.0
 								font-family: $eurostile-extended
 								letter-spacing: -0.05em
+								white-space: nowrap
 								color: #777
 								opacity: 0.3
 								transition: color 1.0s 1.0s ease-in-out, animation 0.5s ease-in-out
