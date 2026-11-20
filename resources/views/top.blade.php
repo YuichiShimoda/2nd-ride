@@ -232,7 +232,7 @@
 						<div class="inner-box"></div>
 					</div>
 					<div class="left-box">
-						<div class="step-ele">
+						<div class="step-ele step1">
 							<div class="img-box">
 								<img class="img base lazyload" data-src="{{ asset('/image/top/service/service1.webp') }}" alt="予約">
 								<img class="img red-layer lazyload" data-src="{{ asset('/image/top/service/service1.webp') }}" alt="グリッチ背景1">
@@ -248,7 +248,7 @@
 								<p>「 まずは相談だけしてみたい 」という方も心よりお待ちしておりますので、お気軽にお問い合わせください。</p>
 							</div>
 						</div>
-						<div class="step-ele">
+						<div class="step-ele step3">
 							<div class="img-box">
 								<img class="img base lazyload" data-src="{{ asset('/image/top/service/service3.webp') }}" alt="受取">
 								<img class="img red-layer lazyload" data-src="{{ asset('/image/top/service/service3.webp') }}" alt="グリッチ背景1">
@@ -266,7 +266,7 @@
 						</div>
 					</div>
 					<div class="right-box">
-						<div class="step-ele">
+						<div class="step-ele step2">
 							<div class="img-box">
 								<img class="img base lazyload" data-src="{{ asset('/image/top/service/service2.webp') }}" alt="査定">
 								<img class="img red-layer lazyload" data-src="{{ asset('/image/top/service/service2.webp') }}" alt="グリッチ背景1">
@@ -282,7 +282,7 @@
 								<p>査定額の理由もわかりやすくご説明いたしますので、ご不明な点があれば何でもお気軽にお尋ねください。</p>
 							</div>
 						</div>
-						<div class="step-ele">
+						<div class="step-ele step4">
 							<div class="img-box">
 								<img class="img base lazyload" data-src="{{ asset('/image/top/service/service4.webp') }}" alt="搬出">
 								<img class="img red-layer lazyload" data-src="{{ asset('/image/top/service/service4.webp') }}" alt="グリッチ背景1">

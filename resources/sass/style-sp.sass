@@ -1458,27 +1458,34 @@ body::-webkit-scrollbar
 				justify-content: space-between
 				align-items: flex-start
 				flex-wrap: wrap
-				width: calc(100vw - 60px)
+				width: calc(100vw - 120px)
 				margin: 60vh auto 0
 				z-index: 10
 				+bp600
-					margin: 60vh auto 0
+					margin: 55vh auto 0
+				+bp550
+					width: calc(100vw - 100px)
 				+bp500
+					width: calc(100vw - 80px)
 					margin: 50vh auto 0
 				+bp450
+					width: calc(100vw - 60px)
 					margin: 40vh auto 0
 				position: relative
 				.circle-trace-box
 					position: absolute
-					left: 0
 					right: 0
-					top: 360px
+					top: 400px
 					margin: auto
 					display: block
-					width: 13%
+					width: 30%
+					padding: 0 4%
 					height: 100vh
 					opacity: 0.0
 					transition: all 0.5s ease-in-out
+					+bp450
+						width: 24%
+						padding: 0 3%
 					.circle-ele
 						display: block
 						width: 100%
@@ -1492,12 +1499,10 @@ body::-webkit-scrollbar
 							margin-top: 0
 				.road-box
 					position: absolute
-					left: 0
 					right: 0
-					bottom: 360px
 					margin: auto
 					display: block
-					width: 16%
+					width: 30%
 					height: 100vh
 					background-image: linear-gradient(to bottom, rgba(#999, 0.5) 60px, transparent 60px), linear-gradient(to bottom, rgba(#999, 0.5) 60px, transparent 60px)
 					background-size: 2px 90px, 2px 90px
@@ -1507,6 +1512,8 @@ body::-webkit-scrollbar
 					opacity: 0.0
 					pointer-events: none
 					transition: all 0.5s ease-in-out
+					+bp450
+						width: 24%
 					.inner-box
 						display: block
 						width: 100%
@@ -1547,15 +1554,13 @@ body::-webkit-scrollbar
 									width: 108%
 									pointer-events: none
 				.top-diagonal-box
-					position: absolute
-					top: 0
-					right: 0
-					display: block
-					width: 50%
+					width: 100%
+					margin-bottom: 60px
 					$diagonal-width: 640
 					$diagonal-height: 280
 					$angle: math.atan(math.div($diagonal-height, $diagonal-width))
 					aspect-ratio: math.div($diagonal-width, $diagonal-height)
+					order: 0
 					.inner-box
 						display: block
 						width: 100%
@@ -1608,15 +1613,16 @@ body::-webkit-scrollbar
 							transform-origin: right bottom
 							transform: rotate($angle)
 				.bottom-diagonal-box
-					position: absolute
-					left: 0
-					bottom: 0
 					display: block
-					width: 50%
+					width: 100%
+					margin-top: 60px
 					$diagonal-width: 640
 					$diagonal-height: 280
 					$angle: math.atan(math.div($diagonal-height, $diagonal-width))
 					aspect-ratio: math.div($diagonal-width, $diagonal-height)
+					order: 5
+					+bp450
+						margin-top: 40px
 					.inner-box
 						display: block
 						width: 100%
@@ -1647,17 +1653,23 @@ body::-webkit-scrollbar
 							transform-origin: right bottom
 							transform: rotate($angle)
 				.left-box
-					display: block
-					width: 39%
+					display: contents
+					width: 100%
 					.step-ele
 						display: block
-						width: 100%
-						&:nth-of-type(1)
+						width: 60%
+						+bp450
+							width: 70%
+						&.step1
+							order: 1
 							.head-box
 								.num
 									letter-spacing: 0.2em
-						&:nth-of-type(2)
-							margin-top: 50px
+						&.step3
+							margin-top: 60px
+							order: 3
+							+bp450
+								margin-top: 50px
 						&.is-glitch
 							.img-box
 								background: #000
@@ -1704,6 +1716,8 @@ body::-webkit-scrollbar
 							align-items: center
 							width: 100%
 							margin-top: 40px
+							+bp450
+								margin-top: 25px
 							.num
 								display: block
 								width: 20px
@@ -1747,6 +1761,8 @@ body::-webkit-scrollbar
 							display: block
 							padding-left: 32px
 							margin-top: 20px
+							+bp450
+								padding-left: 0
 							> p
 								display: block
 								margin-top: 1.4em
@@ -1771,14 +1787,19 @@ body::-webkit-scrollbar
 										transition-delay: 0.3s * ($i - 1)
 										filter: blur(1em)
 				.right-box
-					display: block
-					width: 39%
-					margin-top: 200px
+					display: contents
+					width: 100%
 					.step-ele
 						display: block
-						width: 100%
-						&:nth-of-type(2)
+						width: 60%
+						margin-top: 60px
+						+bp450
+							width: 70%
 							margin-top: 50px
+						&.step2
+							order: 2
+						&.step4
+							order: 4
 						&.is-glitch
 							.img-box
 								background: #000
@@ -1825,6 +1846,8 @@ body::-webkit-scrollbar
 							align-items: center
 							width: 100%
 							margin-top: 40px
+							+bp450
+								margin-top: 25px
 							.num
 								display: block
 								width: 20px
@@ -1868,6 +1891,8 @@ body::-webkit-scrollbar
 							display: block
 							padding-left: 32px
 							margin-top: 20px
+							+bp450
+								padding-left: 0
 							> p
 								display: block
 								margin-top: 1.4em

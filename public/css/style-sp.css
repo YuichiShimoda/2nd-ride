@@ -1791,22 +1791,29 @@ body::-webkit-scrollbar {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: calc(100vw - 60px);
+  width: calc(100vw - 120px);
   margin: 60vh auto 0;
   z-index: 10;
 }
 @media screen and (max-width: 600px) {
   #service .container .scroll-content-box .step-box {
-    margin: 60vh auto 0;
+    margin: 55vh auto 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  #service .container .scroll-content-box .step-box {
+    width: calc(100vw - 100px);
   }
 }
 @media screen and (max-width: 500px) {
   #service .container .scroll-content-box .step-box {
+    width: calc(100vw - 80px);
     margin: 50vh auto 0;
   }
 }
 @media screen and (max-width: 450px) {
   #service .container .scroll-content-box .step-box {
+    width: calc(100vw - 60px);
     margin: 40vh auto 0;
   }
 }
@@ -1815,15 +1822,21 @@ body::-webkit-scrollbar {
 }
 #service .container .scroll-content-box .step-box .circle-trace-box {
   position: absolute;
-  left: 0;
   right: 0;
-  top: 360px;
+  top: 400px;
   margin: auto;
   display: block;
-  width: 13%;
+  width: 30%;
+  padding: 0 4%;
   height: 100vh;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .circle-trace-box {
+    width: 24%;
+    padding: 0 3%;
+  }
 }
 #service .container .scroll-content-box .step-box .circle-trace-box .circle-ele {
   display: block;
@@ -1840,12 +1853,10 @@ body::-webkit-scrollbar {
 }
 #service .container .scroll-content-box .step-box .road-box {
   position: absolute;
-  left: 0;
   right: 0;
-  bottom: 360px;
   margin: auto;
   display: block;
-  width: 16%;
+  width: 30%;
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(153, 153, 153, 0.5) 60px, transparent 60px), linear-gradient(to bottom, rgba(153, 153, 153, 0.5) 60px, transparent 60px);
   background-size: 2px 90px, 2px 90px;
@@ -1855,6 +1866,11 @@ body::-webkit-scrollbar {
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .road-box {
+    width: 24%;
+  }
 }
 #service .container .scroll-content-box .step-box .road-box .inner-box {
   display: block;
@@ -1902,12 +1918,10 @@ body::-webkit-scrollbar {
   pointer-events: none;
 }
 #service .container .scroll-content-box .step-box .top-diagonal-box {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 50%;
+  width: 100%;
+  margin-bottom: 60px;
   aspect-ratio: 2.2857142857;
+  order: 0;
 }
 #service .container .scroll-content-box .step-box .top-diagonal-box .inner-box {
   display: block;
@@ -1966,12 +1980,16 @@ body::-webkit-scrollbar {
   transform: rotate(23.6293777307deg);
 }
 #service .container .scroll-content-box .step-box .bottom-diagonal-box {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   display: block;
-  width: 50%;
+  width: 100%;
+  margin-top: 60px;
   aspect-ratio: 2.2857142857;
+  order: 5;
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .bottom-diagonal-box {
+    margin-top: 40px;
+  }
 }
 #service .container .scroll-content-box .step-box .bottom-diagonal-box .inner-box {
   display: block;
@@ -2006,18 +2024,32 @@ body::-webkit-scrollbar {
   transform: rotate(23.6293777307deg);
 }
 #service .container .scroll-content-box .step-box .left-box {
-  display: block;
-  width: 39%;
+  display: contents;
+  width: 100%;
 }
 #service .container .scroll-content-box .step-box .left-box .step-ele {
   display: block;
-  width: 100%;
+  width: 60%;
 }
-#service .container .scroll-content-box .step-box .left-box .step-ele:nth-of-type(1) .head-box .num {
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .left-box .step-ele {
+    width: 70%;
+  }
+}
+#service .container .scroll-content-box .step-box .left-box .step-ele.step1 {
+  order: 1;
+}
+#service .container .scroll-content-box .step-box .left-box .step-ele.step1 .head-box .num {
   letter-spacing: 0.2em;
 }
-#service .container .scroll-content-box .step-box .left-box .step-ele:nth-of-type(2) {
-  margin-top: 50px;
+#service .container .scroll-content-box .step-box .left-box .step-ele.step3 {
+  margin-top: 60px;
+  order: 3;
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .left-box .step-ele.step3 {
+    margin-top: 50px;
+  }
 }
 #service .container .scroll-content-box .step-box .left-box .step-ele.is-glitch .img-box {
   background: #000;
@@ -2086,6 +2118,11 @@ body::-webkit-scrollbar {
   width: 100%;
   margin-top: 40px;
 }
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .left-box .step-ele .head-box {
+    margin-top: 25px;
+  }
+}
 #service .container .scroll-content-box .step-box .left-box .step-ele .head-box .num {
   display: block;
   width: 20px;
@@ -2134,6 +2171,11 @@ body::-webkit-scrollbar {
   padding-left: 32px;
   margin-top: 20px;
 }
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .left-box .step-ele .desc-box {
+    padding-left: 0;
+  }
+}
 #service .container .scroll-content-box .step-box .left-box .step-ele .desc-box > p {
   display: block;
   margin-top: 1.4em;
@@ -2176,16 +2218,25 @@ body::-webkit-scrollbar {
   filter: blur(1em);
 }
 #service .container .scroll-content-box .step-box .right-box {
-  display: block;
-  width: 39%;
-  margin-top: 200px;
+  display: contents;
+  width: 100%;
 }
 #service .container .scroll-content-box .step-box .right-box .step-ele {
   display: block;
-  width: 100%;
+  width: 60%;
+  margin-top: 60px;
 }
-#service .container .scroll-content-box .step-box .right-box .step-ele:nth-of-type(2) {
-  margin-top: 50px;
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .right-box .step-ele {
+    width: 70%;
+    margin-top: 50px;
+  }
+}
+#service .container .scroll-content-box .step-box .right-box .step-ele.step2 {
+  order: 2;
+}
+#service .container .scroll-content-box .step-box .right-box .step-ele.step4 {
+  order: 4;
 }
 #service .container .scroll-content-box .step-box .right-box .step-ele.is-glitch .img-box {
   background: #000;
@@ -2254,6 +2305,11 @@ body::-webkit-scrollbar {
   width: 100%;
   margin-top: 40px;
 }
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .right-box .step-ele .head-box {
+    margin-top: 25px;
+  }
+}
 #service .container .scroll-content-box .step-box .right-box .step-ele .head-box .num {
   display: block;
   width: 20px;
@@ -2301,6 +2357,11 @@ body::-webkit-scrollbar {
   display: block;
   padding-left: 32px;
   margin-top: 20px;
+}
+@media screen and (max-width: 450px) {
+  #service .container .scroll-content-box .step-box .right-box .step-ele .desc-box {
+    padding-left: 0;
+  }
 }
 #service .container .scroll-content-box .step-box .right-box .step-ele .desc-box > p {
   display: block;
