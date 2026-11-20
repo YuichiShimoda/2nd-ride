@@ -77,7 +77,7 @@ body::-webkit-scrollbar
 
 
 
-#landscape, #expert, #category, #marugoto, #result, #result-scroll-space, #info, #promise, #contact, #footer
+#category, #marugoto, #result, #result-scroll-space, #info, #promise, #contact, #footer
 	display: none !important
 
 
@@ -1374,6 +1374,14 @@ body::-webkit-scrollbar
 			margin-top: -100vh
 			z-index: 10
 			position: relative
+			+bp600
+				padding-bottom: 24vh
+			+bp500
+				padding-bottom: 20vh
+			+bp450
+				padding-bottom: 200px
+			+bp420
+				padding-bottom: 180px
 			.tit-box
 				display: flex
 				justify-content: flex-start
@@ -1484,8 +1492,8 @@ body::-webkit-scrollbar
 					opacity: 0.0
 					transition: all 0.5s ease-in-out
 					+bp450
-						width: 24%
-						padding: 0 3%
+						width: 28%
+						padding: 0 0 0 3%
 					.circle-ele
 						display: block
 						width: 100%
@@ -1499,7 +1507,7 @@ body::-webkit-scrollbar
 							margin-top: 0
 				.road-box
 					position: absolute
-					right: 0
+					left: 0
 					margin: auto
 					display: block
 					width: 30%
@@ -1514,6 +1522,8 @@ body::-webkit-scrollbar
 					transition: all 0.5s ease-in-out
 					+bp450
 						width: 24%
+					+bp420
+						left: -10px
 					.inner-box
 						display: block
 						width: 100%
@@ -1555,12 +1565,22 @@ body::-webkit-scrollbar
 									pointer-events: none
 				.top-diagonal-box
 					width: 100%
-					margin-bottom: 60px
+					margin-bottom: 100px
 					$diagonal-width: 640
 					$diagonal-height: 280
 					$angle: math.atan(math.div($diagonal-height, $diagonal-width))
 					aspect-ratio: math.div($diagonal-width, $diagonal-height)
 					order: 0
+					+bp650
+						margin-bottom: 70px
+					+bp600
+						margin-bottom: 60px
+					+bp550
+						margin-bottom: 55px
+					+bp500
+						margin-bottom: 50px
+					+bp450
+						margin-bottom: 40px
 					.inner-box
 						display: block
 						width: 100%
@@ -1615,14 +1635,22 @@ body::-webkit-scrollbar
 				.bottom-diagonal-box
 					display: block
 					width: 100%
-					margin-top: 60px
+					margin-top: 100px
 					$diagonal-width: 640
 					$diagonal-height: 280
 					$angle: math.atan(math.div($diagonal-height, $diagonal-width))
 					aspect-ratio: math.div($diagonal-width, $diagonal-height)
 					order: 5
+					+bp650
+						margin-top: 90px
+					+bp600
+						margin-top: 80px
+					+bp550
+						margin-top: 70px
+					+bp500
+						margin-top: 65px
 					+bp450
-						margin-top: 40px
+						margin-top: 60px
 					.inner-box
 						display: block
 						width: 100%
@@ -1666,10 +1694,19 @@ body::-webkit-scrollbar
 								.num
 									letter-spacing: 0.2em
 						&.step3
-							margin-top: 60px
+							margin-top: 150px
+							margin-left: auto
 							order: 3
+							+bp600
+								margin-top: 130px
+							+bp550
+								margin-top: 120px
 							+bp450
-								margin-top: 50px
+								margin-top: 100px
+							+bp420
+								margin-top: 90px
+							+bp400
+								margin-top: 80px
 						&.is-glitch
 							.img-box
 								background: #000
@@ -1720,18 +1757,21 @@ body::-webkit-scrollbar
 								margin-top: 25px
 							.num
 								display: block
-								width: 20px
+								width: 26px
 								font-weight: 400
-								font-size: 12px
+								font-size: 16px
 								line-height: 1.0
 								font-family: $ferry
 								letter-spacing: 0.05em
 								color: #ccc
+								+bp550
+									width: 23px
+									font-size: 14px
 							> h2
 								display: block
-								margin-left: 10px
+								margin-left: 15px
 								font-weight: 700
-								font-size: 22px
+								font-size: 24px
 								line-height: 1.0
 								font-family: $noto-sans
 								letter-spacing: 0.25em
@@ -1741,13 +1781,20 @@ body::-webkit-scrollbar
 								background-clip: text
 								text-fill-color: transparent
 								transition: all 0.5s ease-in-out
+								+bp550
+									font-size: 22px
+								+bp420
+									margin-left: 10px
+									font-size: 20px
+								+bp400
+									letter-spacing: 0.15em
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
 								.green
 									display: inline
 									font-weight: 700
-									font-size: 22px
+									font-size: 24px
 									line-height: 1.0
 									font-family: $noto-sans
 									letter-spacing: 0.25em
@@ -1757,23 +1804,28 @@ body::-webkit-scrollbar
 									background-clip: text
 									text-fill-color: transparent
 									transition: all 0.5s ease-in-out
+									+bp550
+										font-size: 22px
+									+bp420
+										font-size: 20px
+									+bp400
+										letter-spacing: 0.15em
 						.desc-box
 							display: block
-							padding-left: 32px
 							margin-top: 20px
-							+bp450
-								padding-left: 0
 							> p
 								display: block
 								margin-top: 1.4em
 								font-weight: 400
-								font-size: 12px
+								font-size: 14px
 								line-height: 1.5
 								font-family: $noto-sans
 								letter-spacing: 0.1em
 								color: #555
 								opacity: 0.0
 								transition: all 0.5s ease-in-out
+								+bp450
+									font-size: 13px
 								&:nth-of-type(1)
 									margin-top: 0
 								&.note
@@ -1799,6 +1851,7 @@ body::-webkit-scrollbar
 						&.step2
 							order: 2
 						&.step4
+							margin-left: auto
 							order: 4
 						&.is-glitch
 							.img-box
@@ -1850,18 +1903,21 @@ body::-webkit-scrollbar
 								margin-top: 25px
 							.num
 								display: block
-								width: 20px
+								width: 26px
 								font-weight: 400
-								font-size: 12px
+								font-size: 16px
 								line-height: 1.0
 								font-family: $ferry
 								letter-spacing: 0.05em
 								color: #ccc
+								+bp550
+									width: 23px
+									font-size: 14px
 							> h2
 								display: block
-								margin-left: 10px
+								margin-left: 15px
 								font-weight: 700
-								font-size: 22px
+								font-size: 24px
 								line-height: 1.0
 								font-family: $noto-sans
 								letter-spacing: 0.25em
@@ -1871,13 +1927,20 @@ body::-webkit-scrollbar
 								background-clip: text
 								text-fill-color: transparent
 								transition: all 0.5s ease-in-out
+								+bp550
+									font-size: 22px
+								+bp420
+									margin-left: 10px
+									font-size: 20px
+								+bp400
+									letter-spacing: 0.15em
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
 								.green
 									display: inline
 									font-weight: 700
-									font-size: 22px
+									font-size: 24px
 									line-height: 1.0
 									font-family: $noto-sans
 									letter-spacing: 0.25em
@@ -1887,23 +1950,28 @@ body::-webkit-scrollbar
 									background-clip: text
 									text-fill-color: transparent
 									transition: all 0.5s ease-in-out
+									+bp550
+										font-size: 22px
+									+bp420
+										font-size: 20px
+									+bp400
+										letter-spacing: 0.15em
 						.desc-box
 							display: block
-							padding-left: 32px
 							margin-top: 20px
-							+bp450
-								padding-left: 0
 							> p
 								display: block
 								margin-top: 1.4em
 								font-weight: 400
-								font-size: 12px
+								font-size: 14px
 								line-height: 1.5
 								font-family: $noto-sans
 								letter-spacing: 0.1em
 								color: #555
 								opacity: 0.0
 								transition: all 0.5s ease-in-out
+								+bp450
+									font-size: 13px
 								&:nth-of-type(1)
 									margin-top: 0
 								&.note
@@ -1924,10 +1992,28 @@ body::-webkit-scrollbar
 				align-items: center
 				width: 280px
 				padding: 18px 40px 18px 60px
-				margin: 140px auto 0
+				margin: 120px auto 0
 				border-radius: 33px
 				background: #fff
 				transition: box-shadow 1.0s ease-in-out
+				+bp600
+					margin: 100px auto 0
+				+bp550
+					padding: 15px 35px 15px 50px
+					border-radius: 30px
+				+bp500
+					width: 260px
+				+bp450
+					width: 245px
+					padding: 15px 30px 15px 40px
+					margin: 80px auto 0
+				+bp420
+					margin: 60px auto 0
+				+bp400
+					width: 230px
+					padding: 15px 30px 15px 35px
+				+bp380
+					margin: 50px auto 0
 				&:hover
 					box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
 					> p
@@ -1947,6 +2033,10 @@ body::-webkit-scrollbar
 					letter-spacing: 0.15em
 					color: #333
 					transition: all 0.5s ease-in-out
+					+bp500
+						font-size: 15px
+					+bp400
+						font-size: 14px
 				.arrow-box
 					display: flex
 					justify-content: flex-start
@@ -1958,11 +2048,21 @@ body::-webkit-scrollbar
 						height: 30px
 						background: #333
 						transition: all 0.5s ease-in-out
+						+bp500
+							height: 28px
+						+bp400
+							height: 25px
 					.arrow
 						display: block
 						width: 17px
 						margin-left: 35px
 						animation: arrowMove 3.0s linear infinite
+						+bp500
+							width: 16px
+							margin-left: 30px
+						+bp400
+							width: 15px
+							margin-left: 25px
 						path
 							fill: #333
 							transition: all 0.5s ease-in-out
@@ -2163,12 +2263,25 @@ body::-webkit-scrollbar
 #landscape
 	display: block
 	width: 100%
-	margin-top: calc(-0.054*100vw - 1px)
+	height: 340px
+	margin-top: calc(-0.065*100vw - 1px)
 	z-index: 2
 	position: relative
+	+bp550
+		margin-top: calc(-0.075*100vw - 1px)
+	+bp450
+		margin-top: calc(-0.055*100vw - 1px)
+		height: calc(0.5*100vw + 80px)
+	+bp400
+		height: 270px
+	+bp380
+		height: 260px
 	.img
 		display: block
 		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
 		z-index: 10
 		position: relative
 	.dots
@@ -2181,6 +2294,12 @@ body::-webkit-scrollbar
 		background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
 		background-size: 16px 16px
 		z-index: 9
+		+bp450
+			height: 42%
+		+bp420
+			height: 40%
+		+bp380
+			height: 37%
 
 
 
@@ -2218,31 +2337,51 @@ body::-webkit-scrollbar
 							.center
 								color: #111
 								animation: none
+								transform-origin: center
+								transform: scaleY(1.2)
 							.en-line
+								transform-origin: center
+								transform: scaleY(1.2)
 								&.top1
 									top: -70%
 									opacity: 1.0
+									+bp450
+										top: -80%
 								&.top2
 									top: -140%
 									opacity: 1.0
+									+bp450
+										top: -150%
 								&.top3
 									top: -200%
 									opacity: 1.0
+									+bp450
+										top: -210%
 								&.top4
 									top: -250%
 									opacity: 1.0
+									+bp450
+										top: -265%
 								&.bottom1
 									bottom: -70%
 									opacity: 1.0
+									+bp450
+										bottom: -80%
 								&.bottom2
 									bottom: -140%
 									opacity: 1.0
+									+bp450
+										bottom: -150%
 								&.bottom3
 									bottom: -200%
 									opacity: 1.0
+									+bp450
+										bottom: -210%
 								&.bottom4
 									bottom: -250%
 									opacity: 1.0
+									+bp450
+										bottom: -265%
 	.container
 		display: block
 		width: 100%
@@ -2291,6 +2430,16 @@ body::-webkit-scrollbar
 							z-index: 10
 							position: relative
 							transition: color 0.5s ease-in-out
+							+bp650
+								font-size: calc(0.1*100vw + 30px)
+							+bp500
+								font-size: calc(0.1*100vw + 25px)
+							+bp450
+								font-size: calc(0.075*100vw + 32px)
+							+bp400
+								font-size: 60px
+							+bp380
+								font-size: 58px
 						.en-line
 							position: absolute
 							left: 0
@@ -2304,6 +2453,17 @@ body::-webkit-scrollbar
 							color: #fff
 							-webkit-text-stroke: 2px $base
 							z-index: 9
+							+bp650
+								font-size: calc(0.1*100vw + 30px)
+							+bp500
+								font-size: calc(0.1*100vw + 25px)
+							+bp450
+								font-size: calc(0.075*100vw + 32px)
+								-webkit-text-stroke: 1.5px $base
+							+bp400
+								font-size: 60px
+							+bp380
+								font-size: 58px
 							&.top1
 								top: 0%
 								clip-path: polygon(-5% 15%, 105% 15%, 105% 92%, -5% 92%)
