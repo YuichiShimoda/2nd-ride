@@ -3429,6 +3429,12 @@ body::-webkit-scrollbar {
   z-index: 5;
   transition: all 1s 0.6s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1);
 }
+#expert .container .sticky-box .content-box .txt-box .sentence-box .en-line.top5 {
+  display: none;
+}
+#expert .container .sticky-box .content-box .txt-box .sentence-box .en-line.top6 {
+  display: none;
+}
 #expert .container .sticky-box .content-box .txt-box .sentence-box .en-line.bottom1 {
   bottom: 0%;
   clip-path: polygon(-5% 20%, 105% 20%, 105% 97%, -5% 97%);
@@ -3456,6 +3462,12 @@ body::-webkit-scrollbar {
   opacity: 0;
   z-index: 5;
   transition: all 1s 0.6s linear(0, 0.266 3.3%, 0.499 6.7%, 0.701 10.2%, 0.875 13.9%, 0.951 15.8%, 1.017 17.7%, 1.076 19.6%, 1.129 21.6%, 1.176 23.7%, 1.215 25.8%, 1.248 28%, 1.274 30.2%, 1.288 31.8%, 1.299 33.4%, 1.306 35%, 1.311 36.7%, 1.314 38.4%, 1.313 40.2%, 1.309 42.1%, 1.303 44%, 1.286 47.5%, 1.26 51.4%, 1.227 55.6%, 1.145 65%, 1.109 69.4%, 1.075 74.1%, 1.048 78.5%, 1.025 83.5%, 1.01 88.5%, 1.002 93.7%, 1);
+}
+#expert .container .sticky-box .content-box .txt-box .sentence-box .en-line.bottom5 {
+  display: none;
+}
+#expert .container .sticky-box .content-box .txt-box .sentence-box .en-line.bottom6 {
+  display: none;
 }
 
 @keyframes greenLoop {

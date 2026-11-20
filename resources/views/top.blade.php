@@ -352,6 +352,8 @@
 				<div class="content-box">
 					<div class="txt-box">
 						<div class="sentence-box">
+							<p class="en-line top6">EXPERTS</p>
+							<p class="en-line top5">EXPERTS</p>
 							<p class="en-line top4">EXPERTS</p>
 							<p class="en-line top3">EXPERTS</p>
 							<p class="en-line top2">EXPERTS</p>
@@ -361,6 +363,8 @@
 							<p class="en-line bottom2">EXPERTS</p>
 							<p class="en-line bottom3">EXPERTS</p>
 							<p class="en-line bottom4">EXPERTS</p>
+							<p class="en-line bottom5">EXPERTS</p>
+							<p class="en-line bottom6">EXPERTS</p>
 						</div>
 					</div>
 				</div>
