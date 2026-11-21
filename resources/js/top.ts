@@ -411,7 +411,7 @@ $(function () {
 		$('body').css('overflow', '');
 	}
 
-	$modal.find('.category-modal__close .category-modal__overlay').on('click', function () {
+	$modal.find('.category-modal__close, .category-modal__overlay').on('click', function () {
 		closeModal();
 	});
 });
@@ -434,7 +434,7 @@ $(function () {
 		$('body').css('overflow', '');
 	}
 
-	$modal.find('.project-modal__close .project-modal__overlay').on('click', function () {
+	$modal.find('.project-modal__close, .project-modal__overlay').on('click', function () {
 		closeModal();
 	});
 });
