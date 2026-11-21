@@ -267,15 +267,34 @@ ScrollTrigger.create({
 	},
 });
 function syncBottomHeight() {
-	var descBoxHeight = $('#service .right-box .step-ele:nth-of-type(2) .desc-box').outerHeight();
-	console.log("hei  " + descBoxHeight);
-	$('#service .road-box').css('bottom', descBoxHeight + 'px');
+	const windowWidth = $(window).width() ?? 0;
+	if (windowWidth <= 700) {
+		const step3Height = $('#service .step3').outerHeight() || 0;
+		const step4Height = $('#service .step4').outerHeight() || 0;
+		const roadHeight = (step3Height + step4Height) * 1.0;
+		$('#service .road-box').css('height', roadHeight + 'px');
+
+		const bottomHeight = $('#service .bottom-diagonal-box').outerHeight() || 0;
+		const bottomMargin = parseFloat($('#service .bottom-diagonal-box').css('margin-top')) || 0;
+		$('#service .road-box').css('bottom', (bottomHeight + bottomMargin) + 'px');
+
+		const topHeight = $('#service .top-diagonal-box').outerHeight() || 0;
+		const topMargin = parseFloat($('#service .top-diagonal-box').css('margin-bottom')) || 0;
+		const step1Height = $('#service .step1').outerHeight() || 0;
+		$('#service .circle-trace-box').css('top', (topHeight + topMargin + step1Height * 0.5) + 'px');
+	} else {
+		const descBoxHeight = $('#service .right-box .step-ele:nth-of-type(2) .desc-box').outerHeight() || 0;
+		$('#service .road-box').css({
+			height: '',
+			bottom: descBoxHeight + 'px'
+		});
+		$('#service .circle-trace-box').css('top', '');
+	}
 }
-syncBottomHeight();
-$(window).on('resize', function() {
-	console.log("res");
+$(window).on('load resize', function() {
 	syncBottomHeight();
 });
+
 gsap.fromTo("#service .link-box",
 	{background: "#00a000", scaleX: 3.0, scaleY: 0.0, opacity: 0.0},
 	{background: "#fff", scaleX: 1.0, scaleY: 1.0, opacity: 1.0, ease: "power1.out",
