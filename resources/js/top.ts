@@ -266,7 +266,7 @@ ScrollTrigger.create({
 		$("#service").removeClass("is-show3");
 	},
 });
-function syncBottomHeight() {
+function serviceCalc() {
 	const windowWidth = $(window).width() ?? 0;
 	if (windowWidth <= 700) {
 		const step3Height = $('#service .step3').outerHeight() || 0;
@@ -292,7 +292,7 @@ function syncBottomHeight() {
 	}
 }
 $(window).on('load resize', function() {
-	syncBottomHeight();
+	serviceCalc();
 });
 
 gsap.fromTo("#service .link-box",
@@ -638,7 +638,22 @@ ScrollTrigger.create({
 	},
 });
 
-
+function resultCalc() {
+	const windowWidth = $(window).width() ?? 0;
+	const windowHeight = $(window).height() ?? 0;
+	if (windowWidth <= 450) {
+		const left3Height = $('#result .left-box').outerHeight() || 0;
+		$('#result .fig-box').css('top', (windowHeight * 0.13 + left3Height) + 'px');
+	} else {
+		const descBoxHeight = $('#service .right-box .step-ele:nth-of-type(2) .desc-box').outerHeight() || 0;
+		$('#result .fig-box').css({
+			top: '',
+		});
+	}
+}
+$(window).on('load resize', function() {
+	resultCalc();
+});
 
 
 

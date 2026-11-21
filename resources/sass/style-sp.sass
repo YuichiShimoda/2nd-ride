@@ -2630,6 +2630,10 @@ body::-webkit-scrollbar
 			background-size: cover
 			background-position: center
 			z-index: 0
+			+bp550
+				background: url("../image/top/category/pixel-bg-sp.webp")
+				background-size: cover
+				background-position: center
 			.content-box
 				position: relative
 				width: 100%
@@ -3793,7 +3797,7 @@ body::-webkit-scrollbar
 					+bp500
 						left: 30px
 					+bp450
-						top: 10vh
+						top: 5vh
 						bottom: initial
 						transform: initial
 					.info-box
@@ -3824,6 +3828,12 @@ body::-webkit-scrollbar
 							text-fill-color: transparent
 							+bp500
 								font-size: 28px
+							+bp450
+								font-size: 26px
+							+bp420
+								font-size: 24px
+							+bp400
+								font-size: 22px
 							&::selection
 								color: #555
 								-webkit-text-fill-color: #555
@@ -3834,6 +3844,8 @@ body::-webkit-scrollbar
 							+bp500
 								width: 300px
 								margin-top: 20px
+							+bp450
+								width: 100%
 							> p
 								display: block
 								margin-top: 1.2em
@@ -3843,6 +3855,8 @@ body::-webkit-scrollbar
 								font-family: $noto-sans
 								letter-spacing: 0.1em
 								color: #fff
+								+bp400
+									font-size: 11px
 								&:nth-of-type(1)
 									margin-top: 0
 								&::selection
@@ -3950,6 +3964,13 @@ body::-webkit-scrollbar
 						bottom: 20vh
 						margin: 0 auto
 						transform: initial
+					+bp420
+						transform-origin: top center
+						transform: scale(0.85)
+					+bp400
+						transform: scale(0.82)
+					+bp380
+						transform: scale(0.77)
 					.inner-box
 						display: block
 						width: 230px
@@ -4577,6 +4598,8 @@ body::-webkit-scrollbar
 				overflow: hidden
 				z-index: 100
 				transition: all 0.5s 1.5s ease-in-out
+				+bp450
+					overflow: initial
 				.inner-box
 					display: block
 					width: 100%
