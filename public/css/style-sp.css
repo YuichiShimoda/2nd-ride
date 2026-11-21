@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -3908,7 +3909,7 @@ body::-webkit-scrollbar {
   color: #555;
 }
 #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::after {
-  content: "??";
+  content: "、";
   display: inline;
   font-weight: 400;
   font-size: 14px;
