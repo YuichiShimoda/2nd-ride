@@ -3701,6 +3701,9 @@ body::-webkit-scrollbar {
   #category .container .scroll-content-box .video-box .video-ele:nth-of-type(2n) {
     margin-top: 35px;
   }
+  #category .container .scroll-content-box .video-box .video-ele:nth-of-type(2n) .inner-box .arrow {
+    animation: blink 6s 3s infinite;
+  }
 }
 @media screen and (max-width: 400px) {
   #category .container .scroll-content-box .video-box .video-ele:nth-of-type(2n) {
@@ -3861,6 +3864,7 @@ body::-webkit-scrollbar {
     top: 48px;
     width: 32px;
     opacity: 1;
+    animation: blink 8s infinite;
   }
 }
 @media screen and (max-width: 420px) {
@@ -3992,7 +3996,7 @@ body::-webkit-scrollbar {
 .category-modal .category-modal__overlay {
   position: absolute;
   inset: 0;
-  background: #232523;
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, #193319, rgba(35, 37, 35, 0.95));
 }
 .category-modal .category-modal__content {
   position: absolute;
@@ -4025,7 +4029,7 @@ body::-webkit-scrollbar {
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0;
-  color: #333;
+  color: #fff;
 }
 .category-modal .category-modal__content .category-modal__body {
   display: flex;
@@ -4067,6 +4071,14 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes blink {
+  0%, 49.9%, 53.4%, 56.7%, 100% {
+    opacity: 1;
+  }
+  50.8%, 55% {
+    opacity: 0;
+  }
+}
 #marugoto {
   display: block;
   width: 100%;
@@ -4639,6 +4651,21 @@ body::-webkit-scrollbar {
   object-position: left center;
   pointer-events: none;
 }
+#marugoto .content-box .project-box .project-ele .inner-box .circle-text {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+  width: 80px;
+  transform-origin: center;
+  animation: circleTextRotate 10s linear infinite;
+  z-index: 7;
+}
+@media screen and (max-width: 450px) {
+  #marugoto .content-box .project-box .project-ele .inner-box .circle-text {
+    display: block;
+  }
+}
 #marugoto .content-box .project-box .project-ele .inner-box .slider-line-box {
   position: absolute;
   top: 0;
@@ -4829,6 +4856,89 @@ body::-webkit-scrollbar {
   z-index: 5;
 }
 
+.project-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .project-modal {
+    display: block;
+  }
+}
+.project-modal.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.project-modal .project-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, #193319, rgba(35, 37, 35, 0.95));
+}
+.project-modal .project-modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 80px);
+  max-height: 80vh;
+  padding: 40px 60px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5), 0px 2px 40px rgba(255, 255, 255, 0.2);
+}
+.project-modal .project-modal__content .project-modal__close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  aspect-ratio: 1/1;
+  background: none;
+  cursor: pointer;
+}
+.project-modal .project-modal__content .project-modal__close .close {
+  display: block;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0;
+  color: #fff;
+}
+.project-modal .project-modal__content .project-modal__body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.project-modal .project-modal__content .project-modal__body p {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1em;
+  color: #ccc;
+}
+@media screen and (max-width: 420px) {
+  .project-modal .project-modal__content .project-modal__body p {
+    font-size: 13px;
+  }
+}
+.project-modal .project-modal__content .project-modal__body p::selection {
+  color: #555;
+}
+
 @keyframes dotPulsate {
   0% {
     transform: scale(1);
@@ -4848,6 +4958,14 @@ body::-webkit-scrollbar {
   }
   100% {
     opacity: 0.2;
+  }
+}
+@keyframes circleTextRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 #result {

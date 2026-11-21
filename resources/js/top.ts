@@ -396,28 +396,48 @@ ScrollTrigger.create({
 $(function () {
 	const $modal = $('.category-modal');
 	const $modalBody = $modal.find('.category-modal__body');
+
 	$('.video-ele').on('click', function () {
 		if (window.innerWidth > 450) return;
 		const $descBox = $(this).find('.desc-box');
 		if (!$descBox.length) return;
-		$modalBody.html($descBox.html());
+		$modalBody.html($descBox.html() || '');
 		$modal.addClass('is-active');
 		$('body').css('overflow', 'hidden');
 	});
 
-	function closeModal() {
+	function closeModal(): void {
 		$modal.removeClass('is-active');
 		$('body').css('overflow', '');
 	}
-	$modal.find('.category-modal__close').on('click', function () {
-		closeModal();
-	});
-	$modal.find('.category-modal__overlay').on('click', function () {
+
+	$modal.find('.category-modal__close .category-modal__overlay').on('click', function () {
 		closeModal();
 	});
 });
 
+$(function () {
+	const $modal = $('.project-modal');
+	const $modalBody = $modal.find('.project-modal__body');
 
+	$('.project-ele .circle-text').on('click', function () {
+		if (window.innerWidth > 450) return;
+		const $descBox = $(this).siblings('.desc-box');
+		if (!$descBox.length) return;
+		$modalBody.html($descBox.html() || '');
+		$modal.addClass('is-active');
+		$('body').css('overflow', 'hidden');
+	});
+
+	function closeModal(): void {
+		$modal.removeClass('is-active');
+		$('body').css('overflow', '');
+	}
+
+	$modal.find('.project-modal__close .project-modal__overlay').on('click', function () {
+		closeModal();
+	});
+});
 
 
 

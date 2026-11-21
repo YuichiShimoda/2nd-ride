@@ -410,18 +410,18 @@
 							</div>
 							<h2 class="cat-tit">家電</h2>
 							<ul class="desc-box">
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
+								<li>家電です</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -440,18 +440,18 @@
 							</div>
 							<h2 class="cat-tit">カメラ</h2>
 							<ul class="desc-box">
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
+								<li>カメラが入ります</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -470,18 +470,17 @@
 							</div>
 							<h2 class="cat-tit">時計</h2>
 							<ul class="desc-box">
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
+								<li>時計のテキストです</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -500,18 +499,18 @@
 							</div>
 							<h2 class="cat-tit">骨董品</h2>
 							<ul class="desc-box">
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
+								<li>骨董品</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -530,18 +529,12 @@
 							</div>
 							<h2 class="cat-tit">ホビー</h2>
 							<ul class="desc-box">
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
-								<li>テキスト</li>
+								<li>ホビー情報を入れさせていただきます</li>
+								<li>ホビー情報を入れさせていただきます</li>
+								<li>ホビー情報を入れさせていただきます</li>
+								<li>ホビー情報を入れさせていただきます</li>
+								<li>ホビー情報を入れさせていただきます</li>
+								<li>ホビー情報を入れさせていただきます</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -608,6 +601,7 @@
 						<div class="image-before">
 							<img class="img lazyload" data-src="{{ asset('/image/top/marugoto/ihin-before.webp') }}" alt="遺品整理">
 						</div>
+						<img class="circle-text lazyload" data-src="{{ asset('/image/top/marugoto/circle-text.svg') }}" alt="円">
 						<div class="slider-line-box">
 							<div class="inner-box">
 								<div class="circle"></div>
@@ -635,6 +629,7 @@
 						<div class="image-before">
 							<img class="img lazyload" data-src="{{ asset('/image/top/marugoto/akiya-before.webp') }}" alt="空き家整理">
 						</div>
+						<img class="circle-text lazyload" data-src="{{ asset('/image/top/marugoto/circle-text.svg') }}" alt="円">
 						<div class="slider-line-box">
 							<div class="inner-box">
 								<div class="circle"></div>
@@ -654,6 +649,15 @@
 						<div class="bg"></div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="project-modal">
+			<div class="project-modal__overlay"></div>
+			<div class="project-modal__content">
+				<div class="project-modal__close">
+					<p class="close">×</p>
+				</div>
+				<div class="project-modal__body"></div>
 			</div>
 		</div>
 	</section>

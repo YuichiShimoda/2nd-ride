@@ -3990,6 +3990,10 @@ body::-webkit-scrollbar {
   transition: all 0.5s ease-in-out;
 }
 
+.category-modal {
+  display: none;
+}
+
 #marugoto {
   display: block;
   width: 100%;
@@ -4616,6 +4620,9 @@ body::-webkit-scrollbar {
   object-position: left center;
   pointer-events: none;
 }
+#marugoto .content-box .project-box .project-ele .inner-box .circle-text {
+  display: none;
+}
 #marugoto .content-box .project-box .project-ele .inner-box .slider-line-box {
   position: absolute;
   top: 0;
@@ -4837,6 +4844,10 @@ body::-webkit-scrollbar {
   height: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.7) 100%);
   z-index: 5;
+}
+
+.project-modal {
+  display: none;
 }
 
 @keyframes dotPulsate {
