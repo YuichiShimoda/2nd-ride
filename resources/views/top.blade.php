@@ -553,6 +553,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="category-modal">
+			<div class="category-modal__overlay"></div>
+			<div class="category-modal__content">
+				<div class="category-modal__close">
+					<p class="close">×</p>
+				</div>
+				<div class="category-modal__body"></div>
+			</div>
+		</div>
 	</section>
 
 

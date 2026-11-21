@@ -388,6 +388,57 @@ ScrollTrigger.create({
 
 
 
+
+
+
+
+
+$(function () {
+	const $modal = $('.category-modal');
+	const $modalBody = $modal.find('.category-modal__body');
+	$('.video-ele').on('click', function () {
+		if (window.innerWidth > 450) return;
+		const $descBox = $(this).find('.desc-box');
+		if (!$descBox.length) return;
+		$modalBody.html($descBox.html());
+		$modal.addClass('is-active');
+		$('body').css('overflow', 'hidden');
+	});
+
+	function closeModal() {
+		$modal.removeClass('is-active');
+		$('body').css('overflow', '');
+	}
+	$modal.find('.category-modal__close').on('click', function () {
+		closeModal();
+	});
+	$modal.find('.category-modal__overlay').on('click', function () {
+		closeModal();
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ScrollTrigger.create({
 	trigger: "#marugoto .head-box",
 	start: "top bottom",
