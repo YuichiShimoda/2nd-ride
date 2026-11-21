@@ -77,7 +77,7 @@ body::-webkit-scrollbar
 
 
 
-#result, #result-scroll-space, #info, #promise, #contact, #footer
+#promise, #contact, #footer
 	display: none !important
 
 
@@ -2296,8 +2296,11 @@ body::-webkit-scrollbar
 		z-index: 9
 		+bp450
 			height: 42%
+			background-size: 12px 12px
 		+bp420
 			height: 40%
+		+bp400
+			background-size: 10px 10px
 		+bp380
 			height: 37%
 
@@ -2328,6 +2331,10 @@ body::-webkit-scrollbar
 	height: 250vh
 	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
 	background-size: 16px 16px
+	+bp450
+		background-size: 12px 12px
+	+bp400
+		background-size: 10px 10px
 	&.is-show
 		.container
 			.sticky-box
@@ -2606,6 +2613,9 @@ body::-webkit-scrollbar
 		padding-top: 180px
 	+bp450
 		padding-top: 160px
+		background-size: 12px 12px
+	+bp400
+		background-size: 10px 10px
 	.container
 		display: block
 		width: 100%
@@ -2933,7 +2943,7 @@ body::-webkit-scrollbar
 								&::selection
 									color: #555
 								&::after
-									content: "、"
+									content: "??"
 									display: inline
 									font-weight: 400
 									font-size: 14px
@@ -3007,6 +3017,20 @@ body::-webkit-scrollbar
 	padding-bottom: 0
 	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
 	background-size: 16px 16px
+	+bp650
+		padding-top: 35vh
+	+bp550
+		padding-top: 30vh
+	+bp500
+		padding-top: 25vh
+	+bp450
+		padding-top: 260px
+		background-size: 12px 12px
+	+bp420
+		padding-top: 220px
+	+bp400
+		padding-top: 200px
+		background-size: 10px 10px
 	.content-box
 		display: block
 		width: 100%
@@ -3019,6 +3043,16 @@ body::-webkit-scrollbar
 			width: calc(100vw - 80px)
 			margin: 0 auto 0
 			position: relative
+			+bp650
+				width: calc(100vw - 120px)
+			+bp500
+				width: calc(100vw - 100px)
+			+bp450
+				width: calc(100vw - 60px)
+			+bp420
+				width: calc(100vw - 40px)
+			+bp400
+				width: calc(100vw - 30px)
 			.left-box
 				display: block
 				width: 100%
@@ -3085,6 +3119,17 @@ body::-webkit-scrollbar
 						-webkit-text-fill-color: transparent
 						background-clip: text
 						text-fill-color: transparent
+						+bp650
+							font-size: 16px
+						+bp550
+							font-size: 15px
+						+bp500
+							font-size: 14px
+						+bp420
+							margin-left: 12px
+							font-size: 13px
+						+bp400
+							font-size: 12px
 						&::selection
 							color: #555
 							-webkit-text-fill-color: #555
@@ -3095,6 +3140,10 @@ body::-webkit-scrollbar
 					transform: translateY(50%)
 					position: relative
 					transition: all 0.5s ease-in-out
+					+bp650
+						margin-top: 25px
+					+bp450
+						margin-top: 20px
 					&.is-show
 						transform: translateY(0%)
 						.head-content
@@ -3121,6 +3170,8 @@ body::-webkit-scrollbar
 						text-fill-color: transparent
 						opacity: 0.0
 						transition: all 0.5s ease-in-out
+						+bp650
+							font-size: calc(0.04*100vw + 4px)
 						&::selection
 							color: #555
 							-webkit-text-fill-color: #555
@@ -3176,6 +3227,8 @@ body::-webkit-scrollbar
 					display: block
 					width: fit-content
 					margin-top: 20px
+					+bp650
+						margin-top: 30px
 					&.is-show
 						> p
 							@for $i from 1 through 5
@@ -3193,6 +3246,12 @@ body::-webkit-scrollbar
 						color: #111
 						opacity: 0
 						transition: all 0.5s ease-in-out
+						+bp650
+							font-size: 14px
+						+bp500
+							font-size: 13px
+						+bp450
+							font-size: 12px
 						@for $i from 1 through 3
 							&:nth-child(#{$i})
 								transform: translateY(1em + 2em * (4 - $i) / (3 * $i))
@@ -3208,6 +3267,25 @@ body::-webkit-scrollbar
 				opacity: 0.0
 				clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)
 				transition: all 1.0s 0.5s ease-in-out
+				+bp650
+					top: -60px
+					width: 170px
+				+bp600
+					top: -30px
+					width: 140px
+				+bp550
+					right: -30px
+				+bp500
+					top: -25px
+					right: -20px
+					width: 120px
+				+bp450
+					top: -15px
+					right: 0
+					width: 100px
+				+bp380
+					top: -12px
+					width: 85px
 				&.is-show
 					opacity: 1.0
 					clip-path: polygon(0% 0%, 200% 0%, 100% 100%, 0% 100%)
@@ -3231,12 +3309,44 @@ body::-webkit-scrollbar
 			width: calc(100vw - 80px)
 			padding-bottom: 50vh
 			margin: 50px auto 0
+			+bp650
+				justify-content: flex-start
+				flex-direction: column
+				flex-wrap: initial
+				width: calc(100vw - 120px)
+				margin: 80px auto 0
+			+bp600
+				margin: 70px auto 0
+			+bp550
+				margin: 60px auto 0
+			+bp500
+				width: calc(100vw - 100px)
+			+bp450
+				width: calc(100vw - 60px)
+			+bp420
+				width: calc(100vw - 40px)
+			+bp400
+				width: calc(100vw - 30px)
 			.project-ele
 				display: block
 				width: calc(50% - 10px)
 				aspect-ratio: 1 / 1
 				border-radius: 10px
 				overflow: hidden
+				+bp650
+					width: 100%
+					border-radius: 20px
+				+bp400
+					border-radius: 15px
+				&:nth-of-type(2)
+					+bp650
+						margin-top: 50px
+					+bp500
+						margin-top: 40px
+					+bp450
+						margin-top: 35px
+					+bp400
+						margin-top: 30px
 				.inner-box
 					display: block
 					width: 100%
@@ -3247,6 +3357,8 @@ body::-webkit-scrollbar
 					&:hover
 						.cat-tit-box
 							opacity: 0.6
+							+bp450
+								opacity: 1.0
 						.desc-box
 							opacity: 0.0
 					.image-after
@@ -3317,6 +3429,8 @@ body::-webkit-scrollbar
 						transform: translateX(-2.5em)
 						transition: all 0.5s ease-in-out
 						z-index: 10
+						+bp420
+							left: 30px
 						&.is-show
 							transform: translateX(0%)
 							.inner-tit-box
@@ -3340,6 +3454,19 @@ body::-webkit-scrollbar
 								color: #fff
 								opacity: 0.0
 								transition: all 0.5s ease-in-out
+								+bp650
+									font-size: 48px
+								+bp600
+									font-size: 44px
+								+bp550
+									font-size: 40px
+								+bp500
+									font-size: 36px
+								+bp450
+									font-size: 34px
+									opacity: 1.0
+								+bp400
+									font-size: 32px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -3362,14 +3489,31 @@ body::-webkit-scrollbar
 						width: calc(100% - 80px)
 						z-index: 10
 						transition: all 0.5s ease-in-out
+						+bp450
+							opacity: 0.0
+						+bp420
+							left: 30px
+							width: calc(100% - 60px)
+						+bp400
+							bottom: 30px
 						> p
 							display: inline-block
 							font-weight: 400
-							font-size: 11px
+							font-size: 10px
 							line-height: 1.5
 							font-family: $noto-sans
 							letter-spacing: 0.1em
 							color: #fff
+							+bp650
+								font-size: 15px
+								line-height: 1.7
+							+bp550
+								font-size: 14px
+							+bp500
+								font-size: 13px
+							+bp450
+								font-size: 12px
+								line-height: 1.5
 							&::selection
 								color: #555
 								-webkit-text-fill-color: #555
@@ -3530,6 +3674,24 @@ body::-webkit-scrollbar
 						transform: scale(3.0, 0.0)
 						opacity: 0.0
 						transition: box-shadow 1.0s ease-in-out, background 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out
+						+bp600
+							width: 280px
+						+bp550
+							padding: 15px 25px 15px 40px
+							border-radius: 30px
+						+bp500
+							width: 255px
+						+bp450
+							width: 245px
+							padding: 15px 25px 15px 30px
+							margin-top: 60px
+						+bp420
+							margin-top: 50px
+						+bp400
+							width: 230px
+							padding: 15px 30px 15px 30px
+						+bp380
+							margin-top: 40px
 						&:hover
 							box-shadow: 0px 0px 4px $base, 0px 0px 16px rgba($base, 0.8), 0px 0px 48px rgba($base, 0.5), 0px 0px 120px rgba($base, 0.3)
 							> p
@@ -3549,6 +3711,10 @@ body::-webkit-scrollbar
 							letter-spacing: 0.15em
 							color: #333
 							transition: all 0.5s ease-in-out
+							+bp500
+								font-size: 15px
+							+bp400
+								font-size: 14px
 						.arrow-box
 							display: flex
 							justify-content: flex-start
@@ -3560,11 +3726,21 @@ body::-webkit-scrollbar
 								height: 30px
 								background: #333
 								transition: all 0.5s ease-in-out
+								+bp500
+									height: 28px
+								+bp400
+									height: 25px
 							.arrow
 								display: block
 								width: 17px
 								margin-left: 35px
 								animation: arrowMove 3.0s linear infinite
+								+bp500
+									width: 16px
+									margin-left: 30px
+								+bp400
+									width: 15px
+									margin-left: 25px
 								path
 									fill: #333
 									transition: all 0.5s ease-in-out
