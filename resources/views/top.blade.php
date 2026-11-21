@@ -435,7 +435,7 @@
 					</div>
 					<div class="video-ele">
 						<div class="inner-box">
-							<div class="video-box">
+							<div class="base-box">
 								<video class="video" preload="none" autoplay loop muted playsinline disablepictureinpicture data-src="{{ asset('/movie/top/category/camera.mp4') }}"></video>
 							</div>
 							<h2 class="cat-tit">カメラ</h2>
@@ -465,7 +465,7 @@
 					</div>
 					<div class="video-ele">
 						<div class="inner-box">
-							<div class="video-box">
+							<div class="base-box">
 								<video class="video" preload="none" autoplay loop muted playsinline disablepictureinpicture data-src="{{ asset('/movie/top/category/watch.mp4') }}"></video>
 							</div>
 							<h2 class="cat-tit">時計</h2>
@@ -495,7 +495,7 @@
 					</div>
 					<div class="video-ele">
 						<div class="inner-box">
-							<div class="video-box">
+							<div class="base-box">
 								<video class="video" preload="none" autoplay loop muted playsinline disablepictureinpicture data-src="{{ asset('/movie/top/category/antique.mp4') }}"></video>
 							</div>
 							<h2 class="cat-tit">骨董品</h2>
