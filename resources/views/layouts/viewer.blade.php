@@ -307,7 +307,7 @@
                         </div>
                         <div class="licenses-ele">
                             <p class="tit">古物商許可：愛知県公安委員会</p>
-                            <p class="detail">第<span class="num">111122223333</span>号</p>
+                            <p class="detail">第<span class="num">542642600300</span>号</p>
                         </div>
                         <div class="link-box">
                             <a class="link" href="{{ route('rule') }}">特定商取引法に基づく表記</a>

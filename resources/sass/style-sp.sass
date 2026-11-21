@@ -77,8 +77,7 @@ body::-webkit-scrollbar
 
 
 
-#promise, #contact, #footer
-	display: none !important
+
 
 
 
@@ -3623,12 +3622,28 @@ body::-webkit-scrollbar
 					height: fit-content
 					transform: translateY(-20vh)
 					z-index: 100
+					+bp550
+						left: 40px
+					+bp500
+						left: 30px
+					+bp450
+						top: 10vh
+						bottom: initial
+						transform: initial
 					.info-box
 						display: block
 						padding: 55px 55px
 						border-radius: 20px
 						background: rgba(#111, 0.6)
 						animation: neonBoxShadow 5.0s linear infinite
+						+bp550
+							padding: 40px 40px
+						+bp500
+							padding: 30px 30px
+						+bp450
+							width: calc(100vw - 60px)
+							padding: 30px 40px
+							border-radius: 15px
 						.head
 							display: block
 							font-weight: 700
@@ -3641,6 +3656,8 @@ body::-webkit-scrollbar
 							-webkit-text-fill-color: transparent
 							background-clip: text
 							text-fill-color: transparent
+							+bp500
+								font-size: 28px
 							&::selection
 								color: #555
 								-webkit-text-fill-color: #555
@@ -3648,6 +3665,9 @@ body::-webkit-scrollbar
 							display: block
 							width: 320px
 							margin-top: 25px
+							+bp500
+								width: 300px
+								margin-top: 20px
 							> p
 								display: block
 								margin-top: 1.2em
@@ -3684,9 +3704,9 @@ body::-webkit-scrollbar
 						+bp450
 							width: 245px
 							padding: 15px 25px 15px 30px
-							margin-top: 60px
+							margin-top: 40px
 						+bp420
-							margin-top: 50px
+							margin-top: 30px
 						+bp400
 							width: 230px
 							padding: 15px 30px 15px 30px
@@ -3747,18 +3767,32 @@ body::-webkit-scrollbar
 				.fig-box
 					position: absolute
 					top: 30%
-					right: calc(0.4*100vw - 280px)
+					right: calc(0.4*100vw - 190px)
 					display: block
 					width: fit-content
 					height: fit-content
 					transform: translateY(-70px)
 					z-index: 10
+					+bp550
+						right: calc(0.4*100vw - 220px)
+					+bp500
+						right: calc(0.4*100vw - 190px)
+					+bp450
+						top: 70vh
+						left: 0
+						right: 0
+						bottom: 20vh
+						margin: 0 auto
+						transform: initial
 					.inner-box
 						display: block
-						width: 275px
+						width: 230px
 						position: relative
 						z-index: 20
 						transform: translateY(15vh) scale(0.7)
+						+bp450
+							width: 160px
+							transform: initial
 						&::before
 							position: absolute
 							top: -20px
@@ -3771,6 +3805,13 @@ body::-webkit-scrollbar
 							box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(#000, 0.6), 1px 1px 48px rgba(#000, 0.3)
 							z-index: 19
 							transition: all 0.5s ease-in-out
+							+bp450
+								top: -10px
+								left: -10px
+								content: ""
+								display: block
+								width: calc(100% + 20px)
+								height: calc(100% + 20px)
 							&:hover
 								background: #bcb
 						> .img
@@ -3790,6 +3831,10 @@ body::-webkit-scrollbar
 							transform-origin: center
 							transform: rotate(-5deg)
 							z-index: 10
+							+bp450
+								top: -40px
+								left: -100px
+								width: 140px
 							&:hover
 								&::before
 									background: #bcb
@@ -3807,6 +3852,13 @@ body::-webkit-scrollbar
 								box-shadow: 1px 1px 4px #fff, 1px 1px 16px rgba(#fff, 0.5)
 								z-index: 9
 								transition: all 0.5s ease-in-out
+								+bp450
+									top: -10px
+									left: -10px
+									content: ""
+									display: block
+									width: calc(100% + 20px)
+									height: calc(100% + 20px)
 							> .img
 								display: block
 								width: 100%
@@ -3822,6 +3874,10 @@ body::-webkit-scrollbar
 							transform-origin: center
 							transform: rotate(10deg)
 							z-index: 30
+							+bp450
+								top: -25%
+								right: -110px
+								width: 130px
 							&:hover
 								&::before
 									background: #bcb
@@ -3839,6 +3895,13 @@ body::-webkit-scrollbar
 								box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(#000, 0.6), 1px 1px 48px rgba(#000, 0.3)
 								z-index: 29
 								transition: all 0.5s ease-in-out
+								+bp450
+									top: -12.5px
+									left: -12.5px
+									content: ""
+									display: block
+									width: calc(100% + 25px)
+									height: calc(100% + 25px)
 							> .img
 								display: block
 								width: 100%
@@ -3847,13 +3910,22 @@ body::-webkit-scrollbar
 								transition: all 0.5s ease-in-out
 						.gift-box
 							position: absolute
-							left: -330px
-							bottom: -450px
+							left: -300px
+							bottom: -540px
 							display: block
 							width: 280px
 							transform-origin: center
 							transform: rotate(-5deg)
 							z-index: 10
+							+bp500
+								left: -270px
+								bottom: -460px
+								width: 240px
+							+bp450
+								left: -100px
+								bottom: -180px
+								width: 190px
+								transform: rotate(-2deg)
 							&:hover
 								&::before
 									background: #bcb
@@ -3871,6 +3943,13 @@ body::-webkit-scrollbar
 								box-shadow: 1px 1px 4px #fff, 1px 1px 16px rgba(#fff, 0.5)
 								z-index: 9
 								transition: all 0.5s ease-in-out
+								+bp450
+									top: -14px
+									left: -14px
+									content: ""
+									display: block
+									width: calc(100% + 28px)
+									height: calc(100% + 28px)
 							> .img
 								display: block
 								width: 100%
@@ -3886,6 +3965,10 @@ body::-webkit-scrollbar
 							transform-origin: center
 							transform: rotate(5deg)
 							z-index: 40
+							+bp450
+								right: -65px
+								bottom: -150px
+								width: 150px
 							&:hover
 								&::before
 									background: #bcb
@@ -3903,6 +3986,13 @@ body::-webkit-scrollbar
 								box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(#000, 0.6), 1px 1px 48px rgba(#000, 0.3)
 								z-index: 39
 								transition: all 0.5s ease-in-out
+								+bp450
+									top: -12.5px
+									left: -12.5px
+									content: ""
+									display: block
+									width: calc(100% + 25px)
+									height: calc(100% + 25px)
 							> .img
 								display: block
 								width: 100%
@@ -3930,6 +4020,8 @@ body::-webkit-scrollbar
 						display: block
 						width: fit-content
 						margin-top: 20px
+						+bp450
+							margin-top: 12px
 						&.slider-box1
 							.ticker-track
 								animation: telop 18.3s linear infinite
@@ -3937,6 +4029,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 40px
 										font-size: 48px
+										+bp450
+											margin-left: 20px
+											font-size: 24px
 						&.slider-box2
 							.ticker-track
 								animation: telop 12.9s linear infinite
@@ -3944,6 +4039,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 70px
+										+bp450
+											margin-left: 15px
+											font-size: 35px
 						&.slider-box3
 							.ticker-track
 								animation: telop 17.7s linear infinite
@@ -3951,6 +4049,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 32px
+										+bp450
+											margin-left: 15px
+											font-size: 16px
 						&.slider-box4
 							.ticker-track
 								animation: telop 19.7s linear infinite
@@ -3958,6 +4059,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 20px
 										font-size: 26px
+										+bp450
+											margin-left: 10px
+											font-size: 13px
 						&.slider-box5
 							.ticker-track
 								animation: telop 15.5s linear infinite reverse
@@ -3965,6 +4069,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 48px
+										+bp450
+											margin-left: 15px
+											font-size: 24px
 						&.slider-box6
 							.ticker-track
 								animation: telop 18.0s linear infinite
@@ -3972,6 +4079,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 32px
+										+bp450
+											margin-left: 15px
+											font-size: 16px
 						&.slider-box7
 							.ticker-track
 								animation: telop 20.9s linear infinite
@@ -3979,6 +4089,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 25px
 										font-size: 26px
+										+bp450
+											margin-left: 12.5px
+											font-size: 13px
 						&.slider-box8
 							.ticker-track
 								animation: telop 17.6s linear infinite
@@ -3986,6 +4099,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 45px
 										font-size: 82px
+										+bp450
+											margin-left: 22.5px
+											font-size: 41px
 						&.slider-box9
 							.ticker-track
 								animation: telop 14.7s linear infinite reverse
@@ -3993,6 +4109,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 30px
+										+bp450
+											margin-left: 15px
+											font-size: 15px
 						&.slider-box10
 							.ticker-track
 								animation: telop 18.6s linear infinite
@@ -4000,6 +4119,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 32px
+										+bp450
+											margin-left: 15px
+											font-size: 16px
 						&.slider-box11
 							.ticker-track
 								animation: telop 20.3s linear infinite
@@ -4007,6 +4129,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 30px
+										+bp450
+											margin-left: 15px
+											font-size: 15px
 						&.slider-box12
 							.ticker-track
 								animation: telop 11.0s linear infinite
@@ -4014,6 +4139,9 @@ body::-webkit-scrollbar
 									> h3
 										margin-left: 30px
 										font-size: 52px
+										+bp450
+											margin-left: 15px
+											font-size: 26px
 						&.slider-box13
 							.ticker-track
 								animation: telop 14.1s linear infinite reverse
@@ -4021,6 +4149,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 40px
 										font-size: 48px
+										+bp450
+											margin-left: 20px
+											font-size: 24px
 						&.slider-box14
 							.ticker-track
 								animation: telop 18.8s linear infinite reverse
@@ -4028,6 +4159,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 70px
+										+bp450
+											margin-left: 15px
+											font-size: 35px
 						&.slider-box15
 							.ticker-track
 								animation: telop 20.7s linear infinite
@@ -4035,6 +4169,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 32px
+										+bp450
+											margin-left: 15px
+											font-size: 16px
 						&.slider-box16
 							.ticker-track
 								animation: telop 17.3s linear infinite reverse
@@ -4042,6 +4179,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 20px
 										font-size: 26px
+										+bp450
+											margin-left: 10px
+											font-size: 13px
 						&.slider-box17
 							.ticker-track
 								animation: telop 11.7s linear infinite
@@ -4049,6 +4189,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 48px
+										+bp450
+											margin-left: 15px
+											font-size: 24px
 						&.slider-box18
 							.ticker-track
 								animation: telop 19.0s linear infinite
@@ -4056,6 +4199,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 32px
+										+bp450
+											margin-left: 15px
+											font-size: 16px
 						&.slider-box19
 							.ticker-track
 								animation: telop 16.2s linear infinite reverse
@@ -4063,6 +4209,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 25px
 										font-size: 26px
+										+bp450
+											margin-left: 12.5px
+											font-size: 13px
 						&.slider-box20
 							.ticker-track
 								animation: telop 21.0s linear infinite
@@ -4070,6 +4219,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 45px
 										font-size: 82px
+										+bp450
+											margin-left: 22.5px
+											font-size: 41px
 						&.slider-box21
 							.ticker-track
 								animation: telop 18.5s linear infinite reverse
@@ -4077,6 +4229,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 30px
+										+bp450
+											margin-left: 15px
+											font-size: 15px
 						&.slider-box22
 							.ticker-track
 								animation: telop 13.4s linear infinite
@@ -4084,6 +4239,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 32px
+										+bp450
+											margin-left: 15px
+											font-size: 16px
 						&.slider-box23
 							.ticker-track
 								animation: telop 17.9s linear infinite
@@ -4091,6 +4249,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 30px
+										+bp450
+											margin-left: 15px
+											font-size: 15px
 						&.slider-box24
 							.ticker-track
 								animation: telop 20.6s linear infinite
@@ -4098,6 +4259,9 @@ body::-webkit-scrollbar
 									> p
 										margin-left: 30px
 										font-size: 52px
+										+bp450
+											margin-left: 15px
+											font-size: 26px
 						.ticker-track
 							display: flex
 							justify-content: flex-start
@@ -4265,17 +4429,21 @@ body::-webkit-scrollbar
 							align-items: center
 							width: max-content
 							height: fit-content
-							padding: 23px 0 28px
+							padding: 20px 0 25px
 							background: $base
 							will-change: transform
 							animation: telop 20.0s linear infinite reverse
+							+bp550
+								padding: 17px 0 22px
 							.ticker-group
 								display: flex
 								flex: 0 0 auto
 								width: max-content
 								> p
 									display: block
-									margin-left: 30px
+									margin-left: 25px
+									+bp550
+										margin-left: 20px
 									&:hover
 										.word
 											.char
@@ -4284,13 +4452,15 @@ body::-webkit-scrollbar
 										.char
 											display: inline-block
 											font-weight: 900
-											font-size: 50px
+											font-size: 40px
 											line-height: 1.0
 											font-family: $eurostile-extended
 											letter-spacing: -0.05em
 											color: #fff
 											user-select: none
 											transition: color 0.5s ease-in-out
+											+bp550
+												font-size: 36px
 						// .swiper-wrapper
 						// 	height: fit-content
 						// 	padding: 30px 0 40px
@@ -4325,17 +4495,21 @@ body::-webkit-scrollbar
 							align-items: center
 							width: max-content
 							height: fit-content
-							padding: 23px 0 28px
+							padding: 20px 0 25px
 							background: $base
 							will-change: transform
 							animation: telop 20.0s linear infinite
+							+bp550
+								padding: 17px 0 22px
 							.ticker-group
 								display: flex
 								flex: 0 0 auto
 								width: max-content
 								> p
 									display: block
-									margin-left: 30px
+									margin-left: 25px
+									+bp550
+										margin-left: 20px
 									&:hover
 										.word
 											.char
@@ -4344,13 +4518,15 @@ body::-webkit-scrollbar
 										.char
 											display: inline-block
 											font-weight: 900
-											font-size: 50px
+											font-size: 40px
 											line-height: 1.0
 											font-family: $eurostile-extended
 											letter-spacing: -0.05em
 											color: #fff
 											user-select: none
 											transition: color 0.5s ease-in-out
+											+bp550
+												font-size: 36px
 						// .swiper-wrapper
 						// 	height: fit-content
 						// 	padding: 30px 0 40px
@@ -4459,6 +4635,13 @@ body::-webkit-scrollbar
 	width: 100%
 	padding-top: 30vh
 	padding-bottom: 200px
+	+bp500
+		padding-top: 20vh
+	+bp450
+		padding-top: 25vh
+		padding-bottom: 180px
+	+bp400
+		padding-bottom: 160px
 	.content-box
 		display: block
 		width: 100%
@@ -4487,12 +4670,20 @@ body::-webkit-scrollbar
 				.char
 					display: inline-block
 					font-weight: 900
-					font-size: 100px
+					font-size: 90px
 					line-height: 1.0
 					font-family: $eurostile-extended
 					letter-spacing: 0.0em
 					color: transparent
 					position: relative
+					+bp550
+						font-size: 84px
+					+bp450
+						font-size: 74px
+					+bp420
+						font-size: 70px
+					+bp400
+						font-size: 66px
 					&::before, &::after
 						position: absolute
 						top: 0
@@ -4513,12 +4704,16 @@ body::-webkit-scrollbar
 						-webkit-text-fill-color: #aaa
 			.jp
 				display: block
-				margin-top: calc(0.01*100vw + 20px)
+				margin-top: 20px
+				+bp550
+					margin-top: 18px
+				+bp400
+					margin-top: 16px
 				.word
 					.char
 						display: inline-block
 						font-weight: 700
-						font-size: calc(0.01*100vw + 15px)
+						font-size: 20px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: -0.3em
@@ -4526,6 +4721,12 @@ body::-webkit-scrollbar
 						filter: blur(0.5em)
 						opacity: 0.0
 						transition: all 1.0s #{"calc(0.5s + abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.2s)"} ease-in-out
+						+bp550
+							font-size: 18px
+						+bp450
+							font-size: 17px
+						+bp400
+							font-size: 16px
 						&::selection
 							color: #555
 							-webkit-text-fill-color: #555
@@ -4543,11 +4744,20 @@ body::-webkit-scrollbar
 					display: flex
 					justify-content: flex-start
 					align-items: flex-start
-					width: 580px
+					width: 500px
 					padding: 0px 20px 15px 20px
-					margin-top: 20px
+					margin-top: 17px
 					border-bottom: solid 1px #ccc
 					position: relative
+					+bp550
+						width: 450px
+					+bp500
+						flex-direction: column
+						width: 340px
+						padding: 0px 30px 15px 30px
+					+bp380
+						width: 320px
+						padding: 0px 20px 15px 20px
 					&:nth-of-type(1)
 						margin-top: 0
 					&:hover
@@ -4557,25 +4767,37 @@ body::-webkit-scrollbar
 							clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)
 					> h3
 						display: block
-						width: 140px
+						width: 120px
 						font-weight: 700
-						font-size: 16px
+						font-size: 15px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						color: #999
+						+bp550
+							width: 110px
+							font-size: 14px
+						+bp500
+							width: 130px
+							letter-spacing: 0.2em
 						&::selection
 							color: #555
 					> p
 						display: block
 						margin-left: 40px
 						font-weight: 400
-						font-size: 16px
+						font-size: 15px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						white-space: nowrap
 						color: #999
+						+bp550
+							margin-left: 25px
+							font-size: 14px
+						+bp500
+							margin-left: 0
+							margin-top: 8px
 						&::selection
 							color: #555
 						.num
@@ -4583,11 +4805,13 @@ body::-webkit-scrollbar
 							margin-left: 0.25em
 							margin-right: 0.3em
 							font-weight: 400
-							font-size: 15px
+							font-size: 14px
 							line-height: 1.0
 							font-family: $noto-sans
 							letter-spacing: 0.05em
 							color: #999
+							+bp550
+								font-size: 13px
 							&::selection
 								color: #555
 					.streak-box
@@ -4627,13 +4851,19 @@ body::-webkit-scrollbar
 						display: block
 						margin-left: 40px
 						font-weight: 400
-						font-size: 16px
+						font-size: 15px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						white-space: nowrap
 						color: #999
 						transition: all 0.5s ease-in-out
+						+bp550
+							margin-left: 25px
+							font-size: 14px
+						+bp500
+							margin-left: 0
+							margin-top: 8px
 						&:hover
 							color: $base
 						&::selection
@@ -4643,13 +4873,19 @@ body::-webkit-scrollbar
 						display: block
 						margin-left: 40px
 						font-weight: 400
-						font-size: 16px
+						font-size: 15px
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						white-space: nowrap
 						color: #999
 						transition: all 0.5s ease-in-out
+						+bp550
+							margin-left: 25px
+							font-size: 14px
+						+bp500
+							margin-left: 0
+							margin-top: 8px
 						&:hover
 							color: $base
 						&::selection
@@ -4658,36 +4894,47 @@ body::-webkit-scrollbar
 						display: block
 						width: fit-content
 						margin-left: 40px
+						+bp550
+							margin-left: 25px
+						+bp500
+							margin-left: 0
+							margin-top: 8px
 						.post-code-box
 							display: block
 							font-weight: 400
-							font-size: 15px
+							font-size: 14px
 							line-height: 1.0
 							font-family: $noto-sans
 							letter-spacing: 0.1em
 							color: #999
+							+bp550
+								font-size: 13px
 							&::selection
 								color: #555
 							.mark
 								display: inline
 								margin-right: 0.15em
 								font-weight: 400
-								font-size: 16px
+								font-size: 15px
 								line-height: 1.0
 								font-family: $noto-sans
 								letter-spacing: 0.0em
 								color: #999
+								+bp550
+									font-size: 14px
 								&::selection
 									color: #555
 						.address
 							display: block
 							margin-top: 8px
 							font-weight: 400
-							font-size: 16px
+							font-size: 15px
 							line-height: 1.0
 							font-family: $noto-sans
 							letter-spacing: 0.1em
 							color: #999
+							+bp550
+								font-size: 14px
 							&::selection
 								color: #555
 			.right-box
@@ -4697,6 +4944,14 @@ body::-webkit-scrollbar
 				margin-top: 100px
 				object-fit: cover
 				object-position: bottom
+				+bp500
+					height: 240px
+				+bp420
+					height: 220px
+				+bp400
+					height: 210px
+				+bp380
+					height: 200px
 				.img
 					display: block
 					width: 100%

@@ -19,10 +19,6 @@ body::-webkit-scrollbar {
   background: #ddd;
 }
 
-#promise, #contact, #footer {
-  display: none !important;
-}
-
 #test {
   display: block;
   width: 100%;
@@ -4817,12 +4813,46 @@ body::-webkit-scrollbar {
   transform: translateY(-20vh);
   z-index: 100;
 }
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .content-box .left-box {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #result .container .sticky-box .content-box .left-box {
+    left: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .left-box {
+    top: 10vh;
+    bottom: initial;
+    transform: initial;
+  }
+}
 #result .container .sticky-box .content-box .left-box .info-box {
   display: block;
   padding: 55px 55px;
   border-radius: 20px;
   background: rgba(17, 17, 17, 0.6);
   animation: neonBoxShadow 5s linear infinite;
+}
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .content-box .left-box .info-box {
+    padding: 40px 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #result .container .sticky-box .content-box .left-box .info-box {
+    padding: 30px 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .left-box .info-box {
+    width: calc(100vw - 60px);
+    padding: 30px 40px;
+    border-radius: 15px;
+  }
 }
 #result .container .sticky-box .content-box .left-box .info-box .head {
   display: block;
@@ -4837,6 +4867,11 @@ body::-webkit-scrollbar {
   background-clip: text;
   text-fill-color: transparent;
 }
+@media screen and (max-width: 500px) {
+  #result .container .sticky-box .content-box .left-box .info-box .head {
+    font-size: 28px;
+  }
+}
 #result .container .sticky-box .content-box .left-box .info-box .head::selection {
   color: #555;
   -webkit-text-fill-color: #555;
@@ -4845,6 +4880,12 @@ body::-webkit-scrollbar {
   display: block;
   width: 320px;
   margin-top: 25px;
+}
+@media screen and (max-width: 500px) {
+  #result .container .sticky-box .content-box .left-box .info-box .desc-box {
+    width: 300px;
+    margin-top: 20px;
+  }
 }
 #result .container .sticky-box .content-box .left-box .info-box .desc-box > p {
   display: block;
@@ -4896,12 +4937,12 @@ body::-webkit-scrollbar {
   #result .container .sticky-box .content-box .left-box .link-box {
     width: 245px;
     padding: 15px 25px 15px 30px;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 @media screen and (max-width: 420px) {
   #result .container .sticky-box .content-box .left-box .link-box {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -4995,19 +5036,45 @@ body::-webkit-scrollbar {
 #result .container .sticky-box .content-box .fig-box {
   position: absolute;
   top: 30%;
-  right: calc(40vw - 280px);
+  right: calc(40vw - 190px);
   display: block;
   width: fit-content;
   height: fit-content;
   transform: translateY(-70px);
   z-index: 10;
 }
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .content-box .fig-box {
+    right: calc(40vw - 220px);
+  }
+}
+@media screen and (max-width: 500px) {
+  #result .container .sticky-box .content-box .fig-box {
+    right: calc(40vw - 190px);
+  }
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box {
+    top: 70vh;
+    left: 0;
+    right: 0;
+    bottom: 20vh;
+    margin: 0 auto;
+    transform: initial;
+  }
+}
 #result .container .sticky-box .content-box .fig-box .inner-box {
   display: block;
-  width: 275px;
+  width: 230px;
   position: relative;
   z-index: 20;
   transform: translateY(15vh) scale(0.7);
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box {
+    width: 160px;
+    transform: initial;
+  }
 }
 #result .container .sticky-box .content-box .fig-box .inner-box::before {
   position: absolute;
@@ -5021,6 +5088,16 @@ body::-webkit-scrollbar {
   box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(0, 0, 0, 0.6), 1px 1px 48px rgba(0, 0, 0, 0.3);
   z-index: 19;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box::before {
+    top: -10px;
+    left: -10px;
+    content: "";
+    display: block;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+  }
 }
 #result .container .sticky-box .content-box .fig-box .inner-box::before:hover {
   background: #bcb;
@@ -5045,6 +5122,13 @@ body::-webkit-scrollbar {
   transform: rotate(-5deg);
   z-index: 10;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .guitar-box {
+    top: -40px;
+    left: -100px;
+    width: 140px;
+  }
+}
 #result .container .sticky-box .content-box .fig-box .inner-box .guitar-box:hover::before {
   background: #bcb;
 }
@@ -5064,6 +5148,16 @@ body::-webkit-scrollbar {
   z-index: 9;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .guitar-box::before {
+    top: -10px;
+    left: -10px;
+    content: "";
+    display: block;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+  }
+}
 #result .container .sticky-box .content-box .fig-box .inner-box .guitar-box > .img {
   display: block;
   width: 100%;
@@ -5080,6 +5174,13 @@ body::-webkit-scrollbar {
   transform-origin: center;
   transform: rotate(10deg);
   z-index: 30;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .dresser-box {
+    top: -25%;
+    right: -110px;
+    width: 130px;
+  }
 }
 #result .container .sticky-box .content-box .fig-box .inner-box .dresser-box:hover::before {
   background: #bcb;
@@ -5100,6 +5201,16 @@ body::-webkit-scrollbar {
   z-index: 29;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .dresser-box::before {
+    top: -12.5px;
+    left: -12.5px;
+    content: "";
+    display: block;
+    width: calc(100% + 25px);
+    height: calc(100% + 25px);
+  }
+}
 #result .container .sticky-box .content-box .fig-box .inner-box .dresser-box > .img {
   display: block;
   width: 100%;
@@ -5109,13 +5220,28 @@ body::-webkit-scrollbar {
 }
 #result .container .sticky-box .content-box .fig-box .inner-box .gift-box {
   position: absolute;
-  left: -330px;
-  bottom: -450px;
+  left: -300px;
+  bottom: -540px;
   display: block;
   width: 280px;
   transform-origin: center;
   transform: rotate(-5deg);
   z-index: 10;
+}
+@media screen and (max-width: 500px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .gift-box {
+    left: -270px;
+    bottom: -460px;
+    width: 240px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .gift-box {
+    left: -100px;
+    bottom: -180px;
+    width: 190px;
+    transform: rotate(-2deg);
+  }
 }
 #result .container .sticky-box .content-box .fig-box .inner-box .gift-box:hover::before {
   background: #bcb;
@@ -5136,6 +5262,16 @@ body::-webkit-scrollbar {
   z-index: 9;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .gift-box::before {
+    top: -14px;
+    left: -14px;
+    content: "";
+    display: block;
+    width: calc(100% + 28px);
+    height: calc(100% + 28px);
+  }
+}
 #result .container .sticky-box .content-box .fig-box .inner-box .gift-box > .img {
   display: block;
   width: 100%;
@@ -5152,6 +5288,13 @@ body::-webkit-scrollbar {
   transform-origin: center;
   transform: rotate(5deg);
   z-index: 40;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .leather-shoes-box {
+    right: -65px;
+    bottom: -150px;
+    width: 150px;
+  }
 }
 #result .container .sticky-box .content-box .fig-box .inner-box .leather-shoes-box:hover::before {
   background: #bcb;
@@ -5171,6 +5314,16 @@ body::-webkit-scrollbar {
   box-shadow: 1px 1px 4px #000, 1px 1px 16px rgba(0, 0, 0, 0.6), 1px 1px 48px rgba(0, 0, 0, 0.3);
   z-index: 39;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .fig-box .inner-box .leather-shoes-box::before {
+    top: -12.5px;
+    left: -12.5px;
+    content: "";
+    display: block;
+    width: calc(100% + 25px);
+    height: calc(100% + 25px);
+  }
 }
 #result .container .sticky-box .content-box .fig-box .inner-box .leather-shoes-box > .img {
   display: block;
@@ -5203,12 +5356,23 @@ body::-webkit-scrollbar {
   width: fit-content;
   margin-top: 20px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker {
+    margin-top: 12px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box1 .ticker-track {
   animation: telop 18.3s linear infinite;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box1 .ticker-track .ticker-group > h3 {
   margin-left: 40px;
   font-size: 48px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box1 .ticker-track .ticker-group > h3 {
+    margin-left: 20px;
+    font-size: 24px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box2 .ticker-track {
   animation: telop 12.9s linear infinite;
@@ -5217,12 +5381,24 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 70px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box2 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 35px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box3 .ticker-track {
   animation: telop 17.7s linear infinite;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box3 .ticker-track .ticker-group > h3 {
   margin-left: 30px;
   font-size: 32px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box3 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 16px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box4 .ticker-track {
   animation: telop 19.7s linear infinite;
@@ -5231,12 +5407,24 @@ body::-webkit-scrollbar {
   margin-left: 20px;
   font-size: 26px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box4 .ticker-track .ticker-group > h3 {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box5 .ticker-track {
   animation: telop 15.5s linear infinite reverse;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box5 .ticker-track .ticker-group > h3 {
   margin-left: 30px;
   font-size: 48px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box5 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 24px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box6 .ticker-track {
   animation: telop 18s linear infinite;
@@ -5245,12 +5433,24 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 32px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box6 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box7 .ticker-track {
   animation: telop 20.9s linear infinite;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box7 .ticker-track .ticker-group > h3 {
   margin-left: 25px;
   font-size: 26px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box7 .ticker-track .ticker-group > h3 {
+    margin-left: 12.5px;
+    font-size: 13px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box8 .ticker-track {
   animation: telop 17.6s linear infinite;
@@ -5259,12 +5459,24 @@ body::-webkit-scrollbar {
   margin-left: 45px;
   font-size: 82px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box8 .ticker-track .ticker-group > h3 {
+    margin-left: 22.5px;
+    font-size: 41px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box9 .ticker-track {
   animation: telop 14.7s linear infinite reverse;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box9 .ticker-track .ticker-group > h3 {
   margin-left: 30px;
   font-size: 30px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box9 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 15px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box10 .ticker-track {
   animation: telop 18.6s linear infinite;
@@ -5273,12 +5485,24 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 32px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box10 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box11 .ticker-track {
   animation: telop 20.3s linear infinite;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box11 .ticker-track .ticker-group > h3 {
   margin-left: 30px;
   font-size: 30px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box11 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 15px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box12 .ticker-track {
   animation: telop 11s linear infinite;
@@ -5287,12 +5511,24 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 52px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box12 .ticker-track .ticker-group > h3 {
+    margin-left: 15px;
+    font-size: 26px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box13 .ticker-track {
   animation: telop 14.1s linear infinite reverse;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box13 .ticker-track .ticker-group > p {
   margin-left: 40px;
   font-size: 48px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box13 .ticker-track .ticker-group > p {
+    margin-left: 20px;
+    font-size: 24px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box14 .ticker-track {
   animation: telop 18.8s linear infinite reverse;
@@ -5301,12 +5537,24 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 70px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box14 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 35px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box15 .ticker-track {
   animation: telop 20.7s linear infinite;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box15 .ticker-track .ticker-group > p {
   margin-left: 30px;
   font-size: 32px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box15 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 16px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box16 .ticker-track {
   animation: telop 17.3s linear infinite reverse;
@@ -5315,12 +5563,24 @@ body::-webkit-scrollbar {
   margin-left: 20px;
   font-size: 26px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box16 .ticker-track .ticker-group > p {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box17 .ticker-track {
   animation: telop 11.7s linear infinite;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box17 .ticker-track .ticker-group > p {
   margin-left: 30px;
   font-size: 48px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box17 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 24px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box18 .ticker-track {
   animation: telop 19s linear infinite;
@@ -5329,12 +5589,24 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 32px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box18 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box19 .ticker-track {
   animation: telop 16.2s linear infinite reverse;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box19 .ticker-track .ticker-group > p {
   margin-left: 25px;
   font-size: 26px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box19 .ticker-track .ticker-group > p {
+    margin-left: 12.5px;
+    font-size: 13px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box20 .ticker-track {
   animation: telop 21s linear infinite;
@@ -5343,12 +5615,24 @@ body::-webkit-scrollbar {
   margin-left: 45px;
   font-size: 82px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box20 .ticker-track .ticker-group > p {
+    margin-left: 22.5px;
+    font-size: 41px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box21 .ticker-track {
   animation: telop 18.5s linear infinite reverse;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box21 .ticker-track .ticker-group > p {
   margin-left: 30px;
   font-size: 30px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box21 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 15px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box22 .ticker-track {
   animation: telop 13.4s linear infinite;
@@ -5357,6 +5641,12 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 32px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box22 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box23 .ticker-track {
   animation: telop 17.9s linear infinite;
 }
@@ -5364,12 +5654,24 @@ body::-webkit-scrollbar {
   margin-left: 30px;
   font-size: 30px;
 }
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box23 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+}
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box24 .ticker-track {
   animation: telop 20.6s linear infinite;
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box24 .ticker-track .ticker-group > p {
   margin-left: 30px;
   font-size: 52px;
+}
+@media screen and (max-width: 450px) {
+  #result .container .sticky-box .content-box .text-pattern-box .ticker.slider-box24 .ticker-track .ticker-group > p {
+    margin-left: 15px;
+    font-size: 26px;
+  }
 }
 #result .container .sticky-box .content-box .text-pattern-box .ticker .ticker-track {
   display: flex;
@@ -5429,10 +5731,15 @@ body::-webkit-scrollbar {
   align-items: center;
   width: max-content;
   height: fit-content;
-  padding: 23px 0 28px;
+  padding: 20px 0 25px;
   background: #00a000;
   will-change: transform;
   animation: telop 20s linear infinite reverse;
+}
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .cross-box .inner-box .cross-slider-box1 .ticker-track {
+    padding: 17px 0 22px;
+  }
 }
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box1 .ticker-track .ticker-group {
   display: flex;
@@ -5441,7 +5748,12 @@ body::-webkit-scrollbar {
 }
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box1 .ticker-track .ticker-group > p {
   display: block;
-  margin-left: 30px;
+  margin-left: 25px;
+}
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .cross-box .inner-box .cross-slider-box1 .ticker-track .ticker-group > p {
+    margin-left: 20px;
+  }
 }
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box1 .ticker-track .ticker-group > p:hover .word .char {
   animation: crossBounceDown 0.5s calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.05s) cubic-bezier(0.25, 1, 0.5, 1);
@@ -5449,13 +5761,18 @@ body::-webkit-scrollbar {
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box1 .ticker-track .ticker-group > p .word .char {
   display: inline-block;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: -0.05em;
   color: #fff;
   user-select: none;
   transition: color 0.5s ease-in-out;
+}
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .cross-box .inner-box .cross-slider-box1 .ticker-track .ticker-group > p .word .char {
+    font-size: 36px;
+  }
 }
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 {
   position: absolute;
@@ -5474,10 +5791,15 @@ body::-webkit-scrollbar {
   align-items: center;
   width: max-content;
   height: fit-content;
-  padding: 23px 0 28px;
+  padding: 20px 0 25px;
   background: #00a000;
   will-change: transform;
   animation: telop 20s linear infinite;
+}
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 .ticker-track {
+    padding: 17px 0 22px;
+  }
 }
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 .ticker-track .ticker-group {
   display: flex;
@@ -5486,7 +5808,12 @@ body::-webkit-scrollbar {
 }
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 .ticker-track .ticker-group > p {
   display: block;
-  margin-left: 30px;
+  margin-left: 25px;
+}
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 .ticker-track .ticker-group > p {
+    margin-left: 20px;
+  }
 }
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 .ticker-track .ticker-group > p:hover .word .char {
   animation: crossBounceDown 0.5s calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.05s) cubic-bezier(0.25, 1, 0.5, 1);
@@ -5494,13 +5821,18 @@ body::-webkit-scrollbar {
 #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 .ticker-track .ticker-group > p .word .char {
   display: inline-block;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: -0.05em;
   color: #fff;
   user-select: none;
   transition: color 0.5s ease-in-out;
+}
+@media screen and (max-width: 550px) {
+  #result .container .sticky-box .cross-box .inner-box .cross-slider-box2 .ticker-track .ticker-group > p .word .char {
+    font-size: 36px;
+  }
 }
 
 #result-scroll-space {
@@ -5600,6 +5932,22 @@ body::-webkit-scrollbar {
   padding-top: 30vh;
   padding-bottom: 200px;
 }
+@media screen and (max-width: 500px) {
+  #info {
+    padding-top: 20vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  #info {
+    padding-top: 25vh;
+    padding-bottom: 180px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #info {
+    padding-bottom: 160px;
+  }
+}
 #info .content-box {
   display: block;
   width: 100%;
@@ -5631,12 +5979,32 @@ body::-webkit-scrollbar {
 #info .content-box .tit-box .word .char {
   display: inline-block;
   font-weight: 900;
-  font-size: 100px;
+  font-size: 90px;
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: 0em;
   color: transparent;
   position: relative;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .tit-box .word .char {
+    font-size: 84px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #info .content-box .tit-box .word .char {
+    font-size: 74px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #info .content-box .tit-box .word .char {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #info .content-box .tit-box .word .char {
+    font-size: 66px;
+  }
 }
 #info .content-box .tit-box .word .char::before, #info .content-box .tit-box .word .char::after {
   position: absolute;
@@ -5662,12 +6030,22 @@ body::-webkit-scrollbar {
 }
 #info .content-box .tit-box .jp {
   display: block;
-  margin-top: calc(1vw + 20px);
+  margin-top: 20px;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .tit-box .jp {
+    margin-top: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #info .content-box .tit-box .jp {
+    margin-top: 16px;
+  }
 }
 #info .content-box .tit-box .jp .word .char {
   display: inline-block;
   font-weight: 700;
-  font-size: calc(1vw + 15px);
+  font-size: 20px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: -0.3em;
@@ -5675,6 +6053,21 @@ body::-webkit-scrollbar {
   filter: blur(0.5em);
   opacity: 0;
   transition: all 1s calc(0.5s + abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.2s) ease-in-out;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .tit-box .jp .word .char {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #info .content-box .tit-box .jp .word .char {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #info .content-box .tit-box .jp .word .char {
+    font-size: 16px;
+  }
 }
 #info .content-box .tit-box .jp .word .char::selection {
   color: #555;
@@ -5696,11 +6089,29 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 580px;
+  width: 500px;
   padding: 0px 20px 15px 20px;
-  margin-top: 20px;
+  margin-top: 17px;
   border-bottom: solid 1px #ccc;
   position: relative;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #info .content-box .detail-box .left-box .info-ele {
+    flex-direction: column;
+    width: 340px;
+    padding: 0px 30px 15px 30px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #info .content-box .detail-box .left-box .info-ele {
+    width: 320px;
+    padding: 0px 20px 15px 20px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele:nth-of-type(1) {
   margin-top: 0;
@@ -5714,13 +6125,25 @@ body::-webkit-scrollbar {
 }
 #info .content-box .detail-box .left-box .info-ele > h3 {
   display: block;
-  width: 140px;
+  width: 120px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   color: #999;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele > h3 {
+    width: 110px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #info .content-box .detail-box .left-box .info-ele > h3 {
+    width: 130px;
+    letter-spacing: 0.2em;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele > h3::selection {
   color: #555;
@@ -5729,12 +6152,24 @@ body::-webkit-scrollbar {
   display: block;
   margin-left: 40px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   white-space: nowrap;
   color: #999;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele > p {
+    margin-left: 25px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #info .content-box .detail-box .left-box .info-ele > p {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele > p::selection {
   color: #555;
@@ -5744,11 +6179,16 @@ body::-webkit-scrollbar {
   margin-left: 0.25em;
   margin-right: 0.3em;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;
   color: #999;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele > p .num {
+    font-size: 13px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele > p .num::selection {
   color: #555;
@@ -5794,13 +6234,25 @@ body::-webkit-scrollbar {
   display: block;
   margin-left: 40px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   white-space: nowrap;
   color: #999;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele .tel {
+    margin-left: 25px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #info .content-box .detail-box .left-box .info-ele .tel {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele .tel:hover {
   color: #00a000;
@@ -5812,13 +6264,25 @@ body::-webkit-scrollbar {
   display: block;
   margin-left: 40px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   white-space: nowrap;
   color: #999;
   transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele .mail {
+    margin-left: 25px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #info .content-box .detail-box .left-box .info-ele .mail {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele .mail:hover {
   color: #00a000;
@@ -5831,14 +6295,30 @@ body::-webkit-scrollbar {
   width: fit-content;
   margin-left: 40px;
 }
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele .address-box {
+    margin-left: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #info .content-box .detail-box .left-box .info-ele .address-box {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
 #info .content-box .detail-box .left-box .info-ele .address-box .post-code-box {
   display: block;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   color: #999;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele .address-box .post-code-box {
+    font-size: 13px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele .address-box .post-code-box::selection {
   color: #555;
@@ -5847,11 +6327,16 @@ body::-webkit-scrollbar {
   display: inline;
   margin-right: 0.15em;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0em;
   color: #999;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele .address-box .post-code-box .mark {
+    font-size: 14px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele .address-box .post-code-box .mark::selection {
   color: #555;
@@ -5860,11 +6345,16 @@ body::-webkit-scrollbar {
   display: block;
   margin-top: 8px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   color: #999;
+}
+@media screen and (max-width: 550px) {
+  #info .content-box .detail-box .left-box .info-ele .address-box .address {
+    font-size: 14px;
+  }
 }
 #info .content-box .detail-box .left-box .info-ele .address-box .address::selection {
   color: #555;
@@ -5876,6 +6366,26 @@ body::-webkit-scrollbar {
   margin-top: 100px;
   object-fit: cover;
   object-position: bottom;
+}
+@media screen and (max-width: 500px) {
+  #info .content-box .detail-box .right-box {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #info .content-box .detail-box .right-box {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #info .content-box .detail-box .right-box {
+    height: 210px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #info .content-box .detail-box .right-box {
+    height: 200px;
+  }
 }
 #info .content-box .detail-box .right-box .img {
   display: block;
