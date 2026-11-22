@@ -5027,6 +5027,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: calc(100vh + 200px);
   background: #232523;
+  overflow-x: clip;
 }
 #result .container .sticky-box .content-box {
   position: relative;
