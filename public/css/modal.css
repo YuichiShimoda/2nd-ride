@@ -492,7 +492,7 @@
     border-radius: 15px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box {
     border-radius: 10px;
   }
@@ -686,7 +686,7 @@
     border-radius: 15px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box {
     border-radius: 10px;
   }
