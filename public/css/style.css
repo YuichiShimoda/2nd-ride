@@ -3892,10 +3892,6 @@ body::-webkit-scrollbar {
   position: absolute;
   left: 60px;
   bottom: 50px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   width: calc(100% - 120px);
   opacity: 0;
   z-index: 22;
@@ -3924,7 +3920,7 @@ body::-webkit-scrollbar {
   }
 }
 #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li {
-  display: inline-block;
+  display: inline;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -3945,7 +3941,7 @@ body::-webkit-scrollbar {
 #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::selection {
   color: #555;
 }
-#category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::after {
+#category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li:not(:last-child)::after {
   content: "、";
   display: inline;
   font-weight: 400;
@@ -3954,9 +3950,6 @@ body::-webkit-scrollbar {
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
   color: #fff;
-}
-#category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li:last-of-type::after {
-  display: none;
 }
 #category .container .scroll-content-box .video-box .video-ele .inner-box .img-box {
   position: absolute;

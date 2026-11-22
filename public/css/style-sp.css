@@ -3884,17 +3884,13 @@ body::-webkit-scrollbar {
   position: absolute;
   left: 35px;
   bottom: 35px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   width: calc(100% - 70px);
   opacity: 0;
   z-index: 22;
   transition: all 0.5s 0.5s ease-in-out;
 }
 #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li {
-  display: inline-block;
+  display: inline;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
@@ -3920,7 +3916,7 @@ body::-webkit-scrollbar {
 #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::selection {
   color: #555;
 }
-#category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::after {
+#category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li:not(:last-child)::after {
   content: "、";
   display: inline;
   font-weight: 400;
@@ -3931,17 +3927,17 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 @media screen and (max-width: 600px) {
-  #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::after {
+  #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li:not(:last-child)::after {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 450px) {
-  #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::after {
+  #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li:not(:last-child)::after {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 420px) {
-  #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li::after {
+  #category .container .scroll-content-box .video-box .video-ele .inner-box .desc-box > li:not(:last-child)::after {
     font-size: 13px;
   }
 }
@@ -4012,10 +4008,20 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   width: calc(100% - 80px);
   max-height: 80vh;
-  padding: 40px 60px;
+  padding: 45px 60px 35px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5), 0px 2px 40px rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 420px) {
+  .category-modal .category-modal__content {
+    padding: 45px 45px 35px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .category-modal .category-modal__content {
+    padding: 45px 40px 35px;
+  }
 }
 .category-modal .category-modal__content .category-modal__close {
   position: absolute;
@@ -4039,14 +4045,10 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 .category-modal .category-modal__content .category-modal__body {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   width: 100%;
 }
 .category-modal .category-modal__content .category-modal__body li {
-  display: inline-block;
+  display: inline;
   font-weight: 400;
   font-size: 14px;
   line-height: 2;
@@ -4062,7 +4064,7 @@ body::-webkit-scrollbar {
 .category-modal .category-modal__content .category-modal__body li::selection {
   color: #555;
 }
-.category-modal .category-modal__content .category-modal__body li::after {
+.category-modal .category-modal__content .category-modal__body li:not(:last-child)::after {
   content: "、";
   display: inline;
   font-weight: 400;
@@ -4073,7 +4075,7 @@ body::-webkit-scrollbar {
   color: #ccc;
 }
 @media screen and (max-width: 420px) {
-  .category-modal .category-modal__content .category-modal__body li::after {
+  .category-modal .category-modal__content .category-modal__body li:not(:last-child)::after {
     font-size: 13px;
   }
 }
@@ -4895,10 +4897,20 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   width: calc(100% - 80px);
   max-height: 80vh;
-  padding: 40px 60px;
+  padding: 45px 60px 35px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5), 0px 2px 40px rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 420px) {
+  .project-modal .project-modal__content {
+    padding: 45px 45px 35px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .project-modal .project-modal__content {
+    padding: 45px 40px 35px;
+  }
 }
 .project-modal .project-modal__content .project-modal__close {
   position: absolute;
@@ -4922,10 +4934,6 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 .project-modal .project-modal__content .project-modal__body {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   width: 100%;
 }
 .project-modal .project-modal__content .project-modal__body p {

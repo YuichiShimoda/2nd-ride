@@ -2926,16 +2926,16 @@ body::-webkit-scrollbar
 							position: absolute
 							left: 35px
 							bottom: 35px
-							display: flex
-							justify-content: flex-start
-							align-items: center
-							flex-wrap: wrap
+							// display: flex
+							// justify-content: flex-start
+							// align-items: center
+							// flex-wrap: wrap
 							width: calc(100% - 70px)
 							opacity: 0.0
 							z-index: 22
 							transition: all 0.5s 0.5s ease-in-out
 							> li
-								display: inline-block
+								display: inline
 								font-weight: 400
 								font-size: 14px
 								line-height: 1.5
@@ -2950,7 +2950,7 @@ body::-webkit-scrollbar
 									font-size: 13px
 								&::selection
 									color: #555
-								&::after
+								&:not(:last-child)::after
 									content: "、"
 									display: inline
 									font-weight: 400
@@ -3021,10 +3021,14 @@ body::-webkit-scrollbar
 		transform: translate(-50%, -50%)
 		width: calc(100% - 80px)
 		max-height: 80vh
-		padding: 40px 60px
+		padding: 45px 60px 35px
 		background: rgba(#000, 0.3)
 		border-radius: 15px
 		box-shadow: 0px 2px 2px rgba(#fff, 0.5), 0px 2px 40px rgba(#fff, 0.2)
+		+bp420
+			padding: 45px 45px 35px
+		+bp400
+			padding: 45px 40px 35px
 		.category-modal__close
 			position: absolute
 			top: 5px
@@ -3045,13 +3049,13 @@ body::-webkit-scrollbar
 				letter-spacing: 0
 				color: #fff
 		.category-modal__body
-			display: flex
-			justify-content: flex-start
-			align-items: center
-			flex-wrap: wrap
+			// display: flex
+			// justify-content: flex-start
+			// align-items: center
+			// flex-wrap: wrap
 			width: 100%
 			li
-				display: inline-block
+				display: inline
 				font-weight: 400
 				font-size: 14px
 				line-height: 2.0
@@ -3062,7 +3066,7 @@ body::-webkit-scrollbar
 					font-size: 13px
 				&::selection
 					color: #555
-				&::after
+				&:not(:last-child)::after
 					content: "、"
 					display: inline
 					font-weight: 400
@@ -3651,10 +3655,14 @@ body::-webkit-scrollbar
 		transform: translate(-50%, -50%)
 		width: calc(100% - 80px)
 		max-height: 80vh
-		padding: 40px 60px
+		padding: 45px 60px 35px
 		background: rgba(#000, 0.3)
 		border-radius: 15px
 		box-shadow: 0px 2px 2px rgba(#fff, 0.5), 0px 2px 40px rgba(#fff, 0.2)
+		+bp420
+			padding: 45px 45px 35px
+		+bp400
+			padding: 45px 40px 35px
 		.project-modal__close
 			position: absolute
 			top: 5px
@@ -3675,10 +3683,10 @@ body::-webkit-scrollbar
 				letter-spacing: 0
 				color: #fff
 		.project-modal__body
-			display: flex
-			justify-content: flex-start
-			align-items: center
-			flex-wrap: wrap
+			// display: flex
+			// justify-content: flex-start
+			// align-items: center
+			// flex-wrap: wrap
 			width: 100%
 			p
 				display: block
