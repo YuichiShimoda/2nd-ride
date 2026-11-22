@@ -643,7 +643,7 @@ function resultCalc() {
 	const windowHeight = $(window).height() ?? 0;
 	if (windowWidth <= 450) {
 		const left3Height = $('#result .left-box').outerHeight() || 0;
-		$('#result .fig-box').css('top', (windowHeight * 0.13 + left3Height) + 'px');
+		$('#result .fig-box').css('top', (windowHeight * 0.17 + left3Height) + 'px');
 	} else {
 		const descBoxHeight = $('#service .right-box .step-ele:nth-of-type(2) .desc-box').outerHeight() || 0;
 		$('#result .fig-box').css({
