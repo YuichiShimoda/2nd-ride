@@ -457,18 +457,18 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 80px;
+    height: 70px;
     margin-top: 5px;
   }
 }
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 75px;
+    height: 65px;
   }
 }
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 70px;
+    height: 62px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -570,7 +570,7 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 11px;
     letter-spacing: 0.1em;
   }
@@ -578,11 +578,7 @@
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
     font-size: 10px;
-  }
-}
-@media screen and (max-width: 380px) {
-  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
-    margin-top: 8px;
+    margin-top: 6px;
   }
 }
 #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp::selection {
@@ -655,18 +651,18 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 80px;
+    height: 70px;
     margin-top: 5px;
   }
 }
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 75px;
+    height: 65px;
   }
 }
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 70px;
+    height: 62px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -768,7 +764,7 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 11px;
     letter-spacing: 0.1em;
   }
@@ -776,11 +772,7 @@
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
     font-size: 10px;
-  }
-}
-@media screen and (max-width: 380px) {
-  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
-    margin-top: 8px;
+    margin-top: 6px;
   }
 }
 #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp::selection {
