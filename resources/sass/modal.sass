@@ -216,6 +216,14 @@ $black-bg: #232523
 		transform: translate(-50%, -50%)
 		z-index: 99999
 		// overflow: hidden
+		+bp1000
+			width: 700px
+		+bp800
+			width: calc(100vw - 100px)
+		+bp450
+			width: calc(100vw - 60px)
+		+bp400
+			width: calc(100vw - 40px)
 		.inside-box
 			display: block
 			width: 100%
@@ -227,6 +235,14 @@ $black-bg: #232523
 				width: 100%
 				margin-top: 100px
 				position: relative
+				+bp550
+					margin-top: 60px
+				+bp500
+					margin-top: 40px
+				+bp450
+					margin-top: 35px
+				+bp400
+					margin-top: 25px
 				&:nth-of-type(1)
 					margin-top: 0
 				.txt
@@ -242,6 +258,24 @@ $black-bg: #232523
 					background-clip: text
 					text-fill-color: transparent
 					z-index: 30
+					+bp1000
+						font-size: 36px
+					+bp800
+						font-size: 32px
+					+bp700
+						font-size: 30px
+					+bp600
+						font-size: 28px
+					+bp550
+						font-size: 26px
+					+bp500
+						font-size: 24px
+					+bp450
+						font-size: 22px
+					+bp420
+						font-size: 20px
+					+bp400
+						font-size: 19px
 					&::selection
 						color: #aaa
 						-webkit-text-fill-color: #aaa
@@ -257,6 +291,10 @@ $black-bg: #232523
 					background: $black-bg
 					z-index: 20
 					transition: all 0.5s ease-in-out
+					+bp800
+						width: 50%
+					+bp700
+						width: 60%
 				.left-streak-box
 					position: absolute
 					top: 0
@@ -267,6 +305,10 @@ $black-bg: #232523
 					width: 360px
 					height: fit-content
 					z-index: 10
+					+bp800
+						width: 50%
+					+bp700
+						width: 40%
 					.line-box
 						display: block
 						width: 100%
@@ -300,6 +342,10 @@ $black-bg: #232523
 					width: 360px
 					height: fit-content
 					z-index: 10
+					+bp800
+						width: 50%
+					+bp700
+						width: 40%
 					.line-box
 						display: block
 						width: 100%
@@ -327,15 +373,44 @@ $black-bg: #232523
 				display: block
 				width: 100%
 				margin-top: 40px
+				+bp550
+					margin-top: 30px
+				+bp400
+					margin-top: 20px
 				> ul
 					display: flex
 					justify-content: space-between
 					align-items: center
 					width: 100%
+					+bp550
+						justify-content: flex-start
+						flex-direction: column
 					.global-nav-box
 						display: block
 						width: calc((100% - 80px)/3)
 						height: 160px
+						+bp800
+							width: calc((100% - 60px)/3)
+						+bp700
+							width: calc((100% - 40px)/3)
+							height: 140px
+						+bp600
+							height: 120px
+						+bp550
+							width: 100%
+							margin-top: 10px
+						+bp450
+							height: 110px
+						+bp420
+							height: 105px
+						+bp400
+							height: 90px
+							margin-top: 5px
+						+bp380
+							height: 85px
+						&:nth-of-type(1)
+							+bp550
+								margin-top: 0
 						.link-box
 							display: flex
 							justify-content: center
@@ -346,6 +421,10 @@ $black-bg: #232523
 							border-radius: 20px
 							background: rgba(#000, 0.3)
 							transition: all 0.5s ease-in-out
+							+bp550
+								border-radius: 15px
+							+bp400
+								border-radius: 10px
 							&:hover
 								box-shadow: 0px 2px 2px rgba(#fff, 0.5), 0px 2px 40px rgba(#fff, 0.2)
 								.en
@@ -364,6 +443,19 @@ $black-bg: #232523
 								background-clip: text
 								text-fill-color: transparent
 								transition: all 0.5s ease-in-out
+								+bp700
+									font-size: 18px
+									letter-spacing: 0.05em
+								+bp550
+									font-size: 20px
+									letter-spacing: 0.15em
+								+bp450
+									font-size: 18px
+									letter-spacing: 0.05em
+								+bp420
+									font-size: 17px
+								+bp400
+									font-size: 16px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -376,21 +468,68 @@ $black-bg: #232523
 								font-family: $noto-sans
 								letter-spacing: 0.2em
 								color: #ccc
+								+bp700
+									margin-top: 12px
+									font-size: 13px
+									letter-spacing: 0.1em
+								+bp550
+									font-size: 14px
+									letter-spacing: 0.2em
+								+bp450
+									margin-top: 12px
+									font-size: 13px
+									letter-spacing: 0.1em
+								+bp420
+									font-size: 12px
+								+bp400
+									margin-top: 10px
+									font-size: 11px
+								+bp380
+									margin-top: 8px
 								&::selection
 									color: #555
 			.bottom-nav-box
 				display: block
 				width: 100%
 				margin-top: 40px
+				+bp550
+					margin-top: 30px
+				+bp400
+					margin-top: 20px
 				> ul
 					display: flex
 					justify-content: space-between
 					align-items: center
 					width: 100%
+					+bp550
+						justify-content: flex-start
+						flex-direction: column
 					.global-nav-box
 						display: block
 						width: calc((100% - 40px)/2)
 						height: 160px
+						+bp800
+							width: calc((100% - 30px)/2)
+						+bp700
+							width: calc((100% - 24px)/2)
+						+bp600
+							height: 140px
+						+bp550
+							width: 100%
+							height: 120px
+							margin-top: 10px
+						+bp450
+							height: 110px
+						+bp420
+							height: 105px
+						+bp400
+							height: 90px
+							margin-top: 5px
+						+bp380
+							height: 85px
+						&:nth-of-type(1)
+							+bp550
+								margin-top: 0
 						.link-box
 							display: flex
 							justify-content: center
@@ -401,6 +540,10 @@ $black-bg: #232523
 							border-radius: 20px
 							background: rgba(#000, 0.3)
 							transition: all 0.5s ease-in-out
+							+bp550
+								border-radius: 15px
+							+bp400
+								border-radius: 10px
 							&:hover
 								box-shadow: 0px 2px 2px rgba(#fff, 0.5), 0px 2px 40px rgba(#fff, 0.2)
 								.en
@@ -419,6 +562,19 @@ $black-bg: #232523
 								background-clip: text
 								text-fill-color: transparent
 								transition: all 0.5s ease-in-out
+								+bp700
+									font-size: 18px
+									letter-spacing: 0.05em
+								+bp550
+									font-size: 20px
+									letter-spacing: 0.15em
+								+bp450
+									font-size: 18px
+									letter-spacing: 0.05em
+								+bp420
+									font-size: 17px
+								+bp400
+									font-size: 16px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -431,6 +587,24 @@ $black-bg: #232523
 								font-family: $noto-sans
 								letter-spacing: 0.2em
 								color: #ccc
+								+bp700
+									margin-top: 12px
+									font-size: 13px
+									letter-spacing: 0.1em
+								+bp550
+									font-size: 14px
+									letter-spacing: 0.2em
+								+bp450
+									margin-top: 12px
+									font-size: 13px
+									letter-spacing: 0.1em
+								+bp420
+									font-size: 12px
+								+bp400
+									margin-top: 10px
+									font-size: 11px
+								+bp380
+									margin-top: 8px
 								&::selection
 									color: #555
 			.close-box
@@ -444,6 +618,14 @@ $black-bg: #232523
 				border: solid 1px #fff
 				cursor: pointer
 				transition: all 1.0s ease-in-out
+				+bp550
+					width: 40px
+					margin: 40px auto 0
+				+bp450
+					margin: 30px auto 0
+				+bp400
+					width: 36px
+					margin: 20px auto 0
 				&:hover
 					border: solid 2px $base
 					background: rgba(#fff, 0.7)
@@ -454,6 +636,8 @@ $black-bg: #232523
 				.img
 					display: block
 					width: 10px
+					+bp550
+						width: 8px
 					path
 						fill: #ccc
 						transition: all 1.0s ease-in-out
