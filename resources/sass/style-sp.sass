@@ -3798,6 +3798,7 @@ body::-webkit-scrollbar
 						left: 30px
 					+bp450
 						top: 5vh
+						left: 20px
 						bottom: initial
 						transform: initial
 					.info-box
@@ -3811,8 +3812,8 @@ body::-webkit-scrollbar
 						+bp500
 							padding: 30px 30px
 						+bp450
-							width: calc(100vw - 60px)
-							padding: 30px 40px
+							width: calc(100vw - 40px)
+							padding: 30px 25px
 							border-radius: 15px
 						.head
 							display: block
@@ -3855,6 +3856,8 @@ body::-webkit-scrollbar
 								font-family: $noto-sans
 								letter-spacing: 0.1em
 								color: #fff
+								+bp450
+									letter-spacing: 0.02em
 								+bp400
 									font-size: 11px
 								&:nth-of-type(1)
