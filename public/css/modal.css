@@ -449,20 +449,26 @@
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
     height: 90px;
+    margin-top: 7px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
+    height: 80px;
     margin-top: 5px;
   }
 }
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 80px;
+    height: 75px;
   }
 }
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 75px;
+    height: 70px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -641,20 +647,26 @@
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
     height: 90px;
+    margin-top: 7px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
+    height: 80px;
     margin-top: 5px;
   }
 }
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 80px;
+    height: 75px;
   }
 }
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 75px;
+    height: 70px;
   }
 }
 @media screen and (max-width: 550px) {
