@@ -165,11 +165,13 @@
 @media screen and (max-width: 450px) {
   #modal .md-contents {
     width: calc(100vw - 60px);
+    padding: 20px 0;
   }
 }
 @media screen and (max-width: 400px) {
   #modal .md-contents {
     width: calc(100vw - 40px);
+    padding: 10px 0;
   }
 }
 #modal .md-contents .inside-box {
@@ -398,9 +400,14 @@
     margin-top: 30px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .top-nav-box {
     margin-top: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #modal .md-contents .inside-box .top-nav-box {
+    margin-top: 15px;
   }
 }
 #modal .md-contents .inside-box .top-nav-box > ul {
@@ -448,9 +455,14 @@
     margin-top: 5px;
   }
 }
+@media screen and (max-width: 400px) {
+  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
+    height: 80px;
+  }
+}
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 85px;
+    height: 75px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -520,7 +532,7 @@
 }
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .en {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .en::selection {
@@ -557,6 +569,11 @@
     letter-spacing: 0.1em;
   }
 }
+@media screen and (max-width: 400px) {
+  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
     margin-top: 8px;
@@ -575,9 +592,14 @@
     margin-top: 30px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .bottom-nav-box {
     margin-top: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #modal .md-contents .inside-box .bottom-nav-box {
+    margin-top: 15px;
   }
 }
 #modal .md-contents .inside-box .bottom-nav-box > ul {
@@ -625,9 +647,14 @@
     margin-top: 5px;
   }
 }
+@media screen and (max-width: 400px) {
+  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
+    height: 80px;
+  }
+}
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 85px;
+    height: 75px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -697,7 +724,7 @@
 }
 @media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .en {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .en::selection {
@@ -734,6 +761,11 @@
     letter-spacing: 0.1em;
   }
 }
+@media screen and (max-width: 400px) {
+  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 380px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
     margin-top: 8px;
@@ -764,6 +796,18 @@
   #modal .md-contents .inside-box .close-box {
     width: 36px;
     margin: 20px auto 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  #modal .md-contents .inside-box .close-box {
+    width: 34px;
+    margin: 15px auto 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  #modal .md-contents .inside-box .close-box {
+    width: 32px;
+    margin: 12px auto 0;
   }
 }
 #modal .md-contents .inside-box .close-box:hover {

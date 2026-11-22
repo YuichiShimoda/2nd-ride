@@ -222,8 +222,10 @@ $black-bg: #232523
 			width: calc(100vw - 100px)
 		+bp450
 			width: calc(100vw - 60px)
+			padding: 20px 0
 		+bp400
 			width: calc(100vw - 40px)
+			padding: 10px 0
 		.inside-box
 			display: block
 			width: 100%
@@ -375,8 +377,10 @@ $black-bg: #232523
 				margin-top: 40px
 				+bp550
 					margin-top: 30px
-				+bp400
+				+bp450
 					margin-top: 20px
+				+bp400
+					margin-top: 15px
 				> ul
 					display: flex
 					justify-content: space-between
@@ -402,8 +406,10 @@ $black-bg: #232523
 						+bp450
 							height: 90px
 							margin-top: 5px
+						+bp400
+							height: 80px
 						+bp380
-							height: 85px
+							height: 75px
 						&:nth-of-type(1)
 							+bp550
 								margin-top: 0
@@ -449,7 +455,7 @@ $black-bg: #232523
 									font-size: 17px
 									letter-spacing: 0.05em
 								+bp400
-									font-size: 16px
+									font-size: 15px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -473,6 +479,8 @@ $black-bg: #232523
 									margin-top: 10px
 									font-size: 11px
 									letter-spacing: 0.1em
+								+bp400
+									font-size: 10px
 								+bp380
 									margin-top: 8px
 								&::selection
@@ -483,8 +491,10 @@ $black-bg: #232523
 				margin-top: 40px
 				+bp550
 					margin-top: 30px
-				+bp400
+				+bp450
 					margin-top: 20px
+				+bp400
+					margin-top: 15px
 				> ul
 					display: flex
 					justify-content: space-between
@@ -510,8 +520,10 @@ $black-bg: #232523
 						+bp450
 							height: 90px
 							margin-top: 5px
+						+bp400
+							height: 80px
 						+bp380
-							height: 85px
+							height: 75px
 						&:nth-of-type(1)
 							+bp550
 								margin-top: 0
@@ -557,7 +569,7 @@ $black-bg: #232523
 									font-size: 17px
 									letter-spacing: 0.05em
 								+bp400
-									font-size: 16px
+									font-size: 15px
 								&::selection
 									color: #555
 									-webkit-text-fill-color: #555
@@ -581,6 +593,8 @@ $black-bg: #232523
 									margin-top: 10px
 									font-size: 11px
 									letter-spacing: 0.1em
+								+bp400
+									font-size: 10px
 								+bp380
 									margin-top: 8px
 								&::selection
@@ -602,6 +616,12 @@ $black-bg: #232523
 				+bp450
 					width: 36px
 					margin: 20px auto 0
+				+bp400
+					width: 34px
+					margin: 15px auto 0
+				+bp380
+					width: 32px
+					margin: 12px auto 0
 				&:hover
 					border: solid 2px $base
 					background: rgba(#fff, 0.7)
