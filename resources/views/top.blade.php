@@ -410,18 +410,22 @@
 							</div>
 							<h2 class="cat-tit">家電</h2>
 							<ul class="desc-box">
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
-								<li>家電です</li>
+								<li>エアコン</li>
+								<li>洗濯機</li>
+								<li>テレビ</li>
+								<li>冷蔵庫</li>
+								<li>電子レンジ</li>
+								<li>炊飯器</li>
+								<li>掃除機</li>
+								<li>空気清浄機</li>
+								<li>扇風機</li>
+								<li>ガスストーブ</li>
+								<li>ミシン</li>
+								<li>ドライヤー</li>
+								<li>パソコン</li>
+								<li>スマートフォン</li>
+								<li>タブレット</li>
+								<li>ガラケー</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -440,18 +444,17 @@
 							</div>
 							<h2 class="cat-tit">カメラ</h2>
 							<ul class="desc-box">
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
-								<li>カメラが入ります</li>
+								<li>デジタルカメラ</li>
+								<li>ミラーレスカメラ</li>
+								<li>フィルムカメラ</li>
+								<li>コンパクトデジタルカメラ</li>
+								<li>交換レンズ</li>
+								<li>双眼鏡</li>
+								<li>望遠鏡</li>
+								<li>三脚</li>
+								<li>ジンバル</li>
+								<li>マイク</li>
+								<li>ファインダー</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -470,17 +473,17 @@
 							</div>
 							<h2 class="cat-tit">時計</h2>
 							<ul class="desc-box">
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
-								<li>時計のテキストです</li>
+								<li>ブランド腕時計</li>
+								<li>機械式腕時計</li>
+								<li>スマートウォッチ</li>
+								<li>ダイバーズウォッチ</li>
+								<li>クロノグラフ</li>
+								<li>ロレックス</li>
+								<li>カルティエ</li>
+								<li>オメガ</li>
+								<li>パネライ</li>
+								<li>セイコ</li>
+								<li>シチズン</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -499,18 +502,16 @@
 							</div>
 							<h2 class="cat-tit">骨董品</h2>
 							<ul class="desc-box">
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
-								<li>骨董品</li>
+								<li>茶道具</li>
+								<li>掛軸</li>
+								<li>日本画</li>
+								<li>洋画</li>
+								<li>陶磁器</li>
+								<li>古美術品</li>
+								<li>仏像</li>
+								<li>彫刻</li>
+								<li>古銭・古紙幣</li>
+								<li>アンティーク家具</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
@@ -529,12 +530,20 @@
 							</div>
 							<h2 class="cat-tit">ホビー</h2>
 							<ul class="desc-box">
-								<li>ホビー情報を入れさせていただきます</li>
-								<li>ホビー情報を入れさせていただきます</li>
-								<li>ホビー情報を入れさせていただきます</li>
-								<li>ホビー情報を入れさせていただきます</li>
-								<li>ホビー情報を入れさせていただきます</li>
-								<li>ホビー情報を入れさせていただきます</li>
+								<li>ゲーム機・ゲームソフト</li>
+								<li>フィギュア</li>
+								<li>プラモデル</li>
+								<li>トレーディングカード</li>
+								<li>レトロ玩具・おもちゃ</li>
+								<li>人形・ぬいぐるみ</li>
+								<li>模型・ラジコン</li>
+								<li>アニメ・キャラクターグッズ</li>
+								<li>アイドル・芸能人グッズ</li>
+								<li>映画・海外ドラマグッズ</li>
+								<li>音楽関連コレクション</li>
+								<li>スポーツ用品</li>
+								<li>キャンプ用品</li>
+								<li>DIY用品</li>
 							</ul>
 							<svg class="arrow" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
 								<path d="M61.1913 0V61H59.1913V2H0.23822V0H61.1913Z" fill="white"/>
