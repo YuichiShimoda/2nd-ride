@@ -444,16 +444,6 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 110px;
-  }
-}
-@media screen and (max-width: 420px) {
-  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
-    height: 105px;
-  }
-}
-@media screen and (max-width: 400px) {
-  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box {
     height: 90px;
     margin-top: 5px;
   }
@@ -524,13 +514,8 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .en {
-    font-size: 18px;
-    letter-spacing: 0.05em;
-  }
-}
-@media screen and (max-width: 420px) {
-  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .en {
     font-size: 17px;
+    letter-spacing: 0.05em;
   }
 }
 @media screen and (max-width: 400px) {
@@ -567,20 +552,9 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
-    margin-top: 12px;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-  }
-}
-@media screen and (max-width: 420px) {
-  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 400px) {
-  #modal .md-contents .inside-box .top-nav-box > ul .global-nav-box .link-box .jp {
     margin-top: 10px;
     font-size: 11px;
+    letter-spacing: 0.1em;
   }
 }
 @media screen and (max-width: 380px) {
@@ -646,16 +620,6 @@
   }
 }
 @media screen and (max-width: 450px) {
-  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 110px;
-  }
-}
-@media screen and (max-width: 420px) {
-  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
-    height: 105px;
-  }
-}
-@media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box {
     height: 90px;
     margin-top: 5px;
@@ -727,13 +691,8 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .en {
-    font-size: 18px;
-    letter-spacing: 0.05em;
-  }
-}
-@media screen and (max-width: 420px) {
-  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .en {
     font-size: 17px;
+    letter-spacing: 0.05em;
   }
 }
 @media screen and (max-width: 400px) {
@@ -770,20 +729,9 @@
 }
 @media screen and (max-width: 450px) {
   #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
-    margin-top: 12px;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-  }
-}
-@media screen and (max-width: 420px) {
-  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 400px) {
-  #modal .md-contents .inside-box .bottom-nav-box > ul .global-nav-box .link-box .jp {
     margin-top: 10px;
     font-size: 11px;
+    letter-spacing: 0.1em;
   }
 }
 @media screen and (max-width: 380px) {
@@ -813,11 +761,6 @@
   }
 }
 @media screen and (max-width: 450px) {
-  #modal .md-contents .inside-box .close-box {
-    margin: 30px auto 0;
-  }
-}
-@media screen and (max-width: 400px) {
   #modal .md-contents .inside-box .close-box {
     width: 36px;
     margin: 20px auto 0;
