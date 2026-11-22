@@ -5279,11 +5279,19 @@ body::-webkit-scrollbar
 							display: block
 							margin-top: 15px
 							font-weight: 400
-							font-size: 14px
+							font-size: 16px
 							line-height: 1.0
 							font-family: $noto-sans
 							letter-spacing: 0.3em
 							color: #111
+							+bp550
+								font-size: 15px
+							+bp450
+								font-size: 14px
+							+bp400
+								font-size: 13px
+							+bp380
+								letter-spacing: 0.15em
 							&:nth-of-type(1)
 								margin-top: 0
 						.top-tit-box
@@ -5297,6 +5305,10 @@ body::-webkit-scrollbar
 							align-items: center
 							flex-direction: column
 							width: fit-content
+							+bp450
+								transform: translate(-50%, calc(-100% - 40px))
+							+bp400
+								transform: translate(-50%, calc(-100% - 30px))
 							h2
 								display: block
 								.word
@@ -5309,6 +5321,16 @@ body::-webkit-scrollbar
 										font-family: $ah-hakushu-rs
 										letter-spacing: 0.25em
 										color: #555
+										+bp550
+											font-size: 38px
+										+bp450
+											font-size: 32px
+										+bp420
+											font-size: 30px
+										+bp400
+											font-size: 28px
+										+bp380
+											font-size: 26px
 										&:nth-of-type(1)
 											margin-right: 0.25em
 											font-weight: 400
@@ -5316,6 +5338,16 @@ body::-webkit-scrollbar
 											line-height: 1.0
 											font-family: $amiri-quran
 											letter-spacing: 0.0em
+											+bp550
+												font-size: 46px
+											+bp450
+												font-size: 42px
+											+bp420
+												font-size: 40px
+											+bp400
+												font-size: 38px
+											+bp380
+												font-size: 36px
 										&:nth-of-type(4)
 											letter-spacing: 0.0em
 							.streak-box
@@ -5323,6 +5355,8 @@ body::-webkit-scrollbar
 								width: fit-content
 								margin-top: 25px
 								position: relative
+								+bp450
+									margin-top: 20px
 								.base
 									display: block
 									width: 150px
@@ -5330,6 +5364,8 @@ body::-webkit-scrollbar
 									background: linear-gradient(to right, rgba($base, 0), $base, rgba($base, 0))
 									box-shadow: 0px 0px 1px $base
 									filter: blur(2px)
+									+bp450
+										width: 130px
 								.highlight
 									position: absolute
 									top: 0
@@ -5342,6 +5378,8 @@ body::-webkit-scrollbar
 									background: linear-gradient(to right, rgba(#fff, 0), #fff, rgba(#fff, 0))
 									filter: blur(1px)
 									z-index: 5
+									+bp450
+										width: 110px
 						.logo-box
 							position: absolute
 							left: 50%
@@ -5354,15 +5392,23 @@ body::-webkit-scrollbar
 							flex-direction: column
 							width: fit-content
 							height: fit-content
+							+bp450
+								transform: translate(-50%, calc(100% + 50px))
+							+bp400
+								transform: translate(-50%, calc(100% + 40px))
 							.logo
 								display: block
-								width: 80px
+								width: 100px
+								+bp550
+									width: 90px
+								+bp450
+									width: 80px
 				.fig1-box
 					position: absolute
 					top: 0
-					left: -100px
+					left: -15vw
 					display: block
-					width: 320px
+					width: 47vw
 					z-index: 1
 					perspective: 200px
 					perspective-origin: right bottom
@@ -5377,10 +5423,12 @@ body::-webkit-scrollbar
 					right: 0
 					margin: auto
 					display: block
-					width: 190px
+					width: 28vw
 					z-index: 1
 					perspective: 200px
 					perspective-origin: center bottom
+					+bp450
+						top: 14vh
 					.img
 						display: block
 						width: 100%
@@ -5388,25 +5436,29 @@ body::-webkit-scrollbar
 				.fig3-box
 					position: absolute
 					top: 120px
-					right: -50px
+					right: -7vw
 					display: block
-					width: 250px
+					width: 35vw
 					z-index: 1
 					perspective: 200px
 					perspective-origin: left bottom
+					+bp450
+						top: 17vh
 					.img
 						display: block
 						width: 100%
 						will-change: transform, opacity
 				.fig4-box
 					position: absolute
-					left: -100px
+					left: -15vw
 					bottom: 90px
 					display: block
-					width: 300px
+					width: 40vw
 					z-index: 1
 					perspective: 200px
 					perspective-origin: right top
+					+bp450
+						bottom: 9vh
 					.img
 						display: block
 						width: 100%
@@ -5418,7 +5470,7 @@ body::-webkit-scrollbar
 					bottom: 0
 					margin: auto
 					display: block
-					width: 225px
+					width: 30vw
 					transform: translate(3%)
 					z-index: 1
 					perspective: 200px
@@ -5429,13 +5481,16 @@ body::-webkit-scrollbar
 						will-change: transform, opacity
 				.fig6-box
 					position: absolute
-					right: -100px
+					right: -12vw
 					bottom: 150px
 					display: block
-					width: 300px
+					width: 40vw
 					z-index: 1
 					perspective: 200px
 					perspective-origin: left top
+					+bp450
+						bottom: 16vh
+						width: 45vw
 					.img
 						display: block
 						width: 100%

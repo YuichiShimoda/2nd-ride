@@ -6808,11 +6808,31 @@ body::-webkit-scrollbar {
   display: block;
   margin-top: 15px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.3em;
   color: #111;
+}
+@media screen and (max-width: 550px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .txt {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .txt {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .txt {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .txt {
+    letter-spacing: 0.15em;
+  }
 }
 #promise .container .sticky-box .content-box .txt-box .sentence-box .txt:nth-of-type(1) {
   margin-top: 0;
@@ -6829,6 +6849,16 @@ body::-webkit-scrollbar {
   flex-direction: column;
   width: fit-content;
 }
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box {
+    transform: translate(-50%, calc(-100% - 40px));
+  }
+}
+@media screen and (max-width: 400px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box {
+    transform: translate(-50%, calc(-100% - 30px));
+  }
+}
 #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 {
   display: block;
 }
@@ -6844,6 +6874,31 @@ body::-webkit-scrollbar {
   letter-spacing: 0.25em;
   color: #555;
 }
+@media screen and (max-width: 550px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char {
+    font-size: 26px;
+  }
+}
 #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char:nth-of-type(1) {
   margin-right: 0.25em;
   font-weight: 400;
@@ -6851,6 +6906,31 @@ body::-webkit-scrollbar {
   line-height: 1;
   font-family: "amiri-quran", sans-serif;
   letter-spacing: 0em;
+}
+@media screen and (max-width: 550px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char:nth-of-type(1) {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char:nth-of-type(1) {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char:nth-of-type(1) {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char:nth-of-type(1) {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char:nth-of-type(1) {
+    font-size: 36px;
+  }
 }
 #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box h2 .word .char:nth-of-type(4) {
   letter-spacing: 0em;
@@ -6861,6 +6941,11 @@ body::-webkit-scrollbar {
   margin-top: 25px;
   position: relative;
 }
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box .streak-box {
+    margin-top: 20px;
+  }
+}
 #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box .streak-box .base {
   display: block;
   width: 150px;
@@ -6868,6 +6953,11 @@ body::-webkit-scrollbar {
   background: linear-gradient(to right, rgba(0, 160, 0, 0), #00a000, rgba(0, 160, 0, 0));
   box-shadow: 0px 0px 1px #00a000;
   filter: blur(2px);
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box .streak-box .base {
+    width: 130px;
+  }
 }
 #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box .streak-box .highlight {
   position: absolute;
@@ -6882,6 +6972,11 @@ body::-webkit-scrollbar {
   filter: blur(1px);
   z-index: 5;
 }
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .top-tit-box .streak-box .highlight {
+    width: 110px;
+  }
+}
 #promise .container .sticky-box .content-box .txt-box .sentence-box .logo-box {
   position: absolute;
   left: 50%;
@@ -6895,16 +6990,36 @@ body::-webkit-scrollbar {
   width: fit-content;
   height: fit-content;
 }
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .logo-box {
+    transform: translate(-50%, calc(100% + 50px));
+  }
+}
+@media screen and (max-width: 400px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .logo-box {
+    transform: translate(-50%, calc(100% + 40px));
+  }
+}
 #promise .container .sticky-box .content-box .txt-box .sentence-box .logo-box .logo {
   display: block;
-  width: 80px;
+  width: 100px;
+}
+@media screen and (max-width: 550px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .logo-box .logo {
+    width: 90px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .txt-box .sentence-box .logo-box .logo {
+    width: 80px;
+  }
 }
 #promise .container .sticky-box .content-box .fig1-box {
   position: absolute;
   top: 0;
-  left: -100px;
+  left: -15vw;
   display: block;
-  width: 320px;
+  width: 47vw;
   z-index: 1;
   perspective: 200px;
   perspective-origin: right bottom;
@@ -6921,10 +7036,15 @@ body::-webkit-scrollbar {
   right: 0;
   margin: auto;
   display: block;
-  width: 190px;
+  width: 28vw;
   z-index: 1;
   perspective: 200px;
   perspective-origin: center bottom;
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .fig2-box {
+    top: 14vh;
+  }
 }
 #promise .container .sticky-box .content-box .fig2-box .img {
   display: block;
@@ -6934,12 +7054,17 @@ body::-webkit-scrollbar {
 #promise .container .sticky-box .content-box .fig3-box {
   position: absolute;
   top: 120px;
-  right: -50px;
+  right: -7vw;
   display: block;
-  width: 250px;
+  width: 35vw;
   z-index: 1;
   perspective: 200px;
   perspective-origin: left bottom;
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .fig3-box {
+    top: 17vh;
+  }
 }
 #promise .container .sticky-box .content-box .fig3-box .img {
   display: block;
@@ -6948,13 +7073,18 @@ body::-webkit-scrollbar {
 }
 #promise .container .sticky-box .content-box .fig4-box {
   position: absolute;
-  left: -100px;
+  left: -15vw;
   bottom: 90px;
   display: block;
-  width: 300px;
+  width: 40vw;
   z-index: 1;
   perspective: 200px;
   perspective-origin: right top;
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .fig4-box {
+    bottom: 9vh;
+  }
 }
 #promise .container .sticky-box .content-box .fig4-box .img {
   display: block;
@@ -6968,7 +7098,7 @@ body::-webkit-scrollbar {
   bottom: 0;
   margin: auto;
   display: block;
-  width: 225px;
+  width: 30vw;
   transform: translate(3%);
   z-index: 1;
   perspective: 200px;
@@ -6981,13 +7111,19 @@ body::-webkit-scrollbar {
 }
 #promise .container .sticky-box .content-box .fig6-box {
   position: absolute;
-  right: -100px;
+  right: -12vw;
   bottom: 150px;
   display: block;
-  width: 300px;
+  width: 40vw;
   z-index: 1;
   perspective: 200px;
   perspective-origin: left top;
+}
+@media screen and (max-width: 450px) {
+  #promise .container .sticky-box .content-box .fig6-box {
+    bottom: 16vh;
+    width: 45vw;
+  }
 }
 #promise .container .sticky-box .content-box .fig6-box .img {
   display: block;
