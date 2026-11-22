@@ -4613,6 +4613,11 @@ body::-webkit-scrollbar {
   user-select: none;
   cursor: ew-resize;
 }
+@media screen and (max-width: 450px) {
+  #marugoto .content-box .project-box .project-ele .inner-box {
+    touch-action: pan-y;
+  }
+}
 #marugoto .content-box .project-box .project-ele .inner-box:hover .cat-tit-box {
   opacity: 0.6;
 }

@@ -569,7 +569,26 @@ $('.hover-slider-container').on('mousemove', function(e) {
 	$container.find('.image-before').css('width', percentage + '%');
 	$container.find('.slider-line-box').css('left', percentage + '%');
 });
+if (window.matchMedia('(max-width: 450px)').matches) {
+	$('.hover-slider-container').on('touchstart touchmove', function(e) {
+		var $container = $(this);
+		var originalEvent = e.originalEvent as TouchEvent | undefined;
+		if (!originalEvent || !originalEvent.touches.length) return;
 
+		var touch = originalEvent.touches[0];
+		var containerLeft = $container.offset()?.left ?? 0;
+		var containerWidth = $container.width() ?? 0;
+		if (containerWidth === 0) return;
+
+		var touchX = touch.pageX - containerLeft;
+		var percentage = (touchX / containerWidth) * 100;
+		percentage = Math.max(0, Math.min(100, percentage));
+
+		$container.find('.image-before').css('width', percentage + '%');
+		$container.find('.slider-line-box').css('left', percentage + '%');
+	});
+
+}
 
 
 
