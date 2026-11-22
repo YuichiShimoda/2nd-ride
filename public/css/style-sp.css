@@ -5019,6 +5019,7 @@ body::-webkit-scrollbar {
   display: block;
   width: 100%;
   height: 100%;
+  overflow-x: clip;
 }
 #result .container .sticky-box {
   position: sticky;
