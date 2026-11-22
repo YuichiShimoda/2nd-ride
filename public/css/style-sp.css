@@ -5994,7 +5994,22 @@ body::-webkit-scrollbar {
 }
 @media screen and (max-width: 450px) {
   #result .container .sticky-box .cross-box {
-    aspect-ratio: 1920/calc(-100vw + 1140px);
+    aspect-ratio: 1920/740;
+  }
+}
+@media screen and (max-width: 420px) {
+  #result .container .sticky-box .cross-box {
+    aspect-ratio: 1920/775;
+  }
+}
+@media screen and (max-width: 400px) {
+  #result .container .sticky-box .cross-box {
+    aspect-ratio: 1920/780;
+  }
+}
+@media screen and (max-width: 380px) {
+  #result .container .sticky-box .cross-box {
+    aspect-ratio: 1920/800;
   }
 }
 #result .container .sticky-box .cross-box .inner-box {

@@ -4613,7 +4613,13 @@ body::-webkit-scrollbar
 				z-index: 100
 				transition: all 0.5s 1.5s ease-in-out
 				+bp450
-					aspect-ratio: 1920 / calc(-1*100vw + 1140px)
+					aspect-ratio: 1920 / 740
+				+bp420
+					aspect-ratio: 1920 / 775
+				+bp400
+					aspect-ratio: 1920 / 780
+				+bp380
+					aspect-ratio: 1920 / 800
 				.inner-box
 					display: block
 					width: 100%
