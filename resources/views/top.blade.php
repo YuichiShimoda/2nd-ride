@@ -1784,7 +1784,7 @@
         'resources/js/defense.ts',
         'resources/js/hamburger-menu.ts',
 		'resources/js/smooth-scroll.ts',
-		'resources/js/mouse.js',
+		'resources/js/mouse.ts',
         'resources/js/top.ts',
     ])
 @stop
