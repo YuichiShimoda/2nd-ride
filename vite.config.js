@@ -15,7 +15,7 @@ export default defineConfig({
                 'resources/js/defense.ts',
                 'resources/js/hamburger-menu.ts',
                 'resources/js/smooth-scroll.ts',
-                'resources/js/mouse.js',
+                'resources/js/mouse.ts',
                 'resources/js/top.ts',
                 'resources/js/result.js',
                 'resources/js/faq.js',

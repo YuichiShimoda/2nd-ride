@@ -275,6 +275,7 @@ body::-webkit-scrollbar
 								font-size: 34px
 							+bp450
 								font-size: 30px
+								animation: enBounceDownSP 5.0s #{"calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.08s)"} cubic-bezier(0.25, 1, 0.5, 1) infinite
 							+bp400
 								font-size: 28px
 				.jp
@@ -375,6 +376,7 @@ body::-webkit-scrollbar
 								font-size: 34px
 							+bp450
 								font-size: 30px
+								animation: enBounceDownSP 5.0s #{"calc(abs(var(--char-index) - (var(--char-total) - 1) / 2) * 0.08s + 2.5s)"} cubic-bezier(0.25, 1, 0.5, 1) infinite
 							+bp400
 								font-size: 28px
 				.jp
@@ -425,6 +427,25 @@ body::-webkit-scrollbar
 		animation-timing-function: ease-in-out
 	100%
 		transform: translateY(0)
+@keyframes enBounceDownSP
+	0%, 75%, 100%
+		color: #333
+		transform: translateY(0)
+
+	80%
+		color: $base
+		transform: translateY(0.5em)
+		animation-timing-function: ease-out
+
+	92%
+		color: $base
+		transform: translateY(-0.1em)
+		animation-timing-function: ease-in-out
+
+	96%
+		color: $base
+		transform: translateY(0.03em)
+		animation-timing-function: ease-in-out
 
 
 

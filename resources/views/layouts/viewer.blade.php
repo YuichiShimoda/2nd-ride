@@ -60,14 +60,15 @@
             <!-- End Google Tag Manager (noscript) -->
 
 
-<!--             <div id="cursor" class="cursor-box">
+            <div id="cursor" class="cursor-box">
                 <div class="inside">
                     <div class="circle">
-                        <img class="gold lazyload" data-src="{{ asset('image/lp/mouse.webp') }}" alt="円">
+                        <!-- <img class="gold lazyload" data-src="{{ asset('image/lp/mouse.webp') }}" alt="円"> -->
+                        <div class="center-circle"></div>
                     </div>
                 </div>
             </div>
-            <canvas id="c"></canvas> -->
+            <!-- <canvas id="c"></canvas> -->
 
 
 
