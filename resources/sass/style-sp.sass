@@ -1004,7 +1004,7 @@ body::-webkit-scrollbar
 						+bp400
 							transform: translateX(75px) rotateZ(-90deg)
 						.ticker-track
-							animation: telop 12.0s linear infinite
+							animation: telopLeft 12.0s linear infinite
 					&.slider-box2
 						right: 0
 						bottom: 0
@@ -1023,7 +1023,7 @@ body::-webkit-scrollbar
 						+bp400
 							transform: translateX(-75px) rotateZ(90deg)
 						.ticker-track
-							animation: telop 12.0s -4.0s linear infinite
+							animation: telopRight 12.0s linear infinite
 					.ticker-track
 						display: flex
 						justify-content: flex-start
@@ -1080,11 +1080,16 @@ body::-webkit-scrollbar
 		opacity: 1.0
 	100%
 		opacity: 0.1
-@keyframes telop
+@keyframes telopLeft
 	0%
 		transform: translateX(0)
 	100%
 		transform: translateX(-50%)
+@keyframes telopRight
+	0%
+		transform: translateX(50%)
+	100%
+		transform: translateX(0)
 #belief-scroll-space
 	display: block
 	width: 100%

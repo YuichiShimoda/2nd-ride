@@ -1235,7 +1235,7 @@ body::-webkit-scrollbar {
   }
 }
 #belief .container .sticky-box .content-box .ticker.slider-box1 .ticker-track {
-  animation: telop 12s linear infinite;
+  animation: telopLeft 12s linear infinite;
 }
 #belief .container .sticky-box .content-box .ticker.slider-box2 {
   right: 0;
@@ -1274,7 +1274,7 @@ body::-webkit-scrollbar {
   }
 }
 #belief .container .sticky-box .content-box .ticker.slider-box2 .ticker-track {
-  animation: telop 12s -4s linear infinite;
+  animation: telopRight 12s linear infinite;
 }
 #belief .container .sticky-box .content-box .ticker .ticker-track {
   display: flex;
@@ -1360,12 +1360,20 @@ body::-webkit-scrollbar {
     opacity: 0.1;
   }
 }
-@keyframes telop {
+@keyframes telopLeft {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+@keyframes telopRight {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 #belief-scroll-space {
