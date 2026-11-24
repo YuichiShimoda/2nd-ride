@@ -1,15 +1,80 @@
-$shippori: 'Shippori Mincho', serif//700
+$base: #00a000
+$black-color: #006000
+$white-light: #E5E5E5
+$white-dark: #D0D0D0
+$black-bg: #232523
 
 
 
 
 
 
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1150
+	@media screen and (max-width: 1150px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
 @mixin bp1000
 	@media screen and (max-width: 1000px)
 		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
 @mixin bp450
 	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
 		@content
 
 
@@ -19,15 +84,54 @@ $shippori: 'Shippori Mincho', serif//700
 
 
 #loader-bg
+	&.is-animating
+		.logo-box
+			display: block
+			animation: loding-logo 1.0s 1.5s ease-in forwards
+			.logo
+				overflow: initial
+				.swoosh-box
+					transform-origin: center
+					animation: swoosh-impact 0.35s 1.0s ease-out both
+					.green-swoosh
+						transform-origin: 50% 50%
+						animation: swoosh-in 1.1s cubic-bezier(.16,1,.3,1) both
+					.gray-top
+						animation: gray-top-in 0.65s 0.45s cubic-bezier(.16,1,.3,1) both
+					.gray-bottom
+						animation: gray-bottom-in 0.75s 0.5s cubic-bezier(.16,1,.3,1) both
+				.letter-box
+					path
+						opacity: 0
+						animation: slideDash 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards
+						&:nth-of-type(1)
+							animation-delay: 0.25s
+						&:nth-of-type(2)
+							animation-delay: 0.32s
+						&:nth-of-type(3)
+							animation-delay: 0.39s
+						&:nth-of-type(4)
+							animation-delay: 0.46s
+						&:nth-of-type(5)
+							animation-delay: 0.53s
+						&:nth-of-type(7)
+							animation-delay: 0.6s
+						&:nth-of-type(8)
+							animation-delay: 0.67s
+						&.l-i-dot
+							transform-origin: 319px 47px
+							opacity: 0.0
+							animation: dotBounce 0.5s 0.78s cubic-bezier(0.34, 1.56, 0.64, 1) forwards
 	&.is-show
-		> .border:before
-			animation: border-draw 0.7s 0.2s linear forwards
-		> .logo
-			animation: show-logo 1.0s 0.5s linear forwards
-		> .overlay-top
-			animation: loading-overlay 0.4s 2.2s linear forwards
-		> .overlay-bottom
-			animation: loading-overlay 0.4s 2.2s linear forwards
+		.light-effect
+			&::before
+				animation: light-pulse 2.0s ease-in-out forwards
+			&::after
+				animation: ray-pulse 2.0s ease-in-out forwards
+		.overlay-top
+			animation: loading-overlay 0.3s 4.2s linear forwards
+		.overlay-bottom
+			animation: loading-overlay 0.3s 4.2s linear forwards
 	position: fixed
 	top: 0
 	left: 0
@@ -36,88 +140,138 @@ $shippori: 'Shippori Mincho', serif//700
 	margin: auto
 	width: 100vw
 	height: 100vh
-	background-color: rgba(#B92928, 1.0)
+	background-color: rgba(#222, 1.0)
 	z-index: 3000
-	> .border
-		position: fixed
-		top: 50%
-		right: 0
-		width: 100vw
-		z-index: 1
-	> .border:before
-		content: ''
-		position: absolute
-		left: 100%
-		top: 0
-		width: 0
-		transform: translateX(-100%)
-		border-top: solid 1px #fff
-	> .logo
+	.logo-box
 		position: fixed
 		top: 50%
 		left: 50%
-		transform: translate(-50%, calc(-50% - 70px))
-		display: block
+		transform: translate(-50%, calc(-50% - 0px))
+		display: none
 		width: 300px
-		opacity: 0
-		z-index: 1
-		+bp1000
+		z-index: 10
+		+bp1400
+			width: 270px
+		+bp1200
 			width: 240px
-			transform: translate(-50%, calc(-50% - 55px))
-		+bp450
+		+bp1100
+			width: 220px
+		+bp950
 			width: 200px
-			transform: translate(-50%, calc(-50% - 45px))
+		+bp800
+			width: 190px
+		+bp750
+			width: 180px
+		+bp700
+			width: 240px
+		+bp550
+			width: 200px
+		+bp450
+			width: 180px
+		+bp400
+			width: 160px
+		.logo
+			display: block
+			width: 100%
+			transition: all 0.5s ease-in-out
+	.light-effect
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		display: block
+		width: 150px
+		aspect-ratio: 3 / 2
+		pointer-events: none
+		&::before
+			position: absolute
+			content: ""
+			display: block
+			background: radial-gradient(ellipse, rgba(#fff, 1) 0%, rgba($base, 0.9) 8%, rgba($black-color, 0.4) 40%, transparent 70%)
+			filter: blur(8px)
+			inset: 0
+			transform: scale(0.0)
+			opacity: 0.0
+			z-index: 5
+		&::after
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			content: ""
+			display: block
+			background: linear-gradient(to bottom, transparent, rgba($base, 0.8), rgba(#fff, 1.0), rgba($base, 0.8), transparent)
+			box-shadow: 0 0 20px 5px rgba($black-color, 0.8)
+			opacity: 0.0
+			z-index: 4
 	> .overlay-top
 		position: fixed
-		top: 0%
-		left: 0
+		top: 0
+		right: 0
 		width: 100vw
-		height: 50vh
+		height: 100vh
 		background-color: #fff
-		transform-origin: bottom center
+		clip-path: polygon(0 0, 100% 0, 100% 100%)
+		transform-origin: top right
 		transform: scaleY(0.0)
 		z-index: 2
 	> .overlay-bottom
 		position: fixed
-		top: 50%
 		left: 0
+		bottom: 0
 		width: 100vw
-		height: 50vh
+		height: 100vh
 		background-color: #fff
-		transform-origin: top center
+		clip-path: polygon(0 0, 100% 100%, 0 100%)
+		transform-origin: bottom left
 		transform: scaleY(0.0)
 		z-index: 2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes border-draw
+@keyframes loding-logo
 	0%
-		width: 0%
-	100%
-		width: 100%
-@keyframes show-logo
-	0%
-		opacity: 0.0
-	100%
 		opacity: 1.0
+	100%
+		opacity: 0.0
+@keyframes light-pulse
+	0%
+		transform: scale(0.0)
+		opacity: 0.0
+	10%
+		transform: scale(0.85)
+		opacity: 0.7
+	40%
+		transform: scaleX(1.3, 1.3)
+		opacity: 1.0
+	70%
+		transform: scale(1.5, 0.5)
+		opacity: 0.7
+	90%
+		transform: scale(2.0, 0.0)
+		opacity: 0.0
+	95%
+		transform: scale(0.0, 0.0)
+		opacity: 0.0
+@keyframes ray-pulse
+	0%
+		width: 0
+		height: 0
+		transform: translate(-50%, -50%) scaleY(0.7)
+		opacity: 0.5
+	30%
+		transform: translate(-50%, -50%) scaleY(1.2)
+		opacity: 1.0
+	60%
+		width: 100vw
+		height: 4px
+		transform: translate(-50%, -50%) scaleY(0.7)
+		opacity: 0.5
+	100%
+		height: 0
+		opacity: 0.0
 @keyframes loading-overlay
 	0%
-		transform: scaleY(0.0)
+		transform: scale(0.0)
 	100%
-		transform: scaleY(1.0)
+		transform: scale(1.0)
 
 
 

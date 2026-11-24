@@ -17,8 +17,15 @@ const resizeObserver = new ResizeObserver(() => {
 resizeObserver.observe(document.body);
 
 $(window).on('load', function() {
-	ScrollTrigger.refresh();
-	Splitting();
+	$('#loader-bg').addClass("is-show");
+	setTimeout(function() {
+		$('#loader-bg').addClass("is-animating");
+	}, 1700);
+	setTimeout(function() {
+		$('#loader-bg').fadeOut(500);
+		ScrollTrigger.refresh();
+		Splitting();
+	}, 4500);
 });
 
 
