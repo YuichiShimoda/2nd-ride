@@ -70,7 +70,7 @@
   margin: auto;
   width: 100vw;
   height: 100vh;
-  background-color: #222222;
+  background-color: #111111;
   z-index: 3000;
 }
 #loader-bg .logo-box {
