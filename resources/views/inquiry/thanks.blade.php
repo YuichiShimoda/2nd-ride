@@ -25,29 +25,21 @@
 
 
 @section('content')
-	<section id="title">
-		<div class="content-box">
-			<h1>ご質問・ご相談 - 完了</h1>
-		</div>
-		<p class="en">INQUIRY</p>
-	</section>
-
-
-
-
-
-
-
-
-
-	<section id="test">
-		<h1>お問い合わせ（ご相談）が完了しました</h1>
-
-		<p>ご相談いただき、誠にありがとうございました。</p>
-		<p>ご入力いただいたメールアドレス宛に、自動確認メールを送信いたしましたのでご確認ください。</p>
-
-		<div style="margin-top: 30px;">
-			<a href="{{ route('top') }}">トップページへ戻る</a>
+	<section id="fv">
+		<div class="complete-box">
+			<div class="inside-box">
+				<p class="en">INQUIRY</p>
+				<h1 class="tit">ご質問・ご相談</h1>
+				<div class="desc-box">
+					<p>ご相談いただき、誠にありがとうございました。</p>
+					<p>ご入力いただいたメールアドレス宛に、自動確認メールを送信いたしましたのでご確認ください。</p>
+				</div>
+				<a class="top-link" href="{{ route('top') }}">
+					<p>トップページへ戻る</p>
+				</a>
+			</div>
+			<img class="left-shage lazyload" data-src="{{ asset('/image/inquiry/left-shape.svg') }}" alt="シェイプ">
+			<img class="right-shage lazyload" data-src="{{ asset('/image/inquiry/right-shape.svg') }}" alt="シェイプ">
 		</div>
 	</section>
 @stop
@@ -58,6 +50,10 @@
 
 @section('js')
 	@vite([
-		'resources/js/inquiry.js',
+		'resources/js/defense.ts',
+		'resources/js/hamburger-menu.ts',
+		'resources/js/smooth-scroll.ts',
+		'resources/js/mouse.ts',
+		'resources/js/inquiry.ts',
 	])
 @stop

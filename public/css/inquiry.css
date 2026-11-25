@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   overflow-x: hidden;
   scrollbar-width: none;
@@ -26,91 +27,160 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-#title {
+::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #ccc;
+  opacity: 1;
+}
+
+#fv {
   display: block;
   width: 100%;
-  padding: 240px 0 120px;
-  background: linear-gradient(180deg, #00a000 0%, #00a000 50%, rgba(0, 160, 0, 0.8) 100%);
+  height: fit-content;
+  min-height: 100vh;
+  padding: 280px 0 160px;
   position: relative;
+  overflow: hidden;
 }
-#title .content-box {
-  display: block;
-  width: 1200px;
-  margin: 0 auto;
+@media screen and (max-width: 1500px) {
+  #fv {
+    padding: 220px 0 160px;
+  }
 }
-@media screen and (max-width: 1400px) {
-  #title .content-box {
-    width: 1000px;
-    padding: 0 0 80px;
-    margin: 200px auto 0;
+@media screen and (max-width: 1300px) {
+  #fv {
+    padding: 200px 0 140px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv {
+    padding: 180px 0 140px;
   }
 }
 @media screen and (max-width: 1100px) {
-  #title .content-box {
-    width: calc(100vw - 100px);
+  #fv {
+    padding: 160px 0 120px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv {
+    padding: 140px 0 100px;
   }
 }
 @media screen and (max-width: 700px) {
-  #title .content-box {
-    margin: 160px auto 0;
-    padding: 0 0 60px;
+  #fv {
+    padding: 110px 0 90px;
   }
 }
 @media screen and (max-width: 500px) {
-  #title .content-box {
-    width: calc(100vw - 60px);
-    padding: 0 0 40px;
+  #fv {
+    padding: 90px 0 70px;
   }
 }
-@media screen and (max-width: 450px) {
-  #title .content-box {
-    width: calc(100vw - 30px);
-    padding: 0 0 30px;
-    margin: 150px auto 0;
-  }
+#fv .content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1200px;
+  margin: 0 auto;
 }
-#title .content-box h1 {
-  display: block;
-  width: 100%;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 1;
-  font-family: "Noto Sans JP", sans-serif;
-  letter-spacing: 0.15em;
-  color: #fff;
+@media screen and (max-width: 1500px) {
+  #fv .content-box {
+    width: 1000px;
+  }
 }
 @media screen and (max-width: 1400px) {
-  #title .content-box h1 {
-    font-size: 34px;
+  #fv .content-box {
+    width: 940px;
   }
 }
-@media screen and (max-width: 900px) {
-  #title .content-box h1 {
-    font-size: 32px;
+@media screen and (max-width: 1300px) {
+  #fv .content-box {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: calc(100vw - 450px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .content-box {
+    width: calc(100vw - 350px);
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box {
+    width: calc(100vw - 300px);
+  }
+}
+@media screen and (max-width: 750px) {
+  #fv .content-box {
+    width: calc(100vw - 270px);
   }
 }
 @media screen and (max-width: 700px) {
-  #title .content-box h1 {
-    font-size: 28px;
+  #fv .content-box {
+    width: calc(100vw - 230px);
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .content-box {
+    width: calc(100vw - 190px);
   }
 }
 @media screen and (max-width: 500px) {
-  #title .content-box h1 {
-    font-size: 24px;
+  #fv .content-box {
+    width: calc(100vw - 60px);
   }
 }
-@media screen and (max-width: 450px) {
-  #title .content-box h1 {
-    font-size: 22px;
+#fv .content-box .left-box {
+  display: block;
+  width: fit-content;
+  max-width: 520px;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .left-box {
+    max-width: 360px;
   }
 }
-#title .en {
-  position: absolute;
-  right: 10vw;
-  bottom: 15px;
+@media screen and (max-width: 1400px) {
+  #fv .content-box .left-box {
+    max-width: 330px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #fv .content-box .left-box {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box .left-box {
+    width: 100%;
+    max-width: initial;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .left-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+#fv .content-box .left-box .en {
   display: block;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 84px;
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: 0.05em;
@@ -120,21 +190,856 @@ body::-webkit-scrollbar {
   background-clip: text;
   text-fill-color: transparent;
 }
-
-#test {
+@media screen and (max-width: 1500px) {
+  #fv .content-box .left-box .en {
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #fv .content-box .left-box .en {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #fv .content-box .left-box .en {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box .left-box .en {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .content-box .left-box .en {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .content-box .left-box .en {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #fv .content-box .left-box .en {
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box .left-box .en {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #fv .content-box .left-box .en {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #fv .content-box .left-box .en {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .content-box .left-box .en {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #fv .content-box .left-box .en {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .left-box .en {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .content-box .left-box .en {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #fv .content-box .left-box .en {
+    font-size: 32px;
+  }
+}
+#fv .content-box .left-box .en::selection {
+  color: #555;
+}
+#fv .content-box .left-box .tit {
+  display: block;
+  width: fit-content;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1;
+  font-family: "eurostile-extended", sans-serif;
+  letter-spacing: 0.25em;
+  color: #00a000;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .left-box .tit {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box .left-box .tit {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .content-box .left-box .tit {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #fv .content-box .left-box .tit {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box .left-box .tit {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .content-box .left-box .tit {
+    margin-top: 17px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #fv .content-box .left-box .tit {
+    margin-top: 17px;
+    font-size: 15px;
+  }
+}
+#fv .content-box .left-box .desc-box {
+  display: block;
+  width: fit-content;
+  margin-top: 60px;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .left-box .desc-box {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #fv .content-box .left-box .desc-box {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .content-box .left-box .desc-box {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .left-box .desc-box {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .left-box .desc-box {
+    width: calc(100vw - 200px);
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .content-box .left-box .desc-box {
+    width: calc(100vw - 140px);
+  }
+}
+@media screen and (max-width: 400px) {
+  #fv .content-box .left-box .desc-box {
+    width: calc(100vw - 120px);
+  }
+}
+#fv .content-box .left-box .desc-box > p {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 1400px) {
+  #fv .content-box .left-box .desc-box > p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box .left-box .desc-box > p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .content-box .left-box .desc-box > p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .left-box .desc-box > p {
+    font-size: 12px;
+  }
+}
+#fv .content-box .form-input-box {
+  display: block;
+  width: 600px;
+  margin-top: 20px;
+  z-index: 10;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .form-input-box {
+    width: 550px;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box .form-input-box {
+    width: 100%;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #fv .content-box .form-input-box {
+    margin-top: 65px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .content-box .form-input-box {
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box .form-input-box {
+    margin-top: 45px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .form-input-box {
+    margin-top: 30px;
+  }
+}
+#fv .content-box .form-input-box .form-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 60px 60px 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0.5px #006000, 0px 0px 4px rgba(0, 96, 0, 0.4), 0px 0px 15px rgba(0, 96, 0, 0.2);
+  position: relative;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .form-input-box .form-inner {
+    padding: 60px 50px 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box .form-input-box .form-inner {
+    padding: 45px 40px 45px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner {
+    padding: 30px 30px 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .content-box .form-input-box .form-inner {
+    padding: 30px 25px 30px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .section-box {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box:nth-of-type(1) {
+  margin-top: 0;
+}
+#fv .content-box .form-input-box .form-inner .ele-box > label {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1em;
+  color: #555;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .ele-box > label {
+    font-size: 13px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .ele-box > label.required {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.8em;
+}
+#fv .content-box .form-input-box .form-inner .ele-box > label.required::after {
+  position: absolute;
+  top: 0;
+  right: -0.1em;
+  content: "*";
+  display: block;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1;
+  color: #ec5555;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .radio-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .radio-box .radio-ele {
+  display: block;
+  margin: 7px 10px 0 0;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .radio-box .radio-ele:last-of-type {
+  margin-right: 0;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .radio-box .radio-ele input[type=radio] {
+  display: none;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .radio-box .radio-ele input[type=radio]:checked + label {
+  border: 1px solid #00a000;
+  background-color: #00a000;
+  color: #fff;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .radio-box .radio-ele label {
+  display: block;
+  padding: 8px 12px;
+  margin: 0;
+  border: 1px solid #A8B2BC;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .radio-box .radio-ele label {
+    font-size: 13px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .ele-box .two-row-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .two-row-box .input-box.second {
+  margin-left: 15px;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .two-row-box .input-box.second {
+    margin-left: 13px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .ele-box .two-row-box .input-box input {
+  width: 140px;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .two-row-box .input-box input {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .two-row-box .input-box input {
+    width: 110px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .two-row-box .input-box input {
+    width: 100px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .ele-box .tel-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .tel-box .hyphen {
+  display: block;
+  margin: 0 0.5em -0.7em;
+  font-weight: 4⃣00;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1em;
+  color: #777;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .tel-box .hyphen {
+    font-size: 11px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .ele-box .tel-box input[type=tel] {
+  width: 45px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .input-box {
+  display: block;
+  width: fit-content;
+  height: 36px;
+  padding: 3px 10px;
+  margin-top: 7px;
+  background: none;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  box-shadow: 0 1px 2px #999;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .input-box > input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .input-box > input {
+    font-size: 13px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .ele-box .input-box > input[name=company] {
+  width: 240px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .input-box > input[name=department] {
+  width: 100px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .input-box > input[name=role] {
+  width: 100px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .input-box > input[type=email] {
+  width: 240px;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .textarea-box {
+  display: block;
+  height: fit-content;
+  padding: 10px 10px;
+  margin-top: 7px;
+  background: none;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  box-shadow: 0 1px 2px #999;
+}
+#fv .content-box .form-input-box .form-inner .ele-box .textarea-box > textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  resize: vertical;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .ele-box .textarea-box > textarea {
+    font-size: 13px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .ele-box .error-msg {
+  display: block;
+  margin-left: 0.2em;
+  margin-top: 0.7em;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #ec5555;
+}
+#fv .content-box .form-input-box .form-inner .btn-box {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .btn-box {
+    margin-top: 20px;
+  }
+}
+#fv .content-box .form-input-box .form-inner .btn-box button {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 5px;
+  background: #006000;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-input-box .form-inner .btn-box button {
+    font-size: 13px;
+  }
+}
+#fv .content-box .form-confirm-box {
+  display: block;
+  width: 600px;
+  margin-top: 20px;
+  z-index: 10;
+}
+#fv .content-box .form-confirm-box .check-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 60px 60px 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0.5px #006000, 0px 0px 4px rgba(0, 96, 0, 0.4), 0px 0px 15px rgba(0, 96, 0, 0.2);
+  position: relative;
+}
+#fv .content-box .form-confirm-box .check-inner .ele-box {
+  display: block;
+  width: 100%;
+  padding: 0 20px 10px;
+  margin-top: 25px;
+  border-bottom: solid 0.5px #ddd;
+}
+#fv .content-box .form-confirm-box .check-inner .ele-box:nth-of-type(1) {
+  margin-top: 0;
+}
+#fv .content-box .form-confirm-box .check-inner .ele-box .list {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1em;
+  color: #00a000;
+}
+#fv .content-box .form-confirm-box .check-inner .ele-box .detail {
+  display: block;
+  width: 100%;
+  margin-top: 0.25em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#fv .content-box .form-confirm-box .check-inner .ele-box .detail.textarea {
+  margin-top: 1em;
+}
+#fv .content-box .form-confirm-box .check-inner .btn-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  margin-top: 40px;
+}
+#fv .content-box .form-confirm-box .check-inner .btn-box button {
+  display: block;
+  width: 150px;
+  height: fit-content;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.15em;
+}
+#fv .content-box .form-confirm-box .check-inner .btn-box button.prev {
+  background: #ddd;
+  color: #333;
+}
+#fv .content-box .form-confirm-box .check-inner .btn-box button.next {
+  margin-left: 15px;
+  background: #006000;
+  color: #fff;
+}
+#fv .content-box .left-shage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20vw;
+  z-index: 1;
+  pointer-events: none;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .left-shage {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #fv .content-box .left-shage {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .content-box .left-shage {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .left-shage {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .left-shage {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .content-box .left-shage {
+    width: 165px;
+  }
+}
+#fv .content-box .right-shage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 35vw;
+  z-index: 1;
+  pointer-events: none;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .right-shage {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #fv .content-box .right-shage {
+    width: 520px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #fv .content-box .right-shage {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .content-box .right-shage {
+    width: 470px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .right-shage {
+    display: none;
+  }
+}
+#fv .content-box .right-shage-sp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 335px;
+  z-index: 1;
+  pointer-events: none;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .right-shage-sp {
+    display: block;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .right-shage-sp {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .content-box .right-shage-sp {
+    width: 250px;
+  }
+}
+#fv .complete-box {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+#fv .complete-box .inside-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  z-index: 10;
+}
+#fv .complete-box .inside-box .en {
+  display: block;
+  font-weight: 900;
+  font-size: 84px;
+  line-height: 1;
+  font-family: "eurostile-extended", sans-serif;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, white 0%, #cccccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+@media screen and (max-width: 1500px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 30px;
+  }
+}
+#fv .complete-box .inside-box .en::selection {
+  color: #555;
+}
+#fv .complete-box .inside-box .tit {
+  display: block;
+  width: fit-content;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1;
+  font-family: "eurostile-extended", sans-serif;
+  letter-spacing: 0.25em;
+  color: #00a000;
+}
+@media screen and (max-width: 1500px) {
+  #fv .complete-box .inside-box .tit {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .complete-box .inside-box .tit {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #fv .complete-box .inside-box .tit {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #fv .complete-box .inside-box .tit {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #fv .complete-box .inside-box .tit {
+    margin-top: 17px;
+    font-size: 15px;
+  }
+}
+#fv .complete-box .inside-box .desc-box {
+  display: block;
+  width: fit-content;
+  margin-top: 60px;
+}
+#fv .complete-box .inside-box .desc-box > p {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #555;
+}
+#fv .complete-box .inside-box .top-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 50vh;
-  margin: 160px auto 0;
+  width: 150px;
+  height: fit-content;
+  padding: 15px 20px;
+  margin-top: 80px;
+  border: 0;
+  border-radius: 5px;
+  background: #006000;
 }
-#test p {
+#fv .complete-box .inside-box .top-link > p {
   display: block;
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.15em;
-  color: #555;
+  color: #fff;
+}
+#fv .complete-box .left-shage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20vw;
+  z-index: 1;
+  pointer-events: none;
+}
+#fv .complete-box .right-shage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 35vw;
+  z-index: 1;
+  pointer-events: none;
 }

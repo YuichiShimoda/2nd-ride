@@ -61,11 +61,44 @@ class ContactController extends Controller
 
 	public function inquiryConfirm(Request $request)
 	{
-		$validated = $request->validate([
-			'name'  => 'required|string|max:255',
-			'email' => 'required|email|max:255',
-			'body'  => 'required|string',
-		]);
+	    $needsCompany = in_array($request->input('inquiry_type'), [
+	        '業務委託について',
+	        '業務提携・協業について',
+	    ], true);
+
+	    $validated = $request->validate([
+	        'inquiry_type' => 'required|in:サービスについて,業務委託について,業務提携・協業について,その他のご相談',
+	        'company' => [$needsCompany ? 'required' : 'nullable', 'string', 'max:255',],
+	        'department' => ['nullable', 'string', 'max:255',],
+	        'role' => [ 'nullable','string','max:255',],
+	        'last_name' => 'required|string|max:255',
+	        'first_name' => 'required|string|max:255',
+	        'last_name_kana' => ['required', 'regex:/^[ぁ-ゖー]+$/u'],
+	        'first_name_kana' => ['required', 'regex:/^[ぁ-ゖー]+$/u'],
+	        'email' => 'required|email',
+	        'tel1' => 'required|regex:/^\d{2,4}$/',
+	        'tel2' => 'required|regex:/^\d{2,4}$/',
+	        'tel3' => 'required|regex:/^\d{3,4}$/',
+	        'body' => 'required|string',
+	    ], [
+	        'inquiry_type.required' => '必ず選択してください。',
+	        'company.required' => '必ず入力してください。',
+	        'last_name.required' => '姓を必ず入力してください。',
+	        'first_name.required' => '名を必ず入力してください。',
+	        'last_name_kana.required' => '姓を必ず入力してください。',
+	        'last_name_kana.regex' => '姓をひらがなで入力してください。',
+	        'first_name_kana.required' => '名を必ず入力してください。',
+	        'first_name_kana.regex' => '名をひらがなで入力してください。',
+	        'email.required' => '必ず入力してください。',
+	        'email.email' => 'メールアドレスを入力してください。',
+	        'tel1.required' => '1番目を必ず入力してください。',
+	        'tel1.regex' => '1番目の正しい桁数を入力してください。',
+	        'tel2.required' => '2番目を必ず入力してください。',
+	        'tel2.regex' => '2番目の正しい桁数を入力してください。',
+	        'tel3.required' => '3番目を必ず入力してください。',
+	        'tel3.regex' => '3番目の正しい桁数を入力してください。',
+	        'body.required' => '必ず入力してください。',
+	    ]);
 
 		session()->put('inquiry_input', $validated);
 		return view('inquiry.confirm', compact('validated'));
@@ -74,7 +107,7 @@ class ContactController extends Controller
 	public function inquiryThanks(Request $request)
 	{
 		if ($request->has('back')) {
-			return redirect()->route('inquiry.index');
+			return redirect()->route('inquiry.index')->withInput(session('inquiry_input'));
 		}
 
 		$input = session()->get('inquiry_input');
@@ -82,8 +115,41 @@ class ContactController extends Controller
 			return redirect()->route('inquiry.index');
 		}
 
-		// ★ここに「ご相談受付メール」の送信処理（DB保存はなし）
-		// Mail::to($input['email'])->send(new InquiryMail($input));
+		$isCompany = in_array($input['inquiry_type'], ['業務委託について', '業務提携・協業について',], true);
+		if ($isCompany) {
+			$department = !empty($input['department']) ? $input['department'] : '---';
+			$role = !empty($input['role']) ? $input['role'] : '---';
+		    $companyInfo = <<<EOT
+会社名：{$input['company']}
+部署：{$department}
+役職：{$role}
+ご担当者：{$input['first_name']} {$input['last_name']}
+EOT;
+		} else {
+			$companyInfo = <<<EOT
+お名前：{$input['first_name']} {$input['last_name']}
+EOT;
+		}
+
+		$body = <<<EOT
+
+HP経由でご相談がありました。
+
+-------------------------
+
+お問い合わせ種別：{$input['inquiry_type']}
+{$companyInfo}
+ふりがな：{$input['first_name_kana']} {$input['last_name_kana']}
+メールアドレス：{$input['email']}
+電話番号：{$input['tel1']}-{$input['tel2']}-{$input['tel3']}
+
+ご相談内容:
+{$input['body']}
+EOT;
+
+		Mail::raw($body, function ($message) {
+			$message->to(['shimoda@x-industry.jp'])->subject('【 要確認 】HPからのご相談');
+		});
 
 		session()->forget('inquiry_input');
 		return view('inquiry.thanks');

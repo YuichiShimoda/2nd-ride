@@ -21,7 +21,7 @@ export default defineConfig({
                 'resources/js/faq.js',
                 'resources/js/profile.js',
                 'resources/js/appointment.js',
-                'resources/js/inquiry.js',
+                'resources/js/inquiry.ts',
                 'resources/js/voice.js',
                 'resources/js/rule.js',
                 'resources/js/policy.js',

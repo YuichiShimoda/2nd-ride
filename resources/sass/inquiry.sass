@@ -22,6 +22,9 @@ $black-bg: #232523
 @mixin bp1600
 	@media screen and (max-width: 1600px)
 		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
 @mixin bp1400
 	@media screen and (max-width: 1400px)
 		@content
@@ -57,6 +60,9 @@ $black-bg: #232523
 		@content
 @mixin bp700
 	@media screen and (max-width: 700px)
+		@content
+@mixin bp650
+	@media screen and (max-width: 650px)
 		@content
 @mixin bp600
 	@media screen and (max-width: 600px)
@@ -98,6 +104,14 @@ body::-webkit-scrollbar
 	background: #ddd
 *::-webkit-scrollbar
 	display: none
+::placeholder
+	font-weight: 400
+	font-size: 14px
+	line-height: 1.0
+	font-family: $noto-sans
+	letter-spacing: 0.05em
+	color: #ccc
+	opacity: 1.0
 
 
 
@@ -130,68 +144,646 @@ body::-webkit-scrollbar
 
 
 
-
-
-#title
+#fv
 	display: block
 	width: 100%
-	padding: 240px 0 120px
-	background: linear-gradient(180deg, rgba($base, 1.0) 0%, rgba($base, 1.0) 50%, rgba($base, 0.8) 100%)
+	height: fit-content
+	min-height: 100vh
+	padding: 280px 0 160px
 	position: relative
+	overflow: hidden
+	+bp1500
+		padding: 220px 0 160px
+	+bp1300
+		padding: 200px 0 140px
+	+bp1200
+		padding: 180px 0 140px
+	+bp1100
+		padding: 160px 0 120px
+	+bp800
+		padding: 140px 0 100px
+	+bp700
+		padding: 110px 0 90px
+	+bp500
+		padding: 90px 0 70px
 	.content-box
-		display: block
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
 		width: 1200px
 		margin: 0 auto
-		+bp1400
+		+bp1500
 			width: 1000px
-			padding: 0 0 80px
-			margin: 200px auto 0
-		+bp1100
-			width: calc(100vw - 100px)
+		+bp1400
+			width: 940px
+		+bp1300
+			width: 900px
+		+bp1200
+			justify-content: flex-start
+			align-items: flex-start
+			flex-direction: column
+			width: calc(100vw - 450px)
+		+bp1000
+			width: calc(100vw - 350px)
+		+bp800
+			width: calc(100vw - 300px)
+		+bp750
+			width: calc(100vw - 270px)
 		+bp700
-			margin: 160px auto 0
-			padding: 0 0 60px
+			width: calc(100vw - 230px)
+		+bp600
+			width: calc(100vw - 190px)
 		+bp500
 			width: calc(100vw - 60px)
-			padding: 0 0 40px
-		+bp450
-			width: calc(100vw - 30px)
-			padding: 0 0 30px
-			margin: 150px auto 0
-		h1
+		.left-box
 			display: block
-			width: 100%
-			font-weight: 700
-			font-size: 38px
-			line-height: 1.0
-			font-family: $noto-sans
-			letter-spacing: 0.15em
-			color: #fff
+			width: fit-content
+			max-width: 520px
+			z-index: 10
+			position: relative
+			+bp1500
+				max-width: 360px
 			+bp1400
-				font-size: 34px
-			+bp900
-				font-size: 32px
-			+bp700
-				font-size: 28px
+				max-width: 330px
+			+bp1300
+				max-width: 300px
+			+bp1200
+				width: 100%
+				max-width: initial
 			+bp500
-				font-size: 24px
-			+bp450
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+			.en
+				display: block
+				font-weight: 900
+				font-size: 84px
+				line-height: 1.0
+				font-family: $eurostile-extended
+				letter-spacing: 0.05em
+				background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				background-clip: text
+				text-fill-color: transparent
+				+bp1500
+					font-size: 56px
+				+bp1400
+					font-size: 52px
+				+bp1300
+					font-size: 48px
+				+bp1200
+					font-size: 72px
+				+bp1000
+					font-size: 64px
+				+bp900
+					font-size: 60px
+				+bp850
+					font-size: 56px
+				+bp800
+					font-size: 52px
+				+bp750
+					font-size: 48px
+				+bp650
+					font-size: 46px
+				+bp600
+					font-size: 44px
+				+bp550
+					font-size: 42px
+				+bp500
+					font-size: 38px
+				+bp450
+					font-size: 36px
+				+bp420
+					font-size: 32px
+				&::selection
+					color: #555
+			.tit
+				display: block
+				width: fit-content
+				margin-top: 40px
+				font-weight: 500
 				font-size: 22px
-	.en
-		position: absolute
-		right: 10vw
-		bottom: 15px
+				line-height: 1.0
+				font-family: $eurostile-extended
+				letter-spacing: 0.25em
+				color: $base
+				+bp1500
+					margin-top: 25px
+					font-size: 16px
+				+bp1200
+					margin-top: 30px
+				+bp1000
+					font-size: 15px
+				+bp850
+					margin-top: 25px
+					font-size: 16px
+				+bp800
+					margin-top: 20px
+				+bp600
+					margin-top: 17px
+				+bp400
+					margin-top: 17px
+					font-size: 15px
+			.desc-box
+				display: block
+				width: fit-content
+				margin-top: 60px
+				+bp1500
+					margin-top: 50px
+				+bp1300
+					margin-top: 40px
+				+bp900
+					margin-top: 30px
+				+bp700
+					margin-top: 25px
+				+bp500
+					width: calc(100vw - 200px)
+				+bp450
+					width: calc(100vw - 140px)
+				+bp400
+					width: calc(100vw - 120px)
+				> p
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 2.0
+					font-family: $noto-sans
+					letter-spacing: 0.05em
+					color: #555
+					+bp1400
+						font-size: 13px
+					+bp1200
+						font-size: 14px
+					+bp900
+						font-size: 13px
+					+bp700
+						font-size: 12px
+		.form-input-box
+			display: block
+			width: 600px
+			margin-top: 20px
+			z-index: 10
+			+bp1500
+				width: 550px
+				margin-top: 16px
+			+bp1200
+				width: 100%
+				margin-top: 70px
+			+bp1100
+				margin-top: 65px
+			+bp900
+				margin-top: 55px
+			+bp800
+				margin-top: 45px
+			+bp700
+				margin-top: 40px
+			+bp500
+				margin-top: 30px
+			.form-inner
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				flex-direction: column
+				width: 100%
+				padding: 60px 60px 50px
+				background-color: #fff
+				border-radius: 20px
+				box-shadow: 0px 0px 0.5px $black-color, 0px 0px 4px rgba($black-color, 0.4), 0px 0px 15px rgba($black-color, 0.2)
+				position: relative
+				+bp1500
+					padding: 60px 50px 50px
+				+bp800
+					padding: 45px 40px 45px
+					border-radius: 15px
+				+bp700
+					padding: 30px 30px 30px
+				+bp600
+					padding: 30px 25px 30px
+				.section-box
+					display: block
+					width: 100%
+					margin-top: 18px
+				.ele-box
+					display: block
+					width: 100%
+					margin-top: 18px
+					&:nth-of-type(1)
+						margin-top: 0
+					> label
+						display: block
+						font-weight: 500
+						font-size: 14px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						color: #555
+						+bp700
+							font-size: 13px
+						&.required
+							position: relative
+							display: inline-block
+							padding-right: 0.8em
+						&.required::after
+							position: absolute
+							top: 0
+							right: -0.1em
+							content: "*"
+							display: block
+							font-weight: 400
+							font-size: 1.1em
+							line-height: 1.0
+							color: #ec5555
+					.radio-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						flex-wrap: wrap
+						width: 100%
+						margin-top: 2px
+						.radio-ele
+							display: block
+							margin: 7px 10px 0 0
+							&:last-of-type
+								margin-right: 0
+							input[type="radio"]
+								display: none
+								&:checked + label
+									border: 1px solid $base
+									background-color: $base
+									color: #fff
+							label
+								display: block
+								padding: 8px 12px
+								margin: 0
+								border: 1px solid #A8B2BC
+								border-radius: 5px
+								font-weight: 400
+								font-size: 14px
+								line-height: 1.0
+								letter-spacing: 0.05em
+								color: #495057
+								cursor: pointer
+								transition: all 0.3s ease-in-out
+								+bp700
+									font-size: 13px
+					.two-row-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						.input-box
+							&.second
+								margin-left: 15px
+								+bp700
+									margin-left: 13px
+							input
+								width: 140px
+								+bp700
+									width: 120px
+								+bp600
+									width: 110px
+								+bp550
+									width: 100px
+					.tel-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						.hyphen
+							display: block
+							margin: 0 0.5em -0.7em
+							font-weight: 4⃣00
+							font-size: 12px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.1em
+							color: #777
+							+bp700
+								font-size: 11px
+						input[type="tel"]
+							width: 45px
+					.input-box
+						display: block
+						width: fit-content
+						height: 36px
+						padding: 3px 10px
+						margin-top: 7px
+						background: none
+						border-radius: 5px
+						border: solid 1px #ccc
+						box-shadow: 0 1px 2px #999
+						> input
+							display: block
+							width: 100%
+							height: 100%
+							padding: 0
+							margin: 0
+							border: 0
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.05em
+							color: #333
+							appearance: none
+							-webkit-appearance: none
+							+bp700
+								font-size: 13px
+							&[name="company"]
+								width: 240px
+							&[name="department"]
+								width: 100px
+							&[name="role"]
+								width: 100px
+							&[type="email"]
+								width: 240px
+					.textarea-box
+						display: block
+						height: fit-content
+						padding: 10px 10px
+						margin-top: 7px
+						background: none
+						border-radius: 5px
+						border: solid 1px #ccc
+						box-shadow: 0 1px 2px #999
+						> textarea
+							display: block
+							width: 100%
+							height: 100%
+							padding: 0
+							margin: 0
+							border: 0
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.5
+							font-family: $noto-sans
+							letter-spacing: 0.05em
+							color: #333
+							appearance: none
+							-webkit-appearance: none
+							resize: vertical
+							+bp700
+								font-size: 13px
+					.error-msg
+						display: block
+						margin-left: 0.2em
+						margin-top: 0.7em
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.05em
+						color: #ec5555
+				.btn-box
+					display: block
+					width: 100%
+					margin-top: 30px
+					cursor: pointer
+					+bp700
+						margin-top: 20px
+					button
+						display: block
+						width: fit-content
+						height: fit-content
+						padding: 15px 30px
+						border: 0
+						border-radius: 5px
+						background: $black-color
+						font-weight: 500
+						font-size: 14px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.15em
+						color: #fff
+						+bp700
+							font-size: 13px
+		.form-confirm-box
+			display: block
+			width: 600px
+			margin-top: 20px
+			z-index: 10
+			.check-inner
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				flex-direction: column
+				width: 100%
+				padding: 60px 60px 50px
+				background-color: #fff
+				border-radius: 20px
+				box-shadow: 0px 0px 0.5px $black-color, 0px 0px 4px rgba($black-color, 0.4), 0px 0px 15px rgba($black-color, 0.2)
+				position: relative
+				.ele-box
+					display: block
+					width: 100%
+					padding: 0 20px 10px
+					margin-top: 25px
+					border-bottom: solid 0.5px #ddd
+					&:nth-of-type(1)
+						margin-top: 0
+					.list
+						display: block
+						font-weight: 500
+						font-size: 14px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.1em
+						color: $base
+					.detail
+						display: block
+						width: 100%
+						margin-top: 0.25em
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.5
+						font-family: $noto-sans
+						letter-spacing: 0.05em
+						color: #555
+						&.textarea
+							margin-top: 1.0em
+				.btn-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					margin-top: 40px
+					button
+						display: block
+						width: 150px
+						height: fit-content
+						padding: 15px 30px
+						border: 0
+						border-radius: 5px
+						font-weight: 500
+						font-size: 14px
+						line-height: 1.0
+						font-family: $noto-sans
+						letter-spacing: 0.15em
+						&.prev
+							background: #ddd
+							color: #333
+						&.next
+							margin-left: 15px
+							background: $black-color
+							color: #fff
+		.left-shage
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 20vw
+			z-index: 1
+			pointer-events: none
+			+bp1500
+				width: 330px
+			+bp1100
+				width: 310px
+			+bp1000
+				width: 290px
+			+bp700
+				width: 225px
+			+bp500
+				width: 180px
+			+bp450
+				width: 165px
+		.right-shage
+			position: absolute
+			top: 0
+			right: 0
+			display: block
+			width: 35vw
+			z-index: 1
+			pointer-events: none
+			+bp1500
+				width: 600px
+			+bp1300
+				width: 520px
+			+bp1100
+				width: 480px
+			+bp1000
+				width: 470px
+			+bp700
+				display: none
+		.right-shage-sp
+			position: absolute
+			top: 0
+			right: 0
+			display: none
+			width: 335px
+			z-index: 1
+			pointer-events: none
+			+bp700
+				display: block
+			+bp500
+				width: 280px
+			+bp450
+				width: 250px
+	.complete-box
 		display: block
-		font-weight: 900
-		font-size: 18px
-		line-height: 1.0
-		font-family: $eurostile-extended
-		letter-spacing: 0.05em
-		background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		background-clip: text
-		text-fill-color: transparent
+		width: fit-content
+		margin: 0 auto
+		.inside-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			z-index: 10
+			.en
+				display: block
+				font-weight: 900
+				font-size: 84px
+				line-height: 1.0
+				font-family: $eurostile-extended
+				letter-spacing: 0.05em
+				background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				background-clip: text
+				text-fill-color: transparent
+				+bp1500
+					font-size: 38px
+				+bp1000
+					font-size: 34px
+				+bp850
+					font-size: 40px
+				+bp550
+					font-size: 34px
+				+bp450
+					font-size: 30px
+				&::selection
+					color: #555
+			.tit
+				display: block
+				width: fit-content
+				margin-top: 40px
+				font-weight: 500
+				font-size: 22px
+				line-height: 1.0
+				font-family: $eurostile-extended
+				letter-spacing: 0.25em
+				color: $base
+				+bp1500
+					margin-top: 25px
+					font-size: 16px
+				+bp1000
+					font-size: 15px
+				+bp850
+					margin-top: 25px
+					font-size: 16px
+				+bp550
+					margin-top: 20px
+				+bp400
+					margin-top: 17px
+					font-size: 15px
+			.desc-box
+				display: block
+				width: fit-content
+				margin-top: 60px
+				> p
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 2.0
+					font-family: $noto-sans
+					letter-spacing: 0.05em
+					text-align: center
+					color: #555
+			.top-link
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 150px
+				height: fit-content
+				padding: 15px 20px
+				margin-top: 80px
+				border: 0
+				border-radius: 5px
+				background: $black-color
+				> p
+					display: block
+					font-weight: 500
+					font-size: 14px
+					line-height: 1.0
+					font-family: $noto-sans
+					letter-spacing: 0.15em
+					color: #fff
+		.left-shage
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 20vw
+			z-index: 1
+			pointer-events: none
+		.right-shage
+			position: absolute
+			top: 0
+			right: 0
+			display: block
+			width: 35vw
+			z-index: 1
+			pointer-events: none
 
 
 
@@ -199,22 +791,3 @@ body::-webkit-scrollbar
 
 
 
-
-
-
-
-#test
-	display: flex
-	justify-content: center
-	align-items: center
-	width: 100%
-	height: 50vh
-	margin: 160px auto 0
-	p
-		display: block
-		font-weight: 400
-		font-size: 50px
-		line-height: 2.0
-		font-family: $noto-sans
-		letter-spacing: 0.15em
-		color: #555
