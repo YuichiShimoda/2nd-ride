@@ -141,6 +141,11 @@ body::-webkit-scrollbar {
     width: calc(100vw - 60px);
   }
 }
+@media screen and (max-width: 450px) {
+  #fv .content-box {
+    width: calc(100vw - 30px);
+  }
+}
 #fv .content-box .left-box {
   display: block;
   width: fit-content;
@@ -258,6 +263,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 450px) {
   #fv .content-box .left-box .en {
     font-size: 36px;
+    background: linear-gradient(180deg, white 0%, #222222 100%);
   }
 }
 @media screen and (max-width: 420px) {
@@ -462,6 +468,11 @@ body::-webkit-scrollbar {
     padding: 30px 25px 30px;
   }
 }
+@media screen and (max-width: 400px) {
+  #fv .content-box .form-input-box .form-inner {
+    border-radius: 10px;
+  }
+}
 #fv .content-box .form-input-box .form-inner .section-box {
   display: block;
   width: 100%;
@@ -539,6 +550,7 @@ body::-webkit-scrollbar {
   line-height: 1;
   letter-spacing: 0.05em;
   color: #495057;
+  box-shadow: 0 1px 2px #aaa;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
