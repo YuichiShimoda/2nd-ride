@@ -264,6 +264,10 @@ body::-webkit-scrollbar {
   #fv .content-box .left-box .en {
     font-size: 36px;
     background: linear-gradient(180deg, white 0%, #222222 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 }
 @media screen and (max-width: 420px) {
