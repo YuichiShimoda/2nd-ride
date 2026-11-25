@@ -396,6 +396,12 @@ body::-webkit-scrollbar {
     font-size: 12px;
   }
 }
+@media screen and (max-width: 450px) {
+  #fv .content-box .left-box .desc-box > p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
 #fv .content-box .form-input-box {
   display: block;
   width: 600px;
