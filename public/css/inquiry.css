@@ -91,6 +91,11 @@ body::-webkit-scrollbar {
     padding: 90px 0 70px;
   }
 }
+@media screen and (max-width: 850px) {
+  #fv.thanks {
+    min-height: initial;
+  }
+}
 #fv .content-box {
   display: flex;
   justify-content: space-between;
@@ -745,6 +750,7 @@ body::-webkit-scrollbar {
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.15em;
   color: #fff;
+  cursor: pointer;
 }
 @media screen and (max-width: 700px) {
   #fv .content-box .form-input-box .form-inner .btn-box button {
@@ -757,17 +763,85 @@ body::-webkit-scrollbar {
   margin-top: 20px;
   z-index: 10;
 }
+@media screen and (max-width: 1500px) {
+  #fv .content-box .form-confirm-box {
+    width: 550px;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box .form-confirm-box {
+    width: 100%;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #fv .content-box .form-confirm-box {
+    margin-top: 65px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .content-box .form-confirm-box {
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box .form-confirm-box {
+    margin-top: 45px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .form-confirm-box {
+    margin-top: 30px;
+  }
+}
 #fv .content-box .form-confirm-box .check-inner {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  padding: 60px 60px 50px;
+  padding: 60px 40px 50px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 0px 0.5px #006000, 0px 0px 4px rgba(0, 96, 0, 0.4), 0px 0px 15px rgba(0, 96, 0, 0.2);
   position: relative;
+}
+@media screen and (max-width: 1500px) {
+  #fv .content-box .form-confirm-box .check-inner {
+    padding: 50px 30px 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .content-box .form-confirm-box .check-inner {
+    padding: 45px 30px 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box .form-confirm-box .check-inner {
+    padding: 35px 30px 45px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box .check-inner {
+    padding: 30px 20px 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .content-box .form-confirm-box .check-inner {
+    padding: 30px 15px 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #fv .content-box .form-confirm-box .check-inner {
+    border-radius: 10px;
+  }
 }
 #fv .content-box .form-confirm-box .check-inner .ele-box {
   display: block;
@@ -775,6 +849,22 @@ body::-webkit-scrollbar {
   padding: 0 20px 10px;
   margin-top: 25px;
   border-bottom: solid 0.5px #ddd;
+}
+@media screen and (max-width: 900px) {
+  #fv .content-box .form-confirm-box .check-inner .ele-box {
+    padding: 0 12px 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box .check-inner .ele-box {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .form-confirm-box .check-inner .ele-box {
+    padding: 0 10px 8px;
+    margin-top: 17px;
+  }
 }
 #fv .content-box .form-confirm-box .check-inner .ele-box:nth-of-type(1) {
   margin-top: 0;
@@ -788,6 +878,11 @@ body::-webkit-scrollbar {
   letter-spacing: 0.1em;
   color: #00a000;
 }
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box .check-inner .ele-box .list {
+    font-size: 13px;
+  }
+}
 #fv .content-box .form-confirm-box .check-inner .ele-box .detail {
   display: block;
   width: 100%;
@@ -799,8 +894,18 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #555;
 }
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box .check-inner .ele-box .detail {
+    font-size: 13px;
+  }
+}
 #fv .content-box .form-confirm-box .check-inner .ele-box .detail.textarea {
   margin-top: 1em;
+}
+@media screen and (max-width: 500px) {
+  #fv .content-box .form-confirm-box .check-inner .ele-box .detail.textarea {
+    margin-top: 0.7em;
+  }
 }
 #fv .content-box .form-confirm-box .check-inner .btn-box {
   display: flex;
@@ -808,6 +913,16 @@ body::-webkit-scrollbar {
   align-items: center;
   width: fit-content;
   margin-top: 40px;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box .check-inner .btn-box {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .content-box .form-confirm-box .check-inner .btn-box {
+    margin-top: 20px;
+  }
 }
 #fv .content-box .form-confirm-box .check-inner .btn-box button {
   display: block;
@@ -821,6 +936,19 @@ body::-webkit-scrollbar {
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.15em;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box .check-inner .btn-box button {
+    width: 140px;
+    padding: 15px 20px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .content-box .form-confirm-box .check-inner .btn-box button {
+    width: 125px;
+  }
 }
 #fv .content-box .form-confirm-box .check-inner .btn-box button.prev {
   background: #ddd;
@@ -830,6 +958,11 @@ body::-webkit-scrollbar {
   margin-left: 15px;
   background: #006000;
   color: #fff;
+}
+@media screen and (max-width: 700px) {
+  #fv .content-box .form-confirm-box .check-inner .btn-box button.next {
+    margin-left: 13px;
+  }
 }
 #fv .content-box .left-shage {
   position: absolute;
@@ -956,27 +1089,82 @@ body::-webkit-scrollbar {
 }
 @media screen and (max-width: 1500px) {
   #fv .complete-box .inside-box .en {
-    font-size: 38px;
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 72px;
   }
 }
 @media screen and (max-width: 1000px) {
   #fv .complete-box .inside-box .en {
-    font-size: 34px;
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 60px;
   }
 }
 @media screen and (max-width: 850px) {
   #fv .complete-box .inside-box .en {
-    font-size: 40px;
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 46px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 44px;
   }
 }
 @media screen and (max-width: 550px) {
   #fv .complete-box .inside-box .en {
-    font-size: 34px;
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 38px;
   }
 }
 @media screen and (max-width: 450px) {
   #fv .complete-box .inside-box .en {
-    font-size: 30px;
+    font-size: 36px;
+    background: linear-gradient(180deg, white 0%, #222222 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+@media screen and (max-width: 420px) {
+  #fv .complete-box .inside-box .en {
+    font-size: 32px;
   }
 }
 #fv .complete-box .inside-box .en::selection {
@@ -999,6 +1187,11 @@ body::-webkit-scrollbar {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 1200px) {
+  #fv .complete-box .inside-box .tit {
+    margin-top: 30px;
+  }
+}
 @media screen and (max-width: 1000px) {
   #fv .complete-box .inside-box .tit {
     font-size: 15px;
@@ -1010,9 +1203,14 @@ body::-webkit-scrollbar {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
   #fv .complete-box .inside-box .tit {
     margin-top: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .complete-box .inside-box .tit {
+    margin-top: 17px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1026,6 +1224,31 @@ body::-webkit-scrollbar {
   width: fit-content;
   margin-top: 60px;
 }
+@media screen and (max-width: 1500px) {
+  #fv .complete-box .inside-box .desc-box {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #fv .complete-box .inside-box .desc-box {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .complete-box .inside-box .desc-box {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .complete-box .inside-box .desc-box {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .complete-box .inside-box .desc-box {
+    width: 100%;
+  }
+}
 #fv .complete-box .inside-box .desc-box > p {
   display: block;
   font-weight: 400;
@@ -1035,6 +1258,39 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   text-align: center;
   color: #555;
+}
+@media screen and (max-width: 1400px) {
+  #fv .complete-box .inside-box .desc-box > p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #fv .complete-box .inside-box .desc-box > p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #fv .complete-box .inside-box .desc-box > p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .complete-box .inside-box .desc-box > p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .complete-box .inside-box .desc-box > p {
+    font-size: 10px;
+  }
+}
+#fv .complete-box .inside-box .desc-box > p br {
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  #fv .complete-box .inside-box .desc-box > p br {
+    display: block;
+  }
 }
 #fv .complete-box .inside-box .top-link {
   display: flex;
@@ -1048,6 +1304,18 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   background: #006000;
 }
+@media screen and (max-width: 700px) {
+  #fv .complete-box .inside-box .top-link {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .complete-box .inside-box .top-link {
+    width: 135px;
+    padding: 15px 10px;
+    margin-top: 40px;
+  }
+}
 #fv .complete-box .inside-box .top-link > p {
   display: block;
   font-weight: 500;
@@ -1056,6 +1324,11 @@ body::-webkit-scrollbar {
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.15em;
   color: #fff;
+}
+@media screen and (max-width: 700px) {
+  #fv .complete-box .inside-box .top-link > p {
+    font-size: 13px;
+  }
 }
 #fv .complete-box .left-shage {
   position: absolute;
@@ -1066,6 +1339,36 @@ body::-webkit-scrollbar {
   z-index: 1;
   pointer-events: none;
 }
+@media screen and (max-width: 1500px) {
+  #fv .complete-box .left-shage {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #fv .complete-box .left-shage {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .complete-box .left-shage {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .complete-box .left-shage {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .complete-box .left-shage {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .complete-box .left-shage {
+    width: 165px;
+  }
+}
 #fv .complete-box .right-shage {
   position: absolute;
   top: 0;
@@ -1074,4 +1377,53 @@ body::-webkit-scrollbar {
   width: 35vw;
   z-index: 1;
   pointer-events: none;
+}
+@media screen and (max-width: 1500px) {
+  #fv .complete-box .right-shage {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #fv .complete-box .right-shage {
+    width: 520px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #fv .complete-box .right-shage {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .complete-box .right-shage {
+    width: 470px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #fv .complete-box .right-shage {
+    display: none;
+  }
+}
+#fv .complete-box .right-shage-sp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 335px;
+  z-index: 1;
+  pointer-events: none;
+}
+@media screen and (max-width: 700px) {
+  #fv .complete-box .right-shage-sp {
+    display: block;
+  }
+}
+@media screen and (max-width: 500px) {
+  #fv .complete-box .right-shage-sp {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv .complete-box .right-shage-sp {
+    width: 250px;
+  }
 }

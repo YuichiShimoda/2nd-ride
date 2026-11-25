@@ -25,21 +25,22 @@
 
 
 @section('content')
-	<section id="fv">
+	<section id="fv" class="thanks">
 		<div class="complete-box">
 			<div class="inside-box">
 				<p class="en">INQUIRY</p>
 				<h1 class="tit">ご質問・ご相談</h1>
 				<div class="desc-box">
 					<p>ご相談いただき、誠にありがとうございました。</p>
-					<p>ご入力いただいたメールアドレス宛に、自動確認メールを送信いたしましたのでご確認ください。</p>
+					<p>ご入力いただいたメールアドレス宛に、<br>自動確認メールを送信いたしましたのでご確認ください。</p>
 				</div>
 				<a class="top-link" href="{{ route('top') }}">
-					<p>トップページへ戻る</p>
+					<p>TOPへ戻る</p>
 				</a>
 			</div>
 			<img class="left-shage lazyload" data-src="{{ asset('/image/inquiry/left-shape.svg') }}" alt="シェイプ">
 			<img class="right-shage lazyload" data-src="{{ asset('/image/inquiry/right-shape.svg') }}" alt="シェイプ">
+			<img class="right-shage-sp lazyload" data-src="{{ asset('/image/inquiry/right-shape-sp.svg') }}" alt="シェイプ">
 		</div>
 	</section>
 @stop

@@ -170,6 +170,9 @@ body::-webkit-scrollbar
 		padding: 110px 0 90px
 	+bp500
 		padding: 90px 0 70px
+	&.thanks
+		+bp850
+			min-height: initial
 	.content-box
 		display: flex
 		justify-content: space-between
@@ -572,6 +575,7 @@ body::-webkit-scrollbar
 						font-family: $noto-sans
 						letter-spacing: 0.15em
 						color: #fff
+						cursor: pointer
 						+bp700
 							font-size: 13px
 		.form-confirm-box
@@ -579,23 +583,59 @@ body::-webkit-scrollbar
 			width: 600px
 			margin-top: 20px
 			z-index: 10
+			+bp1500
+				width: 550px
+				margin-top: 16px
+			+bp1200
+				width: 100%
+				margin-top: 70px
+			+bp1100
+				margin-top: 65px
+			+bp900
+				margin-top: 55px
+			+bp800
+				margin-top: 45px
+			+bp700
+				margin-top: 40px
+			+bp500
+				margin-top: 30px
 			.check-inner
 				display: flex
 				justify-content: flex-start
 				align-items: flex-start
 				flex-direction: column
 				width: 100%
-				padding: 60px 60px 50px
+				padding: 60px 40px 50px
 				background-color: #fff
 				border-radius: 20px
 				box-shadow: 0px 0px 0.5px $black-color, 0px 0px 4px rgba($black-color, 0.4), 0px 0px 15px rgba($black-color, 0.2)
 				position: relative
+				+bp1500
+					padding: 50px 30px 50px
+				+bp1200
+					padding: 45px 30px 50px
+				+bp800
+					padding: 35px 30px 45px
+					border-radius: 15px
+				+bp700
+					padding: 30px 20px 30px
+				+bp600
+					padding: 30px 15px 30px
+				+bp400
+					border-radius: 10px
 				.ele-box
 					display: block
 					width: 100%
 					padding: 0 20px 10px
 					margin-top: 25px
 					border-bottom: solid 0.5px #ddd
+					+bp900
+						padding: 0 12px 10px
+					+bp700
+						margin-top: 20px
+					+bp500
+						padding: 0 10px 8px
+						margin-top: 17px
 					&:nth-of-type(1)
 						margin-top: 0
 					.list
@@ -606,6 +646,8 @@ body::-webkit-scrollbar
 						font-family: $noto-sans
 						letter-spacing: 0.1em
 						color: $base
+						+bp700
+							font-size: 13px
 					.detail
 						display: block
 						width: 100%
@@ -616,14 +658,22 @@ body::-webkit-scrollbar
 						font-family: $noto-sans
 						letter-spacing: 0.05em
 						color: #555
+						+bp700
+							font-size: 13px
 						&.textarea
 							margin-top: 1.0em
+							+bp500
+								margin-top: 0.7em
 				.btn-box
 					display: flex
 					justify-content: flex-start
 					align-items: center
 					width: fit-content
 					margin-top: 40px
+					+bp700
+						margin-top: 25px
+					+bp450
+						margin-top: 20px
 					button
 						display: block
 						width: 150px
@@ -636,6 +686,13 @@ body::-webkit-scrollbar
 						line-height: 1.0
 						font-family: $noto-sans
 						letter-spacing: 0.15em
+						cursor: pointer
+						+bp700
+							width: 140px
+							padding: 15px 20px
+							font-size: 13px
+						+bp450
+							width: 125px
 						&.prev
 							background: #ddd
 							color: #333
@@ -643,6 +700,8 @@ body::-webkit-scrollbar
 							margin-left: 15px
 							background: $black-color
 							color: #fff
+							+bp700
+								margin-left: 13px
 		.left-shage
 			position: absolute
 			top: 0
@@ -719,15 +778,40 @@ body::-webkit-scrollbar
 				background-clip: text
 				text-fill-color: transparent
 				+bp1500
-					font-size: 38px
+					font-size: 56px
+				+bp1400
+					font-size: 52px
+				+bp1300
+					font-size: 48px
+				+bp1200
+					font-size: 72px
 				+bp1000
-					font-size: 34px
+					font-size: 64px
+				+bp900
+					font-size: 60px
 				+bp850
-					font-size: 40px
+					font-size: 56px
+				+bp800
+					font-size: 52px
+				+bp750
+					font-size: 48px
+				+bp650
+					font-size: 46px
+				+bp600
+					font-size: 44px
 				+bp550
-					font-size: 34px
+					font-size: 42px
+				+bp500
+					font-size: 38px
 				+bp450
-					font-size: 30px
+					font-size: 36px
+					background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#222, 1.0) 100%)
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+					background-clip: text
+					text-fill-color: transparent
+				+bp420
+					font-size: 32px
 				&::selection
 					color: #555
 			.tit
@@ -743,13 +827,17 @@ body::-webkit-scrollbar
 				+bp1500
 					margin-top: 25px
 					font-size: 16px
+				+bp1200
+					margin-top: 30px
 				+bp1000
 					font-size: 15px
 				+bp850
 					margin-top: 25px
 					font-size: 16px
-				+bp550
+				+bp800
 					margin-top: 20px
+				+bp600
+					margin-top: 17px
 				+bp400
 					margin-top: 17px
 					font-size: 15px
@@ -757,6 +845,16 @@ body::-webkit-scrollbar
 				display: block
 				width: fit-content
 				margin-top: 60px
+				+bp1500
+					margin-top: 50px
+				+bp1300
+					margin-top: 40px
+				+bp900
+					margin-top: 30px
+				+bp700
+					margin-top: 25px
+				+bp500
+					width: 100%
 				> p
 					display: block
 					font-weight: 400
@@ -766,6 +864,20 @@ body::-webkit-scrollbar
 					letter-spacing: 0.05em
 					text-align: center
 					color: #555
+					+bp1400
+						font-size: 13px
+					+bp1200
+						font-size: 14px
+					+bp900
+						font-size: 13px
+					+bp700
+						font-size: 12px
+					+bp450
+						font-size: 10px
+					br
+						display: none
+						+bp850
+							display: block
 			.top-link
 				display: flex
 				justify-content: center
@@ -777,6 +889,12 @@ body::-webkit-scrollbar
 				border: 0
 				border-radius: 5px
 				background: $black-color
+				+bp700
+					margin-top: 50px
+				+bp500
+					width: 135px
+					padding: 15px 10px
+					margin-top: 40px
 				> p
 					display: block
 					font-weight: 500
@@ -785,6 +903,8 @@ body::-webkit-scrollbar
 					font-family: $noto-sans
 					letter-spacing: 0.15em
 					color: #fff
+					+bp700
+						font-size: 13px
 		.left-shage
 			position: absolute
 			top: 0
@@ -793,6 +913,18 @@ body::-webkit-scrollbar
 			width: 20vw
 			z-index: 1
 			pointer-events: none
+			+bp1500
+				width: 330px
+			+bp1100
+				width: 310px
+			+bp1000
+				width: 290px
+			+bp700
+				width: 225px
+			+bp500
+				width: 180px
+			+bp450
+				width: 165px
 		.right-shage
 			position: absolute
 			top: 0
@@ -801,6 +933,30 @@ body::-webkit-scrollbar
 			width: 35vw
 			z-index: 1
 			pointer-events: none
+			+bp1500
+				width: 600px
+			+bp1300
+				width: 520px
+			+bp1100
+				width: 480px
+			+bp1000
+				width: 470px
+			+bp700
+				display: none
+		.right-shage-sp
+			position: absolute
+			top: 0
+			right: 0
+			display: none
+			width: 335px
+			z-index: 1
+			pointer-events: none
+			+bp700
+				display: block
+			+bp500
+				width: 280px
+			+bp450
+				width: 250px
 
 
 

@@ -94,6 +94,7 @@
 			</form>
 			<img class="left-shage lazyload" data-src="{{ asset('/image/inquiry/left-shape.svg') }}" alt="シェイプ">
 			<img class="right-shage lazyload" data-src="{{ asset('/image/inquiry/right-shape.svg') }}" alt="シェイプ">
+			<img class="right-shage-sp lazyload" data-src="{{ asset('/image/inquiry/right-shape-sp.svg') }}" alt="シェイプ">
 		</div>
 	</section>
 
