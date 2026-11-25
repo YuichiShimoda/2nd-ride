@@ -18,6 +18,16 @@ body::-webkit-scrollbar {
   background-image: radial-gradient(circle, #CCC 1px, transparent 1px);
   background-size: 16px 16px;
 }
+@media screen and (max-width: 450px) {
+  #wrap {
+    background-size: 12px 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #wrap {
+    background-size: 10px 10px;
+  }
+}
 
 *::selection {
   background: #ddd;
