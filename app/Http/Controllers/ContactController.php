@@ -95,8 +95,10 @@ HP経由でご予約がありました。
 
 -------------------------
 
-ご予約の理由：{$request_text}
-買取品カテゴリ：{$category}
+ご予約の理由：
+{$request_text}
+買取品カテゴリ：
+{$category}
 出張買取の希望エリア：{$input['pref']} {$input['area']}
 第1希望日：{$input['first_day']}
 第2希望日：{$second_day}
