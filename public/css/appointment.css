@@ -1555,6 +1555,11 @@ body::-webkit-scrollbar {
   border-left: 2px solid #ec5555;
   opacity: 0;
 }
+@media screen and (max-width: 450px) {
+  .consent-box input[type=checkbox]::after {
+    top: -1px;
+  }
+}
 .consent-box input[type=checkbox]:checked::after {
   opacity: 1;
 }

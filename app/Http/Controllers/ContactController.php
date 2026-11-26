@@ -197,6 +197,11 @@ EOT;
 			return view('inquiry.confirm', ['validated' => $input])->withErrors($validator);
 	    }
 
+		$input = session()->get('inquiry_input');
+		if (!$input) {
+			return redirect()->route('inquiry.index');
+		}
+
 		$isCompany = in_array($input['inquiry_type'], ['業務委託について', '業務提携・協業について',], true);
 		if ($isCompany) {
 			$department = !empty($input['department']) ? $input['department'] : '---';
