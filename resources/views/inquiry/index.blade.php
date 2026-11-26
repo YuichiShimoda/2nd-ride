@@ -31,8 +31,8 @@
 				<p class="en">INQUIRY</p>
 				<h1 class="tit">ご質問・ご相談</h1>
 				<div class="desc-box">
-					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+					<p>Webフォームをご利用ください。</p>
+					<p>お問い合わせにつきましては、3営業日以内にご回答させていただきます。</p>
 				</div>
 			</div>
 			<form class="form-input-box" action="{{ route('inquiry.confirm') }}" method="POST">

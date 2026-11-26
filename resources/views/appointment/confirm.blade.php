@@ -75,6 +75,10 @@
 
 @section('js')
     @vite([
-        'resources/js/appointment.js',
+        'resources/js/defense.ts',
+        'resources/js/hamburger-menu.ts',
+        'resources/js/smooth-scroll.ts',
+        'resources/js/mouse.ts',
+        'resources/js/appointment.ts',
     ])
 @stop

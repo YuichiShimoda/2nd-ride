@@ -20,7 +20,7 @@ export default defineConfig({
                 'resources/js/result.js',
                 'resources/js/faq.js',
                 'resources/js/profile.js',
-                'resources/js/appointment.js',
+                'resources/js/appointment.ts',
                 'resources/js/inquiry.ts',
                 'resources/js/voice.js',
                 'resources/js/rule.js',

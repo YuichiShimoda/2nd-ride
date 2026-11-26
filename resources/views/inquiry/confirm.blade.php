@@ -31,9 +31,8 @@
 				<p class="en">INQUIRY</p>
 				<h1 class="tit">ご質問・ご相談</h1>
 				<div class="desc-box">
-					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-					<p>入力内容をご確認の上、「送信する」ボタンを押してください。</p>
+					<p>入力内容をご確認の上「 送信する 」ボタンを押してください。</p>
+					<p>送信が完了しましたら、ご入力いただいたメールアドレス宛に自動確認メールを送信いたします。</p>
 				</div>
 			</div>
 			<form class="form-confirm-box" action="{{ route('inquiry.thanks') }}" method="POST">
@@ -85,6 +84,9 @@
 					<div class="ele-box">
 						<p class="list">ご相談内容</p>
 						<p class="detail textarea">{!! nl2br(e($validated['body'])) !!}</p>
+					</div>
+					<div class="consent-box">
+						<p><a class="privacy" target="" href="{{ route('privacy') }}">プライバシーポリシー</a>に同意</p>
 					</div>
 					<div class="btn-box">
 						<button class="prev" type="submit" name="back" value="true">修正する</button>
