@@ -85,9 +85,16 @@
 						<p class="list">ご相談内容</p>
 						<p class="detail textarea">{!! nl2br(e($validated['body'])) !!}</p>
 					</div>
-					<div class="consent-box">
-						<p><a class="privacy" target="" href="{{ route('privacy') }}">プライバシーポリシー</a>に同意</p>
-					</div>
+                    <div class="consent-box">
+                        <input type="checkbox" name="consent" value="1">
+                        <div class="text-box">
+                            <a class="policy" href="{{ route('policy') }}" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
+                            <p class="text">に同意</p>
+                        </div>
+                    </div>
+                    @error('consent')
+                        <p class="consent-error">{{ $message }}</p>
+                    @enderror
 					<div class="btn-box">
 						<button class="prev" type="submit" name="back" value="true">修正する</button>
 						<button class="next" type="submit">送信する</button>

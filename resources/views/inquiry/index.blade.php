@@ -65,7 +65,7 @@
 					</div>
 
 					<div id="companyInfo" class="section-box" style="display: none;">
-						{{-- 会社名 --}}
+						<!-- 会社名 -->
 						<div class="ele-box">
 							<label class="required" for="company">会社名</label>
 							<div class="input-box">
@@ -76,7 +76,7 @@
 							@enderror
 						</div>
 
-						{{-- 部署 --}}
+						<!-- 部署 -->
 						<div class="ele-box">
 							<label for="department">部署</label>
 							<div class="input-box">
@@ -84,7 +84,7 @@
 							</div>
 						</div>
 
-						{{-- 役職 --}}
+						<!-- 役職 -->
 						<div class="ele-box">
 							<label for="role">役職</label>
 							<div class="input-box">
@@ -92,7 +92,7 @@
 							</div>
 						</div>
 
-						{{-- ご担当者 --}}
+						<!-- ご担当者 -->
 						<div class="ele-box">
 							<label class="required">ご担当者</label>
 							<div class="two-row-box">
@@ -134,7 +134,7 @@
 
 					<!-- ふりがな -->
 					<div class="ele-box">
-						<label class="required" for="name">ふりがな</label>
+						<label class="required" for="name_kana">ふりがな</label>
 						<div class="two-row-box">
 							<div class="input-box">
 								<input type="text" id="last_name_kana" name="last_name_kana" placeholder="せい" value="{{ old('last_name_kana', $input['last_name_kana'] ?? '') }}">
@@ -164,7 +164,7 @@
 
 					<!-- 電話番号 -->
 					<div class="ele-box">
-						<label class="required" for="email">電話番号</label>
+						<label class="required" for="tel">電話番号</label>
 						<div class="tel-box">
 							<div class="input-box">
 								<input type="tel" id="tel1" name="tel1" placeholder="090" value="{{ old('tel1', $input['tel1'] ?? '') }}">

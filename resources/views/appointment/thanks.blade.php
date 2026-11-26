@@ -25,29 +25,19 @@
 
 
 @section('content')
-    <section id="title">
-        <div class="content-box">
-            <h1>ご予約 - 完了</h1>
-        </div>
-        <p class="en">APPOINTMENT</p>
-    </section>
-
-
-
-
-
-
-
-
-
-    <section id="test">
-        <p>ご予約が完了しました</p>
-
-        <p>お問い合わせ・ご予約いただき、誠にありがとうございました。</p>
-        <p>ご入力いただいたメールアドレス宛に、自動確認メールを送信いたしましたのでご確認ください。</p>
-
-        <div style="margin-top: 30px;">
-            <a href="{{ route('top') }}">トップページへ戻る</a>
+    <section id="fv" class="thanks">
+        <div class="complete-box">
+            <div class="inside-box">
+                <p class="en">APPOINTMENT</p>
+                <h1 class="tit">ご予約</h1>
+                <div class="desc-box">
+                    <p>お問い合わせいただき、誠にありがとうございます。</p>
+                    <p>ご入力いただいたメールアドレス宛に、<br>自動確認メールを送信いたしましたのでご確認ください。</p>
+                </div>
+                <a class="top-link" href="{{ route('top') }}">
+                    <p>TOPへ戻る</p>
+                </a>
+            </div>
         </div>
     </section>
 @stop

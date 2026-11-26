@@ -64,13 +64,53 @@ class ContactController extends Controller
 			return redirect()->route('appointment.index');
 		}
 
+	    $validator = \Validator::make($request->all(), [
+	        'consent' => 'required|accepted',
+	    ], [
+	        'consent.required' => '同意が必要です。',
+	        'consent.accepted' => '同意が必要です。',
+	    ]);
+	    if ($validator->fails()) {
+	        $input = session()->get('appointment_input');
+	        if (!$input) {
+	            return redirect()->route('appointment.index');
+	        }
+			return view('appointment.confirm', ['validated' => $input])->withErrors($validator);
+	    }
+
 		$input = session()->get('appointment_input');
 		if (!$input) {
 			return redirect()->route('appointment.index');
 		}
 
-		// ★ここに「ご予約受付メール」の送信処理（DB保存はなし）
-		// Mail::to($input['email'])->send(new AppointmentMail($input));
+		$request_text = implode('、', $input['request'] ?? []);
+		$category = implode('、', $input['category'] ?? []);
+		$second_day = !empty($input['second_day']) ? $input['second_day'] : '---';
+		$third_day  = !empty($input['third_day']) ? $input['third_day'] : '---';
+		$body = !empty($input['body']) ? $input['body'] : '---';
+
+		$mail_text = <<<EOT
+
+HP経由でご予約がありました。
+
+-------------------------
+
+ご予約の理由：{$request_text}
+買取品カテゴリ：{$category}
+出張買取の希望エリア：{$input['pref']} {$input['area']}
+第1希望日：{$input['first_day']}
+第2希望日：{$second_day}
+第3希望日：{$third_day}
+お名前：{$input['last_name']}（ {$input['last_name_kana']} ）
+電話番号：{$input['tel1']}-{$input['tel2']}-{$input['tel3']}
+
+ご要望:
+{$body}
+EOT;
+
+		Mail::raw($mail_text, function ($message) {
+			$message->to(['shimoda@x-industry.jp'])->subject('【 要確認 】HPからのご予約');
+		});
 
 		session()->forget('appointment_input');
 		return view('appointment.thanks');
@@ -143,10 +183,19 @@ class ContactController extends Controller
 			return redirect()->route('inquiry.index')->withInput(session('inquiry_input'));
 		}
 
-		$input = session()->get('inquiry_input');
-		if (!$input) {
-			return redirect()->route('inquiry.index');
-		}
+	    $validator = \Validator::make($request->all(), [
+	        'consent' => 'required|accepted',
+	    ], [
+	        'consent.required' => '同意が必要です。',
+	        'consent.accepted' => '同意が必要です。',
+	    ]);
+	    if ($validator->fails()) {
+	        $input = session()->get('inquiry_input');
+	        if (!$input) {
+	            return redirect()->route('inquiry.index');
+	        }
+			return view('inquiry.confirm', ['validated' => $input])->withErrors($validator);
+	    }
 
 		$isCompany = in_array($input['inquiry_type'], ['業務委託について', '業務提携・協業について',], true);
 		if ($isCompany) {
@@ -164,7 +213,7 @@ EOT;
 EOT;
 		}
 
-		$body = <<<EOT
+		$mail_text = <<<EOT
 
 HP経由でご相談がありました。
 
@@ -180,7 +229,7 @@ HP経由でご相談がありました。
 {$input['body']}
 EOT;
 
-		Mail::raw($body, function ($message) {
+		Mail::raw($mail_text, function ($message) {
 			$message->to(['shimoda@x-industry.jp'])->subject('【 要確認 】HPからのご相談');
 		});
 

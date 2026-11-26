@@ -172,6 +172,15 @@ body::-webkit-scrollbar
 		padding: 90px 0 70px
 	+bp450
 		padding: 70px 0 70px
+	&.confirm
+		.content-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			flex-wrap: initial
+			.landscape-box
+				display: none
 	&.thanks
 		+bp850
 			min-height: initial
@@ -185,10 +194,6 @@ body::-webkit-scrollbar
 		+bp1500
 			width: 1000px
 		+bp1200
-			// justify-content: flex-start
-			// align-items: flex-start
-			// flex-direction: column
-			// width: calc(100vw - 450px)
 			width: 920px
 		+bp1100
 			width: 840px
@@ -250,12 +255,7 @@ body::-webkit-scrollbar
 				+bp500
 					font-size: 29px
 				+bp450
-					font-size: calc(0.05*100vw + 7px)
-					background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#222, 1.0) 100%)
-					-webkit-background-clip: text
-					-webkit-text-fill-color: transparent
-					background-clip: text
-					text-fill-color: transparent
+					font-size: calc(0.05*100vw + 5px)
 				&::selection
 					color: #555
 			.tit
@@ -326,16 +326,6 @@ body::-webkit-scrollbar
 				width: 62%
 			+bp700
 				width: 100%
-			// +bp1100
-			// 	margin-top: 65px
-			// +bp900
-			// 	margin-top: 55px
-			// +bp800
-			// 	margin-top: 45px
-			// +bp700
-			// 	margin-top: 40px
-			// +bp500
-			// 	margin-top: 30px
 			.form-inner
 				display: flex
 				justify-content: flex-start
@@ -358,10 +348,6 @@ body::-webkit-scrollbar
 					padding: 30px 25px 30px
 				+bp400
 					border-radius: 10px
-				.section-box
-					display: block
-					width: 100%
-					margin-top: 18px
 				.ele-box
 					display: block
 					width: 100%
@@ -392,6 +378,15 @@ body::-webkit-scrollbar
 							font-size: 1.1em
 							line-height: 1.0
 							color: #ec5555
+						.multi
+							display: inline
+							margin-left: 7px
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.1em
+							color: #777
 					.checkbox-box
 						display: flex
 						justify-content: flex-start
@@ -426,7 +421,7 @@ body::-webkit-scrollbar
 									background-color: $base
 								&.checked::after
 									position: absolute
-									top: -4px
+									top: -5px
 									left: 6px
 									display: block
 									content: ""
@@ -434,6 +429,7 @@ body::-webkit-scrollbar
 									height: 12px
 									border: solid #fff
 									border-width: 0 2px 2px 0
+									box-shadow: 1px 1px 1px #333
 									transform: rotate(45deg)
 							.label-text
 								display: block
@@ -750,24 +746,11 @@ body::-webkit-scrollbar
 		.form-confirm-box
 			display: block
 			width: 600px
-			margin-top: 20px
 			z-index: 10
 			+bp1500
 				width: 550px
-				margin-top: 16px
-			+bp1200
-				width: 100%
-				margin-top: 70px
-			+bp1100
-				margin-top: 65px
-			+bp900
-				margin-top: 55px
-			+bp800
-				margin-top: 45px
 			+bp700
-				margin-top: 40px
-			+bp500
-				margin-top: 30px
+				width: 100%
 			.check-inner
 				display: flex
 				justify-content: flex-start
@@ -835,14 +818,14 @@ body::-webkit-scrollbar
 								margin-top: 0.7em
 				.btn-box
 					display: flex
-					justify-content: flex-start
+					justify-content: center
 					align-items: center
 					width: fit-content
-					margin-top: 40px
+					margin: 40px auto 0
 					+bp700
-						margin-top: 25px
+						margin: 25px auto 0
 					+bp450
-						margin-top: 20px
+						margin: 20px auto 0
 					button
 						display: block
 						width: 150px
@@ -1101,3 +1084,108 @@ body::-webkit-scrollbar
 
 
 
+.consent-box
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	width: fit-content
+	margin: 50px auto 0
+	+bp850
+		margin: 40px auto 0
+	+bp700
+		margin: 35px auto 0
+	+bp450
+		margin: 30px auto 0
+	input[type="checkbox"]
+		padding: 0
+		margin: 0
+		background: none
+		border: none
+		border-radius: 0
+		outline: none
+		appearance: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		cursor: pointer
+		padding-left: 15px
+		vertical-align: middle
+		position: relative
+		&::before
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			display: block
+			content: ""
+			width: 14px
+			min-width: 14px
+			height: 14px
+			border: solid 1px #999
+			border-radius: 4px
+			background-color: #fff
+		&::after
+			position: absolute
+			top: -8px
+			left: 3px
+			transform: rotate(-45deg)
+			display: block
+			content: ""
+			width: 12px
+			height: 5px
+			border-bottom: 2px solid #ec5555
+			border-left: 2px solid #ec5555
+			opacity: 0
+		&:checked::after
+			opacity: 1
+	.text-box
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		width: fit-content
+		margin-left: 0.4em
+		position: relative
+		.policy
+			display: inline-block
+			padding: 0 5px 5px
+			margin-right: 0.3em
+			border-bottom: solid 1px #777
+			font-weight: 500
+			font-size: 14px
+			line-height: 1.0
+			font-family: $noto-sans
+			letter-spacing: 0.05em
+			color: #777
+			+bp700
+				padding: 0 5px 3px
+				font-size: 13px
+		.text
+			display: block
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.0
+			font-family: $noto-sans
+			letter-spacing: 0.05em
+			color: #555
+			+bp700
+				font-size: 13px
+		&::after
+			position: absolute
+			top: -0.2em
+			right: -0.6em
+			content: "*"
+			display: block
+			font-weight: 400
+			font-size: 1.1em
+			line-height: 1.0
+			color: #ec5555
+.consent-error
+	display: block
+	width: 100%
+	margin-top: 0.9em
+	font-weight: 400
+	font-size: 10px
+	line-height: 1.0
+	font-family: $noto-sans
+	letter-spacing: 0.05em
+	text-align: center
+	color: #ec5555

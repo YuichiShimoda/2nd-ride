@@ -40,7 +40,7 @@
                 <div class="form-inner">
                     <!-- ご要望 -->
                     <div class="ele-box">
-                        <label class="required" for="request">ご要望</label>
+                        <label class="required" for="request">ご予約の理由<span class="multi">※ 複数選択可</span></label>
                         <div class="checkbox-box">
 					        <div class="checkbox-ele">
 					            <input type="checkbox" id="request1" name="request[]" value="現金化したい" @checked(in_array('現金化したい', old('request', $input['request'] ?? [])))>
@@ -95,7 +95,7 @@
 
                     <!-- 買取品カテゴリ -->
                     <div class="ele-box">
-                        <label class="required" for="category">買取品カテゴリ</label>
+                        <label class="required" for="category">買取品カテゴリ<span class="multi">※ 複数選択可</span></label>
                         <div class="checkbox-box">
 					        <div class="checkbox-ele">
 					            <input type="checkbox" id="category1" name="category[]" value="家電" @checked(in_array('家電', old('category', $input['category'] ?? [])))>
@@ -198,7 +198,7 @@
                         @enderror
                     </div>
 
-                    {{-- 出張買取の希望エリア --}}
+                    <!-- 出張買取の希望エリア -->
                     <div class="ele-box">
                         <label class="required" for="area">出張買取の希望エリア</label>
 						<div class="two-row-box">
@@ -310,11 +310,11 @@
                         @enderror
                     </div>
 
-                    <!-- ご相談内容 -->
+                    <!-- ご要望 -->
                     <div class="ele-box">
-                        <label for="body">ご相談内容</label>
+                        <label for="body">ご要望</label>
                         <div class="textarea-box">
-                            <textarea id="body" name="body" placeholder="詳細をご自由に入力してください。" rows="6">{{ old('body', $input['body'] ?? '') }}</textarea>
+                            <textarea id="body" name="body" placeholder="売りたい物の説明や買い取りに関するご要望を入力してください。" rows="6">{{ old('body', $input['body'] ?? '') }}</textarea>
                         </div>
                         @error('body')
                             <p class="error-msg">{{ $message }}</p>

@@ -25,48 +25,79 @@
 
 
 @section('content')
-    <section id="title">
+    <section id="fv" class="confirm">
         <div class="content-box">
-            <h1>ご予約 - 確認</h1>
-        </div>
-        <p class="en">APPOINTMENT</p>
-    </section>
-
-
-
-
-
-
-
-
-
-    <section id="test">
-        <p>入力内容をご確認の上、「送信する」ボタンを押してください。</p>
-        <form action="{{ route('appointment.thanks') }}" method="POST">
-            @csrf
-            <table border="1" cellpadding="10" style="border-collapse: collapse;">
-                <tr>
-                    <th>お名前</th>
-                    <td>{{ $validated['name'] }}</td>
-                </tr>
-                <tr>
-                    <th>メールアドレス</th>
-                    <td>{{ $validated['email'] }}</td>
-                </tr>
-                <tr>
-                    <th>ご予約希望日時</th>
-                    <td>{{ \Carbon\Carbon::parse($validated['reserve_at'])->format('Y年m月d日 H時i分') }}</td>
-                </tr>
-            </table>
-
-            <div style="margin-top: 20px;">
-                <!-- 修正ボタン（Controllerで 'back' の有無を判定します） -->
-                <button type="submit" name="back" value="true">修正する</button>
-                <!-- 送信ボタン -->
-                <button type="submit">送信する</button>
+            <div class="left-box">
+                <p class="en">APPOINTMENT</p>
+                <h1 class="tit">ご予約</h1>
+                <div class="desc-box">
+                    <p>入力内容をご確認の上「 送信する 」ボタンを押してください。</p>
+                    <p>送信が完了しましたら、ご入力いただいたメールアドレス宛に自動確認メールを送信いたします。</p>
+                </div>
             </div>
-        </form>
+            <form class="form-confirm-box" action="{{ route('appointment.thanks') }}" method="POST">
+                @csrf
+                <div class="check-inner">
+                    <div class="ele-box">
+                        <p class="list">ご予約の理由</p>
+                        <p class="detail">{{ implode('、', $validated['request']) }}</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">買取品カテゴリ</p>
+                        <p class="detail">{{ implode('、', $validated['category']) }}</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">出張買取の希望エリア</p>
+                        <p class="detail">{{ $validated['pref'] }} {{ $validated['area'] }}</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">第1希望日</p>
+                        <p class="detail">{{ $validated['first_day'] }}</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">第2希望日</p>
+                        <p class="detail">{{ $validated['second_day'] }}</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">第3希望日</p>
+                        <p class="detail">{{ $validated['third_day'] }}</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">お名前</p>
+                        <p class="detail">{{ $validated['last_name'] }}（ {{ $validated['last_name_kana'] }} ）</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">電話番号</p>
+                        <p class="detail">{{ $validated['tel1'] }}-{{ $validated['tel2'] }}-{{ $validated['tel3'] }}</p>
+                    </div>
+                    <div class="ele-box">
+                        <p class="list">ご要望</p>
+                        <p class="detail textarea">{!! nl2br(e($validated['body'])) !!}</p>
+                    </div>
+                    <div class="consent-box">
+                        <input type="checkbox" name="consent" value="1">
+                        <div class="text-box">
+                            <a class="policy" href="{{ route('policy') }}" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
+                            <p class="text">に同意</p>
+                        </div>
+                    </div>
+                    @error('consent')
+                        <p class="consent-error">{{ $message }}</p>
+                    @enderror
+                    <div class="btn-box">
+                        <button class="prev" type="submit" name="back" value="true">修正する</button>
+                        <button class="next" type="submit">送信する</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
+
+
+
+
+
+
 @stop
 
 
