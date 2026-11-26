@@ -96,6 +96,11 @@ body::-webkit-scrollbar {
     min-height: initial;
   }
 }
+@media screen and (max-width: 450px) {
+  #fv.thanks {
+    min-height: 75vh;
+  }
+}
 #fv .content-box {
   display: flex;
   justify-content: space-between;
