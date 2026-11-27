@@ -60,6 +60,10 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 450px) {
   #title {
     height: 60vh;
+    background: url("../image/faq/fv-bg-sp.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
   }
 }
 #title .content-box {
