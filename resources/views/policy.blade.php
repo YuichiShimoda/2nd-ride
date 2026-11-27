@@ -27,7 +27,8 @@
 @section('content')
     <section id="title">
         <div class="content-box">
-            <p class="en">PRIVACY POLICY</p>
+            <p class="en">PRIVACY</p>
+            <p class="en">POLICY</p>
             <h1 class="tit">プライバシーポリシー</h1>
         </div>
     </section>
