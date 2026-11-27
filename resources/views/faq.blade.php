@@ -130,6 +130,6 @@
         'resources/js/hamburger-menu.ts',
         'resources/js/smooth-scroll.ts',
         'resources/js/mouse.ts',
-        'resources/js/faq.js',
+        'resources/js/faq.ts',
     ])
 @stop
