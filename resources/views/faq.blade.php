@@ -27,84 +27,88 @@
 @section('content')
     <section id="title">
         <div class="content-box">
-            <h1>よくある質問</h1>
+            <p class="en">FAQ</p>
+            <h1 class="tit">よくある質問</h1>
         </div>
-        <p class="en">FAQ</p>
     </section>
 
     <section id="faq">
+        <div class="desc-box">
+            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
         <div class="fax-box">
             <div class="faq-ele">
                 <div class="each-q accordion-title">
-                    <div>
-                        <span class="tri">▼</span>
+                    <div class="question-box">
+                        <span class="triangle">▼</span>
                         <p class="tit">立ち合いなしでの作業は可能ですか？</p>
                     </div>
                 </div>
                 <div class="each-a accordion-content">
-                    <div class="desc-box">
+                    <div class="answer-box">
                         <p>可能です。</p>
-                        <p>お客様の立ち合いがない場合、<span>写真や動画などで作業確認および報告</span>をおこなうこともできます。</p>
+                        <p>お客様の立ち合いがない場合、写真や動画などで作業確認および報告をおこなうこともできます。</p>
                         <p>なお、立ち合いなしでの作業をご希望の場合、お見積もりの確認に通常よりもお時間をいただく必要があります。</p>
                     </div>
                 </div>
             </div>
             <div class="faq-ele">
                 <div class="each-q accordion-title">
-                    <div>
-                        <span class="tri">▼</span>
+                    <div class="question-box">
+                        <span class="triangle">▼</span>
                         <p class="tit">立ち合いなしでの作業は可能ですか？</p>
                     </div>
                 </div>
                 <div class="each-a accordion-content">
-                    <div class="desc-box">
+                    <div class="answer-box">
                         <p>可能です。</p>
-                        <p>お客様の立ち合いがない場合、<span>写真や動画などで作業確認および報告</span>をおこなうこともできます。</p>
+                        <p>お客様の立ち合いがない場合、写真や動画などで作業確認および報告をおこなうこともできます。</p>
                         <p>なお、立ち合いなしでの作業をご希望の場合、お見積もりの確認に通常よりもお時間をいただく必要があります。</p>
                     </div>
                 </div>
             </div>
             <div class="faq-ele">
                 <div class="each-q accordion-title">
-                    <div>
-                        <span class="tri">▼</span>
+                    <div class="question-box">
+                        <span class="triangle">▼</span>
                         <p class="tit">立ち合いなしでの作業は可能ですか？</p>
                     </div>
                 </div>
                 <div class="each-a accordion-content">
-                    <div class="desc-box">
+                    <div class="answer-box">
                         <p>可能です。</p>
-                        <p>お客様の立ち合いがない場合、<span>写真や動画などで作業確認および報告</span>をおこなうこともできます。</p>
+                        <p>お客様の立ち合いがない場合、写真や動画などで作業確認および報告をおこなうこともできます。</p>
                         <p>なお、立ち合いなしでの作業をご希望の場合、お見積もりの確認に通常よりもお時間をいただく必要があります。</p>
                     </div>
                 </div>
             </div>
             <div class="faq-ele">
                 <div class="each-q accordion-title">
-                    <div>
-                        <span class="tri">▼</span>
+                    <div class="question-box">
+                        <span class="triangle">▼</span>
                         <p class="tit">立ち合いなしでの作業は可能ですか？</p>
                     </div>
                 </div>
                 <div class="each-a accordion-content">
-                    <div class="desc-box">
+                    <div class="answer-box">
                         <p>可能です。</p>
-                        <p>お客様の立ち合いがない場合、<span>写真や動画などで作業確認および報告</span>をおこなうこともできます。</p>
+                        <p>お客様の立ち合いがない場合、写真や動画などで作業確認および報告をおこなうこともできます。</p>
                         <p>なお、立ち合いなしでの作業をご希望の場合、お見積もりの確認に通常よりもお時間をいただく必要があります。</p>
                     </div>
                 </div>
             </div>
             <div class="faq-ele">
                 <div class="each-q accordion-title">
-                    <div>
-                        <span class="tri">▼</span>
+                    <div class="question-box">
+                        <span class="triangle">▼</span>
                         <p class="tit">立ち合いなしでの作業は可能ですか？</p>
                     </div>
                 </div>
                 <div class="each-a accordion-content">
-                    <div class="desc-box">
+                    <div class="answer-box">
                         <p>可能です。</p>
-                        <p>お客様の立ち合いがない場合、<span>写真や動画などで作業確認および報告</span>をおこなうこともできます。</p>
+                        <p>お客様の立ち合いがない場合、写真や動画などで作業確認および報告をおこなうこともできます。</p>
                         <p>なお、立ち合いなしでの作業をご希望の場合、お見積もりの確認に通常よりもお時間をいただく必要があります。</p>
                     </div>
                 </div>

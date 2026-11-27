@@ -14,8 +14,6 @@ body::-webkit-scrollbar {
 #wrap {
   overflow: hidden;
   min-height: 100vh;
-  background-image: radial-gradient(circle, #CCC 1px, transparent 1px);
-  background-size: 16px 16px;
 }
 
 *::selection {
@@ -27,224 +25,468 @@ body::-webkit-scrollbar {
 }
 
 #title {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  padding: 240px 0 120px;
-  background: linear-gradient(180deg, #00a000 0%, #00a000 50%, rgba(0, 160, 0, 0.8) 100%);
+  height: 60vh;
+  background: url("../image/faq/fv-bg.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
   position: relative;
+}
+@media screen and (max-width: 1500px) {
+  #title {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #title {
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #title {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 850px) {
+  #title {
+    height: 36vh;
+  }
 }
 @media screen and (max-width: 450px) {
   #title {
-    padding: 160px 0 60px;
+    height: 60vh;
   }
 }
 #title .content-box {
   display: block;
-  width: 1200px;
+  width: fit-content;
   margin: 0 auto;
 }
-@media screen and (max-width: 1400px) {
-  #title .content-box {
-    width: 1000px;
-    padding: 0 0 80px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  #title .content-box {
-    width: calc(100vw - 100px);
-  }
-}
-@media screen and (max-width: 700px) {
-  #title .content-box {
-    padding: 0 0 60px;
-  }
-}
-@media screen and (max-width: 500px) {
-  #title .content-box {
-    width: calc(100vw - 60px);
-    padding: 0 0 40px;
-  }
-}
-@media screen and (max-width: 450px) {
-  #title .content-box {
-    width: calc(100vw - 30px);
-    padding: 0 0 30px;
-  }
-}
-#title .content-box h1 {
-  display: block;
-  width: 100%;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 1;
-  font-family: "Noto Sans JP", sans-serif;
-  letter-spacing: 0.15em;
-  color: #fff;
-}
-@media screen and (max-width: 1400px) {
-  #title .content-box h1 {
-    font-size: 34px;
-  }
-}
-@media screen and (max-width: 900px) {
-  #title .content-box h1 {
-    font-size: 32px;
-  }
-}
-@media screen and (max-width: 700px) {
-  #title .content-box h1 {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 500px) {
-  #title .content-box h1 {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 450px) {
-  #title .content-box h1 {
-    font-size: 22px;
-  }
-}
-#title .en {
-  position: absolute;
-  right: 10vw;
-  bottom: 15px;
+#title .content-box .en {
   display: block;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 95px;
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
-  letter-spacing: 0.05em;
-  background: linear-gradient(180deg, white 0%, #cccccc 100%);
+  letter-spacing: 0.2em;
+  background: linear-gradient(180deg, white 0%, #222222 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  text-align: center;
 }
-
-.fax-box {
-  display: block;
-  width: 880px;
-  margin: 170px auto 170px;
-  z-index: 10;
+@media screen and (max-width: 1600px) {
+  #title .content-box .en {
+    font-size: calc(6vw - 6px);
+  }
 }
 @media screen and (max-width: 1000px) {
-  .fax-box {
-    width: calc(100vw - 200px);
+  #title .content-box .en {
+    font-size: calc(5.3vw + 10.7px);
   }
 }
 @media screen and (max-width: 700px) {
-  .fax-box {
-    width: calc(100vw - 160px);
+  #title .content-box .en {
+    font-size: 48px;
   }
 }
 @media screen and (max-width: 500px) {
-  .fax-box {
-    width: calc(100vw - 100px);
+  #title .content-box .en {
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 450px) {
-  .fax-box {
-    width: calc(100vw - 60px);
-    margin: 60px auto 60px;
+  #title .content-box .en {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #title .content-box .en {
+    font-size: 34px;
   }
 }
 @media screen and (max-width: 400px) {
-  .fax-box {
-    width: calc(100vw - 30px);
+  #title .content-box .en {
+    font-size: 32px;
   }
 }
-.fax-box .faq-ele {
+@media screen and (max-width: 380px) {
+  #title .content-box .en {
+    font-size: 30px;
+  }
+}
+#title .content-box .en::selection {
+  color: #555;
+}
+#title .content-box .tit {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.25em;
+  text-align: center;
+  color: #00a000;
+}
+@media screen and (max-width: 1500px) {
+  #title .content-box .tit {
+    margin-top: 35px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #title .content-box .tit {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #title .content-box .tit {
+    margin-top: 23px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #title .content-box .tit {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #title .content-box .tit {
+    margin-top: 17px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #title .content-box .tit {
+    letter-spacing: 0.2em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #title .content-box .tit {
+    letter-spacing: 0.15em;
+  }
+}
+
+#faq {
+  display: block;
+  width: 100%;
+  height: fit-content;
+  padding: 240px 0 260px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+@media screen and (max-width: 1600px) {
+  #faq {
+    padding: 200px 0 240px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  #faq {
+    padding: 180px 0 200px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #faq {
+    padding: 170px 0 200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #faq {
+    padding: 150px 0 180px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #faq {
+    padding: 140px 0 170px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #faq {
+    padding: 120px 0 150px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #faq {
+    padding: 100px 0 120px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #faq {
+    padding: 80px 0 100px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #faq {
+    padding: 70px 0 90px;
+  }
+}
+#faq .desc-box {
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1400px) {
+  #faq .desc-box {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #faq .desc-box {
+    width: calc(100vw - 400px);
+  }
+}
+@media screen and (max-width: 1100px) {
+  #faq .desc-box {
+    width: calc(100vw - 300px);
+  }
+}
+@media screen and (max-width: 800px) {
+  #faq .desc-box {
+    width: calc(100vw - 240px);
+  }
+}
+@media screen and (max-width: 700px) {
+  #faq .desc-box {
+    width: calc(100vw - 180px);
+  }
+}
+@media screen and (max-width: 600px) {
+  #faq .desc-box {
+    width: calc(100vw - 140px);
+  }
+}
+@media screen and (max-width: 450px) {
+  #faq .desc-box {
+    width: calc(100vw - 120px);
+  }
+}
+@media screen and (max-width: 400px) {
+  #faq .desc-box {
+    width: calc(100vw - 100px);
+  }
+}
+#faq .desc-box > p {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #777;
+}
+@media screen and (max-width: 600px) {
+  #faq .desc-box > p {
+    font-size: 13px;
+    text-align: left;
+  }
+}
+#faq .fax-box {
+  display: block;
+  width: 1080px;
+  margin: 100px auto 0;
+}
+@media screen and (max-width: 1600px) {
+  #faq .fax-box {
+    margin: 90px auto 0;
+  }
+}
+@media screen and (max-width: 1500px) {
+  #faq .fax-box {
+    margin: 80px auto 0;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #faq .fax-box {
+    width: 950px;
+    margin: 70px auto 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #faq .fax-box {
+    width: calc(100vw - 300px);
+    margin: 65px auto 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #faq .fax-box {
+    width: calc(100vw - 200px);
+    margin: 60px auto 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  #faq .fax-box {
+    width: calc(100vw - 160px);
+    margin: 50px auto 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  #faq .fax-box {
+    width: calc(100vw - 120px);
+    margin: 35px auto 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #faq .fax-box {
+    width: calc(100vw - 80px);
+    margin: 30px auto 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  #faq .fax-box {
+    width: calc(100vw - 60px);
+    margin: 15px auto 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  #faq .fax-box {
+    width: calc(100vw - 40px);
+    margin: 5px auto 0;
+  }
+}
+#faq .fax-box .faq-ele {
   display: block;
   width: 100%;
   background-color: #fff;
   transition: all 0.8s 0.2s ease-out;
   position: relative;
 }
-.fax-box .faq-ele .each-q {
+#faq .fax-box .faq-ele.is-open .each-q {
+  border-bottom: 0;
+}
+#faq .fax-box .faq-ele.is-open .each-q .question-box .triangle {
+  color: #00a000;
+}
+#faq .fax-box .faq-ele.is-open .each-q .question-box .tit {
+  color: #00a000;
+}
+#faq .fax-box .faq-ele .each-q {
   display: block;
   width: 100%;
-  padding: 15px 30px;
-  border-bottom: solid 1px #333;
+  padding: 45px 30px 20px;
+  border-bottom: solid 1px #ccc;
   cursor: pointer;
 }
-@media screen and (max-width: 450px) {
-  .fax-box .faq-ele .each-q {
-    padding: 10px 15px;
+@media screen and (max-width: 1000px) {
+  #faq .fax-box .faq-ele .each-q {
+    padding: 40px 30px 15px;
   }
 }
-.fax-box .faq-ele .each-q > div {
+@media screen and (max-width: 600px) {
+  #faq .fax-box .faq-ele .each-q {
+    padding: 35px 20px 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #faq .fax-box .faq-ele .each-q {
+    padding: 35px 15px 12px;
+  }
+}
+#faq .fax-box .faq-ele .each-q .question-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
-.fax-box .faq-ele .each-q > div .tri {
+#faq .fax-box .faq-ele .each-q .question-box .triangle {
   display: block;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 15px;
   line-height: 1.5;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0;
-  color: #333;
+  color: #555;
 }
-@media screen and (max-width: 450px) {
-  .fax-box .faq-ele .each-q > div .tri {
+@media screen and (max-width: 1000px) {
+  #faq .fax-box .faq-ele .each-q .question-box .triangle {
     font-size: 13px;
   }
 }
-.fax-box .faq-ele .each-q > div .tit {
+#faq .fax-box .faq-ele .each-q .question-box .tit {
   display: block;
   margin-left: 15px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;
-  color: #755A38;
+  color: #333;
+}
+@media screen and (max-width: 1000px) {
+  #faq .fax-box .faq-ele .each-q .question-box .tit {
+    margin-left: 12px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #faq .fax-box .faq-ele .each-q .question-box .tit {
+    margin-left: 10px;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 450px) {
-  .fax-box .faq-ele .each-q > div .tit {
+  #faq .fax-box .faq-ele .each-q .question-box .tit {
     margin-left: 10px;
     font-size: 14px;
   }
 }
-.fax-box .faq-ele .each-a {
+#faq .fax-box .faq-ele .each-a {
   display: none;
   width: 100%;
-  padding: 20px 30px 25px;
+  padding: 5px 30px 30px 61px;
   border-bottom: solid 1px #333;
   position: relative;
 }
-@media screen and (max-width: 450px) {
-  .fax-box .faq-ele .each-a {
-    padding: 10px 15px 15px;
+@media screen and (max-width: 1000px) {
+  #faq .fax-box .faq-ele .each-a {
+    padding: 0 30px 30px 57px;
   }
 }
-.fax-box .faq-ele .each-a .desc-box {
+@media screen and (max-width: 600px) {
+  #faq .fax-box .faq-ele .each-a {
+    padding: 0 20px 30px 47px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #faq .fax-box .faq-ele .each-a {
+    padding: 0 20px 25px 44px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #faq .fax-box .faq-ele .each-a {
+    padding: 0 15px 20px 39px;
+  }
+}
+#faq .fax-box .faq-ele .each-a .answer-box {
   display: block;
   width: 100%;
 }
-.fax-box .faq-ele .each-a .desc-box > p {
+#faq .fax-box .faq-ele .each-a .answer-box > p {
   display: block;
-  margin-top: 8px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 2.2;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;
   color: #555;
 }
-.fax-box .faq-ele .each-a .desc-box > p > span {
-  display: inline;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-  border-bottom: solid 1px #f6c8c6;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Noto Sans JP", sans-serif;
-  letter-spacing: 0.05em;
-  color: #555;
+@media screen and (max-width: 600px) {
+  #faq .fax-box .faq-ele .each-a .answer-box > p {
+    line-height: 2;
+  }
+}
+@media screen and (max-width: 450px) {
+  #faq .fax-box .faq-ele .each-a .answer-box > p {
+    font-size: 13px;
+  }
 }

@@ -95,8 +95,6 @@ body::-webkit-scrollbar
 #wrap
 	overflow: hidden
 	min-height: 100vh
-	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
-	background-size: 16px 16px
 *::selection
 	background: #ddd
 *::-webkit-scrollbar
@@ -136,64 +134,91 @@ body::-webkit-scrollbar
 
 
 #title
-	display: block
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
 	width: 100%
-	padding: 240px 0 120px
-	background: linear-gradient(180deg, rgba($base, 1.0) 0%, rgba($base, 1.0) 50%, rgba($base, 0.8) 100%)
+	height: 60vh
+	background: url("../image/faq/fv-bg.webp")
+	background-attachment: fixed
+	background-size: cover
+	background-position: top center
 	position: relative
+	+bp1500
+		height: 50vh
+	+bp1200
+		height: 45vh
+	+bp1000
+		height: 40vh
+	+bp850
+		height: 36vh
 	+bp450
-		padding: 160px 0 60px
+		height: 60vh
 	.content-box
 		display: block
-		width: 1200px
+		width: fit-content
 		margin: 0 auto
-		+bp1400
-			width: 1000px
-			padding: 0 0 80px
-		+bp1100
-			width: calc(100vw - 100px)
-		+bp700
-			padding: 0 0 60px
-		+bp500
-			width: calc(100vw - 60px)
-			padding: 0 0 40px
-		+bp450
-			width: calc(100vw - 30px)
-			padding: 0 0 30px
-		h1
+		.en
+			display: block
+			font-weight: 900
+			font-size: 95px
+			line-height: 1.0
+			font-family: $eurostile-extended
+			letter-spacing: 0.2em
+			background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#222, 1.0) 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			background-clip: text
+			text-fill-color: transparent
+			text-align: center
+			+bp1600
+				font-size: calc(0.06*100vw - 6px)
+			+bp1000
+				font-size: calc(0.053*100vw + 10.7px)
+			+bp700
+				font-size: 48px
+			+bp500
+				font-size: 40px
+			+bp450
+				font-size: 36px
+			+bp420
+				font-size: 34px
+			+bp400
+				font-size: 32px
+			+bp380
+				font-size: 30px
+			&::selection
+				color: #555
+		.tit
 			display: block
 			width: 100%
-			font-weight: 700
-			font-size: 38px
+			margin-top: 40px
+			font-weight: 500
+			font-size: 24px
 			line-height: 1.0
 			font-family: $noto-sans
-			letter-spacing: 0.15em
-			color: #fff
-			+bp1400
-				font-size: 34px
-			+bp900
-				font-size: 32px
-			+bp700
-				font-size: 28px
+			letter-spacing: 0.25em
+			text-align: center
+			color: $base
+			+bp1500
+				margin-top: 35px
+				font-size: 20px
+			+bp1300
+				margin-top: 30px
+				font-size: 18px
+			+bp1000
+				margin-top: 23px
+				font-size: 16px
 			+bp500
-				font-size: 24px
+				margin-top: 20px
 			+bp450
-				font-size: 22px
-	.en
-		position: absolute
-		right: 10vw
-		bottom: 15px
-		display: block
-		font-weight: 900
-		font-size: 18px
-		line-height: 1.0
-		font-family: $eurostile-extended
-		letter-spacing: 0.05em
-		background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		background-clip: text
-		text-fill-color: transparent
+				margin-top: 17px
+				font-size: 15px
+			+bp420
+				letter-spacing: 0.2em
+			+bp400
+				letter-spacing: 0.15em
 
 
 
@@ -203,93 +228,181 @@ body::-webkit-scrollbar
 
 
 
-
-
-.fax-box
+#faq
 	display: block
-	width: 880px
-	margin: 170px auto 170px
+	width: 100%
+	height: fit-content
+	padding: 240px 0 260px
+	position: relative
+	overflow: hidden
 	z-index: 10
-	+bp1000
-		width: calc(100vw - 200px)
+	+bp1600
+		padding: 200px 0 240px
+	+bp1500
+		padding: 180px 0 200px
+	+bp1400
+		padding: 170px 0 200px
+	+bp1200
+		padding: 150px 0 180px
+	+bp1100
+		padding: 140px 0 170px
+	+bp800
+		padding: 120px 0 150px
 	+bp700
-		width: calc(100vw - 160px)
-	+bp500
-		width: calc(100vw - 100px)
+		padding: 100px 0 120px
 	+bp450
-		width: calc(100vw - 60px)
-		margin: 60px auto 60px
+		padding: 80px 0 100px
 	+bp400
-		width: calc(100vw - 30px)
-	.faq-ele
+		padding: 70px 0 90px
+	.desc-box
 		display: block
-		width: 100%
-		background-color: #fff
-		transition: all 0.8s 0.2s ease-out
-		position: relative
-		.each-q
+		width: 800px
+		margin: 0 auto
+		+bp1400
+			width: 750px
+		+bp1200
+			width: calc(100vw - 400px)
+		+bp1100
+			width: calc(100vw - 300px)
+		+bp800
+			width: calc(100vw - 240px)
+		+bp700
+			width: calc(100vw - 180px)
+		+bp600
+			width: calc(100vw - 140px)
+		+bp450
+			width: calc(100vw - 120px)
+		+bp400
+			width: calc(100vw - 100px)
+		> p
+			display: block
+			font-weight: 400
+			font-size: 14px
+			line-height: 2.0
+			font-family: $noto-sans
+			letter-spacing: 0.05em
+			text-align: center
+			color: #777
+			+bp600
+				font-size: 13px
+				text-align: left
+	.fax-box
+		display: block
+		width: 1080px
+		margin: 100px auto 0
+		+bp1600
+			margin: 90px auto 0
+		+bp1500
+			margin: 80px auto 0
+		+bp1400
+			width: 950px
+			margin: 70px auto 0
+		+bp1200
+			width: calc(100vw - 300px)
+			margin: 65px auto 0
+		+bp1100
+			width: calc(100vw - 200px)
+			margin: 60px auto 0
+		+bp800
+			width: calc(100vw - 160px)
+			margin: 50px auto 0
+		+bp700
+			width: calc(100vw - 120px)
+			margin: 35px auto 0
+		+bp600
+			width: calc(100vw - 80px)
+			margin: 30px auto 0
+		+bp450
+			width: calc(100vw - 60px)
+			margin: 15px auto 0
+		+bp400
+			width: calc(100vw - 40px)
+			margin: 5px auto 0
+		.faq-ele
 			display: block
 			width: 100%
-			padding: 15px 30px
-			border-bottom: solid 1px #333
-			cursor: pointer
-			+bp450
-				padding: 10px 15px
-			> div
-				display: flex
-				justify-content: flex-start
-				align-items: center
-				width: 100%
-				.tri
-					display: block
-					font-weight: 700
-					font-size: 18px
-					line-height: 1.5
-					font-family: $noto-sans
-					letter-spacing: 0
-					color: #333
-					+bp450
-						font-size: 13px
-				.tit
-					display: block
-					margin-left: 15px
-					font-weight: 500
-					font-size: 18px
-					line-height: 1.5
-					font-family: $noto-sans
-					letter-spacing: 0.05em
-					color: #755A38
-					+bp450
-						margin-left: 10px
-						font-size: 14px
-		.each-a
-			display: none
-			width: 100%
-			padding: 20px 30px 25px
-			border-bottom: solid 1px #333
+			background-color: #fff
+			transition: all 0.8s 0.2s ease-out
 			position: relative
-			+bp450
-				padding: 10px 15px 15px
-			.desc-box
+			&.is-open
+				.each-q
+					border-bottom: 0
+					.question-box
+						.triangle
+							color: $base
+						.tit
+							color: $base
+			.each-q
 				display: block
 				width: 100%
-				> p
-					display: block
-					margin-top: 8px
-					font-weight: 400
-					font-size: 14px
-					line-height: 1.5
-					font-family: $noto-sans
-					letter-spacing: 0.05em
-					color: #555
-					> span
-						display: inline
-						padding-left: 0.3em
-						padding-right: 0.3em
-						border-bottom: solid 1px #f6c8c6
+				padding: 45px 30px 20px
+				border-bottom: solid 1px #ccc
+				cursor: pointer
+				+bp1000
+					padding: 40px 30px 15px
+				+bp600
+					padding: 35px 20px 15px
+				+bp450
+					padding: 35px 15px 12px
+				.question-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: 100%
+					.triangle
+						display: block
 						font-weight: 400
-						font-size: 14px
+						font-size: 15px
+						line-height: 1.5
+						font-family: $noto-sans
+						letter-spacing: 0
+						color: #555
+						+bp1000
+							font-size: 13px
+					.tit
+						display: block
+						margin-left: 15px
+						font-weight: 400
+						font-size: 18px
 						line-height: 1.5
 						font-family: $noto-sans
 						letter-spacing: 0.05em
+						color: #333
+						+bp1000
+							margin-left: 12px
+							font-size: 16px
+						+bp500
+							margin-left: 10px
+							font-size: 15px
+						+bp450
+							margin-left: 10px
+							font-size: 14px
+			.each-a
+				display: none
+				width: 100%
+				padding: 5px 30px 30px 61px
+				border-bottom: solid 1px #333
+				position: relative
+				+bp1000
+					padding: 0 30px 30px 57px
+				+bp600
+					padding: 0 20px 30px 47px
+				+bp500
+					padding: 0 20px 25px 44px
+				+bp450
+					padding: 0 15px 20px 39px
+				.answer-box
+					display: block
+					width: 100%
+					> p
+						display: block
+						font-weight: 400
+						font-size: 14px
+						line-height: 2.2
+						font-family: $noto-sans
+						letter-spacing: 0.05em
 						color: #555
+						+bp600
+							line-height: 2.0
+						+bp450
+							font-size: 13px
