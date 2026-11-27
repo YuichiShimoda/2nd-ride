@@ -195,6 +195,7 @@ body::-webkit-scrollbar {
   #title .left-shage {
     display: block;
     width: 30vw;
+    object-fit: cover;
     object-position: top left;
   }
 }
@@ -212,6 +213,7 @@ body::-webkit-scrollbar {
   #title .right-shage {
     display: block;
     width: 30vw;
+    object-fit: cover;
     object-position: bottom right;
   }
 }
