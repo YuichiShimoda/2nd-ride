@@ -22,6 +22,9 @@ $black-bg: #232523
 @mixin bp1600
 	@media screen and (max-width: 1600px)
 		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
 @mixin bp1400
 	@media screen and (max-width: 1400px)
 		@content
@@ -92,8 +95,6 @@ body::-webkit-scrollbar
 #wrap
 	overflow: hidden
 	min-height: 100vh
-	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
-	background-size: 16px 16px
 *::selection
 	background: #ddd
 *::-webkit-scrollbar
@@ -133,65 +134,97 @@ body::-webkit-scrollbar
 
 
 #title
-	display: block
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
 	width: 100%
-	padding: 240px 0 120px
-	background: linear-gradient(180deg, rgba($base, 1.0) 0%, rgba($base, 1.0) 50%, rgba($base, 0.8) 100%)
+	height: 60vh
+	background: url("../image/faq/fv-bg.webp")
+	background-attachment: fixed
+	background-size: cover
+	background-position: top center
 	position: relative
+	+bp1500
+		height: 50vh
+	+bp1200
+		height: 45vh
+	+bp1000
+		height: 40vh
+	+bp850
+		height: 36vh
+	+bp450
+		height: 60vh
+		background: url("../image/policy/fv-bg-sp.webp")
+		background-attachment: fixed
+		background-size: cover
+		background-position: top center
 	.content-box
 		display: block
-		width: 1200px
+		width: fit-content
 		margin: 0 auto
-		+bp1400
-			width: 1000px
-			padding: 0 0 80px
-			margin: 200px auto 0
-		+bp1100
-			width: calc(100vw - 100px)
-		+bp700
-			margin: 160px auto 0
-			padding: 0 0 60px
-		+bp500
-			width: calc(100vw - 60px)
-			padding: 0 0 40px
-		+bp450
-			width: calc(100vw - 30px)
-			padding: 0 0 30px
-			margin: 150px auto 0
-		h1
+		.en
+			display: block
+			width: 50vw
+			font-weight: 900
+			font-size: 95px
+			line-height: 1.0
+			font-family: $eurostile-extended
+			letter-spacing: 0.2em
+			background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#222, 1.0) 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			background-clip: text
+			text-fill-color: transparent
+			text-align: center
+			+bp1600
+				font-size: calc(0.06*100vw - 6px)
+			+bp1000
+				font-size: calc(0.053*100vw + 10.7px)
+			+bp700
+				width: 100vw
+				font-size: 48px
+			+bp500
+				font-size: 40px
+			+bp450
+				font-size: 36px
+			+bp420
+				font-size: 34px
+			+bp400
+				font-size: 32px
+			+bp380
+				font-size: 30px
+			&::selection
+				color: #555
+		.tit
 			display: block
 			width: 100%
-			font-weight: 700
-			font-size: 38px
+			margin-top: 40px
+			font-weight: 500
+			font-size: 24px
 			line-height: 1.0
 			font-family: $noto-sans
-			letter-spacing: 0.15em
-			color: #fff
-			+bp1400
-				font-size: 34px
-			+bp900
-				font-size: 32px
-			+bp700
-				font-size: 28px
+			letter-spacing: 0.25em
+			text-align: center
+			color: $base
+			+bp1500
+				margin-top: 35px
+				font-size: 20px
+			+bp1300
+				margin-top: 30px
+				font-size: 18px
+			+bp1000
+				margin-top: 23px
+				font-size: 16px
 			+bp500
-				font-size: 24px
+				margin-top: 20px
 			+bp450
-				font-size: 22px
-	.en
-		position: absolute
-		right: 10vw
-		bottom: 15px
-		display: block
-		font-weight: 900
-		font-size: 18px
-		line-height: 1.0
-		font-family: $eurostile-extended
-		letter-spacing: 0.05em
-		background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		background-clip: text
-		text-fill-color: transparent
+				margin-top: 17px
+				font-size: 15px
+			+bp420
+				letter-spacing: 0.2em
+			+bp400
+				letter-spacing: 0.15em
 
 
 
@@ -206,20 +239,30 @@ body::-webkit-scrollbar
 #clause
 	display: block
 	width: 1200px
-	margin: 160px auto 25vh
+	margin: 240px auto 260px
+	+bp1600
+		margin: 200px auto 240px
+	+bp1500
+		margin: 180px auto 200px
 	+bp1400
 		width: 1000px
-		margin: 100px auto 100px
+		margin: 170px auto 200px
+	+bp1200
+		margin: 150px auto 180px
 	+bp1100
 		width: calc(100vw - 100px)
-		margin: 90px auto 80px
+		margin: 140px auto 170px
+	+bp800
+		margin: 120px auto 150px
 	+bp700
-		margin: 50px auto 60px
+		margin: 100px auto 120px
 	+bp500
 		width: calc(100vw - 60px)
 	+bp450
 		width: calc(100vw - 30px)
-		margin: 40px auto 40px
+		margin: 80px auto 100px
+	+bp400
+		margin: 70px auto 90px
 	> .outline
 		display: block
 		width: 100%

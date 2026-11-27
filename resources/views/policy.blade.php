@@ -25,17 +25,12 @@
 
 
 @section('content')
-
-
-
-
     <section id="title">
         <div class="content-box">
-            <h1>プライバシーポリシー</h1>
+            <p class="en">PRIVACY POLICY</p>
+            <h1 class="tit">プライバシーポリシー</h1>
         </div>
-        <p class="en">PRIVACY POLICY</p>
     </section>
-
 
 
 
@@ -190,6 +185,10 @@
 
 @section('js')
     @vite([
-        'resources/js/policy.js',
+        'resources/js/defense.ts',
+        'resources/js/hamburger-menu.ts',
+        'resources/js/smooth-scroll.ts',
+        'resources/js/mouse.ts',
+        'resources/js/policy.ts',
     ])
 @stop

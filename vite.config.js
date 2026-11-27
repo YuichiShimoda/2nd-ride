@@ -24,7 +24,7 @@ export default defineConfig({
                 'resources/js/inquiry.ts',
                 'resources/js/voice.js',
                 'resources/js/rule.js',
-                'resources/js/policy.js',
+                'resources/js/policy.ts',
             ],
             refresh: true,
         }),

@@ -1,3 +1,10 @@
+import $ from "jquery";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 import "lazysizes";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
@@ -24,14 +31,12 @@ $(window).on('load', function() {
 
 
 
-
-
 $('a[href^="#"]').click(function(e) {
 	e.preventDefault();
 	var speed = 1000;
 	var href= $(this).attr("href");
-	var target = $(href == "#" || href == "" ? 'html' : href);
-	var windowWidth = $(window).width();
+	var target = $(href && href !== "#" ? href : "html");
+	var windowWidth = $(window).width() ?? 0;
 	if (location.pathname.includes('service')) {
 		if (windowWidth >= 700) {
 			var headerHeight = 0;
@@ -45,9 +50,11 @@ $('a[href^="#"]').click(function(e) {
 			var headerHeight = 0;
 		}
 	}
-	var position = target.offset().top - headerHeight;
+	var position = (target.offset()?.top ?? 0) - headerHeight;
 	$('body,html').animate({scrollTop:position}, speed, 'swing');
-	location.hash = href;
+	if (href) {
+		location.hash = href;
+	}
 	return false;
 });
 
