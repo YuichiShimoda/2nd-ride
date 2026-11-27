@@ -350,7 +350,6 @@
 					const logoBox = document.querySelector('#footer .logo-box');
 					if (!logoBox) return;
 					setInterval(() => {
-						console.log("66");
 						logoBox.classList.remove('is-animating');
 						void logoBox.offsetWidth;
 						logoBox.classList.add('is-animating');

@@ -181,6 +181,40 @@ body::-webkit-scrollbar {
     letter-spacing: 0.15em;
   }
 }
+#title .left-shage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: fit-content;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+@media screen and (max-width: 450px) {
+  #title .left-shage {
+    display: block;
+    width: 30vw;
+    object-position: top left;
+  }
+}
+#title .right-shage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: fit-content;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+@media screen and (max-width: 450px) {
+  #title .right-shage {
+    display: block;
+    width: 30vw;
+    object-position: bottom right;
+  }
+}
 
 #clause {
   display: block;

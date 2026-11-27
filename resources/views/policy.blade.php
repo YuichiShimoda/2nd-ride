@@ -31,6 +31,8 @@
             <p class="en">POLICY</p>
             <h1 class="tit">プライバシーポリシー</h1>
         </div>
+        <img class="left-shage lazyload" data-src="{{ asset('/image/faq/left-shape.svg') }}" alt="シェイプ">
+        <img class="right-shage lazyload" data-src="{{ asset('/image/faq/right-shape.svg') }}" alt="シェイプ">
     </section>
 
 
