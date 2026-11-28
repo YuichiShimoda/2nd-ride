@@ -22,6 +22,9 @@ $black-bg: #232523
 @mixin bp1600
 	@media screen and (max-width: 1600px)
 		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
 @mixin bp1400
 	@media screen and (max-width: 1400px)
 		@content
@@ -92,8 +95,6 @@ body::-webkit-scrollbar
 #wrap
 	overflow: hidden
 	min-height: 100vh
-	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
-	background-size: 16px 16px
 *::selection
 	background: #ddd
 *::-webkit-scrollbar
@@ -132,66 +133,242 @@ body::-webkit-scrollbar
 
 
 
-#title
-	display: block
+#fv
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
 	width: 100%
-	padding: 240px 0 120px
-	background: linear-gradient(180deg, rgba($base, 1.0) 0%, rgba($base, 1.0) 50%, rgba($base, 0.8) 100%)
-	position: relative
+	height: 60vh
+	background: url("../image/profile/fv.webp")
+	background-attachment: fixed
+	background-size: cover
+	background-position: center center
+	+bp1200
+		height: 50vh
+	+bp450
+		height: 60vh
 	.content-box
 		display: block
-		width: 1200px
-		margin: 0 auto
-		+bp1400
-			width: 1000px
-			padding: 0 0 80px
-			margin: 200px auto 0
-		+bp1100
-			width: calc(100vw - 100px)
-		+bp700
-			margin: 160px auto 0
-			padding: 0 0 60px
+		width: 100%
+		height: 100%
+		position: relative
 		+bp500
-			width: calc(100vw - 60px)
-			padding: 0 0 40px
 		+bp450
-			width: calc(100vw - 30px)
-			padding: 0 0 30px
-			margin: 150px auto 0
-		h1
+		+bp420
+		.tit-box
+			position: absolute
+			left: 10vw
+			bottom: 20%
 			display: block
-			width: 100%
+			width: fit-content
+			z-index: 10
+			+bp600
+				left: 40px
+			.tit
+				display: block
+				width: fit-content
+				margin-left: 0.4em
+				font-weight: 500
+				font-size: 24px
+				line-height: 1.0
+				font-family: $noto-sans
+				letter-spacing: 0.25em
+				color: $base
+				+bp1400
+					font-size: 22px
+				+bp1000
+					margin-left: 0.3em
+					font-size: 21px
+				+bp800
+					margin-left: 0.2em
+					font-size: 20px
+				+bp600
+					margin-left: 0.1em
+			.en
+				display: block
+				margin-top: 5px
+				font-weight: 900
+				font-size: calc(0.04*100vw + 84px)
+				line-height: 1.00
+				font-family: $eurostile-extended
+				letter-spacing: 0.05em
+				background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				background-clip: text
+				text-fill-color: transparent
+				+bp1400
+					margin-top: 0
+				+bp1200
+					font-size: calc(0.075*100vw + 30px)
+				+bp1000
+					margin-top: 5px
+					font-size: calc(0.067*100vw + 29.3px)
+				+bp550
+					margin-top: 8px
+				+bp450
+				&::selection
+					color: #555
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#intro
+	display: block
+	width: 100%
+	position: relative
+	.head-box
+		position: absolute
+		left: 0
+		right: 0
+		top: -40px
+		margin: auto
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+		width: 1100px
+		margin: 0 auto 0
+		z-index: 10
+		position: relative
+		+bp1400
+			top: -32px
+			width: 940px
+		+bp1200
+			top: -30px
+			width: 850px
+		+bp1000
+			top: -30px
+			width: fit-content
+			flex-direction: column
+			flex-wrap: initial
+		+bp900
+			top: -30px
+		+bp800
+			top: -26px
+		+bp600
+			top: -22px
+		.head
+			display: block
+			width: fit-content
+			padding: 0.3em 0.5em 0.3em 0.5em
+			background: #000
 			font-weight: 700
-			font-size: 38px
+			font-size: 47px
 			line-height: 1.0
 			font-family: $noto-sans
-			letter-spacing: 0.15em
+			letter-spacing: 0.05em
 			color: #fff
+			&:nth-of-type(1)
+				padding: 0.3em 0.1em 0.3em 0.5em
+				+bp1000
+					padding: 0.3em 0.5em 0.3em 0.5em
+			&:nth-of-type(2)
+				padding: 0.3em 0.5em 0.3em 0.1em
+				+bp1000
+					padding: 0.3em 0.5em 0.3em 0.5em
+					margin-top: 0.3em
+			&:nth-of-type(3)
+				margin-top: 0.5em
+				+bp1000
+					margin-top: 0.3em
 			+bp1400
-				font-size: 34px
+				font-size: 40px
+			+bp1200
+				font-size: 36px
+			+bp1000
+				font-size: 40px
 			+bp900
-				font-size: 32px
-			+bp700
-				font-size: 28px
+				font-size: 34px
+			+bp800
+				font-size: 30px
+			+bp600
+				font-size: 26px
 			+bp500
 				font-size: 24px
 			+bp450
 				font-size: 22px
-	.en
-		position: absolute
-		right: 10vw
-		bottom: 15px
+			&::selection
+				color: #555
+	.content-box
 		display: block
-		font-weight: 900
-		font-size: 18px
-		line-height: 1.0
-		font-family: $eurostile-extended
-		letter-spacing: 0.05em
-		background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		background-clip: text
-		text-fill-color: transparent
+		width: 100%
+		padding: 5.0em 0 220px
+		margin: 0 auto
+		+bp1600
+			padding: 5.0em 0 200px
+		+bp1500
+			padding: 5.0em 0 180px
+		+bp1300
+			padding: 5.0em 0 170px
+		+bp1200
+			padding: 4.0em 0 160px
+		+bp1100
+			padding: 3.5em 0 150px
+		+bp1000
+			padding: 3.0em 0 140px
+		+bp700
+			padding: 2.5em 0 110px
+		+bp500
+			padding: 2.5em 0 100px
+		+bp450
+			padding: 2.5em 0 90px
+		+bp420
+			padding: 2.5em 0 80px
+		.desc-box
+			display: block
+			width: 1100px
+			margin: 0 auto
+			+bp1400
+				width: 940px
+			+bp1200
+				width: 850px
+			+bp1000
+				width: calc(100vw - 200px)
+			+bp800
+				width: calc(100vw - 160px)
+			+bp600
+				width: calc(100vw - 120px)
+			+bp450
+				width: calc(100vw - 80px)
+			> p
+				display: block
+				font-weight: 500
+				font-size: 24px
+				line-height: 1.8
+				font-family: $noto-serif
+				letter-spacing: 0.15em
+				color: #111
+				+bp1400
+					font-size: 21px
+				+bp1200
+					font-size: 20px
+				+bp800
+					font-size: 19px
+				+bp600
+					font-size: 18px
+				+bp450
+					font-size: 17px
 
 
 
@@ -200,21 +377,3 @@ body::-webkit-scrollbar
 
 
 
-
-
-
-#test
-	display: flex
-	justify-content: center
-	align-items: center
-	width: 100%
-	height: 50vh
-	margin: 160px auto 0
-	p
-		display: block
-		font-weight: 400
-		font-size: 50px
-		line-height: 2.0
-		font-family: $noto-sans
-		letter-spacing: 0.15em
-		color: #555

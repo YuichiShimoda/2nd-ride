@@ -14,8 +14,6 @@ body::-webkit-scrollbar {
 #wrap {
   overflow: hidden;
   min-height: 100vh;
-  background-image: radial-gradient(circle, #CCC 1px, transparent 1px);
-  background-size: 16px 16px;
 }
 
 *::selection {
@@ -26,91 +24,85 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-#title {
+#fv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+  background: url("../image/profile/fv.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+@media screen and (max-width: 1200px) {
+  #fv {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  #fv {
+    height: 60vh;
+  }
+}
+#fv .content-box {
   display: block;
   width: 100%;
-  padding: 240px 0 120px;
-  background: linear-gradient(180deg, #00a000 0%, #00a000 50%, rgba(0, 160, 0, 0.8) 100%);
+  height: 100%;
   position: relative;
 }
-#title .content-box {
+#fv .content-box .tit-box {
+  position: absolute;
+  left: 10vw;
+  bottom: 20%;
   display: block;
-  width: 1200px;
-  margin: 0 auto;
+  width: fit-content;
+  z-index: 10;
 }
-@media screen and (max-width: 1400px) {
-  #title .content-box {
-    width: 1000px;
-    padding: 0 0 80px;
-    margin: 200px auto 0;
+@media screen and (max-width: 600px) {
+  #fv .content-box .tit-box {
+    left: 40px;
   }
 }
-@media screen and (max-width: 1100px) {
-  #title .content-box {
-    width: calc(100vw - 100px);
-  }
-}
-@media screen and (max-width: 700px) {
-  #title .content-box {
-    margin: 160px auto 0;
-    padding: 0 0 60px;
-  }
-}
-@media screen and (max-width: 500px) {
-  #title .content-box {
-    width: calc(100vw - 60px);
-    padding: 0 0 40px;
-  }
-}
-@media screen and (max-width: 450px) {
-  #title .content-box {
-    width: calc(100vw - 30px);
-    padding: 0 0 30px;
-    margin: 150px auto 0;
-  }
-}
-#title .content-box h1 {
+#fv .content-box .tit-box .tit {
   display: block;
-  width: 100%;
-  font-weight: 700;
-  font-size: 38px;
+  width: fit-content;
+  margin-left: 0.4em;
+  font-weight: 500;
+  font-size: 24px;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
-  letter-spacing: 0.15em;
-  color: #fff;
+  letter-spacing: 0.25em;
+  color: #00a000;
 }
 @media screen and (max-width: 1400px) {
-  #title .content-box h1 {
-    font-size: 34px;
-  }
-}
-@media screen and (max-width: 900px) {
-  #title .content-box h1 {
-    font-size: 32px;
-  }
-}
-@media screen and (max-width: 700px) {
-  #title .content-box h1 {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 500px) {
-  #title .content-box h1 {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 450px) {
-  #title .content-box h1 {
+  #fv .content-box .tit-box .tit {
     font-size: 22px;
   }
 }
-#title .en {
-  position: absolute;
-  right: 10vw;
-  bottom: 15px;
+@media screen and (max-width: 1000px) {
+  #fv .content-box .tit-box .tit {
+    margin-left: 0.3em;
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fv .content-box .tit-box .tit {
+    margin-left: 0.2em;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #fv .content-box .tit-box .tit {
+    margin-left: 0.1em;
+  }
+}
+#fv .content-box .tit-box .en {
   display: block;
+  margin-top: 5px;
   font-weight: 900;
-  font-size: 18px;
+  font-size: calc(4vw + 84px);
   line-height: 1;
   font-family: "eurostile-extended", sans-serif;
   letter-spacing: 0.05em;
@@ -120,21 +112,288 @@ body::-webkit-scrollbar {
   background-clip: text;
   text-fill-color: transparent;
 }
-
-#test {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50vh;
-  margin: 160px auto 0;
+@media screen and (max-width: 1400px) {
+  #fv .content-box .tit-box .en {
+    margin-top: 0;
+  }
 }
-#test p {
-  display: block;
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 2;
-  font-family: "Noto Sans JP", sans-serif;
-  letter-spacing: 0.15em;
+@media screen and (max-width: 1200px) {
+  #fv .content-box .tit-box .en {
+    font-size: calc(7.5vw + 30px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  #fv .content-box .tit-box .en {
+    margin-top: 5px;
+    font-size: calc(6.7vw + 29.3px);
+  }
+}
+@media screen and (max-width: 550px) {
+  #fv .content-box .tit-box .en {
+    margin-top: 8px;
+  }
+}
+#fv .content-box .tit-box .en::selection {
   color: #555;
+}
+
+#intro {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+#intro .head-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -40px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1100px;
+  margin: 0 auto 0;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1400px) {
+  #intro .head-box {
+    top: -32px;
+    width: 940px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #intro .head-box {
+    top: -30px;
+    width: 850px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #intro .head-box {
+    top: -30px;
+    width: fit-content;
+    flex-direction: column;
+    flex-wrap: initial;
+  }
+}
+@media screen and (max-width: 900px) {
+  #intro .head-box {
+    top: -30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #intro .head-box {
+    top: -26px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #intro .head-box {
+    top: -22px;
+  }
+}
+#intro .head-box .head {
+  display: block;
+  width: fit-content;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  background: #000;
+  font-weight: 700;
+  font-size: 47px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+#intro .head-box .head:nth-of-type(1) {
+  padding: 0.3em 0.1em 0.3em 0.5em;
+}
+@media screen and (max-width: 1000px) {
+  #intro .head-box .head:nth-of-type(1) {
+    padding: 0.3em 0.5em 0.3em 0.5em;
+  }
+}
+#intro .head-box .head:nth-of-type(2) {
+  padding: 0.3em 0.5em 0.3em 0.1em;
+}
+@media screen and (max-width: 1000px) {
+  #intro .head-box .head:nth-of-type(2) {
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    margin-top: 0.3em;
+  }
+}
+#intro .head-box .head:nth-of-type(3) {
+  margin-top: 0.5em;
+}
+@media screen and (max-width: 1000px) {
+  #intro .head-box .head:nth-of-type(3) {
+    margin-top: 0.3em;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #intro .head-box .head {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #intro .head-box .head {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #intro .head-box .head {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #intro .head-box .head {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #intro .head-box .head {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #intro .head-box .head {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #intro .head-box .head {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #intro .head-box .head {
+    font-size: 22px;
+  }
+}
+#intro .head-box .head::selection {
+  color: #555;
+}
+#intro .content-box {
+  display: block;
+  width: 100%;
+  padding: 5em 0 220px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1600px) {
+  #intro .content-box {
+    padding: 5em 0 200px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  #intro .content-box {
+    padding: 5em 0 180px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #intro .content-box {
+    padding: 5em 0 170px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #intro .content-box {
+    padding: 4em 0 160px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #intro .content-box {
+    padding: 3.5em 0 150px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #intro .content-box {
+    padding: 3em 0 140px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #intro .content-box {
+    padding: 2.5em 0 110px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #intro .content-box {
+    padding: 2.5em 0 100px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #intro .content-box {
+    padding: 2.5em 0 90px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #intro .content-box {
+    padding: 2.5em 0 80px;
+  }
+}
+#intro .content-box .desc-box {
+  display: block;
+  width: 1100px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1400px) {
+  #intro .content-box .desc-box {
+    width: 940px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #intro .content-box .desc-box {
+    width: 850px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #intro .content-box .desc-box {
+    width: calc(100vw - 200px);
+  }
+}
+@media screen and (max-width: 800px) {
+  #intro .content-box .desc-box {
+    width: calc(100vw - 160px);
+  }
+}
+@media screen and (max-width: 600px) {
+  #intro .content-box .desc-box {
+    width: calc(100vw - 120px);
+  }
+}
+@media screen and (max-width: 450px) {
+  #intro .content-box .desc-box {
+    width: calc(100vw - 80px);
+  }
+}
+#intro .content-box .desc-box > p {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.8;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 0.15em;
+  color: #111;
+}
+@media screen and (max-width: 1400px) {
+  #intro .content-box .desc-box > p {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #intro .content-box .desc-box > p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #intro .content-box .desc-box > p {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #intro .content-box .desc-box > p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #intro .content-box .desc-box > p {
+    font-size: 17px;
+  }
 }
