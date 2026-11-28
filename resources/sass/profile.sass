@@ -141,11 +141,16 @@ body::-webkit-scrollbar
 	width: 100%
 	height: 60vh
 	background: url("../image/profile/fv.webp")
-	background-attachment: fixed
 	background-size: cover
 	background-position: center center
+	+bp1400
+		background-position: left top
 	+bp1200
 		height: 50vh
+	+bp800
+		background-position: 20% top
+	+bp600
+		background-position: 35% top
 	+bp450
 		height: 60vh
 	.content-box
@@ -153,9 +158,6 @@ body::-webkit-scrollbar
 		width: 100%
 		height: 100%
 		position: relative
-		+bp500
-		+bp450
-		+bp420
 		.tit-box
 			position: absolute
 			left: 10vw
@@ -165,6 +167,8 @@ body::-webkit-scrollbar
 			z-index: 10
 			+bp600
 				left: 40px
+			+bp450
+				left: 30px
 			.tit
 				display: block
 				width: fit-content
@@ -185,6 +189,10 @@ body::-webkit-scrollbar
 					font-size: 20px
 				+bp600
 					margin-left: 0.1em
+				+bp450
+					font-size: 19px
+				+bp420
+					font-size: 18px
 			.en
 				display: block
 				margin-top: 5px
@@ -207,7 +215,7 @@ body::-webkit-scrollbar
 					font-size: calc(0.067*100vw + 29.3px)
 				+bp550
 					margin-top: 8px
-				+bp450
+					font-size: calc(0.2*100vw - 34px)
 				&::selection
 					color: #555
 
@@ -268,6 +276,9 @@ body::-webkit-scrollbar
 			top: -26px
 		+bp600
 			top: -22px
+		+bp450
+			align-items: flex-start
+			width: calc(100vw - 60px)
 		.head
 			display: block
 			width: fit-content
@@ -279,15 +290,21 @@ body::-webkit-scrollbar
 			font-family: $noto-sans
 			letter-spacing: 0.05em
 			color: #fff
+			+bp450
+				padding: 0.5em 0.5em 0.5em 0.5em
 			&:nth-of-type(1)
 				padding: 0.3em 0.1em 0.3em 0.5em
 				+bp1000
 					padding: 0.3em 0.5em 0.3em 0.5em
+				+bp450
+					padding: 0.5em 0.5em 0.5em 0.5em
 			&:nth-of-type(2)
 				padding: 0.3em 0.5em 0.3em 0.1em
 				+bp1000
 					padding: 0.3em 0.5em 0.3em 0.5em
 					margin-top: 0.3em
+					+bp450
+						padding: 0.5em 0.5em 0.5em 0.5em
 			&:nth-of-type(3)
 				margin-top: 0.5em
 				+bp1000
@@ -307,9 +324,34 @@ body::-webkit-scrollbar
 			+bp500
 				font-size: 24px
 			+bp450
-				font-size: 22px
+				font-size: calc(0.05*100vw + 0px)
+				white-space: nowrap
 			&::selection
 				color: #555
+			.yellow
+				display: inline
+				font-weight: 900
+				font-size: 47px
+				line-height: 1.0
+				font-family: $noto-sans
+				letter-spacing: 0.05em
+				color: #FFFF00
+				+bp1400
+					font-size: 40px
+				+bp1200
+					font-size: 36px
+				+bp1000
+					font-size: 40px
+				+bp900
+					font-size: 34px
+				+bp800
+					font-size: 30px
+				+bp600
+					font-size: 26px
+				+bp500
+					font-size: 24px
+				+bp450
+					font-size: calc(0.05*100vw + 0px)
 	.content-box
 		display: block
 		width: 100%
@@ -332,9 +374,9 @@ body::-webkit-scrollbar
 		+bp500
 			padding: 2.5em 0 100px
 		+bp450
-			padding: 2.5em 0 90px
+			padding: 1.5em 0 90px
 		+bp420
-			padding: 2.5em 0 80px
+			padding: 1.5em 0 80px
 		.desc-box
 			display: block
 			width: 1100px
@@ -349,8 +391,10 @@ body::-webkit-scrollbar
 				width: calc(100vw - 160px)
 			+bp600
 				width: calc(100vw - 120px)
-			+bp450
+			+bp500
 				width: calc(100vw - 80px)
+			+bp450
+				width: calc(100vw - 60px)
 			> p
 				display: block
 				font-weight: 500
@@ -359,6 +403,9 @@ body::-webkit-scrollbar
 				font-family: $noto-serif
 				letter-spacing: 0.15em
 				color: #111
+				&:not(:first-child)
+					+bp450
+						margin-top: 1.4em
 				+bp1400
 					font-size: 21px
 				+bp1200
@@ -367,8 +414,38 @@ body::-webkit-scrollbar
 					font-size: 19px
 				+bp600
 					font-size: 18px
-				+bp450
+				+bp550
 					font-size: 17px
+				+bp450
+					font-size: 16px
+				+bp420
+					font-size: 15px
+				+bp380
+					font-size: 14px
+				.emphasis
+					display: inline
+					font-weight: 900
+					font-size: 24px
+					line-height: 1.8
+					font-family: $noto-serif
+					letter-spacing: 0.15em
+					color: $base
+					+bp1400
+						font-size: 21px
+					+bp1200
+						font-size: 20px
+					+bp800
+						font-size: 19px
+					+bp600
+						font-size: 18px
+					+bp550
+						font-size: 17px
+					+bp450
+						font-size: 16px
+					+bp420
+						font-size: 15px
+					+bp380
+						font-size: 14px
 
 
 
