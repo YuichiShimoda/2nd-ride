@@ -22,6 +22,9 @@ $black-bg: #232523
 @mixin bp1600
 	@media screen and (max-width: 1600px)
 		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
 @mixin bp1400
 	@media screen and (max-width: 1400px)
 		@content
@@ -30,6 +33,9 @@ $black-bg: #232523
 		@content
 @mixin bp1200
 	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1150
+	@media screen and (max-width: 1150px)
 		@content
 @mixin bp1100
 	@media screen and (max-width: 1100px)
@@ -81,6 +87,20 @@ $black-bg: #232523
 		@content
 
 
+@mixin bp1150over
+	@media screen and (min-width: 1150px)
+		@content
+@mixin bp1150middle
+	@media screen and (max-width: 1149px) and (min-width: 600px)
+		@content
+@mixin bp600middle
+	@media screen and (max-width: 599px) and (min-width: 450px)
+		@content
+@mixin bp450under
+	@media screen and (max-width: 449px)
+		@content
+
+
 body
 	overflow-x: hidden
 	scrollbar-width: none
@@ -92,8 +112,7 @@ body::-webkit-scrollbar
 #wrap
 	overflow: hidden
 	min-height: 100vh
-	background-image: radial-gradient(circle, #CCC 1px, transparent 1px)
-	background-size: 16px 16px
+	background: #222
 *::selection
 	background: #ddd
 *::-webkit-scrollbar
@@ -132,66 +151,376 @@ body::-webkit-scrollbar
 
 
 
-#title
-	display: block
+#fv
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
 	width: 100%
-	padding: 240px 0 120px
-	background: linear-gradient(180deg, rgba($base, 1.0) 0%, rgba($base, 1.0) 50%, rgba($base, 0.8) 100%)
 	position: relative
 	.content-box
 		display: block
-		width: 1200px
+		width: 100%
+		padding: 240px 0 220px
 		margin: 0 auto
-		+bp1400
-			width: 1000px
-			padding: 0 0 80px
-			margin: 200px auto 0
+		+bp1600
+			padding: 200px 0 200px
+		+bp1500
+			padding: calc(0.067*100vw + 80px) 0 180px
+		+bp1300
+			padding: calc(0.067*100vw + 80px) 0 170px
+		+bp1200
+			padding: calc(0.067*100vw + 80px) 0 160px
 		+bp1100
-			width: calc(100vw - 100px)
+			padding: 150px 0 150px
+		+bp800
+			padding: 140px 0 140px
 		+bp700
-			margin: 160px auto 0
-			padding: 0 0 60px
+			padding: 110px 0 110px
 		+bp500
-			width: calc(100vw - 60px)
-			padding: 0 0 40px
+			padding: 90px 0 100px
 		+bp450
-			width: calc(100vw - 30px)
-			padding: 0 0 30px
-			margin: 150px auto 0
-		h1
-			display: block
-			width: 100%
-			font-weight: 700
-			font-size: 38px
-			line-height: 1.0
-			font-family: $noto-sans
-			letter-spacing: 0.15em
-			color: #fff
-			+bp1400
-				font-size: 34px
-			+bp900
-				font-size: 32px
-			+bp700
-				font-size: 28px
-			+bp500
+			padding: 70px 0 90px
+		+bp420
+			padding: 70px 0 80px
+		.tit-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			margin: 0 auto 0
+			z-index: 10
+			position: relative
+			.en
+				display: block
+				font-weight: 900
+				font-size: 95px
+				line-height: 1.05
+				font-family: $eurostile-extended
+				letter-spacing: 0.05em
+				background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#222, 1.0) 100%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				background-clip: text
+				text-fill-color: transparent
+				+bp1600
+					font-size: calc(0.06*100vw - 6px)
+				+bp1000
+					font-size: calc(0.053*100vw + 10.7px)
+				+bp700
+					font-size: calc(0.08*100vw - 8px)
+				+bp500
+					font-size: 29px
+				+bp450
+					font-size: calc(0.05*100vw + 9px)
+					letter-spacing: 0
+				&::selection
+					color: #555
+			.tit
+				display: block
+				width: fit-content
+				margin-top: 40px
+				font-weight: 500
 				font-size: 24px
+				line-height: 1.0
+				font-family: $noto-sans
+				letter-spacing: 0.25em
+				color: $base
+				+bp1500
+					margin-top: 35px
+					font-size: 20px
+				+bp1300
+					font-size: 18px
+				+bp1000
+					margin-top: 30px
+					font-size: 16px
+				+bp600
+					margin-top: 23px
+					font-size: 15px
+				+bp550
+					margin-top: 20px
+		.desc-box
+			display: block
+			width: fit-content
+			margin: 60px auto 0
+			+bp1500
+				margin: 50px auto 0
+			+bp1300
+				margin: 40px auto 0
+			+bp900
+				width: calc(100vw - 200px)
+				margin: 30px auto 0
+			+bp700
+				width: calc(100vw - 100px)
+				margin: 25px auto 0
+			+bp600
+				margin: 20px auto 0
 			+bp450
-				font-size: 22px
-	.en
-		position: absolute
-		right: 10vw
-		bottom: 15px
-		display: block
-		font-weight: 900
-		font-size: 18px
-		line-height: 1.0
-		font-family: $eurostile-extended
-		letter-spacing: 0.05em
-		background: linear-gradient(180deg, rgba(#fff, 1.0) 0%, rgba(#ccc, 1.0) 100%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		background-clip: text
-		text-fill-color: transparent
+				width: calc(100vw - 80px)
+			> p
+				display: block
+				font-weight: 400
+				font-size: 14px
+				line-height: 2.0
+				font-family: $noto-sans
+				letter-spacing: 0.05em
+				text-align: center
+				color: #fff
+				text-shadow: -1px -1px 4px rgba($base, 0.3), 1px -1px 4px rgba($base, 0.3), -1px 1px 4px rgba($base, 0.3), 1px 1px 4px rgba($base, 0.3)
+				+bp1200
+					font-size: 13px
+				+bp1000
+					text-shadow: -1px -1px 4px rgba($base, 0.25), 1px -1px 4px rgba($base, 0.25), -1px 1px 4px rgba($base, 0.25), 1px 1px 4px rgba($base, 0.25)
+				+bp700
+					font-size: 12px
+					text-align: left
+		.gallery-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-wrap: wrap
+			width: 1200px
+			margin: 120px auto 0
+			+bp1400
+				width: calc(100vw - 160px)
+				margin: 100px auto 0
+			+bp1300
+				width: calc(100vw - 140px)
+				margin: 90px auto 0
+			+bp1200
+				width: calc(100vw - 120px)
+				margin: 80px auto 0
+			+bp1150
+				width: 800px
+				margin: 65px auto 0
+			+bp1000
+				width: calc(100vw - 200px)
+				margin: 60px auto 0
+			+bp900
+				width: calc(100vw - 140px)
+				margin: 55px auto 0
+			+bp800
+				width: calc(100vw - 100px)
+			+bp750
+				width: calc(100vw - 80px)
+			+bp700
+				width: calc(100vw - 60px)
+			+bp600
+				width: calc(100vw - 30px)
+				margin: 50px auto 0
+			+bp550
+				margin: 45px auto 0
+			+bp450
+				flex-direction: column
+				flex-wrap: initial
+				margin: 40px auto 0
+			+bp400
+				margin: 35px auto 0
+			.gallery-ele
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+				padding: 10px 10px 30px
+				aspect-ratio: 1 / 1
+				border: solid 0.5px #555
+				border-radius: 15px
+				position: relative
+				+bp1150over
+					width: calc((100% - 30px)/3)
+					margin-left: 15px
+					&:nth-of-type(3n+1)
+						margin-left: 0
+					&:nth-of-type(n+4)
+						margin-top: 15px
+				+bp1150middle
+					width: calc((100% - 15px)/2)
+					margin-left: 15px
+					&:nth-of-type(2n+1)
+						margin-left: 0
+					&:nth-of-type(n+3)
+						margin-top: 15px
+				+bp600middle
+					width: calc((100% - 10px)/2)
+					margin-left: 10px
+					padding: 7px 7px 17px
+					border-radius: 10px
+					&:nth-of-type(2n+1)
+						margin-left: 0
+					&:nth-of-type(n+3)
+						margin-top: 10px
+				+bp450under
+					width: 70vw
+					max-width: 300px
+					margin-left: 0
+					padding: 7px 7px 17px
+					border-radius: 10px
+					&:nth-of-type(n+2)
+						margin-top: 15px
+				&::before
+					position: absolute
+					top: 0
+					left: 0
+					content: ""
+					display: block
+					width: 100%
+					height: 100%
+					padding: 1px
+					border-radius: 15px
+					background-image: conic-gradient(from calc(var(--vv-shine-b) - var(--vv-shine-w, 24deg)), transparent 0deg, $base calc(var(--vv-shine-w, 24deg) / 2), #77c077 var(--vv-shine-w, 24deg), transparent calc(var(--vv-shine-w, 24deg) * 2), transparent 360deg)
+					mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+					-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+					mask-composite: exclude
+					-webkit-mask-composite: xor
+					opacity: 0.0
+					animation: shineLeft 2.8s linear infinite
+					transition: opacity 0.06s linear
+					+bp600
+						border-radius: 10px
+				&:nth-of-type(2n)::before
+					animation: shineLeft 2.8s linear infinite reverse
+				&::after
+					position: absolute
+					top: 0
+					left: 0
+					content: ""
+					display: block
+					width: 100%
+					height: 100%
+					padding: 1px
+					border-radius: 15px
+					background-image: conic-gradient(from calc(var(--vv-shine-a) - var(--vv-shine-w, 24deg)), transparent 0deg, $base calc(var(--vv-shine-w, 24deg) / 2), #77c077 var(--vv-shine-w, 24deg), transparent calc(var(--vv-shine-w, 24deg) * 2), transparent 360deg)
+					mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+					-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+					mask-composite: exclude
+					-webkit-mask-composite: xor
+					opacity: 0.0
+					animation: shineRight 2.8s 1.4s linear infinite
+					transition: opacity 0.06s linear
+					+bp600
+						border-radius: 10px
+				&:nth-of-type(2n)::after
+					animation: shineRight 2.8s 1.4s linear infinite reverse
+				.fig-box
+					display: block
+					flex: 1
+					width: 100%
+					height: 100%
+					min-height: 0
+					border-radius: 5px
+					overflow: hidden
+					+bp600
+						border-radius: 4px
+					.img
+						display: block
+						width: 100%
+						height: 100%
+						object-fit: cover
+						object-position: center
+				.info-box
+					display: block
+					flex-shrink: 0
+					width: 94%
+					margin: 20px auto 0
+					+bp600
+						margin: 13px auto 0
+					.product
+						display: block
+						font-weight: 500
+						font-size: 18px
+						line-height: 1.5
+						font-family: $noto-sans
+						letter-spacing: 0.05em
+						color: #fff
+						+bp1200
+							font-size: 16px
+						+bp1000
+							font-size: 15px
+						+bp800
+							font-size: 14px
+						+bp600
+							line-height: 1.35
+					.bottom-box
+						display: flex
+						justify-content: space-between
+						align-items: center
+						width: 100%
+						margin-top: 10px
+						+bp600
+							margin-top: 7px
+						.cat
+							display: block
+							font-weight: 500
+							font-size: 14px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.25em
+							color: #aaa
+							+bp1200
+								font-size: 13px
+						.time
+							display: block
+							font-weight: 400
+							font-size: 13px
+							line-height: 1.0
+							font-family: $noto-sans
+							letter-spacing: 0.05em
+							color: #aaa
+							+bp1200
+								font-size: 12px
+@property --vv-shine-a
+	syntax: "<angle>"
+	inherits: false
+	initial-value: 135deg
+@property --vv-shine-b
+	syntax: "<angle>"
+	inherits: false
+	initial-value: 135deg
+@property --vv-shine-w
+	syntax: "<angle>"
+	inherits: false
+	initial-value: 0deg
+@keyframes shineLeft
+	0%
+		--vv-shine-b: 135deg
+		--vv-shine-w: 0deg
+		opacity: 1.0
+	10%
+		--vv-shine-w: 24deg
+	86%
+		--vv-shine-b: 315deg
+		--vv-shine-w: 24deg
+		opacity: 1.0
+	100%
+		--vv-shine-b: 315deg
+		--vv-shine-w: 24deg
+		opacity: 0.0
+@keyframes shineRight
+	0%
+		--vv-shine-a: 135deg
+		--vv-shine-w: 0deg
+		opacity: 1.0
+	10%
+		--vv-shine-w: 24deg
+	86%
+		--vv-shine-a: -45deg
+		--vv-shine-w: 24deg
+		opacity: 1.0
+	100%
+		--vv-shine-a: -45deg
+		--vv-shine-w: 24deg
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
 
 
 

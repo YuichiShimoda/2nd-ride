@@ -17,7 +17,7 @@ export default defineConfig({
                 'resources/js/smooth-scroll.ts',
                 'resources/js/mouse.ts',
                 'resources/js/top.ts',
-                'resources/js/result.js',
+                'resources/js/result.ts',
                 'resources/js/faq.ts',
                 'resources/js/profile.js',
                 'resources/js/appointment.ts',
