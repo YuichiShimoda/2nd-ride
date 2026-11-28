@@ -5,9 +5,11 @@
       .cls-1 {
         fill: #232523;
       }
-
       .cls-2 {
         fill: #00a000;
+      }
+      .cls-3 {
+        fill: #006000;
       }
     </style>
   </defs>
@@ -18,7 +20,7 @@
       <path class="cls-2" d="M336,816v216l24,24v-216L336,816Z"/>
       <path class="cls-2" d="M336,1338.75v-216l24-24v216L336,1338.75Z"/>
       <path class="cls-1" d="M360,0H0l48,48h96l48,48h72v360l48,48v264l48,48V0Z"/>
-      <path class="cls-1" d="M360,2154.75H0l48-48h96l48-48h72v-360l48-48v-264l48-48V2154.75Z"/>
+      <path class="cls-3" d="M360,2154.75H0l48-48h96l48-48h72v-360l48-48v-264l48-48V2154.75Z"/>
     </g>
   </g>
 </svg>
