@@ -412,7 +412,7 @@ body::-webkit-scrollbar {
   }
 }
 #fv .content-box .gallery-box .gallery-ele:nth-of-type(2n)::before {
-  animation: shineLeft 2.8s linear infinite reverse;
+  animation: shineLeft 2.8s 1.4s linear infinite reverse;
 }
 #fv .content-box .gallery-box .gallery-ele::after {
   position: absolute;
@@ -430,7 +430,7 @@ body::-webkit-scrollbar {
   mask-composite: exclude;
   -webkit-mask-composite: xor;
   opacity: 0;
-  animation: shineRight 2.8s 1.4s linear infinite;
+  animation: shineRight 2.8s linear infinite;
   transition: opacity 0.06s linear;
 }
 @media screen and (max-width: 600px) {
